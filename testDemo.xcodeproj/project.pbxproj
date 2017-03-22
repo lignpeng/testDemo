@@ -38,6 +38,9 @@
 		1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */; };
 		1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */; };
 		1F4DBC031E4C6A8A00374EA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */; };
+		1F4EDEF21E8262BB008F00EF /* GPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4EDEF11E8262BB008F00EF /* GPTableViewController.m */; };
+		1F4EDEF71E826357008F00EF /* GPOperationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4EDEF51E826357008F00EF /* GPOperationTableViewCell.m */; };
+		1F4EDEF81E826357008F00EF /* GPOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4EDEF61E826357008F00EF /* GPOperationTableViewCell.xib */; };
 		1F504A741DF15E1500EE4B2A /* GPNullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F504A731DF15E1500EE4B2A /* GPNullViewController.m */; };
 		1F504A781DF1752900EE4B2A /* GPCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F504A771DF1752900EE4B2A /* GPCellViewController.m */; };
 		1F50D67E1E13449400C51A57 /* CustomFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F50D67B1E13449400C51A57 /* CustomFlowLayout.m */; };
@@ -179,6 +182,11 @@
 		1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1F4EDEF01E8262BB008F00EF /* GPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPTableViewController.h; path = "vc/tableview操作/GPTableViewController.h"; sourceTree = "<group>"; };
+		1F4EDEF11E8262BB008F00EF /* GPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPTableViewController.m; path = "vc/tableview操作/GPTableViewController.m"; sourceTree = "<group>"; };
+		1F4EDEF41E826357008F00EF /* GPOperationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPOperationTableViewCell.h; path = "vc/tableview操作/GPOperationTableViewCell.h"; sourceTree = "<group>"; };
+		1F4EDEF51E826357008F00EF /* GPOperationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPOperationTableViewCell.m; path = "vc/tableview操作/GPOperationTableViewCell.m"; sourceTree = "<group>"; };
+		1F4EDEF61E826357008F00EF /* GPOperationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GPOperationTableViewCell.xib; path = "vc/tableview操作/GPOperationTableViewCell.xib"; sourceTree = "<group>"; };
 		1F504A721DF15E1500EE4B2A /* GPNullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPNullViewController.h; path = vc/null/GPNullViewController.h; sourceTree = "<group>"; };
 		1F504A731DF15E1500EE4B2A /* GPNullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPNullViewController.m; path = vc/null/GPNullViewController.m; sourceTree = "<group>"; };
 		1F504A761DF1752900EE4B2A /* GPCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPCellViewController.h; path = vc/cell/GPCellViewController.h; sourceTree = "<group>"; };
@@ -476,6 +484,18 @@
 			name = "支付宝web回调";
 			sourceTree = "<group>";
 		};
+		1F4EDEF31E8262C4008F00EF /* tableView操作 */ = {
+			isa = PBXGroup;
+			children = (
+				1F4EDEF01E8262BB008F00EF /* GPTableViewController.h */,
+				1F4EDEF11E8262BB008F00EF /* GPTableViewController.m */,
+				1F4EDEF41E826357008F00EF /* GPOperationTableViewCell.h */,
+				1F4EDEF51E826357008F00EF /* GPOperationTableViewCell.m */,
+				1F4EDEF61E826357008F00EF /* GPOperationTableViewCell.xib */,
+			);
+			name = "tableView操作";
+			sourceTree = "<group>";
+		};
 		1F504A751DF15E1A00EE4B2A /* null+nil */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +741,7 @@
 			children = (
 				EE764F1A1DEBC95700BF4230 /* IDViewController.h */,
 				EE764F1B1DEBC95700BF4230 /* IDViewController.m */,
+				1F4EDEF31E8262C4008F00EF /* tableView操作 */,
 				1F5394C81E80CBEB009D6B17 /* 摄像 */,
 				1F16CA401E7631CB0038D774 /* 键盘 */,
 				1F47F8D61E553E830056F326 /* 富文本 */,
@@ -891,6 +912,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFEBF4B1DEFD4FE00943705 /* GPExtensionTableViewCell.xib in Resources */,
+				1F4EDEF81E826357008F00EF /* GPOperationTableViewCell.xib in Resources */,
 				EE516D661DE80CFF001F9010 /* png in Resources */,
 				EE14AA4C1DE5419D00E152AD /* LaunchScreen.storyboard in Resources */,
 				1FFA1DB91E1213BC00E02421 /* data.json in Resources */,
@@ -939,6 +961,7 @@
 				1FAA873D1E25BE9700162DA2 /* searchBarCustomView.m in Sources */,
 				1F504A781DF1752900EE4B2A /* GPCellViewController.m in Sources */,
 				1F5699AD1DF663D7009FA98B /* CSProgressHUD_MBProgressHUD.m in Sources */,
+				1F4EDEF71E826357008F00EF /* GPOperationTableViewCell.m in Sources */,
 				1F504A741DF15E1500EE4B2A /* GPNullViewController.m in Sources */,
 				EE516D141DE7DE93001F9010 /* GPTableViewCell.m in Sources */,
 				1FFA1DD51E12154C00E02421 /* JSONKeyMapper.m in Sources */,
@@ -980,6 +1003,7 @@
 				1F3FAA491E0A26AF006CA2C6 /* CSNoviceGuideView.m in Sources */,
 				1FFA1DD61E12154C00E02421 /* JSONValueTransformer.m in Sources */,
 				1FFA1DD21E12154C00E02421 /* JSONAPI.m in Sources */,
+				1F4EDEF21E8262BB008F00EF /* GPTableViewController.m in Sources */,
 				1FFA1DCF1E12154C00E02421 /* JSONModel.m in Sources */,
 				EE14AA411DE5419D00E152AD /* AppDelegate.m in Sources */,
 				EE14AA3E1DE5419D00E152AD /* main.m in Sources */,

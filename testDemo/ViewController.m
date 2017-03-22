@@ -56,7 +56,7 @@
                  @"SearchBarViewController",@"SinaWBSendingViewController",
                  @"DataBindingViewController",@"AlipayViewController",
                  @"AttributeLabelViewController",@"GPKeyBoardViewController",
-                 @"GPVideoViewController"];
+                 @"GPVideoViewController",@"GPTableViewController"];
     return _vcArray; 
 }
 
@@ -68,7 +68,8 @@
                       @"tableViewCell传：nil",@"图片旋转",@"倒计时60s",
                       @"选座排座",@"数组枚举",
                       @"搜索bar",@"微博分享",@"数据绑定：RZDataBinding",
-                      @"支付宝网页拦截native支付",@"富文本",@"键盘弹起",@"摄像"];
+                      @"支付宝网页拦截native支付",@"富文本",@"键盘弹起",@"摄像",
+                      @"tableView操作"];
     return _vcTitleArray;
 }
 
