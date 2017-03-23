@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="424" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="424" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="424" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrT-cr-orQ">
@@ -25,9 +25,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmh-Dt-KDq">
-                        <rect key="frame" x="368" y="6.5" width="40" height="29"/>
+                        <rect key="frame" x="378" y="6.5" width="30" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <state key="normal" title="action"/>
+                        <state key="normal" title="展开"/>
                         <connections>
                             <action selector="action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="B5a-xY-819"/>
                         </connections>
@@ -41,6 +41,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="actionButton" destination="tmh-Dt-KDq" id="xke-3s-THy"/>
                 <outlet property="infoLabel" destination="HrT-cr-orQ" id="JkV-Xo-BVe"/>
             </connections>
             <point key="canvasLocation" x="-84" y="-118"/>

@@ -16,7 +16,7 @@
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray *dataSource;
-
+@property(nonatomic, strong) NSArray *insertData;
 @end
 
 @implementation GPTableViewController
@@ -27,6 +27,13 @@
     }
     _dataSource = [NSMutableArray arrayWithArray:@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7"]];
     return _dataSource;
+}
+
+- (NSArray *)insertData {
+    if (!_insertData) {
+        _insertData = @[@"*1",@"**2",@"***3",@"****4",@"*****5",@"******6"];
+    }
+    return _insertData;
 }
 
 - (void)viewDidLoad {
@@ -59,15 +66,51 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GPOperationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
-    cell.infoLabel.text = self.dataSource[indexPath.row];
+    [cell configCellInfo:self.dataSource[indexPath.row]];
 //    cell.showsReorderControl = NO;
-    cell.cellActionCallBackBlock = ^(GPOperationTableViewCell *cell){
-//        NSIndexPath *index = [tableView indexPathForCell:cell];
+    __weak typeof(self) weakSelf = self;
+    cell.cellActionCallBackBlock = ^(BOOL status,GPOperationTableViewCell *cell){
+        NSIndexPath *index = [tableView indexPathForCell:cell];
         //indexPath直接对应相应cell的indexPath，不用重新根据cell来获取
-        //若是对cell有删除操作的话，记得tableView reloadData一下，不然的话这些数据是没有进行相应的更新的。
+        //若是对cell有删除操作的话，记得tableView reloadData一下，不然的话这些数据是没有进行相应的更新的,或者是根据cell获取[tableView indexPathForCell:cell]也可以
         NSLog(@"indexPath:row = %ld, section = %ld",(long)indexPath.row,(long)indexPath.section);
+        NSLog(@"indexPath:row = %ld, section = %ld",(long)index.row,(long)index.section);
+        if (status) {
+            [weakSelf insertDataSourceAtStartIndex:index];
+        }else {
+            [weakSelf deleteDataSourceAtStartIndex:index];
+        }
+        
     };
     return cell;
+}
+
+//插入数据
+- (void)insertDataSourceAtStartIndex:(NSIndexPath *)indexPath {
+    
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (int i = 0;i < self.insertData.count;i++) {
+        NSIndexPath *index = [NSIndexPath indexPathForRow:(indexPath.row + 1 + i) inSection:indexPath.section];
+        [array addObject:index];
+        [self.dataSource insertObject:self.insertData[i] atIndex:index.row];
+    }
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationBottom];
+    [self.tableView endUpdates];
+}
+
+- (void)deleteDataSourceAtStartIndex:(NSIndexPath *)indexPath {
+    NSRange rang = (NSRange){indexPath.row + 1,self.insertData.count};
+    [self.dataSource removeObjectsInRange:rang];
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0;i < self.insertData.count;i++) {
+        NSIndexPath *index = [NSIndexPath indexPathForRow:(indexPath.row + 1 + i) inSection:indexPath.section];
+        [array addObject:index];
+    }
+    [self.tableView beginUpdates];
+    [self.tableView deleteRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationBottom];
+    [self.tableView endUpdates];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,7 +134,7 @@
         //要先删除dataSource数据，再移除cell，不然会崩溃的
         [self.dataSource removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
-        [tableView reloadData];
+//        [tableView reloadData];
     }
 }
 

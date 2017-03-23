@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 @class GPOperationTableViewCell;
-typedef void (^CellActionCallBackBlock)(GPOperationTableViewCell *cell);
+typedef void (^CellActionCallBackBlock)(BOOL status,GPOperationTableViewCell *cell);
 
 @interface GPOperationTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
 @property(nonatomic, copy) CellActionCallBackBlock cellActionCallBackBlock;
+
+- (void)configCellInfo:(NSString *)string;
 
 @end
