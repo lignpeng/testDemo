@@ -55,6 +55,7 @@
 		1F671A5C1E7A1A5A0022AA4A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */; };
 		1F671A601E7A1A5A0022AA4A /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F671A5F1E7A1A5A0022AA4A /* TodayViewController.m */; };
 		1F671A671E7A1A5A0022AA4A /* MyWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F671A5A1E7A1A5A0022AA4A /* MyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E8EAD1E84B97000D15351 /* GPTools.m */; };
 		1FAA873D1E25BE9700162DA2 /* searchBarCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAA873C1E25BE9700162DA2 /* searchBarCustomView.m */; };
 		1FAA87431E25D8E400162DA2 /* BaseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAA87421E25D8E400162DA2 /* BaseSearchViewController.m */; };
 		1FAA87491E261E5B00162DA2 /* BuildListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAA87481E261E5B00162DA2 /* BuildListViewController.m */; };
@@ -214,6 +215,8 @@
 		1F671A5E1E7A1A5A0022AA4A /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		1F671A5F1E7A1A5A0022AA4A /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		1F671A641E7A1A5A0022AA4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F6E8EAC1E84B97000D15351 /* GPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPTools.h; path = tools/GPTools.h; sourceTree = "<group>"; };
+		1F6E8EAD1E84B97000D15351 /* GPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPTools.m; path = tools/GPTools.m; sourceTree = "<group>"; };
 		1FAA873B1E25BE9700162DA2 /* searchBarCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = searchBarCustomView.h; path = vc/searchBar/searchBarCustomView.h; sourceTree = "<group>"; };
 		1FAA873C1E25BE9700162DA2 /* searchBarCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = searchBarCustomView.m; path = vc/searchBar/searchBarCustomView.m; sourceTree = "<group>"; };
 		1FAA87411E25D8E400162DA2 /* BaseSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSearchViewController.h; path = vc/searchBar/BaseSearchViewController.h; sourceTree = "<group>"; };
@@ -550,6 +553,24 @@
 			path = MyWidget;
 			sourceTree = "<group>";
 		};
+		1F6E8EAB1E84B58300D15351 /* 身份证验证 */ = {
+			isa = PBXGroup;
+			children = (
+				EE764F1A1DEBC95700BF4230 /* IDViewController.h */,
+				EE764F1B1DEBC95700BF4230 /* IDViewController.m */,
+			);
+			name = "身份证验证";
+			sourceTree = "<group>";
+		};
+		1F6E8EAF1E84B97700D15351 /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				1F6E8EAC1E84B97000D15351 /* GPTools.h */,
+				1F6E8EAD1E84B97000D15351 /* GPTools.m */,
+			);
+			name = "工具";
+			sourceTree = "<group>";
+		};
 		1FFA1DAC1E12098D00E02421 /* 选座 */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,6 +711,7 @@
 				EE764F1D1DEBC96400BF4230 /* vc */,
 				EE14AA451DE5419D00E152AD /* Main.storyboard */,
 				EE62759E1DE6E4620085C7FA /* NSString+CSSafeAccess.h */,
+				1F6E8EAF1E84B97700D15351 /* 工具 */,
 				EE62759F1DE6E4620085C7FA /* NSString+CSSafeAccess.m */,
 				EE14AA481DE5419D00E152AD /* Assets.xcassets */,
 				EE14AA4A1DE5419D00E152AD /* LaunchScreen.storyboard */,
@@ -739,8 +761,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
-				EE764F1A1DEBC95700BF4230 /* IDViewController.h */,
-				EE764F1B1DEBC95700BF4230 /* IDViewController.m */,
+				1F6E8EAB1E84B58300D15351 /* 身份证验证 */,
 				1F4EDEF31E8262C4008F00EF /* tableView操作 */,
 				1F5394C81E80CBEB009D6B17 /* 摄像 */,
 				1F16CA401E7631CB0038D774 /* 键盘 */,
@@ -990,6 +1011,7 @@
 				1F5699AB1DF663D7009FA98B /* CSProgressCustomView.m in Sources */,
 				1FFEBF4A1DEFD4FE00943705 /* GPExtensionTableViewCell.m in Sources */,
 				1F5699AC1DF663D7009FA98B /* CSProgressHUD.m in Sources */,
+				1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */,
 				1F4DBBF81E4C616600374EA4 /* AlipayViewController.m in Sources */,
 				1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */,
 				1FFA1DDE1E12159000E02421 /* CSCabinBoundary.m in Sources */,

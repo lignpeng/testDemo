@@ -99,7 +99,7 @@
 }
 
 - (void)guideAction {
-    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
+//    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
