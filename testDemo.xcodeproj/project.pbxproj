@@ -52,6 +52,8 @@
 		1F5699AD1DF663D7009FA98B /* CSProgressHUD_MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5699A91DF663D7009FA98B /* CSProgressHUD_MBProgressHUD.m */; };
 		1F5699B01DF66471009FA98B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5699AF1DF66471009FA98B /* MBProgressHUD.m */; };
 		1F598D081DF5691B00FC50BC /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F598D071DF5691B00FC50BC /* LoadingViewController.m */; };
+		1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */; };
+		1F6280E11E8941B700E0B151 /* gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F6280E01E8941B700E0B151 /* gif */; };
 		1F671A5C1E7A1A5A0022AA4A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */; };
 		1F671A601E7A1A5A0022AA4A /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F671A5F1E7A1A5A0022AA4A /* TodayViewController.m */; };
 		1F671A671E7A1A5A0022AA4A /* MyWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F671A5A1E7A1A5A0022AA4A /* MyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -210,6 +212,9 @@
 		1F5699AF1DF66471009FA98B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1F598D061DF5691B00FC50BC /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = loading/LoadingViewController.h; sourceTree = "<group>"; };
 		1F598D071DF5691B00FC50BC /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = loading/LoadingViewController.m; sourceTree = "<group>"; };
+		1F6280DC1E88F6CA00E0B151 /* GPGIFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGIFViewController.h; path = vc/gif/GPGIFViewController.h; sourceTree = "<group>"; };
+		1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGIFViewController.m; path = vc/gif/GPGIFViewController.m; sourceTree = "<group>"; };
+		1F6280E01E8941B700E0B151 /* gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gif; sourceTree = "<group>"; };
 		1F671A5A1E7A1A5A0022AA4A /* MyWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		1F671A5E1E7A1A5A0022AA4A /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -543,6 +548,15 @@
 			name = loading;
 			sourceTree = "<group>";
 		};
+		1F6280DF1E88F6DD00E0B151 /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				1F6280DC1E88F6CA00E0B151 /* GPGIFViewController.h */,
+				1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */,
+			);
+			name = gif;
+			sourceTree = "<group>";
+		};
 		1F671A5D1E7A1A5A0022AA4A /* MyWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -724,6 +738,7 @@
 		EE14AA3C1DE5419D00E152AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F6280E01E8941B700E0B151 /* gif */,
 				EE516D651DE80CFF001F9010 /* png */,
 				EE14AA3D1DE5419D00E152AD /* main.m */,
 			);
@@ -761,6 +776,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1F6280DF1E88F6DD00E0B151 /* gif */,
 				1F6E8EAB1E84B58300D15351 /* 身份证验证 */,
 				1F4EDEF31E8262C4008F00EF /* tableView操作 */,
 				1F5394C81E80CBEB009D6B17 /* 摄像 */,
@@ -941,6 +957,7 @@
 				1F16CA4A1E7631CB0038D774 /* GPKeyBoardTableViewCell.xib in Resources */,
 				EE14AA491DE5419D00E152AD /* Assets.xcassets in Resources */,
 				1F16CA4C1E7631CB0038D774 /* GPKeyBoardHeaderTableView.xib in Resources */,
+				1F6280E11E8941B700E0B151 /* gif in Resources */,
 				EE516D151DE7DE93001F9010 /* GPTableViewCell.xib in Resources */,
 				EE14AA471DE5419D00E152AD /* Main.storyboard in Resources */,
 			);
@@ -1025,6 +1042,7 @@
 				1F3FAA491E0A26AF006CA2C6 /* CSNoviceGuideView.m in Sources */,
 				1FFA1DD61E12154C00E02421 /* JSONValueTransformer.m in Sources */,
 				1FFA1DD21E12154C00E02421 /* JSONAPI.m in Sources */,
+				1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */,
 				1F4EDEF21E8262BB008F00EF /* GPTableViewController.m in Sources */,
 				1FFA1DCF1E12154C00E02421 /* JSONModel.m in Sources */,
 				EE14AA411DE5419D00E152AD /* AppDelegate.m in Sources */,

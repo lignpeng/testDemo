@@ -65,28 +65,32 @@
 - (void)action {
     [GPTools ShowAlert:@""];
     NSString *idStr = @"53262819820314783X";
-    BOOL flage = [self CheckIsIdentityCard:idStr];
+//    BOOL flage = [self CheckIsIdentityCard:idStr];
+    BOOL flage = [self checkIDCard:idStr];
     NSLog(@"正确的id：%d",flage);
     
-    flage = [self isPureIntWithString:idStr];
+    flage = [self isPureNumbersWithString:idStr];
     NSLog(@"纯数字：%d",flage);
     idStr = @"532628198203147830";
-    flage = [self isPureIntWithString:idStr];
+    flage = [self isPureNumbersWithString:idStr];
     
     NSLog(@"纯数字：%d",flage);
     
     
-    flage = [self CheckIsIdentityCard:idStr];
+//    flage = [self CheckIsIdentityCard:idStr];
+    flage = [self checkIDCard:idStr];
     NSLog(@"不正确的id：%d",flage);
     
     NSLog(@"============================");
     idStr = @"53262819820314783X";
     
-    flage = [self isIdCard:idStr];
+//    flage = [self isIdCard:idStr];
+    flage = [self checkIDCard:idStr];
     
     NSLog(@"正确id：%d",flage);
     idStr = @"532628198203147830";
-    flage = [self isIdCard:idStr];
+//    flage = [self isIdCard:idStr];
+    flage = [self checkIDCard:idStr];
     
     NSLog(@"不正确id：%d",flage);    
     
@@ -95,6 +99,8 @@
 
 #pragma mark  - xxxx
 //身份证号
+
+//--------原先校验方式--------
 - (BOOL)CheckIsIdentityCard: (NSString *)identityCard {
     //判断是否为空
     if (identityCard==nil||identityCard.length <= 0) {
@@ -154,10 +160,10 @@
     if (identityCard.length == 18) {
         NSString *checkNum = [identityCard cs_substringWithRange:NSMakeRange(0, 17)];
         NSString *check = [identityCard cs_substringWithRange:NSMakeRange(17, 1)];
-        if (![self isPureIntWithString:checkNum]){
+        if (![self isPureNumbersWithString:checkNum]){
             return FALSE;
         }
-        if (![self isPureIntWithString:checkNum] && ![check isEqualToString:@"X"] && ![check isEqualToString:@"x"])
+        if (![self isPureNumbersWithString:checkNum] && ![check isEqualToString:@"X"] && ![check isEqualToString:@"x"])
         {
             return FALSE;
         }
@@ -187,38 +193,30 @@
     return YES;
 }
 
--(BOOL)isPureIntWithString:(NSString *)str{
-    /*
-     NSScanner* scan = [NSScanner scannerWithString:string];
-     int val;
-     return[scan scanInt:&val] && [scan isAtEnd];
-     
-     char tmp[128];
-     memset(tmp, 0, 128);
-     strcpy(tmp, [self UTF8String]);
-     */
-    for (int i=0; i<str.length; i++) {
-        unichar c = [str characterAtIndex:i];
-        if (c<'0' || c > '9') {
-            return NO;
-        }
-    }
-    return YES;
-}
+//-(BOOL)isPureIntWithString:(NSString *)str{
+//
+//    for (int i=0; i<str.length; i++) {
+//        unichar c = [str characterAtIndex:i];
+//        if (c<'0' || c > '9') {
+//            return NO;
+//        }
+//    }
+//    return YES;
+//}
 
-//----------------
+//-------新的校验方式---------
 /**
  校验身份证
  
- @param sPaperId 身份证
+ @param idString 身份证
  @return true 校验通过 false 校验失败
  */
-BOOL checkIDCard(NSString *sPaperId){
+- (BOOL)checkIDCard:(NSString *)idString{
     //判断位数
-    if (sPaperId.length != 15 && sPaperId.length != 18) {
+    if (idString.length != 15 && idString.length != 18) {
         return false;
     }
-    NSString *carid = sPaperId;
+    NSString *carid = idString;
     
     long lSumQT = 0 ;
     //加权因子
@@ -226,8 +224,8 @@ BOOL checkIDCard(NSString *sPaperId){
     //校验码
     unsigned char sChecker[11] = {'1','0','X','9','8','7','6','5','4','3','2'};
     //将15位身份证号转换为18位
-    NSMutableString *mString = [NSMutableString stringWithString:sPaperId];
-    if (sPaperId.length == 15) {
+    NSMutableString *mString = [NSMutableString stringWithString:idString];
+    if (idString.length == 15) {
         [mString insertString:@"19" atIndex:6];
         long p =0;
         for (int i =0; i<17; i++){
@@ -269,7 +267,6 @@ BOOL checkIDCard(NSString *sPaperId){
     const char *PaperId = [carid UTF8String];
     //检验长度
     if (18!=strlen(PaperId)) {
-        //        [MBProgressHUD showError:@"请输入正确的证件号"];
         return false;
     }
     //校验数字
@@ -278,7 +275,6 @@ BOOL checkIDCard(NSString *sPaperId){
     if (!isdigit(di)) {
         if ([lst isEqualToString:@"X"]) {
         }else{
-            //            [MBProgressHUD showError:@"请输入正确的证件号"];
             return false;
         }
     }
@@ -286,11 +282,10 @@ BOOL checkIDCard(NSString *sPaperId){
     lSumQT = 0;
     for (int i = 0; i<17; i++){
         NSString * s = [carid substringWithRange:NSMakeRange(i, 1)];
-        NSLog(@"%d",[s intValue]);
+//        NSLog(@"%d",[s intValue]);
         lSumQT += [s intValue] * R[i];
     }
     if (sChecker[lSumQT%11] != PaperId[17]) {
-        //        [MBProgressHUD showError:@"请输入正确的证件号"];
         return false;
     }
     return true;
@@ -314,27 +309,18 @@ int getStringWithRange(NSString *cardId,int startLocation, int length){
  @return true 校验通过 false 校验失败
  */
 BOOL isAreaCode(NSNumber *province){
-    //在provinceArr中找
-    NSDictionary * dict = provinceDict();
-    NSArray *arr = [dict allKeys];
-    int a = 0;
-    for (NSNumber * pr in arr) {
-        if ([pr isEqualToNumber:province]) {
-            a ++;
-        }
-    }
-    if (a == 0) {
-        return false;
-    } else {
-        return true;
-    }
+    NSArray *array = @[@11,@12,@13,@14,@15,@21,
+                       @22,@23,@31,@32,@33,@34,
+                       @35,@36,@37,@41,@42,@43,
+                       @44,@45,@46,@50,@51,@52,
+                       @53,@54,@61,@62,@63,@64,
+                       @65,@71,@81,@82,@91
+                       ];
+    return [array containsObject:province];
 }
 
 /**
 省份信息
-*/
-NSDictionary *provinceDict(){
-    NSDictionary *pDict = @{
                             @11:@"北京市",//|110000，
                             @12:@"天津市",//|120000，
                             @13:@"河北省",//|130000，
@@ -371,8 +357,7 @@ NSDictionary *provinceDict(){
                             @82:@"澳门特别行政区（853)",//820000
                             @91:@"国外"
                             };
-    return pDict;
-}
+*/
 
 
 

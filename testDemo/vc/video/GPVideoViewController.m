@@ -103,27 +103,27 @@
     [device unlockForConfiguration];
     NSError *error;
     self.videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:device error:&error];
-    if (error) {
-        NSLog(@"error: %@",error);
-        self.session = nil;
-        return;
-    }
+//    if (error) {
+//        NSLog(@"error: %@",error);
+//        self.session = nil;
+//        return;
+//    }
     //输出设置。AVVideoCodecJPEG   输出jpeg格式图片
     self.imageOutput = [AVCaptureStillImageOutput new];
     NSDictionary *outputSettingDict = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG,AVVideoCodecKey, nil];
     [self.imageOutput setOutputSettings:outputSettingDict];
     
-    if ([self.session canAddInput:self.videoInput]) {
-        [self.session addInput:self.videoInput];
-    }else {
-        self.session = nil;
-    }
+//    if ([self.session canAddInput:self.videoInput]) {
+//        [self.session addInput:self.videoInput];
+//    }else {
+////        self.session = nil;
+//    }
     
-    if ([self.session canAddOutput:self.imageOutput]) {
-        [self.session addOutput:self.imageOutput];
-    }else {
-        self.session = nil;
-    }
+//    if ([self.session canAddOutput:self.imageOutput]) {
+//        [self.session addOutput:self.imageOutput];
+//    }else {
+//        self.session = nil;
+//    }
     
     //初始化预览图层
     self.preViewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
@@ -133,9 +133,9 @@
     self.preViewLayer.frame = CGRectMake(0, height, CGRectGetWidth(frame), CGRectGetWidth(frame) * 1.2);
     self.preViewLayer.masksToBounds = YES;
     [self.view.layer addSublayer:self.preViewLayer];
-    if (self.session) {
+//    if (self.session) {
         [self.session startRunning];
-    }
+//    }
 }
 //接下来搞一个获取设备方向的方法，再配置图片输出的时候需要使用
 - (AVCaptureVideoOrientation)avCaptureVideoOrientationForDeviceOriention:(UIDeviceOrientation)deviceOrientation {
