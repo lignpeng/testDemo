@@ -10,7 +10,7 @@
  播放gif格式图片
  两种方式：
  一种：webView
- 一种：imageView 
+ 一种：imageView
  
  */
 
