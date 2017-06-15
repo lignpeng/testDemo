@@ -27,6 +27,7 @@
 		1F3FAA491E0A26AF006CA2C6 /* CSNoviceGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3FAA481E0A26AF006CA2C6 /* CSNoviceGuideView.m */; };
 		1F40B3AD1DF809EB00E03910 /* GPTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B3AC1DF809EB00E03910 /* GPTimeViewController.m */; };
 		1F4537191E1CD08E009F5A89 /* ArrayEnumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4537181E1CD08E009F5A89 /* ArrayEnumViewController.m */; };
+		1F4565531E8FA68D00E869F9 /* GPSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4565521E8FA68D00E869F9 /* GPSMSViewController.m */; };
 		1F46D4811E3753D500C9C4FF /* DataBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D4771E3753D500C9C4FF /* DataBindingViewController.m */; };
 		1F46D4821E3753D500C9C4FF /* NSObject+RZDataBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D47A1E3753D500C9C4FF /* NSObject+RZDataBinding.m */; };
 		1F46D4831E3753D500C9C4FF /* RZDBCoalesce.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D47D1E3753D500C9C4FF /* RZDBCoalesce.m */; };
@@ -38,6 +39,7 @@
 		1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */; };
 		1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */; };
 		1F4DBC031E4C6A8A00374EA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */; };
+		1F4E8F861E8BA6A30001D3CC /* GPOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E8F851E8BA6A30001D3CC /* GPOtherViewController.m */; };
 		1F4EDEF21E8262BB008F00EF /* GPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4EDEF11E8262BB008F00EF /* GPTableViewController.m */; };
 		1F4EDEF71E826357008F00EF /* GPOperationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4EDEF51E826357008F00EF /* GPOperationTableViewCell.m */; };
 		1F4EDEF81E826357008F00EF /* GPOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4EDEF61E826357008F00EF /* GPOperationTableViewCell.xib */; };
@@ -78,6 +80,10 @@
 		1FFA1DDF1E12159000E02421 /* CSPriceTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DDB1E12159000E02421 /* CSPriceTag.m */; };
 		1FFA1DE01E12159000E02421 /* CSSeatMapElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DDD1E12159000E02421 /* CSSeatMapElement.m */; };
 		1FFA1DE41E12168C00E02421 /* CSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DE31E12168C00E02421 /* CSUtils.m */; };
+		1FFDB2E71E8A55B70011B2CE /* GPPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFDB2E61E8A55B70011B2CE /* GPPopViewController.m */; };
+		1FFDB2EB1E8A561A0011B2CE /* GPPopNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFDB2EA1E8A561A0011B2CE /* GPPopNavigationController.m */; };
+		1FFDB2EE1E8A56750011B2CE /* GPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFDB2ED1E8A56750011B2CE /* GPLoginViewController.m */; };
+		1FFDB2F11E8A5FF00011B2CE /* UIViewController+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFDB2F01E8A5FF00011B2CE /* UIViewController+Login.m */; };
 		1FFEBF4A1DEFD4FE00943705 /* GPExtensionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEBF481DEFD4FE00943705 /* GPExtensionTableViewCell.m */; };
 		1FFEBF4B1DEFD4FE00943705 /* GPExtensionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFEBF491DEFD4FE00943705 /* GPExtensionTableViewCell.xib */; };
 		EE14AA3E1DE5419D00E152AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14AA3D1DE5419D00E152AD /* main.m */; };
@@ -164,6 +170,8 @@
 		1F40B3AC1DF809EB00E03910 /* GPTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPTimeViewController.m; path = vc/time60/GPTimeViewController.m; sourceTree = "<group>"; };
 		1F4537171E1CD08E009F5A89 /* ArrayEnumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrayEnumViewController.h; path = vc/arrayEnum/ArrayEnumViewController.h; sourceTree = "<group>"; };
 		1F4537181E1CD08E009F5A89 /* ArrayEnumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArrayEnumViewController.m; path = vc/arrayEnum/ArrayEnumViewController.m; sourceTree = "<group>"; };
+		1F4565511E8FA68D00E869F9 /* GPSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSMSViewController.h; path = "vc/短信/GPSMSViewController.h"; sourceTree = "<group>"; };
+		1F4565521E8FA68D00E869F9 /* GPSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSMSViewController.m; path = "vc/短信/GPSMSViewController.m"; sourceTree = "<group>"; };
 		1F46D4761E3753D500C9C4FF /* DataBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBindingViewController.h; path = vc/dataBinding/DataBindingViewController.h; sourceTree = "<group>"; };
 		1F46D4771E3753D500C9C4FF /* DataBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBindingViewController.m; path = vc/dataBinding/DataBindingViewController.m; sourceTree = "<group>"; };
 		1F46D4791E3753D500C9C4FF /* NSObject+RZDataBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RZDataBinding.h"; sourceTree = "<group>"; };
@@ -185,6 +193,8 @@
 		1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1F4E8F841E8BA6A30001D3CC /* GPOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOtherViewController.h; sourceTree = "<group>"; };
+		1F4E8F851E8BA6A30001D3CC /* GPOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOtherViewController.m; sourceTree = "<group>"; };
 		1F4EDEF01E8262BB008F00EF /* GPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPTableViewController.h; path = "vc/tableview操作/GPTableViewController.h"; sourceTree = "<group>"; };
 		1F4EDEF11E8262BB008F00EF /* GPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPTableViewController.m; path = "vc/tableview操作/GPTableViewController.m"; sourceTree = "<group>"; };
 		1F4EDEF41E826357008F00EF /* GPOperationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPOperationTableViewCell.h; path = "vc/tableview操作/GPOperationTableViewCell.h"; sourceTree = "<group>"; };
@@ -263,6 +273,14 @@
 		1FFA1DE31E12168C00E02421 /* CSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSUtils.m; path = vc/selectSeat/CSUtils.m; sourceTree = "<group>"; };
 		1FFA1DE51E12172200E02421 /* CSCheckInModuleMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCheckInModuleMacros.h; path = vc/selectSeat/CSCheckInModuleMacros.h; sourceTree = "<group>"; };
 		1FFA1DE61E1217A200E02421 /* CSConfigMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSConfigMacros.h; path = vc/selectSeat/CSConfigMacros.h; sourceTree = "<group>"; };
+		1FFDB2E51E8A55B70011B2CE /* GPPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPPopViewController.h; path = "vc/弹出顺序/GPPopViewController.h"; sourceTree = "<group>"; };
+		1FFDB2E61E8A55B70011B2CE /* GPPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPPopViewController.m; path = "vc/弹出顺序/GPPopViewController.m"; sourceTree = "<group>"; };
+		1FFDB2E91E8A561A0011B2CE /* GPPopNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPopNavigationController.h; sourceTree = "<group>"; };
+		1FFDB2EA1E8A561A0011B2CE /* GPPopNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPopNavigationController.m; sourceTree = "<group>"; };
+		1FFDB2EC1E8A56750011B2CE /* GPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLoginViewController.h; sourceTree = "<group>"; };
+		1FFDB2ED1E8A56750011B2CE /* GPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLoginViewController.m; sourceTree = "<group>"; };
+		1FFDB2EF1E8A5FF00011B2CE /* UIViewController+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Login.h"; sourceTree = "<group>"; };
+		1FFDB2F01E8A5FF00011B2CE /* UIViewController+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Login.m"; sourceTree = "<group>"; };
 		1FFEBF471DEFD4FE00943705 /* GPExtensionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPExtensionTableViewCell.h; path = vc/extension/GPExtensionTableViewCell.h; sourceTree = "<group>"; };
 		1FFEBF481DEFD4FE00943705 /* GPExtensionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPExtensionTableViewCell.m; path = vc/extension/GPExtensionTableViewCell.m; sourceTree = "<group>"; };
 		1FFEBF491DEFD4FE00943705 /* GPExtensionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GPExtensionTableViewCell.xib; path = vc/extension/GPExtensionTableViewCell.xib; sourceTree = "<group>"; };
@@ -420,6 +438,15 @@
 				1F4537181E1CD08E009F5A89 /* ArrayEnumViewController.m */,
 			);
 			name = "数组枚举";
+			sourceTree = "<group>";
+		};
+		1F4565541E8FA69300E869F9 /* 短信 */ = {
+			isa = PBXGroup;
+			children = (
+				1F4565511E8FA68D00E869F9 /* GPSMSViewController.h */,
+				1F4565521E8FA68D00E869F9 /* GPSMSViewController.m */,
+			);
+			name = "短信";
 			sourceTree = "<group>";
 		};
 		1F46D4781E3753D500C9C4FF /* RZDataBinding */ = {
@@ -679,6 +706,23 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		1FFDB2E81E8A55BC0011B2CE /* viewController弹出 */ = {
+			isa = PBXGroup;
+			children = (
+				1FFDB2E51E8A55B70011B2CE /* GPPopViewController.h */,
+				1FFDB2E61E8A55B70011B2CE /* GPPopViewController.m */,
+				1FFDB2E91E8A561A0011B2CE /* GPPopNavigationController.h */,
+				1FFDB2EA1E8A561A0011B2CE /* GPPopNavigationController.m */,
+				1FFDB2EC1E8A56750011B2CE /* GPLoginViewController.h */,
+				1FFDB2ED1E8A56750011B2CE /* GPLoginViewController.m */,
+				1FFDB2EF1E8A5FF00011B2CE /* UIViewController+Login.h */,
+				1FFDB2F01E8A5FF00011B2CE /* UIViewController+Login.m */,
+				1F4E8F841E8BA6A30001D3CC /* GPOtherViewController.h */,
+				1F4E8F851E8BA6A30001D3CC /* GPOtherViewController.m */,
+			);
+			name = "viewController弹出";
+			sourceTree = "<group>";
+		};
 		1FFEBF461DEFD4C200943705 /* extension扩展 */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,6 +820,8 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1F4565541E8FA69300E869F9 /* 短信 */,
+				1FFDB2E81E8A55BC0011B2CE /* viewController弹出 */,
 				1F6280DF1E88F6DD00E0B151 /* gif */,
 				1F6E8EAB1E84B58300D15351 /* 身份证验证 */,
 				1F4EDEF31E8262C4008F00EF /* tableView操作 */,
@@ -1008,16 +1054,21 @@
 				1F40B3AD1DF809EB00E03910 /* GPTimeViewController.m in Sources */,
 				1F47F8D51E553E740056F326 /* AttributeLabelViewController.m in Sources */,
 				1F09E57E1DEECAAB00B34910 /* GPExtensionViewController.m in Sources */,
+				1F4E8F861E8BA6A30001D3CC /* GPOtherViewController.m in Sources */,
 				1FFA1DB51E12103000E02421 /* SubCollectionViewCell.m in Sources */,
 				1F46D4811E3753D500C9C4FF /* DataBindingViewController.m in Sources */,
 				1F3892161E35D742005AA26B /* BaseViewController.m in Sources */,
 				1F50D67F1E13449400C51A57 /* NSArray+CSSafeAccess.m in Sources */,
 				1F46D4881E3758DC00C9C4FF /* Person.m in Sources */,
+				1FFDB2E71E8A55B70011B2CE /* GPPopViewController.m in Sources */,
 				1F5394C71E80CBE0009D6B17 /* GPVideoViewController.m in Sources */,
 				1FFA1DE01E12159000E02421 /* CSSeatMapElement.m in Sources */,
 				1F46D4831E3753D500C9C4FF /* RZDBCoalesce.m in Sources */,
+				1FFDB2EE1E8A56750011B2CE /* GPLoginViewController.m in Sources */,
 				1F5699B01DF66471009FA98B /* MBProgressHUD.m in Sources */,
 				1FFA1DDF1E12159000E02421 /* CSPriceTag.m in Sources */,
+				1FFDB2EB1E8A561A0011B2CE /* GPPopNavigationController.m in Sources */,
+				1F4565531E8FA68D00E869F9 /* GPSMSViewController.m in Sources */,
 				1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */,
 				1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */,
 				1F4537191E1CD08E009F5A89 /* ArrayEnumViewController.m in Sources */,
@@ -1046,6 +1097,7 @@
 				1F4EDEF21E8262BB008F00EF /* GPTableViewController.m in Sources */,
 				1FFA1DCF1E12154C00E02421 /* JSONModel.m in Sources */,
 				EE14AA411DE5419D00E152AD /* AppDelegate.m in Sources */,
+				1FFDB2F11E8A5FF00011B2CE /* UIViewController+Login.m in Sources */,
 				EE14AA3E1DE5419D00E152AD /* main.m in Sources */,
 				EE764F1C1DEBC95700BF4230 /* IDViewController.m in Sources */,
 				1F598D081DF5691B00FC50BC /* LoadingViewController.m in Sources */,
