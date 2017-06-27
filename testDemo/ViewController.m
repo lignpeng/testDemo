@@ -57,7 +57,8 @@
                  @"DataBindingViewController",@"AlipayViewController",
                  @"AttributeLabelViewController",@"GPKeyBoardViewController",
                  @"GPVideoViewController",@"GPTableViewController",
-                 @"GPGIFViewController",@"GPPopViewController"];
+                 @"GPGIFViewController",@"GPPopViewController",
+                 @"ModelViewController",@"GGXibViewController"];
     return _vcArray; 
 }
 
@@ -70,7 +71,8 @@
                       @"选座排座",@"数组枚举",
                       @"搜索bar",@"微博分享",@"数据绑定：RZDataBinding",
                       @"支付宝网页拦截native支付",@"富文本",@"键盘弹起",@"摄像",
-                      @"tableView操作",@"播放gif",@"弹出viewController"];
+                      @"tableView操作",@"播放gif",@"弹出viewController",
+                      @"对象转模型",@"xib使用"];
     return _vcTitleArray;
 }
 
@@ -101,6 +103,7 @@
 
 - (void)guideAction {
 //    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
+    NSLog(@"***-------------****");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

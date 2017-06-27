@@ -32,6 +32,14 @@
     [super tearDown];
 }
 
+- (void)testxx {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.tables.staticTexts[@"对象转模型"] tap];
+    [app.buttons[@"show"] tap];
+    
+}
+
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.

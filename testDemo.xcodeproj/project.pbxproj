@@ -22,6 +22,12 @@
 		1F16CA4C1E7631CB0038D774 /* GPKeyBoardHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F16CA461E7631CB0038D774 /* GPKeyBoardHeaderTableView.xib */; };
 		1F16CA4D1E7631CB0038D774 /* GPKeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA481E7631CB0038D774 /* GPKeyBoardViewController.m */; };
 		1F16CA501E7633110038D774 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA4F1E7633110038D774 /* Model.m */; };
+		1F2CF67F1EF3753900093C15 /* ModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF67E1EF3753900093C15 /* ModelViewController.m */; };
+		1F2CF6831EF37A5E00093C15 /* CSEMemberInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6821EF37A5E00093C15 /* CSEMemberInfoModel.m */; };
+		1F2CF6861EF37BCE00093C15 /* UnmenberToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6851EF37BCE00093C15 /* UnmenberToken.m */; };
+		1F2CF68C1EF386BF00093C15 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6891EF386BF00093C15 /* NSObject+YYModel.m */; };
+		1F2CF68D1EF386BF00093C15 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF68B1EF386BF00093C15 /* YYClassInfo.m */; };
+		1F2CF6951EF7638A00093C15 /* myTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6941EF7638A00093C15 /* myTests.m */; };
 		1F3892121E35D594005AA26B /* SinaWBSendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38920F1E35D594005AA26B /* SinaWBSendingViewController.m */; };
 		1F3892161E35D742005AA26B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3892151E35D742005AA26B /* BaseViewController.m */; };
 		1F3FAA491E0A26AF006CA2C6 /* CSNoviceGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3FAA481E0A26AF006CA2C6 /* CSNoviceGuideView.m */; };
@@ -56,13 +62,13 @@
 		1F598D081DF5691B00FC50BC /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F598D071DF5691B00FC50BC /* LoadingViewController.m */; };
 		1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */; };
 		1F6280E11E8941B700E0B151 /* gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F6280E01E8941B700E0B151 /* gif */; };
-		1F671A5C1E7A1A5A0022AA4A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */; };
-		1F671A601E7A1A5A0022AA4A /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F671A5F1E7A1A5A0022AA4A /* TodayViewController.m */; };
-		1F671A671E7A1A5A0022AA4A /* MyWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F671A5A1E7A1A5A0022AA4A /* MyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E8EAD1E84B97000D15351 /* GPTools.m */; };
 		1FAA873D1E25BE9700162DA2 /* searchBarCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAA873C1E25BE9700162DA2 /* searchBarCustomView.m */; };
 		1FAA87431E25D8E400162DA2 /* BaseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAA87421E25D8E400162DA2 /* BaseSearchViewController.m */; };
 		1FAA87491E261E5B00162DA2 /* BuildListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAA87481E261E5B00162DA2 /* BuildListViewController.m */; };
+		1FB412781EFB4B260040C840 /* GGXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB412761EFB4B260040C840 /* GGXibViewController.m */; };
+		1FB412791EFB4B260040C840 /* GGXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB412771EFB4B260040C840 /* GGXibViewController.xib */; };
+		1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4127C1EFB532C0040C840 /* HexColor.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
 		1FFA1DB51E12103000E02421 /* SubCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DB01E12103000E02421 /* SubCollectionViewCell.m */; };
@@ -102,12 +108,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1F671A651E7A1A5A0022AA4A /* PBXContainerItemProxy */ = {
+		1F2CF6971EF7638A00093C15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EE14AA311DE5419D00E152AD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1F671A591E7A1A5A0022AA4A;
-			remoteInfo = MyWidget;
+			remoteGlobalIDString = EE14AA381DE5419D00E152AD;
+			remoteInfo = testDemo;
 		};
 		EE14AA531DE5419D00E152AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -132,7 +138,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1F671A671E7A1A5A0022AA4A /* MyWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +165,19 @@
 		1F16CA481E7631CB0038D774 /* GPKeyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeyBoardViewController.m; sourceTree = "<group>"; };
 		1F16CA4E1E7633110038D774 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		1F16CA4F1E7633110038D774 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		1F2CF67D1EF3753900093C15 /* ModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelViewController.h; path = "vc/对象转模型/ModelViewController.h"; sourceTree = "<group>"; };
+		1F2CF67E1EF3753900093C15 /* ModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelViewController.m; path = "vc/对象转模型/ModelViewController.m"; sourceTree = "<group>"; };
+		1F2CF6811EF37A5E00093C15 /* CSEMemberInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSEMemberInfoModel.h; path = "vc/对象转模型/CSEMemberInfoModel.h"; sourceTree = "<group>"; };
+		1F2CF6821EF37A5E00093C15 /* CSEMemberInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSEMemberInfoModel.m; path = "vc/对象转模型/CSEMemberInfoModel.m"; sourceTree = "<group>"; };
+		1F2CF6841EF37BCE00093C15 /* UnmenberToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnmenberToken.h; path = "vc/对象转模型/UnmenberToken.h"; sourceTree = "<group>"; };
+		1F2CF6851EF37BCE00093C15 /* UnmenberToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnmenberToken.m; path = "vc/对象转模型/UnmenberToken.m"; sourceTree = "<group>"; };
+		1F2CF6881EF386BF00093C15 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		1F2CF6891EF386BF00093C15 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		1F2CF68A1EF386BF00093C15 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		1F2CF68B1EF386BF00093C15 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		1F2CF6921EF7638A00093C15 /* myTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2CF6941EF7638A00093C15 /* myTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myTests.m; sourceTree = "<group>"; };
+		1F2CF6961EF7638A00093C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F38920E1E35D594005AA26B /* SinaWBSendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWBSendingViewController.h; sourceTree = "<group>"; };
 		1F38920F1E35D594005AA26B /* SinaWBSendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWBSendingViewController.m; sourceTree = "<group>"; };
 		1F3892141E35D742005AA26B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -225,11 +243,7 @@
 		1F6280DC1E88F6CA00E0B151 /* GPGIFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGIFViewController.h; path = vc/gif/GPGIFViewController.h; sourceTree = "<group>"; };
 		1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGIFViewController.m; path = vc/gif/GPGIFViewController.m; sourceTree = "<group>"; };
 		1F6280E01E8941B700E0B151 /* gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gif; sourceTree = "<group>"; };
-		1F671A5A1E7A1A5A0022AA4A /* MyWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		1F671A5E1E7A1A5A0022AA4A /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		1F671A5F1E7A1A5A0022AA4A /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		1F671A641E7A1A5A0022AA4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6E8EAC1E84B97000D15351 /* GPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPTools.h; path = tools/GPTools.h; sourceTree = "<group>"; };
 		1F6E8EAD1E84B97000D15351 /* GPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPTools.m; path = tools/GPTools.m; sourceTree = "<group>"; };
 		1FAA873B1E25BE9700162DA2 /* searchBarCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = searchBarCustomView.h; path = vc/searchBar/searchBarCustomView.h; sourceTree = "<group>"; };
@@ -238,6 +252,11 @@
 		1FAA87421E25D8E400162DA2 /* BaseSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseSearchViewController.m; path = vc/searchBar/BaseSearchViewController.m; sourceTree = "<group>"; };
 		1FAA87471E261E5B00162DA2 /* BuildListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuildListViewController.h; path = vc/searchBar/BuildListViewController.h; sourceTree = "<group>"; };
 		1FAA87481E261E5B00162DA2 /* BuildListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuildListViewController.m; path = vc/searchBar/BuildListViewController.m; sourceTree = "<group>"; };
+		1FB412751EFB4B260040C840 /* GGXibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGXibViewController.h; path = vc/xib/GGXibViewController.h; sourceTree = "<group>"; };
+		1FB412761EFB4B260040C840 /* GGXibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGXibViewController.m; path = vc/xib/GGXibViewController.m; sourceTree = "<group>"; };
+		1FB412771EFB4B260040C840 /* GGXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GGXibViewController.xib; path = vc/xib/GGXibViewController.xib; sourceTree = "<group>"; };
+		1FB4127B1EFB532C0040C840 /* HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HexColor.h; path = tools/HexColor.h; sourceTree = "<group>"; };
+		1FB4127C1EFB532C0040C840 /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = tools/HexColor.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
 		1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSelectSeatViewController.m; path = vc/selectSeat/GPSelectSeatViewController.m; sourceTree = "<group>"; };
 		1FFA1DAD1E12103000E02421 /* PagingCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagingCollectionViewLayout.h; path = vc/selectSeat/PagingCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -311,11 +330,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F671A571E7A1A5A0022AA4A /* Frameworks */ = {
+		1F2CF68F1EF7638A00093C15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F671A5C1E7A1A5A0022AA4A /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +416,40 @@
 			);
 			name = "键盘";
 			path = "vc/键盘";
+			sourceTree = "<group>";
+		};
+		1F2CF6801EF3754000093C15 /* 对象转模型 */ = {
+			isa = PBXGroup;
+			children = (
+				1F2CF6871EF386BF00093C15 /* YYModel */,
+				1F2CF67D1EF3753900093C15 /* ModelViewController.h */,
+				1F2CF67E1EF3753900093C15 /* ModelViewController.m */,
+				1F2CF6811EF37A5E00093C15 /* CSEMemberInfoModel.h */,
+				1F2CF6841EF37BCE00093C15 /* UnmenberToken.h */,
+				1F2CF6851EF37BCE00093C15 /* UnmenberToken.m */,
+				1F2CF6821EF37A5E00093C15 /* CSEMemberInfoModel.m */,
+			);
+			name = "对象转模型";
+			sourceTree = "<group>";
+		};
+		1F2CF6871EF386BF00093C15 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				1F2CF6881EF386BF00093C15 /* NSObject+YYModel.h */,
+				1F2CF6891EF386BF00093C15 /* NSObject+YYModel.m */,
+				1F2CF68A1EF386BF00093C15 /* YYClassInfo.h */,
+				1F2CF68B1EF386BF00093C15 /* YYClassInfo.m */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		1F2CF6931EF7638A00093C15 /* myTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F2CF6941EF7638A00093C15 /* myTests.m */,
+				1F2CF6961EF7638A00093C15 /* Info.plist */,
+			);
+			path = myTests;
 			sourceTree = "<group>";
 		};
 		1F38920B1E35D594005AA26B /* 微博分享 */ = {
@@ -584,16 +636,6 @@
 			name = gif;
 			sourceTree = "<group>";
 		};
-		1F671A5D1E7A1A5A0022AA4A /* MyWidget */ = {
-			isa = PBXGroup;
-			children = (
-				1F671A5E1E7A1A5A0022AA4A /* TodayViewController.h */,
-				1F671A5F1E7A1A5A0022AA4A /* TodayViewController.m */,
-				1F671A641E7A1A5A0022AA4A /* Info.plist */,
-			);
-			path = MyWidget;
-			sourceTree = "<group>";
-		};
 		1F6E8EAB1E84B58300D15351 /* 身份证验证 */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,10 +648,22 @@
 		1F6E8EAF1E84B97700D15351 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				1FB4127B1EFB532C0040C840 /* HexColor.h */,
+				1FB4127C1EFB532C0040C840 /* HexColor.m */,
 				1F6E8EAC1E84B97000D15351 /* GPTools.h */,
 				1F6E8EAD1E84B97000D15351 /* GPTools.m */,
 			);
 			name = "工具";
+			sourceTree = "<group>";
+		};
+		1FB4127A1EFB4B2D0040C840 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				1FB412751EFB4B260040C840 /* GGXibViewController.h */,
+				1FB412761EFB4B260040C840 /* GGXibViewController.m */,
+				1FB412771EFB4B260040C840 /* GGXibViewController.xib */,
+			);
+			name = xib;
 			sourceTree = "<group>";
 		};
 		1FFA1DAC1E12098D00E02421 /* 选座 */ = {
@@ -741,7 +795,7 @@
 				EE14AA3B1DE5419D00E152AD /* testDemo */,
 				EE14AA551DE5419D00E152AD /* testDemoTests */,
 				EE14AA601DE5419E00E152AD /* testDemoUITests */,
-				1F671A5D1E7A1A5A0022AA4A /* MyWidget */,
+				1F2CF6931EF7638A00093C15 /* myTests */,
 				EE14AA3A1DE5419D00E152AD /* Products */,
 				1F0362431E0D0D2400BD804A /* Frameworks */,
 			);
@@ -753,7 +807,7 @@
 				EE14AA391DE5419D00E152AD /* testDemo.app */,
 				EE14AA521DE5419D00E152AD /* testDemoTests.xctest */,
 				EE14AA5D1DE5419E00E152AD /* testDemoUITests.xctest */,
-				1F671A5A1E7A1A5A0022AA4A /* MyWidget.appex */,
+				1F2CF6921EF7638A00093C15 /* myTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -820,6 +874,8 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FB4127A1EFB4B2D0040C840 /* xib */,
+				1F2CF6801EF3754000093C15 /* 对象转模型 */,
 				1F4565541E8FA69300E869F9 /* 短信 */,
 				1FFDB2E81E8A55BC0011B2CE /* viewController弹出 */,
 				1F6280DF1E88F6DD00E0B151 /* gif */,
@@ -848,22 +904,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1F671A591E7A1A5A0022AA4A /* MyWidget */ = {
+		1F2CF6911EF7638A00093C15 /* myTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F671A6A1E7A1A5A0022AA4A /* Build configuration list for PBXNativeTarget "MyWidget" */;
+			buildConfigurationList = 1F2CF69B1EF7638A00093C15 /* Build configuration list for PBXNativeTarget "myTests" */;
 			buildPhases = (
-				1F671A561E7A1A5A0022AA4A /* Sources */,
-				1F671A571E7A1A5A0022AA4A /* Frameworks */,
-				1F671A581E7A1A5A0022AA4A /* Resources */,
+				1F2CF68E1EF7638A00093C15 /* Sources */,
+				1F2CF68F1EF7638A00093C15 /* Frameworks */,
+				1F2CF6901EF7638A00093C15 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1F2CF6981EF7638A00093C15 /* PBXTargetDependency */,
 			);
-			name = MyWidget;
-			productName = MyWidget;
-			productReference = 1F671A5A1E7A1A5A0022AA4A /* MyWidget.appex */;
-			productType = "com.apple.product-type.app-extension";
+			name = myTests;
+			productName = myTests;
+			productReference = 1F2CF6921EF7638A00093C15 /* myTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		EE14AA381DE5419D00E152AD /* testDemo */ = {
 			isa = PBXNativeTarget;
@@ -877,7 +934,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1F671A661E7A1A5A0022AA4A /* PBXTargetDependency */,
 			);
 			name = testDemo;
 			productName = testDemo;
@@ -929,15 +985,10 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = genpeng;
 				TargetAttributes = {
-					1F671A591E7A1A5A0022AA4A = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 5XY856E7G8;
+					1F2CF6911EF7638A00093C15 = {
+						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
+						TestTargetID = EE14AA381DE5419D00E152AD;
 					};
 					EE14AA381DE5419D00E152AD = {
 						CreatedOnToolsVersion = 8.1;
@@ -977,13 +1028,13 @@
 				EE14AA381DE5419D00E152AD /* testDemo */,
 				EE14AA511DE5419D00E152AD /* testDemoTests */,
 				EE14AA5C1DE5419E00E152AD /* testDemoUITests */,
-				1F671A591E7A1A5A0022AA4A /* MyWidget */,
+				1F2CF6911EF7638A00093C15 /* myTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1F671A581E7A1A5A0022AA4A /* Resources */ = {
+		1F2CF6901EF7638A00093C15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -996,6 +1047,7 @@
 			files = (
 				1FFEBF4B1DEFD4FE00943705 /* GPExtensionTableViewCell.xib in Resources */,
 				1F4EDEF81E826357008F00EF /* GPOperationTableViewCell.xib in Resources */,
+				1FB412791EFB4B260040C840 /* GGXibViewController.xib in Resources */,
 				EE516D661DE80CFF001F9010 /* png in Resources */,
 				EE14AA4C1DE5419D00E152AD /* LaunchScreen.storyboard in Resources */,
 				1FFA1DB91E1213BC00E02421 /* data.json in Resources */,
@@ -1026,11 +1078,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1F671A561E7A1A5A0022AA4A /* Sources */ = {
+		1F2CF68E1EF7638A00093C15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F671A601E7A1A5A0022AA4A /* TodayViewController.m in Sources */,
+				1F2CF6951EF7638A00093C15 /* myTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,6 +1105,8 @@
 				1F16CA501E7633110038D774 /* Model.m in Sources */,
 				1F40B3AD1DF809EB00E03910 /* GPTimeViewController.m in Sources */,
 				1F47F8D51E553E740056F326 /* AttributeLabelViewController.m in Sources */,
+				1F2CF6861EF37BCE00093C15 /* UnmenberToken.m in Sources */,
+				1F2CF68D1EF386BF00093C15 /* YYClassInfo.m in Sources */,
 				1F09E57E1DEECAAB00B34910 /* GPExtensionViewController.m in Sources */,
 				1F4E8F861E8BA6A30001D3CC /* GPOtherViewController.m in Sources */,
 				1FFA1DB51E12103000E02421 /* SubCollectionViewCell.m in Sources */,
@@ -1065,11 +1119,14 @@
 				1FFA1DE01E12159000E02421 /* CSSeatMapElement.m in Sources */,
 				1F46D4831E3753D500C9C4FF /* RZDBCoalesce.m in Sources */,
 				1FFDB2EE1E8A56750011B2CE /* GPLoginViewController.m in Sources */,
+				1F2CF6831EF37A5E00093C15 /* CSEMemberInfoModel.m in Sources */,
 				1F5699B01DF66471009FA98B /* MBProgressHUD.m in Sources */,
 				1FFA1DDF1E12159000E02421 /* CSPriceTag.m in Sources */,
 				1FFDB2EB1E8A561A0011B2CE /* GPPopNavigationController.m in Sources */,
 				1F4565531E8FA68D00E869F9 /* GPSMSViewController.m in Sources */,
 				1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */,
+				1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */,
+				1F2CF67F1EF3753900093C15 /* ModelViewController.m in Sources */,
 				1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */,
 				1F4537191E1CD08E009F5A89 /* ArrayEnumViewController.m in Sources */,
 				1FFA1DD11E12154C00E02421 /* JSONModelError.m in Sources */,
@@ -1082,6 +1139,7 @@
 				1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */,
 				1F4DBBF81E4C616600374EA4 /* AlipayViewController.m in Sources */,
 				1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */,
+				1FB412781EFB4B260040C840 /* GGXibViewController.m in Sources */,
 				1FFA1DDE1E12159000E02421 /* CSCabinBoundary.m in Sources */,
 				1F46D4841E3753D500C9C4FF /* RZDBTransforms.m in Sources */,
 				1FFA1DD31E12154C00E02421 /* JSONHTTPClient.m in Sources */,
@@ -1101,6 +1159,7 @@
 				EE14AA3E1DE5419D00E152AD /* main.m in Sources */,
 				EE764F1C1DEBC95700BF4230 /* IDViewController.m in Sources */,
 				1F598D081DF5691B00FC50BC /* LoadingViewController.m in Sources */,
+				1F2CF68C1EF386BF00093C15 /* NSObject+YYModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1123,10 +1182,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1F671A661E7A1A5A0022AA4A /* PBXTargetDependency */ = {
+		1F2CF6981EF7638A00093C15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1F671A591E7A1A5A0022AA4A /* MyWidget */;
-			targetProxy = 1F671A651E7A1A5A0022AA4A /* PBXContainerItemProxy */;
+			target = EE14AA381DE5419D00E152AD /* testDemo */;
+			targetProxy = 1F2CF6971EF7638A00093C15 /* PBXContainerItemProxy */;
 		};
 		EE14AA541DE5419D00E152AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1160,33 +1219,33 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1F671A681E7A1A5A0022AA4A /* Debug */ = {
+		1F2CF6991EF7638A00093C15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = MyWidget/MyWidget.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5XY856E7G8;
-				INFOPLIST_FILE = MyWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs.testDemo.Mycode;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = myTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gaby.myTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testDemo.app/testDemo";
 			};
 			name = Debug;
 		};
-		1F671A691E7A1A5A0022AA4A /* Release */ = {
+		1F2CF69A1EF7638A00093C15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = MyWidget/MyWidget.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5XY856E7G8;
-				INFOPLIST_FILE = MyWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs.testDemo.Mycode;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = myTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gaby.myTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testDemo.app/testDemo";
 			};
 			name = Release;
 		};
@@ -1296,6 +1355,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cs.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1305,7 +1365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = testDemo/testDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5XY856E7G8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo/GT.embeddedframework",
@@ -1315,6 +1375,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cs.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -1367,11 +1428,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F671A6A1E7A1A5A0022AA4A /* Build configuration list for PBXNativeTarget "MyWidget" */ = {
+		1F2CF69B1EF7638A00093C15 /* Build configuration list for PBXNativeTarget "myTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F671A681E7A1A5A0022AA4A /* Debug */,
-				1F671A691E7A1A5A0022AA4A /* Release */,
+				1F2CF6991EF7638A00093C15 /* Debug */,
+				1F2CF69A1EF7638A00093C15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
