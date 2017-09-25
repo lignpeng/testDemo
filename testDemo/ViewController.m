@@ -115,9 +115,12 @@
 //    [CSAirNameListView airNameListView:self.vcTitleArray complish:^(NSInteger index, NSString *name) {
 //        NSLog(@"index = %ld name = %@",(long)index,name);
 //    }];
-    
-    [CSAirNameListView airNameListView:self.vcTitleArray selectedIndex:5 complish:^(NSInteger index, NSString *name) {
+    __weak typeof(self) weakSelf = self;
+    [CSAirNameListView airNameListView:self.vcTitleArray selectedIndex:0 complish:^(NSInteger index, NSString *name) {
         NSLog(@"index = %ld name = %@",(long)index,name);
+        UIViewController *vc = [NSClassFromString(weakSelf.vcArray[index]) new];
+        vc.title = weakSelf.vcTitleArray[index];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
     NSLog(@"***-------------***");
 }

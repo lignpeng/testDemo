@@ -85,7 +85,9 @@
     //订单号
     NSString *orderNoString = @"xxxxxxx";
     self.orderInfoLabel = ({
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(frame), 45)];
+        //获取导航栏和状态栏的高度
+        CGRect rect = [[UIApplication sharedApplication] statusBarFrame];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(rect) + CGRectGetHeight(self.navigationController.navigationBar.frame), CGRectGetWidth(frame), 45)];
         label.textColor = [UIColor whiteColor];
         label.font = [UIFont systemFontOfSize:14.0];
         label.numberOfLines = 1;

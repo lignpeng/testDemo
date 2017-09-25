@@ -24,7 +24,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     CGRect frame = [UIScreen mainScreen].bounds;
     CGFloat comm = 16;
-    CGRect tframe = (CGRect){comm,64 + comm ,CGRectGetWidth(frame) - comm * 2,comm * 2};
+    //获取导航栏和状态栏的高度
+    CGRect rect = [[UIApplication sharedApplication] statusBarFrame];
+    CGRect tframe = (CGRect){comm,CGRectGetHeight(rect) + CGRectGetHeight(self.navigationController.navigationBar.frame) + comm ,CGRectGetWidth(frame) - comm * 2,comm * 2};
     self.textField = ({
         UITextField *textField = [[UITextField alloc] initWithFrame:tframe];
         textField.font = [UIFont systemFontOfSize:14];
@@ -48,59 +50,22 @@
     btn.clipsToBounds = YES;
 }
 
-
-- (void)string {
-//    NSInteger statusCode = 200;
-//    NSString *str = @"服务器繁忙，请您稍后再试";
-////    NSString *userInfoValue = [str stringByAppendingFormat:@"[00%ld]",(long)statusCode];
-//    NSString *ss = [Return_Message_common stringByAppendingFormat:@"[00%d]",statusCode];
-//    NSLog(@"%@", userInfoValue);
-}
-
 - (BOOL)isPureNumbersWithString:(NSString *)string {
     string = [string stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
     return string.length <= 0;
 }
 
 - (void)action {
-    [GPTools ShowAlert:@""];
-    NSString *idStr = @"53262819820314783X";
-//    BOOL flage = [self CheckIsIdentityCard:idStr];
+//    NSString *idStr = @"53262819820314783X";
+    NSString *idStr = self.textField.text;
     BOOL flage = [self checkIDCard:idStr];
-    NSLog(@"正确的id：%d",flage);
-    
-    flage = [self isPureNumbersWithString:idStr];
-    NSLog(@"纯数字：%d",flage);
-    idStr = @"532628198203147830";
-    flage = [self isPureNumbersWithString:idStr];
-    
-    NSLog(@"纯数字：%d",flage);
-    
-    
-//    flage = [self CheckIsIdentityCard:idStr];
-    flage = [self checkIDCard:idStr];
-    NSLog(@"不正确的id：%d",flage);
-    
-    NSLog(@"============================");
-    idStr = @"53262819820314783X";
-    
-//    flage = [self isIdCard:idStr];
-    flage = [self checkIDCard:idStr];
-    
-    NSLog(@"正确id：%d",flage);
-    idStr = @"532628198203147830";
-//    flage = [self isIdCard:idStr];
-    flage = [self checkIDCard:idStr];
-    
-    NSLog(@"不正确id：%d",flage);    
-    
-    
+    NSLog(@"证件号码：%@ %@",idStr,flage?@"正确":@"不正确");
+    [GPTools ShowAlert:[NSString stringWithFormat:@"证件号码：\n%@\n%@",idStr,flage?@"正确":@"不正确"]];
 }
 
 #pragma mark  - xxxx
 //身份证号
-
-//--------原先校验方式--------
+//--------1、身份证校验：校验不精确------
 - (BOOL)CheckIsIdentityCard: (NSString *)identityCard {
     //判断是否为空
     if (identityCard==nil||identityCard.length <= 0) {
@@ -152,6 +117,7 @@
     return NO;
 }
 
+//---2、身份证校验： 校验不精确 ---
 -(BOOL)isIdCard:(NSString *)identityCard{
     if (identityCard.length != 18) {
         return FALSE;
@@ -193,24 +159,7 @@
     return YES;
 }
 
-//-(BOOL)isPureIntWithString:(NSString *)str{
-//
-//    for (int i=0; i<str.length; i++) {
-//        unichar c = [str characterAtIndex:i];
-//        if (c<'0' || c > '9') {
-//            return NO;
-//        }
-//    }
-//    return YES;
-//}
-
-//-------新的校验方式---------
-/**
- 校验身份证
- 
- @param idString 身份证
- @return true 校验通过 false 校验失败
- */
+//-------3、身份证校验：精确---------
 - (BOOL)checkIDCard:(NSString *)idString{
     //判断位数
     if (idString.length != 15 && idString.length != 18) {

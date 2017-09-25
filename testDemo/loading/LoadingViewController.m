@@ -42,8 +42,8 @@
     CGFloat margin = 10;
     CGFloat wdith = (CGRectGetWidth(frame) - 4 * margin)/3;
     CGFloat height = 42;
-    
-    CGRect bframe = CGRectMake(margin, margin + 64, wdith, height);
+    CGRect rect = [[UIApplication sharedApplication] statusBarFrame];
+    CGRect bframe = CGRectMake(margin, margin + CGRectGetHeight(rect) + CGRectGetHeight(self.navigationController.navigationBar.frame), wdith, height);
     UIButton *showBtn = ({
         UIButton *btn = [[UIButton alloc] initWithFrame:bframe];
         btn.backgroundColor = [UIColor blueColor];
