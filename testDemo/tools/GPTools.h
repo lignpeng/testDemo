@@ -15,6 +15,10 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 
 @interface GPTools : NSObject
 
+//获取当前控制器
++ (UIViewController *)getCurrentVC;
++ (UIViewController *)getCurrentViewController;
+
 + (void)ShowAlert:(NSString *)message;
 + (void)ShowAlertView:(NSString *)message alertHandler:(AlertViewHandler)handle;
 + (void)ShowAlertViewWithoutCancelAction:(NSString *)title message:(NSString *)message handler:(AlertViewHandler) handle;

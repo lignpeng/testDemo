@@ -11,15 +11,13 @@
 #import "GPExtensionViewController.h"
 #import "CSNoviceGuideView.h"
 #define cellIdentify @"cellReuse"
-
+#import "CSAirNameListView.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong) NSString *name;
 
 @property(nonatomic, strong) UITableView *tableView;
-
-//@property(nonatomic, strong) NSMutableArray *array;
 @property(nonatomic, strong) NSArray *imageArray;
 @property(nonatomic, strong) NSArray *colorArray;
 @property(nonatomic, strong) NSArray *vcArray;
@@ -58,7 +56,11 @@
                  @"AttributeLabelViewController",@"GPKeyBoardViewController",
                  @"GPVideoViewController",@"GPTableViewController",
                  @"GPGIFViewController",@"GPPopViewController",
-                 @"ModelViewController",@"GGXibViewController"];
+                 @"ModelViewController",@"GGXibViewController",
+                 @"CalulateImageViewController",@"GGPredicateViewController",
+                 @"GGDateViewController",@"GGBlockViewController",
+                 @"GGVIPDayViewController",@"GGSelectViewController",
+                 @"GGMLeakViewController"];
     return _vcArray; 
 }
 
@@ -72,7 +74,9 @@
                       @"搜索bar",@"微博分享",@"数据绑定：RZDataBinding",
                       @"支付宝网页拦截native支付",@"富文本",@"键盘弹起",@"摄像",
                       @"tableView操作",@"播放gif",@"弹出viewController",
-                      @"对象转模型",@"xib使用"];
+                      @"对象转模型",@"xib使用",@"计算图片大小",@"谓词predicate",
+                      @"时间校验",@"block多层回调",@"会员日弹框",@"弹出选择列表",
+                      @"MLeakFinder使用"];
     return _vcTitleArray;
 }
 
@@ -103,7 +107,19 @@
 
 - (void)guideAction {
 //    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
-    NSLog(@"***-------------****");
+//    [CSAirNameListView airNameListView];
+    NSLog(@"***-------------***");
+//    [CSAirNameListView airNameListView:^(NSInteger section, NSInteger index, NSString *name) {
+//        NSLog(@"section = %ld index = %ld name = %@",(long)section,(long)index,name);
+//    }];
+//    [CSAirNameListView airNameListView:self.vcTitleArray complish:^(NSInteger index, NSString *name) {
+//        NSLog(@"index = %ld name = %@",(long)index,name);
+//    }];
+    
+    [CSAirNameListView airNameListView:self.vcTitleArray selectedIndex:5 complish:^(NSInteger index, NSString *name) {
+        NSLog(@"index = %ld name = %@",(long)index,name);
+    }];
+    NSLog(@"***-------------***");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
