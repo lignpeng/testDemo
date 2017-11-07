@@ -131,6 +131,7 @@
 		1FB412781EFB4B260040C840 /* GGXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB412761EFB4B260040C840 /* GGXibViewController.m */; };
 		1FB412791EFB4B260040C840 /* GGXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB412771EFB4B260040C840 /* GGXibViewController.xib */; };
 		1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4127C1EFB532C0040C840 /* HexColor.m */; };
+		1FB8D9F41FB13FDD001A60A3 /* GGSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
 		1FFA1DB51E12103000E02421 /* SubCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DB01E12103000E02421 /* SubCollectionViewCell.m */; };
@@ -452,6 +453,8 @@
 		1FB412771EFB4B260040C840 /* GGXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GGXibViewController.xib; path = vc/xib/GGXibViewController.xib; sourceTree = "<group>"; };
 		1FB4127B1EFB532C0040C840 /* HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HexColor.h; path = tools/HexColor.h; sourceTree = "<group>"; };
 		1FB4127C1EFB532C0040C840 /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = tools/HexColor.m; sourceTree = "<group>"; };
+		1FB8D9F21FB13FDD001A60A3 /* GGSpaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGSpaceViewController.h; path = "vc/去空格/GGSpaceViewController.h"; sourceTree = "<group>"; };
+		1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGSpaceViewController.m; path = "vc/去空格/GGSpaceViewController.m"; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
 		1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSelectSeatViewController.m; path = vc/selectSeat/GPSelectSeatViewController.m; sourceTree = "<group>"; };
 		1FFA1DAD1E12103000E02421 /* PagingCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagingCollectionViewLayout.h; path = vc/selectSeat/PagingCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -1145,6 +1148,15 @@
 			name = xib;
 			sourceTree = "<group>";
 		};
+		1FB8D9F51FB13FE4001A60A3 /* 去空格 */ = {
+			isa = PBXGroup;
+			children = (
+				1FB8D9F21FB13FDD001A60A3 /* GGSpaceViewController.h */,
+				1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */,
+			);
+			name = "去空格";
+			sourceTree = "<group>";
+		};
 		1FC09C171F01FF4D00D2F8A7 /* 第一篇：15个VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1413,6 +1425,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FB8D9F51FB13FE4001A60A3 /* 去空格 */,
 				1F0C60E21F70FFDA00D8F01B /* MLeakFinder使用 */,
 				1F090E501F5E8E9100CA0C61 /* 弹出选择列表 */,
 				1F090E441F56B2A700CA0C61 /* 会员日弹框 */,
@@ -1712,6 +1725,7 @@
 				1F4DBBF81E4C616600374EA4 /* AlipayViewController.m in Sources */,
 				1F0C61C91F720CBB00D8F01B /* FBAssociationManager.mm in Sources */,
 				1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */,
+				1FB8D9F41FB13FDD001A60A3 /* GGSpaceViewController.m in Sources */,
 				1FB412781EFB4B260040C840 /* GGXibViewController.m in Sources */,
 				1F090E6A1F5E910C00CA0C61 /* GGSelectViewController.m in Sources */,
 				1FFA1DDE1E12159000E02421 /* CSCabinBoundary.m in Sources */,

@@ -60,7 +60,7 @@
                  @"CalulateImageViewController",@"GGPredicateViewController",
                  @"GGDateViewController",@"GGBlockViewController",
                  @"GGVIPDayViewController",@"GGSelectViewController",
-                 @"GGMLeakViewController"];
+                 @"GGMLeakViewController",@"GGSpaceViewController"];
     return _vcArray; 
 }
 
@@ -76,7 +76,7 @@
                       @"tableView操作",@"播放gif",@"弹出viewController",
                       @"对象转模型",@"xib使用",@"计算图片大小",@"谓词predicate",
                       @"时间校验",@"block多层回调",@"会员日弹框",@"弹出选择列表",
-                      @"MLeakFinder使用"];
+                      @"MLeakFinder使用",@"去空格"];
     return _vcTitleArray;
 }
 
