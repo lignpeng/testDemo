@@ -12,5 +12,4 @@
 
 + (void)showVIPDayADs;//弹出广告页
 
-
 @end
