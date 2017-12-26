@@ -62,14 +62,26 @@
         [array addObject:[User user:[NSString stringWithFormat:@"00%lu",(unsigned long)index] type:index]];
         index--;
     }
+    
+    User *user = nil;
+    if ([user.name isEqualToString:@""]) {
+        
+    }
+    
+    
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"type >= 3 or score >= 80"];
     //po predicate.predicateFormat: type >= 3 OR score >= 80
     NSArray *predicateArray = [array filteredArrayUsingPredicate:predicate];
     NSString *name = @"name";
     NSString *str = @"005";
-    NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"%@ == %@",name,str];
+    NSPredicate *predicate0 = [NSPredicate predicateWithFormat:@"%@ == %@",name,str];
     //po predicate1.predicateFormat:"name" == "005"，零个结果
+    NSArray *predicateArray0 = [array filteredArrayUsingPredicate:predicate0];
+    
+    NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"self.%@ == %@",name,str];
+    //po predicate1.predicateFormat:SELF."name" == "005"，1个结果
     NSArray *predicateArray1 = [array filteredArrayUsingPredicate:predicate1];
+    
     
     NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"name == %@",str];
     //po predicate2.predicateFormat: name == "005"，有一个结果

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CSBrowingHistoryMarco.h"
 
 @interface CSBrowsingHistoryTypeView : UIView
 
 //弹出选择页
-+ (void)showBrowsingHistoryTypeViewWithDelegate:(UIViewController *)delegate Type:(NSUInteger )selectType complishBlock:(void(^)(NSUInteger type))complishBlock dismissBlock:(void(^)())dismissBlock;
++ (void)showBrowsingHistoryTypeViewWithDelegate:(UIViewController *)delegate Type:(BrowsingType )selectType complishBlock:(void(^)(BrowsingType type))complishBlock dismissBlock:(void(^)())dismissBlock;
 
 //是否已经弹出
 + (BOOL)isBrowsingHistoryTypeViewShow:(UIViewController *)delegate;

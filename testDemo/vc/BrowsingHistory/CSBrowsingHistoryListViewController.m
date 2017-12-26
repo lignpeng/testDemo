@@ -10,6 +10,11 @@
 #import "CSBrowsingHistoryListViewModel.h"
 #import "Masonry.h"
 #import "CSBrowsingHistoryTypeView.h"
+#import "CSBrowingHistoryAirPortCell.h"
+#import "CSBrowingHistoryFlightNumberCell.h"
+#import "CSBrowingHistoryBlankView.h"
+#import "HexColor.h"
+#import "CSBrowingHistoryModel.h"
 
 
 @interface CSBrowsingHistoryListViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -28,9 +33,7 @@
 }
 
 - (void)initView {
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    
+    self.view.backgroundColor = [HXColor colorWith8BitRedN:239 green:242 blue:245];
     self.navigationItem.titleView = self.topButton;
     [self updateButtonContentAction];
     
@@ -43,9 +46,26 @@
         make.leading.equalTo(self.view);
         make.bottom.equalTo(self.view.mas_bottom);
     }];
+    [self updateView];
+}
+
+- (void)updateView {
+    [self.viewModel updataDataSoure];
+    if (![self.viewModel isHaveDataSoure]) {
+        self.navigationItem.rightBarButtonItem = nil;
+        [CSBrowingHistoryBlankView showWithTitle:[self.viewModel blankInfomation] delegate:self];
+    }else {
+        [CSBrowingHistoryBlankView dismissWithDelegate:self];
+        [self showRightBarButtonItem];
+    }
+    [self.tableView reloadData];
 }
 
 - (void)showRightBarButtonItem {
+    if (![self.viewModel isHaveDataSoure]) {
+        self.navigationItem.rightBarButtonItem = nil;
+        return;
+    }
     if (self.navigationItem.rightBarButtonItem) {
         return;
     }
@@ -58,13 +78,14 @@
         [self.topButton setImage:[UIImage imageNamed:@"icon_s"] forState:UIControlStateNormal];
     }
     __weak typeof(self) weakSelf = self;
-    [CSBrowsingHistoryTypeView showBrowsingHistoryTypeViewWithDelegate:self Type:0 complishBlock:^(NSUInteger type) {
+    [CSBrowsingHistoryTypeView showBrowsingHistoryTypeViewWithDelegate:self Type:self.viewModel.type complishBlock:^(BrowsingType type) {
         NSLog(@"type = %lu",(unsigned long)type);
-        [weakSelf showRightBarButtonItem];
-        NSArray *titleArray = @[@"浏览历史",@"机票搜索浏览历史",@"航班动态浏览历史"];
-        [weakSelf.topButton setTitle:titleArray[type] forState:UIControlStateNormal];
+        weakSelf.viewModel.type = type;
+//        [weakSelf showRightBarButtonItem];
+        [weakSelf.topButton setTitle:[weakSelf.viewModel browingHistoryTitle] forState:UIControlStateNormal];
         [weakSelf.topButton setImage:[UIImage imageNamed:@"icon_x"] forState:UIControlStateNormal];
         [weakSelf updateButtonContentAction];
+        [weakSelf updateView];
     } dismissBlock:^{
         [weakSelf showRightBarButtonItem];
         [self.topButton setImage:[UIImage imageNamed:@"icon_x"] forState:UIControlStateNormal];
@@ -92,15 +113,57 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return [self.viewModel numberOfSections];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [self.viewModel numberOfRowsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+//    }
+    CSBrowingHistoryAirPortCell *cell = [CSBrowingHistoryAirPortCell browingHistoryAirPortCellWithTableView:tableView];
+    CSBrowingHistoryModel *model = [self.viewModel cellModelForRowAtIndexPath:indexPath];
+    [cell setupBrowingHistoryCellWithModel:model];
+    [cell hiddenSeparatorView:[self.viewModel isHiddenSeparatorViewAtIndexPath:indexPath]];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+//    return [self.viewModel heightForHeaderInSection:section];
+    return 40;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 2;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    CGFloat headerHeight = [self tableView:tableView heightForHeaderInSection:section];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds) - 20, headerHeight)];
+//    headerView.backgroundColor = RGBCOLOR(238, 242, 245);
+    headerView.backgroundColor = [UIColor clearColor];
+    UILabel *label = [UILabel new];
+    [headerView addSubview:label];
+//    label.textColor = textLabelColor;
+    label.backgroundColor= [UIColor clearColor];
+    label.font = [UIFont systemFontOfSize:14];
+    label.numberOfLines = 0;
+    label.text = [self.viewModel sectionTitleForSection:section];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(headerView).offset(16);
+        make.trailing.equalTo(headerView).offset(-16);
+        make.top.equalTo(headerView);
+        make.bottom.equalTo(headerView.mas_bottom);
+    }];
+    return headerView;
 }
 
 - (UIButton *)topButton {
@@ -109,7 +172,7 @@
             UIButton * button =[UIButton buttonWithType:UIButtonTypeCustom];
             button.frame=CGRectMake(0, 0, 150, 30);
             button.titleLabel.font = [UIFont systemFontOfSize:16];
-            [button setTitle:@"浏览历史浏览历史" forState:UIControlStateNormal];
+            [button setTitle:[self.viewModel browingHistoryTitle] forState:UIControlStateNormal];
             [button setImage:[UIImage imageNamed:@"icon_x"] forState:UIControlStateNormal];
             [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
             [button addTarget:self action:@selector(showSelectionType) forControlEvents:UIControlEventTouchUpInside];
@@ -121,13 +184,15 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [UITableView new];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.rowHeight = UITableViewAutomaticDimension;
-        _tableView.estimatedRowHeight = 72;
-//        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([@"" class]) bundle:nil] forCellReuseIdentifier:@""];
+        _tableView.estimatedRowHeight = 80;
+        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CSBrowingHistoryAirPortCell class]) bundle:nil] forCellReuseIdentifier:kCSBrowingHistoryAirPortCell];
+        _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
 }

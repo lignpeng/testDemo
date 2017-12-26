@@ -65,6 +65,8 @@
 		1F0C61DF1F720CBB00D8F01B /* FBObjectInStructReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C61C71F720CBB00D8F01B /* FBObjectInStructReference.m */; };
 		1F0C61E21F7215D300D8F01B /* GGDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C61E11F7215D300D8F01B /* GGDelegateViewController.m */; };
 		1F0C61E51F72174100D8F01B /* GGMasoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C61E41F72174100D8F01B /* GGMasoryViewController.m */; };
+		1F11EE361FD7AB9F007A70A1 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F11EE351FD7AB74007A70A1 /* AMapFoundationKit.framework */; };
+		1F11EE391FDA2FDB007A70A1 /* GGRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F11EE381FDA2FDB007A70A1 /* GGRefreshViewController.m */; };
 		1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */; };
 		1F16CA4A1E7631CB0038D774 /* GPKeyBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */; };
 		1F16CA4B1E7631CB0038D774 /* GPKeyBoardHeaderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA451E7631CB0038D774 /* GPKeyBoardHeaderTableView.m */; };
@@ -75,6 +77,8 @@
 		1F1DE1271FBBE858006BCFB0 /* CSBrowingHistoryFlightNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DE1251FBBE858006BCFB0 /* CSBrowingHistoryFlightNumberCell.xib */; };
 		1F1DE12B1FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DE1291FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.m */; };
 		1F1DE12C1FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DE12A1FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.xib */; };
+		1F1DE12F1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DE12E1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m */; };
+		1F1DE1321FBD3B28006BCFB0 /* CSBrowingHistoryMarco.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DE1311FBD3B28006BCFB0 /* CSBrowingHistoryMarco.m */; };
 		1F2CF67F1EF3753900093C15 /* ModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF67E1EF3753900093C15 /* ModelViewController.m */; };
 		1F2CF6831EF37A5E00093C15 /* CSEMemberInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6821EF37A5E00093C15 /* CSEMemberInfoModel.m */; };
 		1F2CF6861EF37BCE00093C15 /* UnmenberToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6851EF37BCE00093C15 /* UnmenberToken.m */; };
@@ -137,6 +141,7 @@
 		1FB412791EFB4B260040C840 /* GGXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB412771EFB4B260040C840 /* GGXibViewController.xib */; };
 		1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4127C1EFB532C0040C840 /* HexColor.m */; };
 		1FB8D9F41FB13FDD001A60A3 /* GGSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */; };
+		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
 		1FFA1DB51E12103000E02421 /* SubCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DB01E12103000E02421 /* SubCollectionViewCell.m */; };
@@ -328,6 +333,9 @@
 		1F0C61E11F7215D300D8F01B /* GGDelegateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGDelegateViewController.m; path = "vc/MLeakFinder使用/GGDelegateViewController.m"; sourceTree = "<group>"; };
 		1F0C61E31F72174100D8F01B /* GGMasoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGMasoryViewController.h; path = "vc/MLeakFinder使用/GGMasoryViewController.h"; sourceTree = "<group>"; };
 		1F0C61E41F72174100D8F01B /* GGMasoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGMasoryViewController.m; path = "vc/MLeakFinder使用/GGMasoryViewController.m"; sourceTree = "<group>"; };
+		1F11EE351FD7AB74007A70A1 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		1F11EE371FDA2FDB007A70A1 /* GGRefreshViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGRefreshViewController.h; path = "vc/上下拉刷新refresh/GGRefreshViewController.h"; sourceTree = "<group>"; };
+		1F11EE381FDA2FDB007A70A1 /* GGRefreshViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGRefreshViewController.m; path = "vc/上下拉刷新refresh/GGRefreshViewController.m"; sourceTree = "<group>"; };
 		1F16CA411E7631CB0038D774 /* GPKeyBoardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKeyBoardTableViewCell.h; sourceTree = "<group>"; };
 		1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeyBoardTableViewCell.m; sourceTree = "<group>"; };
 		1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPKeyBoardTableViewCell.xib; sourceTree = "<group>"; };
@@ -344,6 +352,10 @@
 		1F1DE1281FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryAirPortCell.h; path = vc/BrowsingHistory/view/CSBrowingHistoryAirPortCell.h; sourceTree = "<group>"; };
 		1F1DE1291FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryAirPortCell.m; path = vc/BrowsingHistory/view/CSBrowingHistoryAirPortCell.m; sourceTree = "<group>"; };
 		1F1DE12A1FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CSBrowingHistoryAirPortCell.xib; path = vc/BrowsingHistory/view/CSBrowingHistoryAirPortCell.xib; sourceTree = "<group>"; };
+		1F1DE12D1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryBlankView.h; path = vc/BrowsingHistory/view/CSBrowingHistoryBlankView.h; sourceTree = "<group>"; };
+		1F1DE12E1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryBlankView.m; path = vc/BrowsingHistory/view/CSBrowingHistoryBlankView.m; sourceTree = "<group>"; };
+		1F1DE1301FBD3B28006BCFB0 /* CSBrowingHistoryMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryMarco.h; path = vc/BrowsingHistory/model/CSBrowingHistoryMarco.h; sourceTree = "<group>"; };
+		1F1DE1311FBD3B28006BCFB0 /* CSBrowingHistoryMarco.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryMarco.m; path = vc/BrowsingHistory/model/CSBrowingHistoryMarco.m; sourceTree = "<group>"; };
 		1F2CF67D1EF3753900093C15 /* ModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelViewController.h; path = "vc/对象转模型/ModelViewController.h"; sourceTree = "<group>"; };
 		1F2CF67E1EF3753900093C15 /* ModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelViewController.m; path = "vc/对象转模型/ModelViewController.m"; sourceTree = "<group>"; };
 		1F2CF6811EF37A5E00093C15 /* CSEMemberInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSEMemberInfoModel.h; path = "vc/对象转模型/CSEMemberInfoModel.h"; sourceTree = "<group>"; };
@@ -470,6 +482,8 @@
 		1FB4127C1EFB532C0040C840 /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = tools/HexColor.m; sourceTree = "<group>"; };
 		1FB8D9F21FB13FDD001A60A3 /* GGSpaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGSpaceViewController.h; path = "vc/去空格/GGSpaceViewController.h"; sourceTree = "<group>"; };
 		1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGSpaceViewController.m; path = "vc/去空格/GGSpaceViewController.m"; sourceTree = "<group>"; };
+		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
+		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
 		1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSelectSeatViewController.m; path = vc/selectSeat/GPSelectSeatViewController.m; sourceTree = "<group>"; };
 		1FFA1DAD1E12103000E02421 /* PagingCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagingCollectionViewLayout.h; path = vc/selectSeat/PagingCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -568,6 +582,7 @@
 				1F03624B1E0D0D4400BD804A /* CoreTelephony.framework in Frameworks */,
 				1F0362491E0D0D3B00BD804A /* Security.framework in Frameworks */,
 				1F0362471E0D0D3200BD804A /* libsqlite3.tbd in Frameworks */,
+				1F11EE361FD7AB9F007A70A1 /* AMapFoundationKit.framework in Frameworks */,
 				1F0362451E0D0D2400BD804A /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,6 +859,15 @@
 			path = Reference;
 			sourceTree = "<group>";
 		};
+		1F11EE3A1FDA2FE4007A70A1 /* 上下拉刷新 */ = {
+			isa = PBXGroup;
+			children = (
+				1F11EE371FDA2FDB007A70A1 /* GGRefreshViewController.h */,
+				1F11EE381FDA2FDB007A70A1 /* GGRefreshViewController.m */,
+			);
+			name = "上下拉刷新";
+			sourceTree = "<group>";
+		};
 		1F16CA401E7631CB0038D774 /* 键盘 */ = {
 			isa = PBXGroup;
 			children = (
@@ -873,6 +897,8 @@
 				1F1DE1281FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.h */,
 				1F1DE1291FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.m */,
 				1F1DE12A1FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.xib */,
+				1F1DE12D1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.h */,
+				1F1DE12E1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1213,6 +1239,17 @@
 			name = "第一篇：15个VC";
 			sourceTree = "<group>";
 		};
+		1FF70B261FBE91C200C29816 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1FFBB9921FB94C9100D28480 /* CSBrowsingHistoryListViewModel.h */,
+				1FFBB9931FB94C9100D28480 /* CSBrowsingHistoryListViewModel.m */,
+				1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */,
+				1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		1FFA1DAC1E12098D00E02421 /* 选座 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1312,9 +1349,10 @@
 			children = (
 				1FFBB98E1FB949C700D28480 /* CSBrowsingHistoryListViewController.h */,
 				1FFBB98F1FB949C700D28480 /* CSBrowsingHistoryListViewController.m */,
-				1FFBB9921FB94C9100D28480 /* CSBrowsingHistoryListViewModel.h */,
-				1FFBB9931FB94C9100D28480 /* CSBrowsingHistoryListViewModel.m */,
+				1FF70B261FBE91C200C29816 /* model */,
 				1F1DE1221FBBE7C1006BCFB0 /* view */,
+				1F1DE1301FBD3B28006BCFB0 /* CSBrowingHistoryMarco.h */,
+				1F1DE1311FBD3B28006BCFB0 /* CSBrowingHistoryMarco.m */,
 			);
 			name = "浏览历史";
 			sourceTree = "<group>";
@@ -1434,6 +1472,7 @@
 		EE14AA3C1DE5419D00E152AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F11EE351FD7AB74007A70A1 /* AMapFoundationKit.framework */,
 				1F0C618A1F720CBB00D8F01B /* FBRetainCycleDetector */,
 				1F0C60BC1F70FF9F00D8F01B /* MLeaksFinder */,
 				1FA65F251F29757C008D8FCA /* Masonry */,
@@ -1483,6 +1522,7 @@
 				1FC09C171F01FF4D00D2F8A7 /* 第一篇：15个VC */,
 				1FA65F221F297305008D8FCA /* CSAirNameListView.h */,
 				1FA65F231F297306008D8FCA /* CSAirNameListView.m */,
+				1F11EE3A1FDA2FE4007A70A1 /* 上下拉刷新 */,
 			);
 			name = vc;
 			sourceTree = "<group>";
@@ -1758,6 +1798,7 @@
 				1F1DE12B1FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.m in Sources */,
 				1F0C60DD1F70FF9F00D8F01B /* UIView+MemoryLeak.m in Sources */,
 				1F0C61DF1F720CBB00D8F01B /* FBObjectInStructReference.m in Sources */,
+				1F1DE1321FBD3B28006BCFB0 /* CSBrowingHistoryMarco.m in Sources */,
 				1F3892121E35D594005AA26B /* SinaWBSendingViewController.m in Sources */,
 				1FAA87491E261E5B00162DA2 /* BuildListViewController.m in Sources */,
 				1F0C60D81F70FF9F00D8F01B /* UINavigationController+MemoryLeak.m in Sources */,
@@ -1792,8 +1833,10 @@
 				1F3C4DED1F414B2E00EFF7AB /* GGDateViewController.m in Sources */,
 				1F0C60DA1F70FF9F00D8F01B /* UISplitViewController+MemoryLeak.m in Sources */,
 				1F46D4821E3753D500C9C4FF /* NSObject+RZDataBinding.m in Sources */,
+				1F1DE12F1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m in Sources */,
 				1FA65F421F29757C008D8FCA /* MASConstraint.m in Sources */,
 				1F16CA4B1E7631CB0038D774 /* GPKeyBoardHeaderTableView.m in Sources */,
+				1F11EE391FDA2FDB007A70A1 /* GGRefreshViewController.m in Sources */,
 				1FA65F241F297306008D8FCA /* CSAirNameListView.m in Sources */,
 				1F0C60D51F70FF9F00D8F01B /* MLeaksMessenger.m in Sources */,
 				1F3FAA491E0A26AF006CA2C6 /* CSNoviceGuideView.m in Sources */,
@@ -1806,6 +1849,7 @@
 				1F0C61E21F7215D300D8F01B /* GGDelegateViewController.m in Sources */,
 				1F0C60DB1F70FF9F00D8F01B /* UITabBarController+MemoryLeak.m in Sources */,
 				1F0C61DB1F720CBB00D8F01B /* FBClassStrongLayoutHelpers.m in Sources */,
+				1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */,
 				1F1DE1261FBBE858006BCFB0 /* CSBrowingHistoryFlightNumberCell.m in Sources */,
 				EE14AA3E1DE5419D00E152AD /* main.m in Sources */,
 				1F090E5B1F5E90EB00CA0C61 /* GGOneViewController.m in Sources */,
@@ -2008,6 +2052,7 @@
 					"$(PROJECT_DIR)/testDemo",
 				);
 				INFOPLIST_FILE = testDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccs.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2028,6 +2073,7 @@
 					"$(PROJECT_DIR)/testDemo",
 				);
 				INFOPLIST_FILE = testDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccs.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

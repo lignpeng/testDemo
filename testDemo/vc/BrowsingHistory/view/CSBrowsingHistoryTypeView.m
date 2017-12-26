@@ -9,6 +9,7 @@
 #import "CSBrowsingHistoryTypeView.h"
 #define viewAlpha 0.3
 #import "Masonry.h"
+#import "HexColor.h"
 
 @interface CSBrowsingHistoryTypeView()
 
@@ -16,14 +17,14 @@
 @property(nonatomic, strong) UIView *holderView;
 @property(nonatomic, strong) UIButton *backButton;
 @property(nonatomic, assign) NSInteger selectType;
-@property(nonatomic, copy) void (^selectTypeBlock)(NSUInteger type);
+@property(nonatomic, copy) void (^selectTypeBlock)(BrowsingType type);
 @property(nonatomic, copy) void (^dismissBlock)();
 @end
 
 @implementation CSBrowsingHistoryTypeView
 
 //弹出选择页
-+ (void)showBrowsingHistoryTypeViewWithDelegate:(UIViewController *)delegate Type:(NSUInteger )selectType complishBlock:(void(^)(NSUInteger type))complishBlock dismissBlock:(void(^)())dismissBlock{
++ (void)showBrowsingHistoryTypeViewWithDelegate:(UIViewController *)delegate Type:(BrowsingType )selectType complishBlock:(void(^)(BrowsingType type))complishBlock dismissBlock:(void(^)())dismissBlock{
     if ([self removeBrowsingHistoryTypeView:delegate]) {
         return;
     }
@@ -94,7 +95,7 @@
         make.top.equalTo(self);
         make.leading.equalTo(self);
         make.trailing.equalTo(self);
-        make.height.mas_equalTo(64);
+        make.height.mas_equalTo(87);
     }];
     [self addSubview:self.backButton];
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -106,20 +107,24 @@
 }
 
 - (void)addSubButton {
-    CGFloat margin = 16;
+    CGFloat margin = 15;
     NSUInteger count = 3;
-    CGFloat hight = margin*2;
+    CGFloat hight = margin*2 +7;
     CGFloat width = (CGRectGetWidth([UIScreen mainScreen].bounds) - (count + 1)*margin)/count;
     NSArray *titleArray = @[@"全部",@"机票搜索",@"航班动态"];
-    CGRect bframe = (CGRect){margin,margin,width,hight};
+    CGRect bframe = (CGRect){margin+10,margin+10,width,hight};
     for (int i = 0;i < count; i++) {
         bframe.origin.x += (i == 0 ? 0 : (margin + width));
         UIButton *button = [[UIButton alloc] initWithFrame:bframe];
         [button setTitle:titleArray[i] forState:UIControlStateNormal];
         if (i == self.selectType) {
-            button.backgroundColor = [UIColor blueColor];
+            button.backgroundColor = [HXColor colorWith8BitRedN:0 green:138 blue:203];
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }else {
-            button.backgroundColor = [UIColor grayColor];
+            button.backgroundColor = [HXColor colorWith8BitRedN:232 green:236 blue:239];
+            button.layer.borderColor = [HXColor colorWith8BitRedN:161 green:168 blue:165].CGColor;
+            button.layer.borderWidth = 0.5;
+            [button setTitleColor:[HXColor colorWith8BitRedN:77 green:77 blue:77] forState:UIControlStateNormal];
         }
         button.layer.cornerRadius = hight * 0.5;
         button.clipsToBounds = YES;

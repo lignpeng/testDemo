@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define kCSBrowingHistoryAirPortCell @"CSBrowingHistoryAirPortCell"
+
+@class CSBrowingHistoryModel;
 @interface CSBrowingHistoryAirPortCell : UITableViewCell
+
++ (instancetype)browingHistoryAirPortCellWithTableView:(UITableView *)tableView;
+
+- (void)setupBrowingHistoryCellWithModel:(CSBrowingHistoryModel *)model;
+- (void)hiddenSeparatorView:(BOOL)hidden;
 
 @end

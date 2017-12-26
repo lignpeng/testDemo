@@ -48,6 +48,7 @@
     NSComparisonResult result =[date compare:[NSDate date]];
     [self calculateAge:str];
     [self calculateMargin:@""];
+    [self dateyesToday];
 }
 
 //计算年龄
@@ -82,6 +83,30 @@
     NSDate * nowDate = [NSDate date];
     //计算两个中间差值(秒)
     NSTimeInterval time = [nowDate timeIntervalSinceDate:birthDay];
+}
+
+- (void)dateyesToday {
+    NSDate *today = [NSDate date];
+//    NSLog(@”today is %@”,today);
+    //再获取的时间date减去24小时的时间（昨天的这个时候）
+    NSDate *yesterday = [NSDate dateWithTimeIntervalSinceNow:-(24*60*60)];
+//    NSLog(@”yesterday is %@”,yesterday);//打印昨天的时间
+    NSDateFormatter *dateFormater = [NSDateFormatter new];
+    dateFormater.dateFormat =@"yyyy-MM-dd";
+    NSString *todayString = [dateFormater stringFromDate:today];
+    NSString *yestoday = [dateFormater stringFromDate:yesterday];
+    NSString *dd = @"2017-12-07";
+    if ([dd isEqualToString:todayString]) {
+        NSLog(@"today is %@",todayString);
+    }else {
+        NSLog(@"today is not %@",todayString);
+    }
+    
+    if ([dd isEqualToString:yestoday]) {
+        NSLog(@"yestoday is %@",dd);
+    }else {
+        NSLog(@"yestoday is not %@",dd);
+    }
 }
 
 
