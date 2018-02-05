@@ -32,6 +32,26 @@
 }
 
 - (void)action {
+    NSString *birthdayStr = @"124243200000";
+    NSString *validay  = @"1598400000000";
+    NSString *bb = [self timeConvertToDate:birthdayStr];
+    NSString *dd = [self timeConvertToDate:validay];
+    NSLog(@"birthday:%@ = %@\nvaliday: %@ = %@",birthdayStr,bb,validay,dd);
+}
+
+- (NSString *)timeConvertToDate:(NSString *)timeString {
+        // 时间戳 : 从1970年1月1号 00:00:00开始走过的毫秒数
+        // 时间字符串 - 时间戳
+    NSTimeInterval second = timeString.longLongValue/1000.0;
+        // 时间戳 -> NSDate
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:second];
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    [df setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateString = [df stringFromDate:date];
+    return dateString;
+}
+
+- (void)actionT {
     NSString *str = @"1983-04-17";
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     df.dateFormat = @"yyyy-MM-dd";

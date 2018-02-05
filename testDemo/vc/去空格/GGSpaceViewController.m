@@ -32,7 +32,7 @@
 }
 
 - (void)action {
-    NSString *str = @"   g h    ";
+    NSString *str = @"   123    456  789    ";
     //去除右侧空格
     NSString *str1 = [self stringByTrimmingRightString:str];
     NSLog(@"===%@===",str1);
@@ -94,6 +94,7 @@
     }
     return [str substringWithRange:NSMakeRange(length,sumLength - length)];
 }
+
 @end
 
 

@@ -79,6 +79,7 @@
 		1F1DE12C1FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DE12A1FBBE995006BCFB0 /* CSBrowingHistoryAirPortCell.xib */; };
 		1F1DE12F1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DE12E1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m */; };
 		1F1DE1321FBD3B28006BCFB0 /* CSBrowingHistoryMarco.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DE1311FBD3B28006BCFB0 /* CSBrowingHistoryMarco.m */; };
+		1F2966BA2005F9BF00FBD78A /* GGStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2966B92005F9BF00FBD78A /* GGStringViewController.m */; };
 		1F2CF67F1EF3753900093C15 /* ModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF67E1EF3753900093C15 /* ModelViewController.m */; };
 		1F2CF6831EF37A5E00093C15 /* CSEMemberInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6821EF37A5E00093C15 /* CSEMemberInfoModel.m */; };
 		1F2CF6861EF37BCE00093C15 /* UnmenberToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6851EF37BCE00093C15 /* UnmenberToken.m */; };
@@ -356,6 +357,8 @@
 		1F1DE12E1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryBlankView.m; path = vc/BrowsingHistory/view/CSBrowingHistoryBlankView.m; sourceTree = "<group>"; };
 		1F1DE1301FBD3B28006BCFB0 /* CSBrowingHistoryMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryMarco.h; path = vc/BrowsingHistory/model/CSBrowingHistoryMarco.h; sourceTree = "<group>"; };
 		1F1DE1311FBD3B28006BCFB0 /* CSBrowingHistoryMarco.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryMarco.m; path = vc/BrowsingHistory/model/CSBrowingHistoryMarco.m; sourceTree = "<group>"; };
+		1F2966B82005F9BF00FBD78A /* GGStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGStringViewController.h; path = "vc/字符串包含/GGStringViewController.h"; sourceTree = "<group>"; };
+		1F2966B92005F9BF00FBD78A /* GGStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGStringViewController.m; path = "vc/字符串包含/GGStringViewController.m"; sourceTree = "<group>"; };
 		1F2CF67D1EF3753900093C15 /* ModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelViewController.h; path = "vc/对象转模型/ModelViewController.h"; sourceTree = "<group>"; };
 		1F2CF67E1EF3753900093C15 /* ModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelViewController.m; path = "vc/对象转模型/ModelViewController.m"; sourceTree = "<group>"; };
 		1F2CF6811EF37A5E00093C15 /* CSEMemberInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSEMemberInfoModel.h; path = "vc/对象转模型/CSEMemberInfoModel.h"; sourceTree = "<group>"; };
@@ -901,6 +904,15 @@
 				1F1DE12E1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		1F2966BB2005F9C900FBD78A /* 字符串包含 */ = {
+			isa = PBXGroup;
+			children = (
+				1F2966B82005F9BF00FBD78A /* GGStringViewController.h */,
+				1F2966B92005F9BF00FBD78A /* GGStringViewController.m */,
+			);
+			name = "字符串包含";
 			sourceTree = "<group>";
 		};
 		1F2CF6801EF3754000093C15 /* 对象转模型 */ = {
@@ -1514,6 +1526,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1F2966BB2005F9C900FBD78A /* 字符串包含 */,
 				1FFBB9911FB949CD00D28480 /* 浏览历史 */,
 				1FB8D9F51FB13FE4001A60A3 /* 去空格 */,
 				1F090E501F5E8E9100CA0C61 /* 弹出选择列表 */,
@@ -1853,6 +1866,7 @@
 				1F1DE1261FBBE858006BCFB0 /* CSBrowingHistoryFlightNumberCell.m in Sources */,
 				EE14AA3E1DE5419D00E152AD /* main.m in Sources */,
 				1F090E5B1F5E90EB00CA0C61 /* GGOneViewController.m in Sources */,
+				1F2966BA2005F9BF00FBD78A /* GGStringViewController.m in Sources */,
 				1FFFD9871F25A67C00929FC2 /* GGPredicateViewController.m in Sources */,
 				1FA65F441F29757C008D8FCA /* MASLayoutConstraint.m in Sources */,
 				1F0C61E51F72174100D8F01B /* GGMasoryViewController.m in Sources */,
