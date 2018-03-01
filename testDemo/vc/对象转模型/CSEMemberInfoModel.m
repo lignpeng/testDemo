@@ -3,7 +3,7 @@
 //  CSMBP
 //
 //  Created by chpeng on 17/6/9.
-//  Copyright © 2017年 China Southern Airlines. All rights reserved.
+//   
 //
 
 #import "CSEMemberInfoModel.h"
