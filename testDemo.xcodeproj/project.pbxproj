@@ -122,6 +122,8 @@
 		1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */; };
 		1F6280E11E8941B700E0B151 /* gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F6280E01E8941B700E0B151 /* gif */; };
 		1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E8EAD1E84B97000D15351 /* GPTools.m */; };
+		1F8B927B202852BD00710DB6 /* GGRunTimeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B927A202852BD00710DB6 /* GGRunTimeMethodViewController.m */; };
+		1F8B927F202854A200710DB6 /* GGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B927E202854A200710DB6 /* GGPerson.m */; };
 		1F9916F11FBAC24800E6F744 /* CSBrowsingHistoryTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9916F01FBAC24800E6F744 /* CSBrowsingHistoryTypeView.m */; };
 		1FA65F241F297306008D8FCA /* CSAirNameListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA65F231F297306008D8FCA /* CSAirNameListView.m */; };
 		1FA65F401F29757C008D8FCA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FA65F261F29757C008D8FCA /* Info.plist */; };
@@ -442,6 +444,10 @@
 		1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		1F6E8EAC1E84B97000D15351 /* GPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPTools.h; path = tools/GPTools.h; sourceTree = "<group>"; };
 		1F6E8EAD1E84B97000D15351 /* GPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPTools.m; path = tools/GPTools.m; sourceTree = "<group>"; };
+		1F8B9279202852BD00710DB6 /* GGRunTimeMethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGRunTimeMethodViewController.h; path = "vc/runtime调用方法/GGRunTimeMethodViewController.h"; sourceTree = "<group>"; };
+		1F8B927A202852BD00710DB6 /* GGRunTimeMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGRunTimeMethodViewController.m; path = "vc/runtime调用方法/GGRunTimeMethodViewController.m"; sourceTree = "<group>"; };
+		1F8B927D202854A200710DB6 /* GGPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGPerson.h; path = "vc/runtime调用方法/GGPerson.h"; sourceTree = "<group>"; };
+		1F8B927E202854A200710DB6 /* GGPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGPerson.m; path = "vc/runtime调用方法/GGPerson.m"; sourceTree = "<group>"; };
 		1F9916EF1FBAC24800E6F744 /* CSBrowsingHistoryTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowsingHistoryTypeView.h; path = vc/BrowsingHistory/view/CSBrowsingHistoryTypeView.h; sourceTree = "<group>"; };
 		1F9916F01FBAC24800E6F744 /* CSBrowsingHistoryTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowsingHistoryTypeView.m; path = vc/BrowsingHistory/view/CSBrowsingHistoryTypeView.m; sourceTree = "<group>"; };
 		1FA65F221F297305008D8FCA /* CSAirNameListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSAirNameListView.h; path = "vc/列表选择器/CSAirNameListView.h"; sourceTree = "<group>"; };
@@ -1177,6 +1183,17 @@
 			name = "工具";
 			sourceTree = "<group>";
 		};
+		1F8B927C202852C700710DB6 /* runtime调用方法 */ = {
+			isa = PBXGroup;
+			children = (
+				1F8B9279202852BD00710DB6 /* GGRunTimeMethodViewController.h */,
+				1F8B927A202852BD00710DB6 /* GGRunTimeMethodViewController.m */,
+				1F8B927D202854A200710DB6 /* GGPerson.h */,
+				1F8B927E202854A200710DB6 /* GGPerson.m */,
+			);
+			name = "runtime调用方法";
+			sourceTree = "<group>";
+		};
 		1FA65F251F29757C008D8FCA /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -1526,6 +1543,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1F8B927C202852C700710DB6 /* runtime调用方法 */,
 				1F2966BB2005F9C900FBD78A /* 字符串包含 */,
 				1FFBB9911FB949CD00D28480 /* 浏览历史 */,
 				1FB8D9F51FB13FE4001A60A3 /* 去空格 */,
@@ -1631,8 +1649,7 @@
 					};
 					EE14AA381DE5419D00E152AD = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 5XY856E7G8;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1747,6 +1764,7 @@
 				1F090E781F5EBB2000CA0C61 /* GPPopNavigationController.m in Sources */,
 				1F0C61D81F720CBB00D8F01B /* FBBlockStrongLayout.m in Sources */,
 				1F504A781DF1752900EE4B2A /* GPCellViewController.m in Sources */,
+				1F8B927B202852BD00710DB6 /* GGRunTimeMethodViewController.m in Sources */,
 				1F5699AD1DF663D7009FA98B /* CSProgressHUD_MBProgressHUD.m in Sources */,
 				1F0C60E11F70FFD400D8F01B /* GGMLeakViewController.m in Sources */,
 				1F0C61DD1F720CBB00D8F01B /* Struct.mm in Sources */,
@@ -1769,6 +1787,7 @@
 				1F3C4DFC1F45976500EFF7AB /* GGBlockViewController.m in Sources */,
 				1F40B3AD1DF809EB00E03910 /* GPTimeViewController.m in Sources */,
 				1F47F8D51E553E740056F326 /* AttributeLabelViewController.m in Sources */,
+				1F8B927F202854A200710DB6 /* GGPerson.m in Sources */,
 				1F2CF6861EF37BCE00093C15 /* UnmenberToken.m in Sources */,
 				1FA65F461F29757C008D8FCA /* MASViewConstraint.m in Sources */,
 				1F2CF68D1EF386BF00093C15 /* YYClassInfo.m in Sources */,
@@ -2059,7 +2078,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = testDemo/testDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5XY856E7G8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo/GT.embeddedframework",
@@ -2068,9 +2088,10 @@
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ccs.testDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.model.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2080,7 +2101,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = testDemo/testDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5XY856E7G8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo/GT.embeddedframework",
@@ -2089,9 +2111,10 @@
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ccs.testDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.model.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
