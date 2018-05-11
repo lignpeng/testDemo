@@ -119,6 +119,12 @@
 		1F5699AD1DF663D7009FA98B /* CSProgressHUD_MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5699A91DF663D7009FA98B /* CSProgressHUD_MBProgressHUD.m */; };
 		1F5699B01DF66471009FA98B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5699AF1DF66471009FA98B /* MBProgressHUD.m */; };
 		1F598D081DF5691B00FC50BC /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F598D071DF5691B00FC50BC /* LoadingViewController.m */; };
+		1F61D13820A0481100F933DC /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61D13720A0481100F933DC /* WebViewController.m */; };
+		1F61D14320A0488500F933DC /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61D13C20A0488500F933DC /* WebViewJavascriptBridge.m */; };
+		1F61D14420A0488500F933DC /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61D13E20A0488500F933DC /* WebViewJavascriptBridge_JS.m */; };
+		1F61D14520A0488500F933DC /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61D14020A0488500F933DC /* WebViewJavascriptBridgeBase.m */; };
+		1F61D14620A0488500F933DC /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61D14220A0488500F933DC /* WKWebViewJavascriptBridge.m */; };
+		1F61D14920A04F8500F933DC /* NativeFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61D14820A04F8500F933DC /* NativeFunction.m */; };
 		1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */; };
 		1F6280E11E8941B700E0B151 /* gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F6280E01E8941B700E0B151 /* gif */; };
 		1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E8EAD1E84B97000D15351 /* GPTools.m */; };
@@ -144,6 +150,7 @@
 		1FB412791EFB4B260040C840 /* GGXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB412771EFB4B260040C840 /* GGXibViewController.xib */; };
 		1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4127C1EFB532C0040C840 /* HexColor.m */; };
 		1FB8D9F41FB13FDD001A60A3 /* GGSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */; };
+		1FDB7E2720A17D74002E2F61 /* TimezoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E2620A17D74002E2F61 /* TimezoneViewController.m */; };
 		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
@@ -438,6 +445,18 @@
 		1F5699AF1DF66471009FA98B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1F598D061DF5691B00FC50BC /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = loading/LoadingViewController.h; sourceTree = "<group>"; };
 		1F598D071DF5691B00FC50BC /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = loading/LoadingViewController.m; sourceTree = "<group>"; };
+		1F61D13620A0481100F933DC /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = vc/wkwebview/WebViewController.h; sourceTree = "<group>"; };
+		1F61D13720A0481100F933DC /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = vc/wkwebview/WebViewController.m; sourceTree = "<group>"; };
+		1F61D13B20A0488500F933DC /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		1F61D13C20A0488500F933DC /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		1F61D13D20A0488500F933DC /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		1F61D13E20A0488500F933DC /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		1F61D13F20A0488500F933DC /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		1F61D14020A0488500F933DC /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		1F61D14120A0488500F933DC /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		1F61D14220A0488500F933DC /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		1F61D14720A04F8500F933DC /* NativeFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NativeFunction.h; path = vc/wkwebview/NativeFunction.h; sourceTree = "<group>"; };
+		1F61D14820A04F8500F933DC /* NativeFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NativeFunction.m; path = vc/wkwebview/NativeFunction.m; sourceTree = "<group>"; };
 		1F6280DC1E88F6CA00E0B151 /* GPGIFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGIFViewController.h; path = vc/gif/GPGIFViewController.h; sourceTree = "<group>"; };
 		1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGIFViewController.m; path = vc/gif/GPGIFViewController.m; sourceTree = "<group>"; };
 		1F6280E01E8941B700E0B151 /* gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gif; sourceTree = "<group>"; };
@@ -491,6 +510,8 @@
 		1FB4127C1EFB532C0040C840 /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = tools/HexColor.m; sourceTree = "<group>"; };
 		1FB8D9F21FB13FDD001A60A3 /* GGSpaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGSpaceViewController.h; path = "vc/去空格/GGSpaceViewController.h"; sourceTree = "<group>"; };
 		1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGSpaceViewController.m; path = "vc/去空格/GGSpaceViewController.m"; sourceTree = "<group>"; };
+		1FDB7E2520A17D74002E2F61 /* TimezoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimezoneViewController.h; path = vc/timezone/TimezoneViewController.h; sourceTree = "<group>"; };
+		1FDB7E2620A17D74002E2F61 /* TimezoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TimezoneViewController.m; path = vc/timezone/TimezoneViewController.m; sourceTree = "<group>"; };
 		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
 		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
@@ -1154,6 +1175,34 @@
 			name = loading;
 			sourceTree = "<group>";
 		};
+		1F61D13920A0481900F933DC /* wkwebview */ = {
+			isa = PBXGroup;
+			children = (
+				1F61D13620A0481100F933DC /* WebViewController.h */,
+				1F61D13720A0481100F933DC /* WebViewController.m */,
+				1F61D13A20A0488500F933DC /* WebViewJavascriptBridge */,
+				1F61D14720A04F8500F933DC /* NativeFunction.h */,
+				1F61D14820A04F8500F933DC /* NativeFunction.m */,
+			);
+			name = wkwebview;
+			sourceTree = "<group>";
+		};
+		1F61D13A20A0488500F933DC /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				1F61D13B20A0488500F933DC /* WebViewJavascriptBridge.h */,
+				1F61D13C20A0488500F933DC /* WebViewJavascriptBridge.m */,
+				1F61D13D20A0488500F933DC /* WebViewJavascriptBridge_JS.h */,
+				1F61D13E20A0488500F933DC /* WebViewJavascriptBridge_JS.m */,
+				1F61D13F20A0488500F933DC /* WebViewJavascriptBridgeBase.h */,
+				1F61D14020A0488500F933DC /* WebViewJavascriptBridgeBase.m */,
+				1F61D14120A0488500F933DC /* WKWebViewJavascriptBridge.h */,
+				1F61D14220A0488500F933DC /* WKWebViewJavascriptBridge.m */,
+			);
+			name = WebViewJavascriptBridge;
+			path = vc/wkwebview/WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
 		1F6280DF1E88F6DD00E0B151 /* gif */ = {
 			isa = PBXGroup;
 			children = (
@@ -1266,6 +1315,15 @@
 				1F0362541E0D0D8C00BD804A /* 腾讯GT */,
 			);
 			name = "第一篇：15个VC";
+			sourceTree = "<group>";
+		};
+		1FDB7E2820A17D81002E2F61 /* timezone */ = {
+			isa = PBXGroup;
+			children = (
+				1FDB7E2520A17D74002E2F61 /* TimezoneViewController.h */,
+				1FDB7E2620A17D74002E2F61 /* TimezoneViewController.m */,
+			);
+			name = timezone;
 			sourceTree = "<group>";
 		};
 		1FF70B261FBE91C200C29816 /* model */ = {
@@ -1543,6 +1601,8 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FDB7E2820A17D81002E2F61 /* timezone */,
+				1F61D13920A0481900F933DC /* wkwebview */,
 				1F8B927C202852C700710DB6 /* runtime调用方法 */,
 				1F2966BB2005F9C900FBD78A /* 字符串包含 */,
 				1FFBB9911FB949CD00D28480 /* 浏览历史 */,
@@ -1784,6 +1844,7 @@
 				1F0C61CF1F720CBB00D8F01B /* fishhook.c in Sources */,
 				1FA65F471F29757C008D8FCA /* NSArray+MASAdditions.m in Sources */,
 				1F16CA501E7633110038D774 /* Model.m in Sources */,
+				1F61D14420A0488500F933DC /* WebViewJavascriptBridge_JS.m in Sources */,
 				1F3C4DFC1F45976500EFF7AB /* GGBlockViewController.m in Sources */,
 				1F40B3AD1DF809EB00E03910 /* GPTimeViewController.m in Sources */,
 				1F47F8D51E553E740056F326 /* AttributeLabelViewController.m in Sources */,
@@ -1797,6 +1858,7 @@
 				1F46D4811E3753D500C9C4FF /* DataBindingViewController.m in Sources */,
 				1F3892161E35D742005AA26B /* BaseViewController.m in Sources */,
 				1F50D67F1E13449400C51A57 /* NSArray+CSSafeAccess.m in Sources */,
+				1F61D14920A04F8500F933DC /* NativeFunction.m in Sources */,
 				1F46D4881E3758DC00C9C4FF /* Person.m in Sources */,
 				1FFDB2E71E8A55B70011B2CE /* GPPopViewController.m in Sources */,
 				1F090E5C1F5E90EB00CA0C61 /* GGThreeViewController.m in Sources */,
@@ -1815,12 +1877,15 @@
 				1FA65F431F29757C008D8FCA /* MASConstraintMaker.m in Sources */,
 				1F4565531E8FA68D00E869F9 /* GPSMSViewController.m in Sources */,
 				1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */,
+				1FDB7E2720A17D74002E2F61 /* TimezoneViewController.m in Sources */,
+				1F61D14520A0488500F933DC /* WebViewJavascriptBridgeBase.m in Sources */,
 				1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */,
 				1F2CF67F1EF3753900093C15 /* ModelViewController.m in Sources */,
 				1F0C61D21F720CBB00D8F01B /* FBObjectGraphConfiguration.m in Sources */,
 				1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */,
 				1F4537191E1CD08E009F5A89 /* ArrayEnumViewController.m in Sources */,
 				1FFA1DD11E12154C00E02421 /* JSONModelError.m in Sources */,
+				1F61D13820A0481100F933DC /* WebViewController.m in Sources */,
 				1F0C60DE1F70FF9F00D8F01B /* UIViewController+MemoryLeak.m in Sources */,
 				1FA65F491F29757C008D8FCA /* View+MASAdditions.m in Sources */,
 				1FA65F411F29757C008D8FCA /* MASCompositeConstraint.m in Sources */,
@@ -1864,6 +1929,7 @@
 				1FFA1DD01E12154C00E02421 /* JSONModelClassProperty.m in Sources */,
 				1F3C4DED1F414B2E00EFF7AB /* GGDateViewController.m in Sources */,
 				1F0C60DA1F70FF9F00D8F01B /* UISplitViewController+MemoryLeak.m in Sources */,
+				1F61D14320A0488500F933DC /* WebViewJavascriptBridge.m in Sources */,
 				1F46D4821E3753D500C9C4FF /* NSObject+RZDataBinding.m in Sources */,
 				1F1DE12F1FBD1C52006BCFB0 /* CSBrowingHistoryBlankView.m in Sources */,
 				1FA65F421F29757C008D8FCA /* MASConstraint.m in Sources */,
@@ -1877,6 +1943,7 @@
 				1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */,
 				1F4EDEF21E8262BB008F00EF /* GPTableViewController.m in Sources */,
 				1FFA1DCF1E12154C00E02421 /* JSONModel.m in Sources */,
+				1F61D14620A0488500F933DC /* WKWebViewJavascriptBridge.m in Sources */,
 				EE14AA411DE5419D00E152AD /* AppDelegate.m in Sources */,
 				1F0C61E21F7215D300D8F01B /* GGDelegateViewController.m in Sources */,
 				1F0C60DB1F70FF9F00D8F01B /* UITabBarController+MemoryLeak.m in Sources */,
