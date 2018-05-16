@@ -127,6 +127,7 @@
 		1F61D14920A04F8500F933DC /* NativeFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F61D14820A04F8500F933DC /* NativeFunction.m */; };
 		1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */; };
 		1F6280E11E8941B700E0B151 /* gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F6280E01E8941B700E0B151 /* gif */; };
+		1F632B8920AA833000C37ABE /* ExcelCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F632B8820AA833000C37ABE /* ExcelCollectionViewFlowLayout.m */; };
 		1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E8EAD1E84B97000D15351 /* GPTools.m */; };
 		1F8B927B202852BD00710DB6 /* GGRunTimeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B927A202852BD00710DB6 /* GGRunTimeMethodViewController.m */; };
 		1F8B927F202854A200710DB6 /* GGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B927E202854A200710DB6 /* GGPerson.m */; };
@@ -151,6 +152,11 @@
 		1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4127C1EFB532C0040C840 /* HexColor.m */; };
 		1FB8D9F41FB13FDD001A60A3 /* GGSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */; };
 		1FDB7E2720A17D74002E2F61 /* TimezoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E2620A17D74002E2F61 /* TimezoneViewController.m */; };
+		1FDB7E2E20A57D10002E2F61 /* GExcelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E2D20A57D10002E2F61 /* GExcelViewController.m */; };
+		1FDB7E3220A57DFF002E2F61 /* UIExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3120A57DFF002E2F61 /* UIExcelView.m */; };
+		1FDB7E3520A58993002E2F61 /* UIExcelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3420A58993002E2F61 /* UIExcelTableViewCell.m */; };
+		1FDB7E3B20A58D25002E2F61 /* UIExcelCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3A20A58D25002E2F61 /* UIExcelCollectionCell.m */; };
+		1FDB7E3E20A59838002E2F61 /* UILeftCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */; };
 		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
@@ -460,6 +466,8 @@
 		1F6280DC1E88F6CA00E0B151 /* GPGIFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGIFViewController.h; path = vc/gif/GPGIFViewController.h; sourceTree = "<group>"; };
 		1F6280DD1E88F6CA00E0B151 /* GPGIFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGIFViewController.m; path = vc/gif/GPGIFViewController.m; sourceTree = "<group>"; };
 		1F6280E01E8941B700E0B151 /* gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gif; sourceTree = "<group>"; };
+		1F632B8720AA833000C37ABE /* ExcelCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExcelCollectionViewFlowLayout.h; path = "vc/excel表/ExcelCollectionViewFlowLayout.h"; sourceTree = "<group>"; };
+		1F632B8820AA833000C37ABE /* ExcelCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ExcelCollectionViewFlowLayout.m; path = "vc/excel表/ExcelCollectionViewFlowLayout.m"; sourceTree = "<group>"; };
 		1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		1F6E8EAC1E84B97000D15351 /* GPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPTools.h; path = tools/GPTools.h; sourceTree = "<group>"; };
 		1F6E8EAD1E84B97000D15351 /* GPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPTools.m; path = tools/GPTools.m; sourceTree = "<group>"; };
@@ -512,6 +520,16 @@
 		1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGSpaceViewController.m; path = "vc/去空格/GGSpaceViewController.m"; sourceTree = "<group>"; };
 		1FDB7E2520A17D74002E2F61 /* TimezoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimezoneViewController.h; path = vc/timezone/TimezoneViewController.h; sourceTree = "<group>"; };
 		1FDB7E2620A17D74002E2F61 /* TimezoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TimezoneViewController.m; path = vc/timezone/TimezoneViewController.m; sourceTree = "<group>"; };
+		1FDB7E2C20A57D10002E2F61 /* GExcelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GExcelViewController.h; path = "vc/excel表/GExcelViewController.h"; sourceTree = "<group>"; };
+		1FDB7E2D20A57D10002E2F61 /* GExcelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GExcelViewController.m; path = "vc/excel表/GExcelViewController.m"; sourceTree = "<group>"; };
+		1FDB7E3020A57DFF002E2F61 /* UIExcelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIExcelView.h; path = "vc/excel表/UIExcelView.h"; sourceTree = "<group>"; };
+		1FDB7E3120A57DFF002E2F61 /* UIExcelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIExcelView.m; path = "vc/excel表/UIExcelView.m"; sourceTree = "<group>"; };
+		1FDB7E3320A58993002E2F61 /* UIExcelTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIExcelTableViewCell.h; path = "vc/excel表/UIExcelTableViewCell.h"; sourceTree = "<group>"; };
+		1FDB7E3420A58993002E2F61 /* UIExcelTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIExcelTableViewCell.m; path = "vc/excel表/UIExcelTableViewCell.m"; sourceTree = "<group>"; };
+		1FDB7E3920A58D25002E2F61 /* UIExcelCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIExcelCollectionCell.h; path = "vc/excel表/UIExcelCollectionCell.h"; sourceTree = "<group>"; };
+		1FDB7E3A20A58D25002E2F61 /* UIExcelCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIExcelCollectionCell.m; path = "vc/excel表/UIExcelCollectionCell.m"; sourceTree = "<group>"; };
+		1FDB7E3C20A59838002E2F61 /* UILeftCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UILeftCollectionCell.h; path = "vc/excel表/UILeftCollectionCell.h"; sourceTree = "<group>"; };
+		1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UILeftCollectionCell.m; path = "vc/excel表/UILeftCollectionCell.m"; sourceTree = "<group>"; };
 		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
 		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
@@ -1326,6 +1344,25 @@
 			name = timezone;
 			sourceTree = "<group>";
 		};
+		1FDB7E2F20A57D88002E2F61 /* excel表 */ = {
+			isa = PBXGroup;
+			children = (
+				1FDB7E2C20A57D10002E2F61 /* GExcelViewController.h */,
+				1FDB7E2D20A57D10002E2F61 /* GExcelViewController.m */,
+				1FDB7E3020A57DFF002E2F61 /* UIExcelView.h */,
+				1FDB7E3120A57DFF002E2F61 /* UIExcelView.m */,
+				1FDB7E3320A58993002E2F61 /* UIExcelTableViewCell.h */,
+				1FDB7E3420A58993002E2F61 /* UIExcelTableViewCell.m */,
+				1FDB7E3920A58D25002E2F61 /* UIExcelCollectionCell.h */,
+				1FDB7E3A20A58D25002E2F61 /* UIExcelCollectionCell.m */,
+				1FDB7E3C20A59838002E2F61 /* UILeftCollectionCell.h */,
+				1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */,
+				1F632B8720AA833000C37ABE /* ExcelCollectionViewFlowLayout.h */,
+				1F632B8820AA833000C37ABE /* ExcelCollectionViewFlowLayout.m */,
+			);
+			name = "excel表";
+			sourceTree = "<group>";
+		};
 		1FF70B261FBE91C200C29816 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1601,6 +1638,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FDB7E2F20A57D88002E2F61 /* excel表 */,
 				1FDB7E2820A17D81002E2F61 /* timezone */,
 				1F61D13920A0481900F933DC /* wkwebview */,
 				1F8B927C202852C700710DB6 /* runtime调用方法 */,
@@ -1709,7 +1747,8 @@
 					};
 					EE14AA381DE5419D00E152AD = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 5XY856E7G8;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1815,6 +1854,7 @@
 				1FAA87431E25D8E400162DA2 /* BaseSearchViewController.m in Sources */,
 				EE6275A01DE6E4620085C7FA /* NSString+CSSafeAccess.m in Sources */,
 				1F0C61D91F720CBB00D8F01B /* FBBlockStrongRelationDetector.m in Sources */,
+				1FDB7E3B20A58D25002E2F61 /* UIExcelCollectionCell.m in Sources */,
 				1FFA1DE41E12168C00E02421 /* CSUtils.m in Sources */,
 				1F090E6D1F5E931100CA0C61 /* CSPopoverController.m in Sources */,
 				1F50D67E1E13449400C51A57 /* CustomFlowLayout.m in Sources */,
@@ -1828,6 +1868,7 @@
 				1F5699AD1DF663D7009FA98B /* CSProgressHUD_MBProgressHUD.m in Sources */,
 				1F0C60E11F70FFD400D8F01B /* GGMLeakViewController.m in Sources */,
 				1F0C61DD1F720CBB00D8F01B /* Struct.mm in Sources */,
+				1FDB7E2E20A57D10002E2F61 /* GExcelViewController.m in Sources */,
 				1F4EDEF71E826357008F00EF /* GPOperationTableViewCell.m in Sources */,
 				1F504A741DF15E1500EE4B2A /* GPNullViewController.m in Sources */,
 				EE516D141DE7DE93001F9010 /* GPTableViewCell.m in Sources */,
@@ -1883,6 +1924,7 @@
 				1F2CF67F1EF3753900093C15 /* ModelViewController.m in Sources */,
 				1F0C61D21F720CBB00D8F01B /* FBObjectGraphConfiguration.m in Sources */,
 				1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */,
+				1FDB7E3220A57DFF002E2F61 /* UIExcelView.m in Sources */,
 				1F4537191E1CD08E009F5A89 /* ArrayEnumViewController.m in Sources */,
 				1FFA1DD11E12154C00E02421 /* JSONModelError.m in Sources */,
 				1F61D13820A0481100F933DC /* WebViewController.m in Sources */,
@@ -1909,6 +1951,7 @@
 				1F0C60D41F70FF9F00D8F01B /* MLeakedObjectProxy.m in Sources */,
 				1F0C61CB1F720CBB00D8F01B /* FBRetainCycleUtils.m in Sources */,
 				1F0C61CE1F720CBB00D8F01B /* FBStandardGraphEdgeFilters.mm in Sources */,
+				1F632B8920AA833000C37ABE /* ExcelCollectionViewFlowLayout.m in Sources */,
 				1F5699AC1DF663D7009FA98B /* CSProgressHUD.m in Sources */,
 				1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */,
 				1FFFD9801F21EDEF00929FC2 /* CalulateImageViewController.m in Sources */,
@@ -1938,6 +1981,7 @@
 				1FA65F241F297306008D8FCA /* CSAirNameListView.m in Sources */,
 				1F0C60D51F70FF9F00D8F01B /* MLeaksMessenger.m in Sources */,
 				1F3FAA491E0A26AF006CA2C6 /* CSNoviceGuideView.m in Sources */,
+				1FDB7E3520A58993002E2F61 /* UIExcelTableViewCell.m in Sources */,
 				1FFA1DD61E12154C00E02421 /* JSONValueTransformer.m in Sources */,
 				1FFA1DD21E12154C00E02421 /* JSONAPI.m in Sources */,
 				1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */,
@@ -1957,6 +2001,7 @@
 				1FA65F441F29757C008D8FCA /* MASLayoutConstraint.m in Sources */,
 				1F0C61E51F72174100D8F01B /* GGMasoryViewController.m in Sources */,
 				EE764F1C1DEBC95700BF4230 /* IDViewController.m in Sources */,
+				1FDB7E3E20A59838002E2F61 /* UILeftCollectionCell.m in Sources */,
 				1F598D081DF5691B00FC50BC /* LoadingViewController.m in Sources */,
 				1F2CF68C1EF386BF00093C15 /* NSObject+YYModel.m in Sources */,
 				1FA65F451F29757C008D8FCA /* MASViewAttribute.m in Sources */,
@@ -2143,10 +2188,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = testDemo/testDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XY856E7G8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo/GT.embeddedframework",
@@ -2166,10 +2210,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = testDemo/testDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XY856E7G8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo/GT.embeddedframework",

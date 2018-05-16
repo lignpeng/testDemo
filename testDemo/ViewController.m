@@ -62,7 +62,8 @@
                  @"GGVIPDayViewController",@"GGSelectViewController",
                  @"GGMLeakViewController",@"GGSpaceViewController",
                  @"CSBrowsingHistoryListViewController",@"GGStringViewController",
-                 @"GGRunTimeMethodViewController",@"TimezoneViewController"];
+                 @"GGRunTimeMethodViewController",@"TimezoneViewController",
+                 @"GExcelViewController"];
     return _vcArray; 
 }
 
@@ -79,7 +80,7 @@
                       @"对象转模型",@"xib使用",@"计算图片大小",@"谓词predicate",
                       @"时间校验",@"block多层回调",@"会员日弹框",@"弹出选择列表",
                       @"MLeakFinder使用",@"去空格",@"浏览历史",@"字符串包含",
-                      @"runtime调用方法",@"获取当前时区"];
+                      @"runtime调用方法",@"获取当前时区",@"excel表"];
     return _vcTitleArray;
 }
 
