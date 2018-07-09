@@ -101,6 +101,7 @@
 		1F46D4881E3758DC00C9C4FF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D4871E3758DC00C9C4FF /* Person.m */; };
 		1F47346F1E1F98D7005CF05E /* SearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F47346E1E1F98D7005CF05E /* SearchBarViewController.m */; };
 		1F47F8D51E553E740056F326 /* AttributeLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F47F8D41E553E740056F326 /* AttributeLabelViewController.m */; };
+		1F483C0A20CE960E00FF0FED /* CSURLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F483C0920CE960E00FF0FED /* CSURLAlertView.m */; };
 		1F4DBBF81E4C616600374EA4 /* AlipayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DBBF71E4C616600374EA4 /* AlipayViewController.m */; };
 		1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */; };
 		1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */; };
@@ -419,6 +420,8 @@
 		1F47346E1E1F98D7005CF05E /* SearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBarViewController.m; path = vc/searchBar/SearchBarViewController.m; sourceTree = "<group>"; };
 		1F47F8D31E553E740056F326 /* AttributeLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributeLabelViewController.h; path = "vc/富文本/AttributeLabelViewController.h"; sourceTree = "<group>"; };
 		1F47F8D41E553E740056F326 /* AttributeLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributeLabelViewController.m; path = "vc/富文本/AttributeLabelViewController.m"; sourceTree = "<group>"; };
+		1F483C0820CE960E00FF0FED /* CSURLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSURLAlertView.h; path = tools/CSURLAlertView.h; sourceTree = "<group>"; };
+		1F483C0920CE960E00FF0FED /* CSURLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSURLAlertView.m; path = tools/CSURLAlertView.m; sourceTree = "<group>"; };
 		1F4DBBF61E4C616600374EA4 /* AlipayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlipayViewController.h; path = vc/alipay/AlipayViewController.h; sourceTree = "<group>"; };
 		1F4DBBF71E4C616600374EA4 /* AlipayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlipayViewController.m; path = vc/alipay/AlipayViewController.m; sourceTree = "<group>"; };
 		1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -1242,6 +1245,8 @@
 		1F6E8EAF1E84B97700D15351 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				1F483C0820CE960E00FF0FED /* CSURLAlertView.h */,
+				1F483C0920CE960E00FF0FED /* CSURLAlertView.m */,
 				1FB4127B1EFB532C0040C840 /* HexColor.h */,
 				1FB4127C1EFB532C0040C840 /* HexColor.m */,
 				1F6E8EAC1E84B97000D15351 /* GPTools.h */,
@@ -1853,6 +1858,7 @@
 			files = (
 				1FAA87431E25D8E400162DA2 /* BaseSearchViewController.m in Sources */,
 				EE6275A01DE6E4620085C7FA /* NSString+CSSafeAccess.m in Sources */,
+				1F483C0A20CE960E00FF0FED /* CSURLAlertView.m in Sources */,
 				1F0C61D91F720CBB00D8F01B /* FBBlockStrongRelationDetector.m in Sources */,
 				1FDB7E3B20A58D25002E2F61 /* UIExcelCollectionCell.m in Sources */,
 				1FFA1DE41E12168C00E02421 /* CSUtils.m in Sources */,

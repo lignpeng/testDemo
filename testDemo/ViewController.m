@@ -13,6 +13,9 @@
 #define cellIdentify @"cellReuse"
 #import "CSAirNameListView.h"
 
+#import "CSURLAlertView.h"
+
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong) NSString *name;
@@ -119,12 +122,20 @@
 //    [CSAirNameListView airNameListView:self.vcTitleArray complish:^(NSInteger index, NSString *name) {
 //        NSLog(@"index = %ld name = %@",(long)index,name);
 //    }];
-    __weak typeof(self) weakSelf = self;
-    [CSAirNameListView airNameListView:self.vcTitleArray selectedIndex:0 complish:^(NSInteger index, NSString *name) {
-        NSLog(@"index = %ld name = %@",(long)index,name);
-        UIViewController *vc = [NSClassFromString(weakSelf.vcArray[index]) new];
-        vc.title = weakSelf.vcTitleArray[index];
-        [weakSelf.navigationController pushViewController:vc animated:YES];
+//    __weak typeof(self) weakSelf = self;
+//    [CSAirNameListView airNameListView:self.vcTitleArray selectedIndex:0 complish:^(NSInteger index, NSString *name) {
+//        NSLog(@"index = %ld name = %@",(long)index,name);
+//        UIViewController *vc = [NSClassFromString(weakSelf.vcArray[index]) new];
+//        vc.title = weakSelf.vcTitleArray[index];
+//        [weakSelf.navigationController pushViewController:vc animated:YES];
+//    }];
+    
+//    [CSURLAlertView urlAlertView];
+    NSString *titleStr = @"您还未添加身份证，请前往离您最近的南航会员服务中心进行身份认证，或致电 95539 咨询。";
+    NSString *textStr = @"会员服务中心";
+//    [CSURLAlertView urlAlertView:titleStr urlString:textStr complish:nil];
+    [CSURLAlertView urlAlertView:titleStr urlString:textStr buttonTitle:@"知道了" complish:^(BOOL flag) {
+        NSLog(@"***------000000-------***");
     }];
     NSLog(@"***-------------***");
 }

@@ -32,10 +32,13 @@
 }
 
 - (void)action {
-    NSArray *array = @[@"123",@"456",@"789"];
+    NSArray *array = @[@"123sdf",@"45sfe6释放",@"af/ef"];
     NSLog(@"containt 123 = %d",[array containsObject:@"123"]);
     NSLog(@"containt 23 = %d",[array containsObject:@"23"]);
     NSLog(@"containt 13 = %d",[array containsObject:@"13"]);
+    for (NSString *title in array) {
+        NSLog(@"%@:%@",title,[title uppercaseString]);
+    }
 }
 
 @end
