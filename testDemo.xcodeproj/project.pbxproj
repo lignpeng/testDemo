@@ -158,6 +158,9 @@
 		1FDB7E3520A58993002E2F61 /* UIExcelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3420A58993002E2F61 /* UIExcelTableViewCell.m */; };
 		1FDB7E3B20A58D25002E2F61 /* UIExcelCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3A20A58D25002E2F61 /* UIExcelCollectionCell.m */; };
 		1FDB7E3E20A59838002E2F61 /* UILeftCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */; };
+		1FF6903C20F44598003B5431 /* RiseUpCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6903B20F44598003B5431 /* RiseUpCalcViewController.m */; };
+		1FF6903E20F44859003B5431 /* RiseupCalcHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */; };
+		1FF6904120F44873003B5431 /* RiseupCalcHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6904020F44873003B5431 /* RiseupCalcHeaderView.m */; };
 		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
@@ -533,6 +536,11 @@
 		1FDB7E3A20A58D25002E2F61 /* UIExcelCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIExcelCollectionCell.m; path = "vc/excel表/UIExcelCollectionCell.m"; sourceTree = "<group>"; };
 		1FDB7E3C20A59838002E2F61 /* UILeftCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UILeftCollectionCell.h; path = "vc/excel表/UILeftCollectionCell.h"; sourceTree = "<group>"; };
 		1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UILeftCollectionCell.m; path = "vc/excel表/UILeftCollectionCell.m"; sourceTree = "<group>"; };
+		1FF6903A20F44598003B5431 /* RiseUpCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiseUpCalcViewController.h; sourceTree = "<group>"; };
+		1FF6903B20F44598003B5431 /* RiseUpCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiseUpCalcViewController.m; sourceTree = "<group>"; };
+		1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiseupCalcHeaderView.xib; sourceTree = "<group>"; };
+		1FF6903F20F44873003B5431 /* RiseupCalcHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RiseupCalcHeaderView.h; sourceTree = "<group>"; };
+		1FF6904020F44873003B5431 /* RiseupCalcHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiseupCalcHeaderView.m; sourceTree = "<group>"; };
 		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
 		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
@@ -1368,6 +1376,19 @@
 			name = "excel表";
 			sourceTree = "<group>";
 		};
+		1FF6903920F44598003B5431 /* 复利计算 */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6903A20F44598003B5431 /* RiseUpCalcViewController.h */,
+				1FF6903B20F44598003B5431 /* RiseUpCalcViewController.m */,
+				1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */,
+				1FF6903F20F44873003B5431 /* RiseupCalcHeaderView.h */,
+				1FF6904020F44873003B5431 /* RiseupCalcHeaderView.m */,
+			);
+			name = "复利计算";
+			path = "vc/复利计算";
+			sourceTree = "<group>";
+		};
 		1FF70B261FBE91C200C29816 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1643,6 +1664,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FF6903920F44598003B5431 /* 复利计算 */,
 				1FDB7E2F20A57D88002E2F61 /* excel表 */,
 				1FDB7E2820A17D81002E2F61 /* timezone */,
 				1F61D13920A0481900F933DC /* wkwebview */,
@@ -1817,6 +1839,7 @@
 				1FFA1DB91E1213BC00E02421 /* data.json in Resources */,
 				1F0C61D01F720CBB00D8F01B /* LICENSE in Resources */,
 				1FFA1DB61E12103000E02421 /* SubCollectionViewCell.xib in Resources */,
+				1FF6903E20F44859003B5431 /* RiseupCalcHeaderView.xib in Resources */,
 				1FA65F401F29757C008D8FCA /* Info.plist in Resources */,
 				1F16CA4A1E7631CB0038D774 /* GPKeyBoardTableViewCell.xib in Resources */,
 				EE14AA491DE5419D00E152AD /* Assets.xcassets in Resources */,
@@ -1903,6 +1926,7 @@
 				1FFA1DB51E12103000E02421 /* SubCollectionViewCell.m in Sources */,
 				1FFBB9941FB94C9100D28480 /* CSBrowsingHistoryListViewModel.m in Sources */,
 				1F46D4811E3753D500C9C4FF /* DataBindingViewController.m in Sources */,
+				1FF6903C20F44598003B5431 /* RiseUpCalcViewController.m in Sources */,
 				1F3892161E35D742005AA26B /* BaseViewController.m in Sources */,
 				1F50D67F1E13449400C51A57 /* NSArray+CSSafeAccess.m in Sources */,
 				1F61D14920A04F8500F933DC /* NativeFunction.m in Sources */,
@@ -1926,6 +1950,7 @@
 				1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */,
 				1FDB7E2720A17D74002E2F61 /* TimezoneViewController.m in Sources */,
 				1F61D14520A0488500F933DC /* WebViewJavascriptBridgeBase.m in Sources */,
+				1FF6904120F44873003B5431 /* RiseupCalcHeaderView.m in Sources */,
 				1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */,
 				1F2CF67F1EF3753900093C15 /* ModelViewController.m in Sources */,
 				1F0C61D21F720CBB00D8F01B /* FBObjectGraphConfiguration.m in Sources */,

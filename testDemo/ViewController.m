@@ -66,7 +66,7 @@
                  @"GGMLeakViewController",@"GGSpaceViewController",
                  @"CSBrowsingHistoryListViewController",@"GGStringViewController",
                  @"GGRunTimeMethodViewController",@"TimezoneViewController",
-                 @"GExcelViewController"];
+                 @"GExcelViewController",@"RiseUpCalcViewController"];
     return _vcArray; 
 }
 
@@ -83,7 +83,7 @@
                       @"对象转模型",@"xib使用",@"计算图片大小",@"谓词predicate",
                       @"时间校验",@"block多层回调",@"会员日弹框",@"弹出选择列表",
                       @"MLeakFinder使用",@"去空格",@"浏览历史",@"字符串包含",
-                      @"runtime调用方法",@"获取当前时区",@"excel表"];
+                      @"runtime调用方法",@"获取当前时区",@"excel表",@"复利计算"];
     return _vcTitleArray;
 }
 
@@ -131,8 +131,8 @@
 //    }];
     
 //    [CSURLAlertView urlAlertView];
-    NSString *titleStr = @"您还未添加身份证，请前往离您最近的南航会员服务中心进行身份认证，或致电 95539 咨询。";
-    NSString *textStr = @"会员服务中心";
+    NSString *titleStr = @"您还未添加身份证，进行身份认证。";
+    NSString *textStr = @"身份认证";
 //    [CSURLAlertView urlAlertView:titleStr urlString:textStr complish:nil];
     [CSURLAlertView urlAlertView:titleStr urlString:textStr buttonTitle:@"知道了" complish:^(BOOL flag) {
         NSLog(@"***------000000-------***");

@@ -76,10 +76,6 @@
 }
 
 - (void)urlAlertViewString:(NSString *)fullString urlString:(NSString *)urlStr {
-//    self.layer.cornerRadius = 14;
-//    self.layer.masksToBounds = YES;
-//    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:@"当前用户信息已成功关联明珠卡，如需切换明珠卡，可在\"我的会员卡\"进行切换." attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}];
-//    NSRange range = [[attributeString string] rangeOfString:@"我的会员卡"];
     UIFont *font = [UIFont systemFontOfSize:15];
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:fullString attributes:@{NSFontAttributeName:font}];
     NSRange range = [[attributeString string] rangeOfString:urlStr];
