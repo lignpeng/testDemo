@@ -161,6 +161,12 @@
 		1FF6903C20F44598003B5431 /* RiseUpCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6903B20F44598003B5431 /* RiseUpCalcViewController.m */; };
 		1FF6903E20F44859003B5431 /* RiseupCalcHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */; };
 		1FF6904120F44873003B5431 /* RiseupCalcHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6904020F44873003B5431 /* RiseupCalcHeaderView.m */; };
+		1FF6904420F599F2003B5431 /* SelectPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6904320F599F2003B5431 /* SelectPanViewController.m */; };
+		1FF6904820F59ADB003B5431 /* SelectManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6904720F59ADB003B5431 /* SelectManagerViewController.m */; };
+		1FF6904F20F59EF4003B5431 /* UIButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6904D20F59EF4003B5431 /* UIButtonView.m */; };
+		1FF6905220F5A9CA003B5431 /* UISelectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6905120F5A9CA003B5431 /* UISelectCollectionViewCell.m */; };
+		1FF6905520F5AC03003B5431 /* UILabelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6905420F5AC03003B5431 /* UILabelsViewController.m */; };
+		1FF6905C20F5AFBD003B5431 /* LabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6905B20F5AFBD003B5431 /* LabelModel.m */; };
 		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
@@ -541,6 +547,18 @@
 		1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiseupCalcHeaderView.xib; sourceTree = "<group>"; };
 		1FF6903F20F44873003B5431 /* RiseupCalcHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RiseupCalcHeaderView.h; sourceTree = "<group>"; };
 		1FF6904020F44873003B5431 /* RiseupCalcHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiseupCalcHeaderView.m; sourceTree = "<group>"; };
+		1FF6904220F599F2003B5431 /* SelectPanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelectPanViewController.h; path = "vc/转盘/SelectPanViewController.h"; sourceTree = "<group>"; };
+		1FF6904320F599F2003B5431 /* SelectPanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SelectPanViewController.m; path = "vc/转盘/SelectPanViewController.m"; sourceTree = "<group>"; };
+		1FF6904620F59ADB003B5431 /* SelectManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelectManagerViewController.h; path = "vc/转盘/SelectManagerViewController.h"; sourceTree = "<group>"; };
+		1FF6904720F59ADB003B5431 /* SelectManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SelectManagerViewController.m; path = "vc/转盘/SelectManagerViewController.m"; sourceTree = "<group>"; };
+		1FF6904D20F59EF4003B5431 /* UIButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonView.m; sourceTree = "<group>"; };
+		1FF6904E20F59EF4003B5431 /* UIButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonView.h; sourceTree = "<group>"; };
+		1FF6905020F5A9CA003B5431 /* UISelectCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISelectCollectionViewCell.h; sourceTree = "<group>"; };
+		1FF6905120F5A9CA003B5431 /* UISelectCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISelectCollectionViewCell.m; sourceTree = "<group>"; };
+		1FF6905320F5AC03003B5431 /* UILabelsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UILabelsViewController.h; path = "vc/转盘/UILabelsViewController.h"; sourceTree = "<group>"; };
+		1FF6905420F5AC03003B5431 /* UILabelsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UILabelsViewController.m; path = "vc/转盘/UILabelsViewController.m"; sourceTree = "<group>"; };
+		1FF6905A20F5AFBD003B5431 /* LabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelModel.h; sourceTree = "<group>"; };
+		1FF6905B20F5AFBD003B5431 /* LabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelModel.m; sourceTree = "<group>"; };
 		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
 		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
@@ -1389,6 +1407,43 @@
 			path = "vc/复利计算";
 			sourceTree = "<group>";
 		};
+		1FF6904520F599FC003B5431 /* 转盘 */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6904220F599F2003B5431 /* SelectPanViewController.h */,
+				1FF6904320F599F2003B5431 /* SelectPanViewController.m */,
+				1FF6905320F5AC03003B5431 /* UILabelsViewController.h */,
+				1FF6905420F5AC03003B5431 /* UILabelsViewController.m */,
+				1FF6904620F59ADB003B5431 /* SelectManagerViewController.h */,
+				1FF6904720F59ADB003B5431 /* SelectManagerViewController.m */,
+				1FF6905920F5AFBD003B5431 /* model */,
+				1FF6904C20F59EF4003B5431 /* view */,
+			);
+			name = "转盘";
+			sourceTree = "<group>";
+		};
+		1FF6904C20F59EF4003B5431 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6904E20F59EF4003B5431 /* UIButtonView.h */,
+				1FF6904D20F59EF4003B5431 /* UIButtonView.m */,
+				1FF6905020F5A9CA003B5431 /* UISelectCollectionViewCell.h */,
+				1FF6905120F5A9CA003B5431 /* UISelectCollectionViewCell.m */,
+			);
+			name = view;
+			path = "vc/转盘/view";
+			sourceTree = "<group>";
+		};
+		1FF6905920F5AFBD003B5431 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6905A20F5AFBD003B5431 /* LabelModel.h */,
+				1FF6905B20F5AFBD003B5431 /* LabelModel.m */,
+			);
+			name = model;
+			path = "vc/转盘/model";
+			sourceTree = "<group>";
+		};
 		1FF70B261FBE91C200C29816 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1664,6 +1719,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FF6904520F599FC003B5431 /* 转盘 */,
 				1FF6903920F44598003B5431 /* 复利计算 */,
 				1FDB7E2F20A57D88002E2F61 /* excel表 */,
 				1FDB7E2820A17D81002E2F61 /* timezone */,
@@ -1893,6 +1949,7 @@
 				1F090E781F5EBB2000CA0C61 /* GPPopNavigationController.m in Sources */,
 				1F0C61D81F720CBB00D8F01B /* FBBlockStrongLayout.m in Sources */,
 				1F504A781DF1752900EE4B2A /* GPCellViewController.m in Sources */,
+				1FF6904420F599F2003B5431 /* SelectPanViewController.m in Sources */,
 				1F8B927B202852BD00710DB6 /* GGRunTimeMethodViewController.m in Sources */,
 				1F5699AD1DF663D7009FA98B /* CSProgressHUD_MBProgressHUD.m in Sources */,
 				1F0C60E11F70FFD400D8F01B /* GGMLeakViewController.m in Sources */,
@@ -1928,6 +1985,7 @@
 				1F46D4811E3753D500C9C4FF /* DataBindingViewController.m in Sources */,
 				1FF6903C20F44598003B5431 /* RiseUpCalcViewController.m in Sources */,
 				1F3892161E35D742005AA26B /* BaseViewController.m in Sources */,
+				1FF6904820F59ADB003B5431 /* SelectManagerViewController.m in Sources */,
 				1F50D67F1E13449400C51A57 /* NSArray+CSSafeAccess.m in Sources */,
 				1F61D14920A04F8500F933DC /* NativeFunction.m in Sources */,
 				1F46D4881E3758DC00C9C4FF /* Person.m in Sources */,
@@ -1945,6 +2003,7 @@
 				1F0C60D91F70FF9F00D8F01B /* UIPageViewController+MemoryLeak.m in Sources */,
 				1FFA1DDF1E12159000E02421 /* CSPriceTag.m in Sources */,
 				1F0C61CD1F720CBB00D8F01B /* FBRetainCycleDetector.mm in Sources */,
+				1FF6905C20F5AFBD003B5431 /* LabelModel.m in Sources */,
 				1FA65F431F29757C008D8FCA /* MASConstraintMaker.m in Sources */,
 				1F4565531E8FA68D00E869F9 /* GPSMSViewController.m in Sources */,
 				1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */,
@@ -1973,6 +2032,7 @@
 				1FAA87491E261E5B00162DA2 /* BuildListViewController.m in Sources */,
 				1F0C60D81F70FF9F00D8F01B /* UINavigationController+MemoryLeak.m in Sources */,
 				1F9916F11FBAC24800E6F744 /* CSBrowsingHistoryTypeView.m in Sources */,
+				1FF6904F20F59EF4003B5431 /* UIButtonView.m in Sources */,
 				1F5699AB1DF663D7009FA98B /* CSProgressCustomView.m in Sources */,
 				1FFEBF4A1DEFD4FE00943705 /* GPExtensionTableViewCell.m in Sources */,
 				1F090E761F5EBB2000CA0C61 /* GPLoginViewController.m in Sources */,
@@ -1991,6 +2051,7 @@
 				1F0C61C91F720CBB00D8F01B /* FBAssociationManager.mm in Sources */,
 				1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */,
 				1FB8D9F41FB13FDD001A60A3 /* GGSpaceViewController.m in Sources */,
+				1FF6905520F5AC03003B5431 /* UILabelsViewController.m in Sources */,
 				1FB412781EFB4B260040C840 /* GGXibViewController.m in Sources */,
 				1F090E6A1F5E910C00CA0C61 /* GGSelectViewController.m in Sources */,
 				1FFA1DDE1E12159000E02421 /* CSCabinBoundary.m in Sources */,
@@ -2014,6 +2075,7 @@
 				1F3FAA491E0A26AF006CA2C6 /* CSNoviceGuideView.m in Sources */,
 				1FDB7E3520A58993002E2F61 /* UIExcelTableViewCell.m in Sources */,
 				1FFA1DD61E12154C00E02421 /* JSONValueTransformer.m in Sources */,
+				1FF6905220F5A9CA003B5431 /* UISelectCollectionViewCell.m in Sources */,
 				1FFA1DD21E12154C00E02421 /* JSONAPI.m in Sources */,
 				1F6280DE1E88F6CA00E0B151 /* GPGIFViewController.m in Sources */,
 				1F4EDEF21E8262BB008F00EF /* GPTableViewController.m in Sources */,

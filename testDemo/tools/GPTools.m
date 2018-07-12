@@ -133,6 +133,25 @@
     [[self getCurrentVC] presentViewController:alertVC animated:YES completion:nil];
 }
 
++ (NSString *)createFileName:(int)length {
+    char data[length];
+    for (int x=0;x<length;data[x++] = (char)('A' + (arc4random_uniform(26))));
+    return [[NSString alloc] initWithBytes:data length:length encoding:NSUTF8StringEncoding];
+}
+
+//获取指定区域的图片
++ (UIImage *)clipImageOrignImage:(UIImage *)orignImage WithRect:(CGRect)aRect {
+    
+    CGImageRef subImageRef = CGImageCreateWithImageInRect(orignImage.CGImage, aRect);
+    UIGraphicsBeginImageContext(aRect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextDrawImage(context, aRect, subImageRef);
+    UIImage *viewImage = [UIImage imageWithCGImage:subImageRef];
+    UIGraphicsEndImageContext();
+
+    return viewImage;
+    
+}
 
 @end
 

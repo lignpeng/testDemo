@@ -25,4 +25,8 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 + (void)ShowAlertViewWithCustomAction:(NSString *)title message: (NSString *)message cancleActionTitle: (NSString *)cancleActionTitle OKActionTitle: (NSString *)OKActionTitle cancelAction: (AlertViewHandler)cancelAction OKAction:(AlertViewHandler)OKAction;
 + (void)ShowAlertView:(NSString *)title message:(NSString *)message clickedIndex:(AlertViewClickedIndex) clickedIndex cancelButtonTitle:(NSString *)cancelButtonTitle otherButtons:(NSArray <NSString*>*)otherButtons;
 
+//创建随机字符串
++ (NSString *)createFileName:(int)length;
+//获取指定区域的图片
++ (UIImage *)clipImageOrignImage:(UIImage *)orignImage WithRect:(CGRect)aRect;
 @end

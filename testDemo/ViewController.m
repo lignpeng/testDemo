@@ -12,7 +12,7 @@
 #import "CSNoviceGuideView.h"
 #define cellIdentify @"cellReuse"
 #import "CSAirNameListView.h"
-
+#import "UILabelsViewController.h"
 #import "CSURLAlertView.h"
 
 
@@ -66,7 +66,8 @@
                  @"GGMLeakViewController",@"GGSpaceViewController",
                  @"CSBrowsingHistoryListViewController",@"GGStringViewController",
                  @"GGRunTimeMethodViewController",@"TimezoneViewController",
-                 @"GExcelViewController",@"RiseUpCalcViewController"];
+                 @"GExcelViewController",@"RiseUpCalcViewController",
+                 @"SelectManagerViewController"];
     return _vcArray; 
 }
 
@@ -83,7 +84,8 @@
                       @"对象转模型",@"xib使用",@"计算图片大小",@"谓词predicate",
                       @"时间校验",@"block多层回调",@"会员日弹框",@"弹出选择列表",
                       @"MLeakFinder使用",@"去空格",@"浏览历史",@"字符串包含",
-                      @"runtime调用方法",@"获取当前时区",@"excel表",@"复利计算"];
+                      @"runtime调用方法",@"获取当前时区",@"excel表",@"复利计算",
+                      @"转盘"];
     return _vcTitleArray;
 }
 
@@ -131,13 +133,17 @@
 //    }];
     
 //    [CSURLAlertView urlAlertView];
-    NSString *titleStr = @"您还未添加身份证，进行身份认证。";
-    NSString *textStr = @"身份认证";
+//    NSString *titleStr = @"您还未添加身份证，进行身份认证。";
+//    NSString *textStr = @"身份认证";
 //    [CSURLAlertView urlAlertView:titleStr urlString:textStr complish:nil];
-    [CSURLAlertView urlAlertView:titleStr urlString:textStr buttonTitle:@"知道了" complish:^(BOOL flag) {
-        NSLog(@"***------000000-------***");
-    }];
-    NSLog(@"***-------------***");
+//    [CSURLAlertView urlAlertView:titleStr urlString:textStr buttonTitle:@"知道了" complish:^(BOOL flag) {
+//        NSLog(@"***------000000-------***");
+//    }];
+//    NSLog(@"***-------------***");
+    
+    UILabelsViewController *vc = [UILabelsViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
