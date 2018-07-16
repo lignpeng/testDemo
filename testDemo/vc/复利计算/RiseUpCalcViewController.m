@@ -94,6 +94,14 @@
             [weakSelf.view endEditing:YES];
         }
     };
+    headerView.copyActionBlock = ^{
+        
+        if (weakSelf.resultStr.length > 0) {
+            UIPasteboard *board = [UIPasteboard generalPasteboard];
+            board.string = weakSelf.resultStr;
+        }
+        
+    };
 //    headerView.actionBlock = ^(NSString *sumStr, NSString *riseStr, NSString *numStr){
 //        weakSelf.sum = [sumStr floatValue];
 //        weakSelf.rise = [riseStr floatValue];

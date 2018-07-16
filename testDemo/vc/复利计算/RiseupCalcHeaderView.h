@@ -11,7 +11,7 @@
 @interface RiseupCalcHeaderView : UIView
 
 @property(nonatomic, copy) void (^editBlock)(NSString *sumStr,NSString *riseStr,NSString *numStr,BOOL flag);
-//@property(nonatomic, copy) void (^actionBlock)(NSString *sumStr,NSString *riseStr,NSString *numStr);
+@property(nonatomic, copy) void (^copyActionBlock)();
 
 + (instancetype)riseupCalcHeaderView;
 

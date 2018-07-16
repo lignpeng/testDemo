@@ -73,7 +73,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54Q-kc-ccw">
-                    <rect key="frame" x="383" y="51.5" width="64" height="42"/>
+                    <rect key="frame" x="383" y="16" width="64" height="42"/>
                     <color key="backgroundColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="64" id="0r5-f6-O25"/>
@@ -94,6 +94,21 @@
                         <constraint firstAttribute="height" constant="1" id="5cf-UE-ap4"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQK-J8-Zag">
+                    <rect key="frame" x="383" y="86" width="64" height="42"/>
+                    <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="EpQ-ay-R5Q"/>
+                        <constraint firstAttribute="width" constant="64" id="nKX-0M-bSD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <state key="normal" title="复制">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="copyStrAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vd4-6M-CQf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -108,15 +123,17 @@
                 <constraint firstAttribute="bottom" secondItem="P80-uS-TBv" secondAttribute="bottom" id="FtV-Gn-7it"/>
                 <constraint firstItem="nJO-99-j4k" firstAttribute="leading" secondItem="889-2K-GJk" secondAttribute="leading" id="H3A-na-TXJ"/>
                 <constraint firstItem="2h3-fl-rVJ" firstAttribute="top" secondItem="Yaf-kL-Af4" secondAttribute="bottom" constant="2" id="HbG-AH-acq"/>
+                <constraint firstItem="P80-uS-TBv" firstAttribute="top" secondItem="DQK-J8-Zag" secondAttribute="bottom" constant="16" id="I32-6x-4DX"/>
                 <constraint firstItem="ZdA-3Q-8MK" firstAttribute="leading" secondItem="ohd-5m-iGv" secondAttribute="leading" id="JC8-1R-wLm"/>
                 <constraint firstAttribute="trailing" secondItem="P80-uS-TBv" secondAttribute="trailing" constant="8" id="Ke6-i7-Jdh"/>
+                <constraint firstItem="54Q-kc-ccw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Mce-vu-8R3"/>
                 <constraint firstItem="nP9-zt-A9b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="NM7-Re-FMY"/>
                 <constraint firstItem="O1i-LX-8jm" firstAttribute="height" secondItem="nP9-zt-A9b" secondAttribute="height" id="P8A-62-Opc"/>
-                <constraint firstItem="54Q-kc-ccw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Zuv-oB-GQV"/>
                 <constraint firstItem="54Q-kc-ccw" firstAttribute="leading" secondItem="Yaf-kL-Af4" secondAttribute="trailing" constant="16" id="aQK-bg-4TI"/>
                 <constraint firstItem="nJO-99-j4k" firstAttribute="top" secondItem="889-2K-GJk" secondAttribute="bottom" constant="2" id="ddj-aY-bU8"/>
                 <constraint firstItem="O1i-LX-8jm" firstAttribute="top" secondItem="mzo-WP-ZWh" secondAttribute="bottom" constant="8" id="fQK-Od-PJw"/>
                 <constraint firstItem="889-2K-GJk" firstAttribute="width" secondItem="ZdA-3Q-8MK" secondAttribute="width" id="gGU-bn-jL7"/>
+                <constraint firstItem="DQK-J8-Zag" firstAttribute="leading" secondItem="54Q-kc-ccw" secondAttribute="leading" id="geH-fI-qBl"/>
                 <constraint firstItem="mzo-WP-ZWh" firstAttribute="top" secondItem="nP9-zt-A9b" secondAttribute="bottom" constant="8" id="ggQ-8w-oGO"/>
                 <constraint firstItem="889-2K-GJk" firstAttribute="centerY" secondItem="O1i-LX-8jm" secondAttribute="centerY" id="hJR-qA-LKt"/>
                 <constraint firstItem="Yaf-kL-Af4" firstAttribute="centerY" secondItem="mzo-WP-ZWh" secondAttribute="centerY" id="hTm-p4-nUZ"/>
@@ -137,6 +154,7 @@
                 <outlet property="actionButton" destination="54Q-kc-ccw" id="ahZ-0z-kqu"/>
                 <outlet property="numberTextField" destination="889-2K-GJk" id="nYe-wf-9qY"/>
                 <outlet property="riseTextField" destination="Yaf-kL-Af4" id="M49-AE-5eL"/>
+                <outlet property="strCopyButton" destination="DQK-J8-Zag" id="sEm-aL-yay"/>
                 <outlet property="sumTextField" destination="ZdA-3Q-8MK" id="Ql2-OA-lFS"/>
             </connections>
             <point key="canvasLocation" x="250" y="-930"/>
