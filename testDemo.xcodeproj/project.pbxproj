@@ -167,6 +167,8 @@
 		1FF6905220F5A9CA003B5431 /* UISelectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6905120F5A9CA003B5431 /* UISelectCollectionViewCell.m */; };
 		1FF6905520F5AC03003B5431 /* UILabelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6905420F5AC03003B5431 /* UILabelsViewController.m */; };
 		1FF6905C20F5AFBD003B5431 /* LabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6905B20F5AFBD003B5431 /* LabelModel.m */; };
+		1FF69062210086F2003B5431 /* CSManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF69060210086F1003B5431 /* CSManagerTest.m */; };
+		1FF69063210086F2003B5431 /* CSPassagerPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF69061210086F2003B5431 /* CSPassagerPickerView.m */; };
 		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
@@ -489,8 +491,8 @@
 		1F8B927E202854A200710DB6 /* GGPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGPerson.m; path = "vc/runtime调用方法/GGPerson.m"; sourceTree = "<group>"; };
 		1F9916EF1FBAC24800E6F744 /* CSBrowsingHistoryTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowsingHistoryTypeView.h; path = vc/BrowsingHistory/view/CSBrowsingHistoryTypeView.h; sourceTree = "<group>"; };
 		1F9916F01FBAC24800E6F744 /* CSBrowsingHistoryTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowsingHistoryTypeView.m; path = vc/BrowsingHistory/view/CSBrowsingHistoryTypeView.m; sourceTree = "<group>"; };
-		1FA65F221F297305008D8FCA /* CSAirNameListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSAirNameListView.h; path = "vc/列表选择器/CSAirNameListView.h"; sourceTree = "<group>"; };
-		1FA65F231F297306008D8FCA /* CSAirNameListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSAirNameListView.m; path = "vc/列表选择器/CSAirNameListView.m"; sourceTree = "<group>"; };
+		1FA65F221F297305008D8FCA /* CSAirNameListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAirNameListView.h; sourceTree = "<group>"; };
+		1FA65F231F297306008D8FCA /* CSAirNameListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAirNameListView.m; sourceTree = "<group>"; };
 		1FA65F261F29757C008D8FCA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA65F271F29757C008D8FCA /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		1FA65F281F29757C008D8FCA /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -559,6 +561,10 @@
 		1FF6905420F5AC03003B5431 /* UILabelsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UILabelsViewController.m; path = "vc/转盘/UILabelsViewController.m"; sourceTree = "<group>"; };
 		1FF6905A20F5AFBD003B5431 /* LabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelModel.h; sourceTree = "<group>"; };
 		1FF6905B20F5AFBD003B5431 /* LabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelModel.m; sourceTree = "<group>"; };
+		1FF6905E210086F1003B5431 /* CSManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSManagerTest.h; sourceTree = "<group>"; };
+		1FF6905F210086F1003B5431 /* CSPassagerPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPassagerPickerView.h; sourceTree = "<group>"; };
+		1FF69060210086F1003B5431 /* CSManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSManagerTest.m; sourceTree = "<group>"; };
+		1FF69061210086F2003B5431 /* CSPassagerPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPassagerPickerView.m; sourceTree = "<group>"; };
 		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
 		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
@@ -1271,6 +1277,7 @@
 		1F6E8EAF1E84B97700D15351 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				1FF6905D210086F1003B5431 /* other */,
 				1F483C0820CE960E00FF0FED /* CSURLAlertView.h */,
 				1F483C0920CE960E00FF0FED /* CSURLAlertView.m */,
 				1FB4127B1EFB532C0040C840 /* HexColor.h */,
@@ -1442,6 +1449,20 @@
 			);
 			name = model;
 			path = "vc/转盘/model";
+			sourceTree = "<group>";
+		};
+		1FF6905D210086F1003B5431 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6905E210086F1003B5431 /* CSManagerTest.h */,
+				1FF69060210086F1003B5431 /* CSManagerTest.m */,
+				1FA65F221F297305008D8FCA /* CSAirNameListView.h */,
+				1FA65F231F297306008D8FCA /* CSAirNameListView.m */,
+				1FF6905F210086F1003B5431 /* CSPassagerPickerView.h */,
+				1FF69061210086F2003B5431 /* CSPassagerPickerView.m */,
+			);
+			name = other;
+			path = tools/other;
 			sourceTree = "<group>";
 		};
 		1FF70B261FBE91C200C29816 /* model */ = {
@@ -1732,8 +1753,6 @@
 				1F090E441F56B2A700CA0C61 /* 会员日弹框 */,
 				1FFFD9841F25A61500929FC2 /* 第二篇：15个VC */,
 				1FC09C171F01FF4D00D2F8A7 /* 第一篇：15个VC */,
-				1FA65F221F297305008D8FCA /* CSAirNameListView.h */,
-				1FA65F231F297306008D8FCA /* CSAirNameListView.m */,
 				1F11EE3A1FDA2FE4007A70A1 /* 上下拉刷新 */,
 			);
 			name = vc;
@@ -1970,12 +1989,14 @@
 				1F0C61DC1F720CBB00D8F01B /* FBStructEncodingParser.mm in Sources */,
 				1F0C61CF1F720CBB00D8F01B /* fishhook.c in Sources */,
 				1FA65F471F29757C008D8FCA /* NSArray+MASAdditions.m in Sources */,
+				1FF69062210086F2003B5431 /* CSManagerTest.m in Sources */,
 				1F16CA501E7633110038D774 /* Model.m in Sources */,
 				1F61D14420A0488500F933DC /* WebViewJavascriptBridge_JS.m in Sources */,
 				1F3C4DFC1F45976500EFF7AB /* GGBlockViewController.m in Sources */,
 				1F40B3AD1DF809EB00E03910 /* GPTimeViewController.m in Sources */,
 				1F47F8D51E553E740056F326 /* AttributeLabelViewController.m in Sources */,
 				1F8B927F202854A200710DB6 /* GGPerson.m in Sources */,
+				1FF69063210086F2003B5431 /* CSPassagerPickerView.m in Sources */,
 				1F2CF6861EF37BCE00093C15 /* UnmenberToken.m in Sources */,
 				1FA65F461F29757C008D8FCA /* MASViewConstraint.m in Sources */,
 				1F2CF68D1EF386BF00093C15 /* YYClassInfo.m in Sources */,

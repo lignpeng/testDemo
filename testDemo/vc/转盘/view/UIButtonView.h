@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LabelModel.h"
 
 @interface UIButtonView : UIView
 
@@ -14,4 +15,6 @@
 
 + (instancetype)buttonViewWithTitle:(NSString *)title;
 
++ (instancetype)buttonViewViewModel:(LabelModel *)model;
++ (UIView *)buttonViewWithFrame:(CGRect)frame Model:(LabelModel *)model;
 @end

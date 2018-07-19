@@ -14,7 +14,7 @@
 #import "CSAirNameListView.h"
 #import "UILabelsViewController.h"
 #import "CSURLAlertView.h"
-
+#import "SelectPanViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -141,7 +141,8 @@
 //    }];
 //    NSLog(@"***-------------***");
     
-    UILabelsViewController *vc = [UILabelsViewController new];
+//    UILabelsViewController *vc = [UILabelsViewController new];
+    SelectPanViewController *vc = [SelectPanViewController new];
     [self.navigationController pushViewController:vc animated:YES];
     
 }

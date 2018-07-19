@@ -12,5 +12,6 @@
 
 @property(nonatomic, copy) void (^actionBlock)(NSArray *array);
 
++ (instancetype)labelsViewControllerWith:(NSArray *)items complishBlock:(void(^)(NSArray *items))complishBlock;
 
 @end

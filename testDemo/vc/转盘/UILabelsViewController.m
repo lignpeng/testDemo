@@ -22,6 +22,15 @@
 
 @implementation UILabelsViewController
 
++ (instancetype)labelsViewControllerWith:(NSArray *)items complishBlock:(void(^)(NSArray *items))complishBlock {
+    UILabelsViewController *vc = [UILabelsViewController new];
+    if (items.count > 0) {
+        [vc.dataSource addObjectsFromArray:items];
+    }
+    vc.actionBlock = complishBlock;
+    return vc;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
@@ -257,28 +266,3 @@
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
