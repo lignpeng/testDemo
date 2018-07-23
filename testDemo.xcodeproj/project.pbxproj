@@ -169,6 +169,9 @@
 		1FF6905C20F5AFBD003B5431 /* LabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6905B20F5AFBD003B5431 /* LabelModel.m */; };
 		1FF69062210086F2003B5431 /* CSManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF69060210086F1003B5431 /* CSManagerTest.m */; };
 		1FF69063210086F2003B5431 /* CSPassagerPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF69061210086F2003B5431 /* CSPassagerPickerView.m */; };
+		1FF690662105CC5D003B5431 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF690652105CC5D003B5431 /* Realm.framework */; };
+		1FF690672105CC72003B5431 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF690652105CC5D003B5431 /* Realm.framework */; };
+		1FF690682105CC72003B5431 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF690652105CC5D003B5431 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
@@ -243,6 +246,17 @@
 			files = (
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF690692105CC72003B5431 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1FF690682105CC72003B5431 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -565,6 +579,7 @@
 		1FF6905F210086F1003B5431 /* CSPassagerPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPassagerPickerView.h; sourceTree = "<group>"; };
 		1FF69060210086F1003B5431 /* CSManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSManagerTest.m; sourceTree = "<group>"; };
 		1FF69061210086F2003B5431 /* CSPassagerPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPassagerPickerView.m; sourceTree = "<group>"; };
+		1FF690652105CC5D003B5431 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = sdk/Realm.framework; sourceTree = "<group>"; };
 		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
 		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
@@ -658,10 +673,12 @@
 				1F4DBC031E4C6A8A00374EA4 /* CoreGraphics.framework in Frameworks */,
 				1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */,
 				1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */,
+				1FF690662105CC5D003B5431 /* Realm.framework in Frameworks */,
 				1F0362531E0D0D6700BD804A /* UIKit.framework in Frameworks */,
 				1F0362511E0D0D6100BD804A /* QuartzCore.framework in Frameworks */,
 				1F03624F1E0D0D5A00BD804A /* SystemConfiguration.framework in Frameworks */,
 				1F03624D1E0D0D4E00BD804A /* AudioToolbox.framework in Frameworks */,
+				1FF690672105CC72003B5431 /* Realm.framework in Frameworks */,
 				1F03624B1E0D0D4400BD804A /* CoreTelephony.framework in Frameworks */,
 				1F0362491E0D0D3B00BD804A /* Security.framework in Frameworks */,
 				1F0362471E0D0D3200BD804A /* libsqlite3.tbd in Frameworks */,
@@ -1698,6 +1715,7 @@
 		EE14AA3C1DE5419D00E152AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1FF690652105CC5D003B5431 /* Realm.framework */,
 				1F11EE351FD7AB74007A70A1 /* AMapFoundationKit.framework */,
 				1F0C618A1F720CBB00D8F01B /* FBRetainCycleDetector */,
 				1F0C60BC1F70FF9F00D8F01B /* MLeaksFinder */,
@@ -1787,6 +1805,8 @@
 				EE14AA361DE5419D00E152AD /* Frameworks */,
 				EE14AA371DE5419D00E152AD /* Resources */,
 				1F671A6B1E7A1A5A0022AA4A /* Embed App Extensions */,
+				1FF690692105CC72003B5431 /* Embed Frameworks */,
+				1FF6906A2105CCEB003B5431 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1940,6 +1960,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FF6906A2105CCEB003B5431 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F2CF68E1EF7638A00093C15 /* Sources */ = {
@@ -2309,6 +2345,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo/GT.embeddedframework",
 					"$(PROJECT_DIR)/testDemo",
+					"$(PROJECT_DIR)/testDemo/sdk",
 				);
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2331,6 +2368,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo/GT.embeddedframework",
 					"$(PROJECT_DIR)/testDemo",
+					"$(PROJECT_DIR)/testDemo/sdk",
 				);
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

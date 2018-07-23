@@ -12,6 +12,7 @@
 #import "UILabelsViewController.h"
 #import "UIButtonView.h"
 #import <CoreMotion/CoreMotion.h>
+#import "GPTools.h"
 
 @interface SelectPanViewController ()
 
@@ -25,6 +26,8 @@
 @property(nonatomic, strong) UIView *resultView;
 @property(nonatomic, strong) UIButton *actionButton;
 @property(nonatomic, strong) UIButton *labelsButton;
+@property(nonatomic, strong) UIStepper *stepper;
+@property(nonatomic, strong) UILabel *numLabel;
 //动画部分
 //列表部分
 @property (nonatomic, strong) UIGravityBehavior *listGravity;//重力
@@ -128,8 +131,25 @@
     [self.actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.listView.mas_bottom).offset(margin * 0.5);
         make.left.equalTo(self.scrollView).offset(margin*3);
-        make.width.mas_equalTo(widht - margin*6);
+        make.width.mas_equalTo(widht*0.5 - margin*4);
         make.height.mas_equalTo(42);
+    }];
+    
+    [self.scrollView addSubview:self.numLabel];
+    [self.numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.actionButton);
+        make.left.equalTo(self.actionButton.mas_right).offset(margin);
+        make.width.mas_equalTo(margin*2);
+        make.height.mas_equalTo(42);
+    }];
+    
+    [self.scrollView addSubview:self.stepper];
+    [self.stepper mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.actionButton);
+        make.right.equalTo(self.scrollView).offset(margin*2);
+        make.left.equalTo(self.numLabel.mas_right).offset(margin);
+//        make.width.mas_equalTo(widht*0.5 - margin*4);
+        make.height.mas_equalTo(28);
     }];
     
     [self.scrollView addSubview:self.resultView];
@@ -269,35 +289,36 @@
     return _dataSource;
 }
 
+- (UIStepper *)stepper {
+    if (!_stepper) {
+        _stepper = [[UIStepper alloc] init];
+        _stepper.backgroundColor = [UIColor whiteColor];
+    }
+    return _stepper;
+}
+
+- (UILabel *)numLabel {
+    if (!_numLabel) {
+        _numLabel = [UILabel new];
+        _numLabel.textColor = [UIColor darkTextColor];
+        _numLabel.textAlignment = NSTextAlignmentCenter;
+        _numLabel.font = [UIFont systemFontOfSize:14];
+        _numLabel.backgroundColor = [UIColor whiteColor];
+    }
+    return _numLabel;
+}
+
 - (UIButton *)actionButton {
     if (!_actionButton) {
-        _actionButton = ({
-            UIButton *bt = [[UIButton alloc] init];
-            [bt setTitle:@"执行" forState:UIControlStateNormal];
-            bt.backgroundColor = [UIColor colorWithRed:21.0/256.0 green:126.0/256.0 blue:251.0/256.0 alpha:1];
-            bt.titleLabel.textColor = [UIColor whiteColor];
-            bt.titleLabel.font = [UIFont systemFontOfSize:14];
-            [self clipCorner:bt corner:5];
-            [bt addTarget:self action:@selector(selectAction) forControlEvents:UIControlEventTouchUpInside];
-            bt;
-                        
-        });
+        _actionButton = [GPTools createButton:@"执行" titleFont:[UIFont systemFontOfSize:14] corner:5 target:self action:@selector(selectAction)];
+        _actionButton.backgroundColor = [UIColor colorWithRed:21.0/256.0 green:126.0/256.0 blue:251.0/256.0 alpha:1];
     }
     return _actionButton;
 }
 
 - (UIButton *)labelsButton {
     if (!_labelsButton) {
-        _labelsButton = ({
-            UIButton *bt = [[UIButton alloc] init];
-            [bt setTitle:@"标签管理" forState:UIControlStateNormal];
-            bt.backgroundColor = [UIColor clearColor];
-            bt.titleLabel.textColor = [UIColor colorWithRed:21.0/256.0 green:126.0/256.0 blue:251.0/256.0 alpha:1];
-            bt.titleLabel.font = [UIFont systemFontOfSize:14];
-            [self clipCorner:bt corner:5];
-            [bt addTarget:self action:@selector(addAction) forControlEvents:UIControlEventTouchUpInside];
-            bt;
-        });
+        _labelsButton = [GPTools createButton:@"标签管理" titleFont:[UIFont systemFontOfSize:14] corner:5 target:self action:@selector(addAction)];
     }
     return _labelsButton;
 }
@@ -333,7 +354,7 @@
 //        _scrollView.contentSize = [UIScreen mainScreen].bounds.size;
         _scrollView.alwaysBounceVertical = YES;
         _scrollView.alwaysBounceHorizontal = NO;
-        _scrollView.backgroundColor = [UIColor grayColor];
+        _scrollView.backgroundColor = [UIColor clearColor];
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
     }

@@ -29,4 +29,7 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 + (NSString *)createFileName:(int)length;
 //获取指定区域的图片
 + (UIImage *)clipImageOrignImage:(UIImage *)orignImage WithRect:(CGRect)aRect;
+
+//创建按钮
++ (UIButton *)createButton:(NSString *)title titleFont:(UIFont *)titleFont corner:(CGFloat)radius target:(nullable id)target action:(SEL)selector;
 @end

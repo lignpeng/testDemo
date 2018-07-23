@@ -153,6 +153,20 @@
     
 }
 
++ (UIButton *)createButton:(NSString *)title titleFont:(UIFont *)titleFont corner:(CGFloat)radius target:(nullable id)target action:(SEL)selector {
+    UIButton *bt = [[UIButton alloc] init];
+    [bt setTitle:title forState:UIControlStateNormal];
+    bt.backgroundColor = [UIColor clearColor];
+        //    bt.titleLabel.textColor = [UIColor colorWithRed:21.0/256.0 green:126.0/256.0 blue:251.0/256.0 alpha:1];
+    if (radius > 0) {
+        bt.layer.cornerRadius = radius;
+        bt.clipsToBounds = YES;
+    }
+    bt.titleLabel.font = titleFont;
+    [bt addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    return bt;
+}
+
 @end
 
 
