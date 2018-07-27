@@ -11,6 +11,8 @@
 #import "Masonry.h"
 #import "GPTools.h"
 #import <Photos/PHPhotoLibrary.h>
+#import "FileTools.h"
+#import "UIViewController+BackButtonHandler.h"
 
 @interface UILabelsViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -36,10 +38,18 @@
     [self initView];
 }
 
+//返回
+- (BOOL)navigationShouldPopOnBackButton {
+    if (self.actionBlock) {
+        self.actionBlock(self.dataSource);
+    }
+    return YES;
+}
+
 - (void)initView {
     self.title = @"标签";
     self.view.backgroundColor = [UIColor lightGrayColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(okAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"管理" style:UIBarButtonItemStylePlain target:self action:@selector(okAction)];
     CGFloat margin = 16;
     CGFloat theight = 42;
     CGFloat navigationbarHight = CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]) + CGRectGetHeight(self.navigationController.navigationBar.frame);
@@ -102,10 +112,10 @@
 }
 
 - (void)okAction {
-    if (self.actionBlock) {
-        self.actionBlock(self.dataSource);
+    for (LabelModel *model in self.dataSource) {
+        model.isShowDelete = !model.isShowDelete;
     }
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.collectionView reloadData];
 }
 
 - (void)addImageAction {
@@ -137,13 +147,8 @@
 //    CGRect selectRect = [[info objectForKey:UIImagePickerControllerCropRect] CGRectValue]; //通过key值获取到图片
 //    UIImage *image = [GPTools clipImageOrignImage:orignImage WithRect:selectRect];
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
-    NSString *path = [NSHomeDirectory() stringByAppendingString:@"/Documents/images"];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    BOOL isDir = NO;
-    BOOL exist = [fileManager fileExistsAtPath:path isDirectory:&isDir];
-    if (!(isDir && exist)) {
-        [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
-    }
+    NSString *path = [FileTools createFileFolderInDocumentsWithName:@"images"];
+    
     NSString *pathStr = [path stringByAppendingString:[NSString stringWithFormat:@"/%@.png",[GPTools createFileName:6]]];
     [UIImagePNGRepresentation(image) writeToFile:pathStr atomically:YES];
     NSLog(@"str = %@",pathStr);
@@ -162,11 +167,14 @@
 }
 
 - (void)addLabelModel:(NSString *)name isImage:(BOOL)isImage{
-    LabelModel *model = [LabelModel new];
+    LabelModel *model = [[LabelModel alloc] init];
     model.name = name;
     model.isImage = isImage;
+    //对象重定向到realm存储的数据对象，上面创建的model跟下面存储到realm的对象不相关的
+//    [FileTools addObjectToDB:model];
     [self.dataSource addObject:model];
     [self.collectionView reloadData];
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -178,43 +186,49 @@
     __weak typeof(self) weakSelf = self;
     cell.deleteActionBlock = ^(NSIndexPath *indexPath) {
         [GPTools ShowAlertView:[NSString stringWithFormat:@"是否删除：“%@”标签",((LabelModel *)weakSelf.dataSource[indexPath.row]).name] alertHandler:^{
-            [weakSelf removeItem:indexPath];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf removeItem:indexPath];
+            });
+            
         }];
     };
     return cell;
 }
 
 - (void)removeItem:(NSIndexPath *)indexPath {
+//    [FileTools deletDBObject:@[self.dataSource[indexPath.row]]];
+//    LabelModel *model = self.dataSource[indexPath.row];
+//    [FileTools deletDBObject:model withKeyValue:model.id];
     [self.dataSource removeObjectAtIndex:indexPath.row];
     [self.collectionView reloadData];
 }
 
-- (void)longTouchAction:(UILongPressGestureRecognizer *)tap {
-    CGPoint pointTouch = [tap locationInView:self.collectionView];
-    
-    if (tap.state == UIGestureRecognizerStateBegan) {
-        NSLog(@"UIGestureRecognizerStateBegan");
-        
-        NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pointTouch];
-        if (indexPath == nil) {
-            NSLog(@"空");
-        }else{
-            
-            NSLog(@"Section = %ld,Row = %ld",(long)indexPath.section,(long)indexPath.row);
-           LabelModel *model = self.dataSource[indexPath.row];
-            model.isShowDelete = !model.isShowDelete;
-            [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
-        }
-    }
-    if (tap.state == UIGestureRecognizerStateChanged) {
-        NSLog(@"UIGestureRecognizerStateChanged");
-    }
-    
-    if (tap.state == UIGestureRecognizerStateEnded) {
-        NSLog(@"UIGestureRecognizerStateEnded");
-    }
-
-}
+//- (void)longTouchAction:(UILongPressGestureRecognizer *)tap {
+//    CGPoint pointTouch = [tap locationInView:self.collectionView];
+//
+//    if (tap.state == UIGestureRecognizerStateBegan) {
+//        NSLog(@"UIGestureRecognizerStateBegan");
+//
+//        NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pointTouch];
+//        if (indexPath == nil) {
+//            NSLog(@"空");
+//        }else{
+//
+//            NSLog(@"Section = %ld,Row = %ld",(long)indexPath.section,(long)indexPath.row);
+//           LabelModel *model = self.dataSource[indexPath.row];
+//            model.isShowDelete = !model.isShowDelete;
+//            [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+//        }
+//    }
+//    if (tap.state == UIGestureRecognizerStateChanged) {
+//        NSLog(@"UIGestureRecognizerStateChanged");
+//    }
+//
+//    if (tap.state == UIGestureRecognizerStateEnded) {
+//        NSLog(@"UIGestureRecognizerStateEnded");
+//    }
+//
+//}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat widht = CGRectGetWidth(self.collectionView.bounds) / 4;

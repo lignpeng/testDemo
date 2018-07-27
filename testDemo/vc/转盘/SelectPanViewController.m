@@ -13,6 +13,8 @@
 #import "UIButtonView.h"
 #import <CoreMotion/CoreMotion.h>
 #import "GPTools.h"
+#import "FileTools.h"
+#import "HexColor.h"
 
 @interface SelectPanViewController ()
 
@@ -28,6 +30,8 @@
 @property(nonatomic, strong) UIButton *labelsButton;
 @property(nonatomic, strong) UIStepper *stepper;
 @property(nonatomic, strong) UILabel *numLabel;
+@property(nonatomic, assign) int actionCount;
+@property(nonatomic, strong) dispatch_source_t timer;
 //动画部分
 //列表部分
 @property (nonatomic, strong) UIGravityBehavior *listGravity;//重力
@@ -45,6 +49,7 @@
 @implementation SelectPanViewController
 
 - (void)initData {
+    self.actionCount = 1;
     self.listAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.listView];
     self.listGravity = [[UIGravityBehavior alloc] init];
     [self.listAnimator addBehavior:self.listGravity];
@@ -67,6 +72,11 @@
     self.resultDynamicItemBehavior.elasticity = 1.0;//弹性
     [self.resultAnimator addBehavior:self.resultDynamicItemBehavior];
     [self useGyroPush];
+    [self updateActionNum];
+}
+
+- (void)updateActionNum {
+    self.numLabel.text = [NSString stringWithFormat:@"次数：%2d",self.actionCount];
 }
 
 - (void)useGyroPush {
@@ -95,6 +105,8 @@
     [super viewDidLoad];
     [self initView];
     [self initData];
+    [FileTools configDefaultRealmDBWithdbName:labelRealm];
+    NSLog(@"%@",[RLMRealmConfiguration defaultConfiguration].fileURL.absoluteString);
 }
 
 - (void)initView {
@@ -126,29 +138,33 @@
         make.width.mas_equalTo(72);
         make.height.mas_equalTo(32);
     }];
-    
+    CGFloat btheight = 42;
     [self.scrollView addSubview:self.actionButton];
     [self.actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.listView.mas_bottom).offset(margin * 0.5);
-        make.left.equalTo(self.scrollView).offset(margin*3);
-        make.width.mas_equalTo(widht*0.5 - margin*4);
-        make.height.mas_equalTo(42);
+        make.left.equalTo(self.scrollView).offset(margin*1.5);
+        make.width.mas_equalTo(widht*0.5 - margin*3.5);
+        make.height.mas_equalTo(btheight);
     }];
     
     [self.scrollView addSubview:self.numLabel];
     [self.numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.actionButton);
-        make.left.equalTo(self.actionButton.mas_right).offset(margin);
-        make.width.mas_equalTo(margin*2);
-        make.height.mas_equalTo(42);
+        make.left.equalTo(self.actionButton.mas_right).offset(margin*0.5);
+//        make.width.mas_equalTo(margin*4);
+//        make.right.equalTo(self.actionButton.mas_left).offset(margin*0.5);
+        make.height.mas_equalTo(btheight);
     }];
+    
     
     [self.scrollView addSubview:self.stepper];
     [self.stepper mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.actionButton);
-        make.right.equalTo(self.scrollView).offset(margin*2);
-        make.left.equalTo(self.numLabel.mas_right).offset(margin);
-//        make.width.mas_equalTo(widht*0.5 - margin*4);
+//        make.centerY.equalTo(self.actionButton);
+        make.top.equalTo(self.listView.mas_bottom).offset(margin * 0.5 + (btheight - 28)*0.5);
+        make.trailing.equalTo(self.scrollView);
+        make.left.equalTo(self.numLabel.mas_right).offset(margin*0.5);
+            //        make.width.mas_equalTo(widht*0.5 - margin*4);
+        make.width.mas_equalTo(margin*4);
         make.height.mas_equalTo(28);
     }];
     
@@ -180,6 +196,11 @@
         }
     }];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)stepperAction {
+    self.actionCount = self.stepper.value + 1;
+    [self updateActionNum];
 }
 
 - (void)updateViews {
@@ -244,14 +265,35 @@
 }
 
 - (void)selectAction {
+    self.actionButton.backgroundColor = [UIColor grayColor];
+    self.actionButton.enabled = NO;
     [self.selectedItemsArray removeAllObjects];
     [self updateResultViews];
+    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, NULL, NULL, dispatch_get_global_queue(0, 0));
+    float tt = 1.5;
+    dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, tt * NSEC_PER_SEC);//开始时间:从现在开始3秒后开始
+        //    dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC), 0);
+    dispatch_source_set_timer(self.timer, start, (int64_t)(tt * NSEC_PER_SEC), 0);
+    
+//3. 设置定时器的回调
+    __block int count = self.actionCount;
     __weak typeof(self) weakSelf = self;
-    self.selectActionBlock = dispatch_block_create(0, ^{
-        [weakSelf dealWithSelect];
+    dispatch_source_set_event_handler(self.timer, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf dealWithSelect];
+        });
+        count--;
+        if (count == 0) { // 执行4次,让定时器取消
+            dispatch_cancel(weakSelf.timer);
+            weakSelf.timer = nil; // 置空,因为是强引用
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.actionButton.backgroundColor = [UIColor colorWithRed:21.0/256.0 green:126.0/256.0 blue:251.0/256.0 alpha:1];
+                weakSelf.actionButton.enabled = YES;
+            });
+        }
     });
-    [self.selectedItemsArray removeAllObjects];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.5 * NSEC_PER_SEC),dispatch_get_main_queue(), self.selectActionBlock);
+//4.启动定时器: GCD定时器默认是暂停的
+    dispatch_resume(self.timer);
 }
 
 - (void)dealWithSelect {
@@ -267,6 +309,8 @@
 - (void)stopSelectAction {
     dispatch_cancel(self.selectActionBlock);
 }
+
+#pragma mark - 懒加载
 
 - (NSMutableArray *)selectedItemsArray {
     if (!_selectedItemsArray) {
@@ -293,6 +337,12 @@
     if (!_stepper) {
         _stepper = [[UIStepper alloc] init];
         _stepper.backgroundColor = [UIColor whiteColor];
+        _stepper.continuous = NO;//禁止长按连续触
+        _stepper.autorepeat = NO;//一次点击只会改变一次值
+        _stepper.minimumValue = 0;
+        _stepper.maximumValue = 98;
+        _stepper.stepValue = 1;
+        [_stepper addTarget:self action:@selector(stepperAction) forControlEvents:UIControlEventValueChanged];
     }
     return _stepper;
 }
@@ -331,7 +381,7 @@
 - (UIView *)listView {
     if (!_listView) {
         _listView = [UIView new];
-        _listView.backgroundColor = [UIColor lightGrayColor];
+        _listView.backgroundColor = [UIColor colorWith8BitRedN:153 green:209 blue:141];
         [self clipCorner:_listView corner:5];
     }
     return _listView;

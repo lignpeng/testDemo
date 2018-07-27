@@ -4,7 +4,7 @@
 #import <Foundation/Foundation.h>
 
 
-#define CSManagerTestIsOpen YES
+#define CSManagerTestIsOpen NO
 
 @interface CSManagerTest : NSObject
 

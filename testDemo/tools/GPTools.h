@@ -31,5 +31,5 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 + (UIImage *)clipImageOrignImage:(UIImage *)orignImage WithRect:(CGRect)aRect;
 
 //创建按钮
-+ (UIButton *)createButton:(NSString *)title titleFont:(UIFont *)titleFont corner:(CGFloat)radius target:(nullable id)target action:(SEL)selector;
++ (UIButton *)createButton:(NSString *)title titleFont:(UIFont *)titleFont corner:(CGFloat)radius target:(nullable id)target action:(SEL _Nonnull )selector;
 @end
