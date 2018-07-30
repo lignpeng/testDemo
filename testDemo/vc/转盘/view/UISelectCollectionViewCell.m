@@ -41,18 +41,14 @@
 
 - (void)configCell:(LabelModel *)model {
     self.imageView.hidden = !model.isImage;
-//    self.namelabel.hidden = model.isImage;
     self.deletButton.hidden = !model.isShowDelete;
     if (model.isImage) {
         self.imageView.image = [[UIImage alloc] initWithContentsOfFile:model.path];
         self.namelabel.backgroundColor = [UIColor clearColor];
     }else {
-//        self.namelabel.backgroundColor = [UIColor whiteColor];
         self.namelabel.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256 alpha:0.45];
     }
-//    else {
     self.namelabel.text = model.name;
-//    }
 }
 
 - (void)initView {
@@ -82,7 +78,6 @@
         make.right.equalTo(self.mas_right);
         make.width.height.mas_equalTo(20);
     }];
-//    self.namelabel.layer.cornerRadius = CGRectGetWidth(self.bounds)*0.5;
 }
 
 - (void)layoutSubviews {
@@ -106,7 +101,6 @@
     if (!_namelabel) {
         _namelabel = [UILabel new];
         _namelabel.backgroundColor = [UIColor whiteColor];
-//        _namelabel.textColor = [UIColor darkTextColor];
         _namelabel.textColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
         _namelabel.textAlignment = NSTextAlignmentCenter;
         _namelabel.font = [UIFont boldSystemFontOfSize:12];
@@ -114,9 +108,6 @@
         _namelabel.clipsToBounds = YES;
         _namelabel.layer.borderWidth = 1;
         _namelabel.layer.borderColor = [[UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256] CGColor];
-//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
-//        tap.numberOfTapsRequired = 2;
-//        [_namelabel addGestureRecognizer:tap];
     }
     return _namelabel;
 }
@@ -128,9 +119,6 @@
         _imageView.clipsToBounds = YES;
         _imageView.layer.borderWidth = 1;
         _imageView.layer.borderColor = [[UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256] CGColor];
-//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
-//        tap.numberOfTapsRequired = 2;
-//        [_imageView addGestureRecognizer:tap];
     }
     return _imageView;
 }

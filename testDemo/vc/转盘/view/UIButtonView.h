@@ -11,10 +11,10 @@
 
 @interface UIButtonView : UIView
 
-@property(nonatomic, copy) void (^deleteActionBlock)(NSString *title);
+//@property(nonatomic, copy) void (^deleteActionBlock)(NSString *title);
 
-+ (instancetype)buttonViewWithTitle:(NSString *)title;
+//+ (instancetype)buttonViewWithTitle:(NSString *)title;
 
-+ (instancetype)buttonViewViewModel:(LabelModel *)model;
+//+ (instancetype)buttonViewViewModel:(LabelModel *)model;
 + (UIView *)buttonViewWithFrame:(CGRect)frame Model:(LabelModel *)model;
 @end

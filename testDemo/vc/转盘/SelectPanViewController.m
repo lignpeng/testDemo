@@ -154,19 +154,15 @@
     [self.numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.actionButton);
         make.left.equalTo(self.actionButton.mas_right).offset(margin*0.5);
-//        make.width.mas_equalTo(margin*4);
-//        make.right.equalTo(self.actionButton.mas_left).offset(margin*0.5);
         make.height.mas_equalTo(btheight);
     }];
     
     
     [self.scrollView addSubview:self.stepper];
     [self.stepper mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.equalTo(self.actionButton);
         make.top.equalTo(self.listView.mas_bottom).offset(margin * 0.5 + (btheight - 28)*0.5);
         make.trailing.equalTo(self.scrollView);
         make.left.equalTo(self.numLabel.mas_right).offset(margin*0.5);
-            //        make.width.mas_equalTo(widht*0.5 - margin*4);
         make.width.mas_equalTo(margin*4);
         make.height.mas_equalTo(28);
     }];
