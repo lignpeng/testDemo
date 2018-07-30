@@ -34,6 +34,7 @@
 @property(nonatomic, assign) int actionCount;//次数
 @property(nonatomic, strong) dispatch_source_t timer;//定时器
 @property(nonatomic, strong) UILabel *bestLabel;//最佳提示
+@property(nonatomic, strong) NSMutableArray *bestArray;
 //动画部分
 //列表部分
 @property (nonatomic, strong) UIGravityBehavior *listGravity;//重力
@@ -279,6 +280,7 @@
     self.actionButton.backgroundColor = [UIColor grayColor];
     self.actionButton.enabled = NO;
     [self.selectedItemsArray removeAllObjects];
+    [self.bestArray removeAllObjects];
     [self updateResultViews];
     self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, NULL, NULL, dispatch_get_global_queue(0, 0));
     float tt = 1.5;
@@ -309,17 +311,48 @@
 //筛选操作
 - (void)dealWithSelect {
     NSLog(@"----- log -----");
-    if (self.itemsArray.count <=0) {
+    if (self.itemsArray.count <= 0) {
         return;
     }
     LabelModel *label = self.itemsArray[arc4random() % self.itemsArray.count];
     [self.selectedItemsArray addObject:label];
     [self createBullWith:label superView:self.resultView action:@selector(addResultBehavior:)];
+    self.bestLabel.text = [self bestModel];
 }
 
-//- (LabelModel *)bestModel {
-//    
-//}
+- (NSString *)bestModel {
+    NSArray *array = [DataTools filterMaxItemsArray:self.selectedItemsArray isStringObj:NO filterKey:[LabelModel primaryKey]];
+    if (array.count <= 0) {
+        return nil;
+    }
+    //1、选出最大数
+    NSInteger max = ((NSArray *)array[0]).count;
+    NSInteger index = 0;
+    for (int i = 0; i < array.count; i++) {
+        NSInteger d = ((NSArray *)array[i]).count;
+        if (max < d) {
+            max = d;
+            index = i;
+        }
+    }
+    //2、相同个数的情况
+    NSMutableArray *indexArray = [NSMutableArray array];
+    for (int i = 0; i < array.count; i++) {
+        NSInteger d = ((NSArray *)array[i]).count;
+        if (max == d) {
+            [indexArray addObject:@(i)];
+        }
+    }
+    NSString *best = @"最佳：";
+    [self.bestArray removeAllObjects];
+    for (int i = 0; i < indexArray.count; i++) {
+        NSArray *tempArray = (NSArray *)array[i];
+        LabelModel *label = tempArray.firstObject;
+        [self.bestArray addObject:label];
+        best = [best stringByAppendingFormat:@"%@%@",(i == 0)?@"":@"、",label.name];
+    }
+    return best;
+}
 
 - (void)stopSelectAction {
     dispatch_cancel(self.selectActionBlock);
@@ -346,6 +379,13 @@
         _itemsArray = [NSMutableArray array];
     }
     return _itemsArray;
+}
+
+- (NSMutableArray *)bestArray {
+    if (!_bestArray) {
+        _bestArray = [NSMutableArray array];
+    }
+    return _bestArray;
 }
 
 - (NSMutableArray *)dataSource {

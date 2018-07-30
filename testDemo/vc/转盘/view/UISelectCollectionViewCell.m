@@ -8,6 +8,7 @@
 
 #import "UISelectCollectionViewCell.h"
 #import "Masonry.h"
+#import "HexColor.h"
 
 @interface UISelectCollectionViewCell()
 
@@ -40,28 +41,35 @@
 
 - (void)configCell:(LabelModel *)model {
     self.imageView.hidden = !model.isImage;
-    self.namelabel.hidden = model.isImage;
+//    self.namelabel.hidden = model.isImage;
     self.deletButton.hidden = !model.isShowDelete;
     if (model.isImage) {
-        self.imageView.image = [[UIImage alloc] initWithContentsOfFile:model.name];
+        self.imageView.image = [[UIImage alloc] initWithContentsOfFile:model.path];
+        self.namelabel.backgroundColor = [UIColor clearColor];
     }else {
-        self.namelabel.text = model.name;
+//        self.namelabel.backgroundColor = [UIColor whiteColor];
+        self.namelabel.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256 alpha:0.45];
     }
+//    else {
+    self.namelabel.text = model.name;
+//    }
 }
 
 - (void)initView {
 //    CGFloat commom = 64;
     self.backgroundColor = [UIColor clearColor];
 //    self.frame = (CGRect){0,0,commom,commom};
-    [self addSubview:self.namelabel];
-    [self.namelabel mas_makeConstraints:^(MASConstraintMaker *make) {
+
+    [self addSubview:self.imageView];
+    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
         make.left.equalTo(self.mas_left);
         make.right.equalTo(self.mas_right);
         make.bottom.equalTo(self.mas_bottom);
     }];
-    [self addSubview:self.imageView];
-    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    [self addSubview:self.namelabel];
+    [self.namelabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
         make.left.equalTo(self.mas_left);
         make.right.equalTo(self.mas_right);
@@ -98,13 +106,14 @@
     if (!_namelabel) {
         _namelabel = [UILabel new];
         _namelabel.backgroundColor = [UIColor whiteColor];
-        _namelabel.textColor = [UIColor darkTextColor];
+//        _namelabel.textColor = [UIColor darkTextColor];
+        _namelabel.textColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
         _namelabel.textAlignment = NSTextAlignmentCenter;
-        _namelabel.font = [UIFont systemFontOfSize:12];
+        _namelabel.font = [UIFont boldSystemFontOfSize:12];
         _namelabel.numberOfLines = 0;
         _namelabel.clipsToBounds = YES;
         _namelabel.layer.borderWidth = 1;
-        _namelabel.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+        _namelabel.layer.borderColor = [[UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256] CGColor];
 //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
 //        tap.numberOfTapsRequired = 2;
 //        [_namelabel addGestureRecognizer:tap];
@@ -118,7 +127,7 @@
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         _imageView.clipsToBounds = YES;
         _imageView.layer.borderWidth = 1;
-        _imageView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+        _imageView.layer.borderColor = [[UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256] CGColor];
 //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
 //        tap.numberOfTapsRequired = 2;
 //        [_imageView addGestureRecognizer:tap];

@@ -114,6 +114,10 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"引导" style:UIBarButtonItemStylePlain target:self action:@selector(guideAction)];
 }
 
+- (void)viewDidLayoutSubviews {
+    self.tableView.frame = self.view.bounds;
+}
+
 - (void)guideAction {
 //    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
 //    [CSAirNameListView airNameListView];

@@ -8,6 +8,7 @@
 
 #import "UIButtonView.h"
 #import "Masonry.h"
+#import "HexColor.h"
 
 @interface UIButtonView()
 
@@ -28,21 +29,26 @@
 }
 
 + (UIView *)buttonViewWithFrame:(CGRect)frame Model:(LabelModel *)model {
-//    UIButtonView *view = [self buttonViewViewModel:model];
-//    view.frame = frame;
-//    [view updateFrame];
-    if (model.isImage) {
-        UIImageView *imageView = [self imageView];
-        imageView.image = [[UIImage alloc] initWithContentsOfFile:model.name];
-        imageView.frame = frame;
-        imageView.layer.cornerRadius = CGRectGetWidth(frame) * 0.5;
-        return imageView;
-    }
+
+    UIView *view = [UIView new];
+    view.frame = frame;
+
     UILabel *label = [self namelabel];
     label.text = model.name;
-    label.frame = frame;
+    label.frame = view.bounds;
     label.layer.cornerRadius = CGRectGetWidth(frame) * 0.5;
-    return label;
+    label.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256 alpha:0.45];
+    if (model.isImage) {
+        UIImageView *imageView = [self imageView];
+        imageView.image = [[UIImage alloc] initWithContentsOfFile:model.path];
+        imageView.frame = view.bounds;
+        imageView.layer.cornerRadius = CGRectGetWidth(frame) * 0.5;
+        [view addSubview:imageView];
+        label.backgroundColor = [UIColor clearColor];
+    }
+    
+    [view addSubview:label];
+    return view;
 }
 
 + (instancetype)buttonViewWithTitle:(NSString *)title {
@@ -56,7 +62,7 @@
     self.namelabel.hidden = model.isImage;
     self.deletButton.hidden = !model.isShowDelete;
     if (model.isImage) {
-        self.imageView.image = [[UIImage alloc] initWithContentsOfFile:model.name];
+        self.imageView.image = [[UIImage alloc] initWithContentsOfFile:model.path];
     }else {
         self.namelabel.text = model.name;
     }
@@ -118,13 +124,14 @@
 
 + (UILabel *)namelabel {
     UILabel *_namelabel = [UILabel new];
-    _namelabel.textColor = [UIColor darkTextColor];
+//    _namelabel.textColor = [UIColor darkTextColor];
+    _namelabel.textColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
     _namelabel.backgroundColor = [UIColor whiteColor];
     _namelabel.textAlignment = NSTextAlignmentCenter;
     _namelabel.font = [UIFont systemFontOfSize:14];
     _namelabel.clipsToBounds = YES;
     _namelabel.layer.borderWidth = 1;
-    _namelabel.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    _namelabel.layer.borderColor = [[UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256] CGColor];
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
 //    tap.numberOfTapsRequired = 2;
 //    [_namelabel addGestureRecognizer:tap];
@@ -136,20 +143,21 @@
     _imageView.contentMode = UIViewContentModeScaleAspectFit;
     _imageView.clipsToBounds = YES;
     _imageView.layer.borderWidth = 1;
-    _imageView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    _imageView.layer.borderColor = [[UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256] CGColor];
     return _imageView;
 }
 
 - (UILabel *)namelabel {
     if (!_namelabel) {
         _namelabel = [UILabel new];
-        _namelabel.textColor = [UIColor darkTextColor];
+//        _namelabel.textColor = [UIColor darkTextColor];
+        _namelabel.textColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
         _namelabel.backgroundColor = [UIColor whiteColor];
         _namelabel.textAlignment = NSTextAlignmentCenter;
         _namelabel.font = [UIFont systemFontOfSize:14];
         _namelabel.clipsToBounds = YES;
         _namelabel.layer.borderWidth = 1;
-        _namelabel.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+        _namelabel.layer.borderColor = [[UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256] CGColor];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
         tap.numberOfTapsRequired = 2;
         [_namelabel addGestureRecognizer:tap];
@@ -163,7 +171,7 @@
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         _imageView.clipsToBounds = YES;
         _imageView.layer.borderWidth = 1;
-        _imageView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+        _imageView.layer.borderColor = [[UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256] CGColor];
     }
     return _imageView;
 }

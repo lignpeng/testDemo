@@ -18,6 +18,7 @@ RLM_ARRAY_TYPE(LabelModel)
 @interface LabelModel : RLMObject
 @property(nonatomic, strong) NSString *id;//主键
 @property(nonatomic, strong) NSString *name;//title或图片路径
+@property(nonatomic, strong) NSString *path;//图片路径
 @property(nonatomic, assign) BOOL isImage;//是否图片
 @property(nonatomic, assign) BOOL isSelected;//是否已被选中
 @property(nonatomic, assign) BOOL isShowDelete;

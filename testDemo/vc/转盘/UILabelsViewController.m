@@ -169,8 +169,16 @@
 
 - (void)addLabelModel:(NSString *)name isImage:(BOOL)isImage{
     LabelModel *model = [[LabelModel alloc] init];
-    model.name = name;
     model.isImage = isImage;
+    if (isImage) {
+        model.path = name;
+        NSPredicate *predic = [NSPredicate predicateWithFormat:@"self.isImage == YES"];
+        NSArray *array = [self.dataSource filteredArrayUsingPredicate:predic];
+        model.name = [NSString stringWithFormat:@"%lu号",array.count + 1];        
+    }else {
+        model.name = name;
+    }
+    
     //对象重定向到realm存储的数据对象，上面创建的model跟下面存储到realm的对象不相关的
 //    [FileTools addObjectToDB:model];
     [self.dataSource addObject:model];
