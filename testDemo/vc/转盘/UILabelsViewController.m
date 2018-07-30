@@ -13,6 +13,7 @@
 #import <Photos/PHPhotoLibrary.h>
 #import "FileTools.h"
 #import "UIViewController+BackButtonHandler.h"
+#import "DataTools.h"
 
 @interface UILabelsViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -149,7 +150,7 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     NSString *path = [FileTools createFileFolderInDocumentsWithName:@"images"];
     
-    NSString *pathStr = [path stringByAppendingString:[NSString stringWithFormat:@"/%@.png",[GPTools createFileName:6]]];
+    NSString *pathStr = [path stringByAppendingString:[NSString stringWithFormat:@"/%@.png",[DataTools createFileName:6]]];
     [UIImagePNGRepresentation(image) writeToFile:pathStr atomically:YES];
     NSLog(@"str = %@",pathStr);
     [self addLabelModel:pathStr isImage:YES];

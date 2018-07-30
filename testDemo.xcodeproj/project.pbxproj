@@ -174,6 +174,7 @@
 		1FF6906E2105D17E003B5431 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF6906B2105D16E003B5431 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FF6907C2105D5A2003B5431 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6907A2105D5A2003B5431 /* FileTools.m */; };
 		1FF69080210B19C8003B5431 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6907E210B19C8003B5431 /* UIViewController+BackButtonHandler.m */; };
+		1FF69083210EB2F0003B5431 /* DataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF69082210EB2F0003B5431 /* DataTools.m */; };
 		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
@@ -586,6 +587,8 @@
 		1FF6907B2105D5A2003B5431 /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileTools.h; path = tools/FileTools.h; sourceTree = "<group>"; };
 		1FF6907E210B19C8003B5431 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		1FF6907F210B19C8003B5431 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		1FF69081210EB2F0003B5431 /* DataTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataTools.h; path = tools/DataTools.h; sourceTree = "<group>"; };
+		1FF69082210EB2F0003B5431 /* DataTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DataTools.m; path = tools/DataTools.m; sourceTree = "<group>"; };
 		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
 		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
@@ -1308,6 +1311,8 @@
 				1F6E8EAD1E84B97000D15351 /* GPTools.m */,
 				1FF6907B2105D5A2003B5431 /* FileTools.h */,
 				1FF6907A2105D5A2003B5431 /* FileTools.m */,
+				1FF69081210EB2F0003B5431 /* DataTools.h */,
+				1FF69082210EB2F0003B5431 /* DataTools.m */,
 			);
 			name = "工具";
 			sourceTree = "<group>";
@@ -2074,6 +2079,7 @@
 				1F46D4831E3753D500C9C4FF /* RZDBCoalesce.m in Sources */,
 				1F2CF6831EF37A5E00093C15 /* CSEMemberInfoModel.m in Sources */,
 				1F0C61D61F720CBB00D8F01B /* FBObjectiveCNSCFTimer.mm in Sources */,
+				1FF69083210EB2F0003B5431 /* DataTools.m in Sources */,
 				1F090E791F5EBB2000CA0C61 /* UIViewController+Login.m in Sources */,
 				1F5699B01DF66471009FA98B /* MBProgressHUD.m in Sources */,
 				1F0C60D91F70FF9F00D8F01B /* UIPageViewController+MemoryLeak.m in Sources */,

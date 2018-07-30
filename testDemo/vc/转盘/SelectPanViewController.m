@@ -15,6 +15,7 @@
 #import "GPTools.h"
 #import "FileTools.h"
 #import "HexColor.h"
+#import "DataTools.h"
 
 @interface SelectPanViewController ()
 
@@ -26,12 +27,13 @@
 @property(nonatomic, strong) UIScrollView *scrollView;
 @property(nonatomic, strong) UIView *listView;
 @property(nonatomic, strong) UIView *resultView;
-@property(nonatomic, strong) UIButton *actionButton;
-@property(nonatomic, strong) UIButton *labelsButton;
-@property(nonatomic, strong) UIStepper *stepper;
-@property(nonatomic, strong) UILabel *numLabel;
-@property(nonatomic, assign) int actionCount;
-@property(nonatomic, strong) dispatch_source_t timer;
+@property(nonatomic, strong) UIButton *actionButton;//执行按钮
+@property(nonatomic, strong) UIButton *labelsButton;//标签管理按钮
+@property(nonatomic, strong) UIStepper *stepper;//加减次数
+@property(nonatomic, strong) UILabel *numLabel;//展示次数
+@property(nonatomic, assign) int actionCount;//次数
+@property(nonatomic, strong) dispatch_source_t timer;//定时器
+@property(nonatomic, strong) UILabel *bestLabel;//最佳提示
 //动画部分
 //列表部分
 @property (nonatomic, strong) UIGravityBehavior *listGravity;//重力
@@ -175,6 +177,12 @@
         make.width.mas_equalTo(widht - margin*2);
         make.height.mas_equalTo(120);
     }];
+    
+    [self.scrollView addSubview:self.bestLabel];
+    [self.bestLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(self.resultView);
+        make.height.mas_equalTo(32);
+    }];
     [self.view layoutIfNeeded];
 }
 
@@ -265,14 +273,16 @@
 }
 
 - (void)selectAction {
+    if (self.itemsArray.count <=0) {
+        return;
+    }
     self.actionButton.backgroundColor = [UIColor grayColor];
     self.actionButton.enabled = NO;
     [self.selectedItemsArray removeAllObjects];
     [self updateResultViews];
     self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, NULL, NULL, dispatch_get_global_queue(0, 0));
     float tt = 1.5;
-    dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, tt * NSEC_PER_SEC);//开始时间:从现在开始3秒后开始
-        //    dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC), 0);
+    dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, tt * NSEC_PER_SEC);//开始时间:从现在开始1.5秒后开始
     dispatch_source_set_timer(self.timer, start, (int64_t)(tt * NSEC_PER_SEC), 0);
     
 //3. 设置定时器的回调
@@ -296,6 +306,7 @@
     dispatch_resume(self.timer);
 }
 
+//筛选操作
 - (void)dealWithSelect {
     NSLog(@"----- log -----");
     if (self.itemsArray.count <=0) {
@@ -306,11 +317,22 @@
     [self createBullWith:label superView:self.resultView action:@selector(addResultBehavior:)];
 }
 
+//- (LabelModel *)bestModel {
+//    
+//}
+
 - (void)stopSelectAction {
     dispatch_cancel(self.selectActionBlock);
 }
 
 #pragma mark - 懒加载
+
+- (void)dealloc {
+    if (self.timer) {
+        dispatch_cancel(self.timer);
+    }
+    self.timer = nil; // 置空,因为是强引用
+}
 
 - (NSMutableArray *)selectedItemsArray {
     if (!_selectedItemsArray) {
@@ -356,6 +378,18 @@
         _numLabel.backgroundColor = [UIColor whiteColor];
     }
     return _numLabel;
+}
+
+- (UILabel *)bestLabel {
+    if (!_bestLabel) {
+        _bestLabel = [UILabel new];
+        _bestLabel.textColor = [UIColor redColor];
+        _bestLabel.textAlignment = NSTextAlignmentCenter;
+//        _bestLabel.font = [UIFont systemFontOfSize:14];
+        _bestLabel.font = [UIFont boldSystemFontOfSize:14];
+        _bestLabel.backgroundColor = [UIColor clearColor];
+    }
+    return _bestLabel;
 }
 
 - (UIButton *)actionButton {

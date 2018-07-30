@@ -5,6 +5,10 @@
 //  Created by lignpeng on 2018/7/23.
 //  Copyright © 2018年 genpeng. All rights reserved.
 //
+/*
+ 关于文件方面的操作
+ 
+ */
 
 #import <Foundation/Foundation.h>
 #import <Realm/Realm.h>

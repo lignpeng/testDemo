@@ -7,6 +7,8 @@
 //
 
 #import "GGPredicateViewController.h"
+#import "DataTools.h"
+#import "HexColor.h"
 
 @interface User : NSObject
 
@@ -29,6 +31,8 @@
 
 @interface GGPredicateViewController ()
 
+@property(nonatomic, strong) UITextView *textView;
+
 @end
 
 @implementation GGPredicateViewController
@@ -41,18 +45,66 @@
 - (void)initView {
     self.view.backgroundColor = [UIColor whiteColor];
     CGFloat margin = 32;
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(margin, margin * 3, CGRectGetWidth([UIScreen mainScreen].bounds) - margin * 2, 42)];
+    CGRect sframe = [UIScreen mainScreen].bounds;
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(margin, margin * 3, CGRectGetWidth(sframe) - margin * 2, 42)];
     [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"action" forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor blueColor];
+    button.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
     button.layer.cornerRadius = 5;
     button.clipsToBounds = YES;
     [self.view addSubview:button];
+    CGRect bframe = button.frame;
+    CGFloat y = CGRectGetHeight(bframe) + CGRectGetMinY(bframe) + margin * 0.25;
+    self.textView.frame = (CGRect){margin * 0.5,y,CGRectGetWidth(sframe) - margin,CGRectGetHeight(sframe) - y - margin};
+    [self.view addSubview:self.textView];
+}
+
+- (UITextView *)textView {
+    if (!_textView) {
+        _textView = [UITextView new];
+        _textView.font = [UIFont systemFontOfSize:14];
+        _textView.showsHorizontalScrollIndicator = NO;
+        _textView.editable = NO;
+        _textView.textAlignment = NSTextAlignmentLeft;
+    }
+    return _textView;
 }
 
 - (void)action {
-    [self objects];
-    [self strings];
+//    [self objects];
+//    [self strings];
+    [self newAction];
+}
+
+- (void)newAction {
+    NSMutableArray *array = [NSMutableArray array];
+    NSUInteger index = 6;
+    while (index > 0) {
+        User *user =[User user:[NSString stringWithFormat:@"00%lu",(unsigned long)index] type:index];
+        if (index % 2 == 0) {
+            user.name = @"aa";
+        }else {
+            user.name = @"bb";
+        }
+        [array addObject:user];
+        index--;
+    }
+    NSArray *sarray = [DataTools filterMaxItemsArray:array isStringObj:NO filterKey:@"name"];
+    NSLog(@"%@",sarray);
+    
+    
+    
+    NSArray *array1 = @[@"2018-7-01",@"2018-7-02",@"2018-7-03",
+                        @"2018-7-01",@"2018-7-02",@"2018-7-03",
+                        @"2018-7-01",@"2018-7-02",@"2018-7-03",
+                        @"2018-7-01",@"2018-7-02",@"2018-7-03",
+                        @"2018-7-01",@"2018-7-02",@"2018-7-03",
+                        @"2018-7-01",@"2018-7-02",@"2018-7-03",
+                        @"2018-7-04",@"2018-7-06",@"2018-7-08",
+                        @"2018-7-05",@"2018-7-07",@"2018-7-09"];
+    NSArray *darray = [DataTools filterMaxItemsArray:array1 isStringObj:YES filterKey:nil];
+    NSLog(@"%@",darray);
+    self.textView.text = [sarray.description stringByAppendingFormat:@"\n%@", darray.description];
 }
 
 - (void)objects{
