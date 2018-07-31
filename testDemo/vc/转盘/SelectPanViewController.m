@@ -35,6 +35,7 @@
 @property(nonatomic, strong) dispatch_source_t timer;//定时器
 @property(nonatomic, strong) UILabel *bestLabel;//最佳提示
 @property(nonatomic, strong) NSMutableArray *bestArray;
+@property(nonatomic, assign) BOOL isTurnOnShakeAction;
 //动画部分
 //列表部分
 @property (nonatomic, strong) UIGravityBehavior *listGravity;//重力
@@ -110,6 +111,7 @@
     [self initData];
     [FileTools configDefaultRealmDBWithdbName:labelRealm];
     NSLog(@"%@",[RLMRealmConfiguration defaultConfiguration].fileURL.absoluteString);
+    [self startShakeAction];
 }
 
 - (void)initView {
@@ -177,7 +179,17 @@
     
     [self.scrollView addSubview:self.bestLabel];
     [self.bestLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self.resultView);
+        make.top.left.equalTo(self.resultView);
+        make.right.equalTo(self.resultView).offset(-56);
+        make.height.mas_equalTo(32);
+    }];
+    
+    UIButton *clearButton = [GPTools createButton:@"清空" titleFont:[UIFont systemFontOfSize:14] corner:5 target:self action:@selector(clearResult)];
+    [self.scrollView addSubview:clearButton];
+    [clearButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.resultView);
+        make.right.equalTo(self.resultView);
+        make.width.mas_equalTo(72);
         make.height.mas_equalTo(32);
     }];
     [self.view layoutIfNeeded];
@@ -190,7 +202,31 @@
     self.scrollView.contentSize = (CGSize){CGRectGetWidth(sframe),height};
 }
 
-//添加标签
+#pragma mark - 摇一摇
+- (void)startShakeAction {
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
+    [self becomeFirstResponder];
+    self.isTurnOnShakeAction = YES;
+}
+
+- (void)endShakeAction {
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = NO;
+    [self resignFirstResponder];
+    self.isTurnOnShakeAction = NO;
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    
+}
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (event.subtype == UIEventSubtypeMotionShake && self.isTurnOnShakeAction) { // 判断是否是摇动结束
+        NSLog(@"摇动结束");
+        [self dealWithSelect];
+    }
+}
+
+#pragma mark - 添加标签
 - (void)addAction {
     __weak typeof(self) weakSelf = self;
     UILabelsViewController *vc = [UILabelsViewController labelsViewControllerWith:self.itemsArray complishBlock:^(NSArray *items) {
@@ -269,15 +305,22 @@
     [self.resultDynamicItemBehavior addItem:item];
 }
 
+#pragma mark - 筛选
+//清理筛选结果
+- (void)clearResult {
+    [self.selectedItemsArray removeAllObjects];
+    [self.bestArray removeAllObjects];
+    [self updateResultViews];
+}
+
 - (void)selectAction {
     if (self.itemsArray.count <=0) {
         return;
     }
+    [self endShakeAction];
     self.actionButton.backgroundColor = [UIColor grayColor];
     self.actionButton.enabled = NO;
-    [self.selectedItemsArray removeAllObjects];
-    [self.bestArray removeAllObjects];
-    [self updateResultViews];
+    [self clearResult];
     self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, NULL, NULL, dispatch_get_global_queue(0, 0));
     float tt = 1.5;
     dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, tt * NSEC_PER_SEC);//开始时间:从现在开始1.5秒后开始
@@ -297,6 +340,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 weakSelf.actionButton.backgroundColor = [UIColor colorWithRed:21.0/256.0 green:126.0/256.0 blue:251.0/256.0 alpha:1];
                 weakSelf.actionButton.enabled = YES;
+                [weakSelf startShakeAction];
             });
         }
     });
