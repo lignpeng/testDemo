@@ -15,6 +15,7 @@
 #import "FileTools.h"
 #import "HexColor.h"
 #import "DataTools.h"
+#import "UIEditTextFieldView.h"
 
 @interface SelectPanViewController ()
 
@@ -238,31 +239,58 @@
 }
 
 //保存到数据库
+
+
+
 - (void)saveAction {
     if (self.itemsArray.count == 0) {
         return;
     }
     
+    if (self.actionResult == nil || self.actionResult.name.length == 0) {
+        __weak typeof(self) weakSelf = self;
+        [UIEditTextFieldView editTextFieldWithTitle:@"起个名吧~！" editStr:self.bestLabel.text complish:^(NSString *text) {
+            [weakSelf saveAction:text];
+        } cancelBlock:^{
+            [weakSelf saveAction:nil];
+        }];
+    }else {
+        [self saveAction:nil];
+    }
+}
+
+- (void)saveAction:(NSString *)name {
     if (self.actionResult == nil) {
         self.actionResult = [[ActionResult alloc] init];
         NSDate *today = [NSDate date];
         NSDateFormatter *dateFormater = [NSDateFormatter new];
         dateFormater.dateFormat = @"yyyy-MM-dd HH:mm:ss";
         self.actionResult.date = [dateFormater stringFromDate:today];
-        self.actionResult.name = self.bestLabel.text.length > 0 ? self.bestLabel.text:@"";
+        if (name.length > 0) {
+            self.actionResult.name = name;
+        }else {
+            self.actionResult.name = self.bestLabel.text.length > 0 ? self.bestLabel.text:@"";
+        }
         [self.actionResult.labels addObjects:self.itemsArray];
         [self.actionResult.resultLabels addObjects:self.selectedItemsArray];
     }
-    //清理不存在的标签
+        //清理不存在的标签
     [self removeObjOrignArray:self.itemsArray filterArray:self.actionResult.labels];
     [self removeObjOrignArray:self.selectedItemsArray filterArray:self.actionResult.resultLabels];
-    //添加新增的标签
+        //添加新增的标签
     [self addObjOrignArray:self.itemsArray targetArray:self.actionResult.labels];
     [self addObjOrignArray:self.selectedItemsArray targetArray:self.actionResult.resultLabels];
-   
+    
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
     self.actionResult.bestStr = self.bestLabel.text.length > 0 ? self.bestLabel.text:@"";
+    if (self.actionResult.name.length == 0) {
+        if (name.length > 0) {
+            self.actionResult.name = name;
+        }else {
+            self.actionResult.name = self.actionResult.bestStr;
+        }
+    }
     [realm commitWriteTransaction];
     [FileTools addObjectToDB:self.actionResult];
     [self.navigationController popViewControllerAnimated:YES];

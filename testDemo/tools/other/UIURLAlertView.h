@@ -1,14 +1,13 @@
 //
 //  CSURLAlertView.h
-//  CSMBP-AppStore-Package
 //
 //  Created by lignpeng on 2018/6/11.
-//  Copyright © 2018年 China Southern Airlines. All rights reserved.
+//  Copyright © 2018年 genpeng. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CSURLAlertView : UIView
+@interface UIURLAlertView : UIView
 
 + (instancetype)urlAlertView;
 

@@ -3,11 +3,10 @@
 //  CSMBP
 //
 //  Created by lyh on 16/5/13.
-//  Copyright © 2016年 China Southern Airlines. All rights reserved.
+//  Copyright © 2016年 genpeng. All rights reserved.
 //
 
 #import "CSUtils.h"
-//#import "CSLanguageManager.h"
 #import <objc/runtime.h>
 
 @implementation CSUtils

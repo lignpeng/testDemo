@@ -3,7 +3,7 @@
 //  CSMBP
 //
 //  Created by lyh on 16/5/13.
-//  Copyright © 2016年 China Southern Airlines. All rights reserved.
+//  Copyright © 2016年 genpeng. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

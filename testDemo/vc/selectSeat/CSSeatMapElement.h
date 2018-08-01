@@ -3,7 +3,7 @@
 //  CSMBP
 //
 //  Created by lyh on 16/6/30.
-//  Copyright © 2016年 China Southern Airlines. All rights reserved.
+//  Copyright © 2016年 genpeng. All rights reserved.
 //
 
 #import "JSONModel.h"

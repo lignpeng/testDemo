@@ -45,16 +45,20 @@
     [super viewDidLoad];
     [FileTools configDefaultRealmDBWithdbName:labelRealm];
     [self initView];
-//    [self.tableView reloadData];
+}
+
+- (void)updateView {
+    [self.dataSource sortedResultsUsingKeyPath:@"date" ascending:NO];
+    [self.tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.tableView reloadData];
+    [self updateView];
 }
 
 - (void)initView {
-    self.title = @"testDemo";
+//    self.title = @"testDemo";
     self.view.backgroundColor = [UIColor whiteColor];
     CGRect frame = self.view.bounds;
     CGFloat vheight = 120;

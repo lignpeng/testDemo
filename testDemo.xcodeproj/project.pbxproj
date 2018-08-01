@@ -67,6 +67,7 @@
 		1F0C61E51F72174100D8F01B /* GGMasoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C61E41F72174100D8F01B /* GGMasoryViewController.m */; };
 		1F11EE361FD7AB9F007A70A1 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F11EE351FD7AB74007A70A1 /* AMapFoundationKit.framework */; };
 		1F11EE391FDA2FDB007A70A1 /* GGRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F11EE381FDA2FDB007A70A1 /* GGRefreshViewController.m */; };
+		1F16ACDA21118C0200BA265C /* UIEditTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ACD921118C0200BA265C /* UIEditTextFieldView.m */; };
 		1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */; };
 		1F16CA4A1E7631CB0038D774 /* GPKeyBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */; };
 		1F16CA4B1E7631CB0038D774 /* GPKeyBoardHeaderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA451E7631CB0038D774 /* GPKeyBoardHeaderTableView.m */; };
@@ -101,7 +102,7 @@
 		1F46D4881E3758DC00C9C4FF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D4871E3758DC00C9C4FF /* Person.m */; };
 		1F47346F1E1F98D7005CF05E /* SearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F47346E1E1F98D7005CF05E /* SearchBarViewController.m */; };
 		1F47F8D51E553E740056F326 /* AttributeLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F47F8D41E553E740056F326 /* AttributeLabelViewController.m */; };
-		1F483C0A20CE960E00FF0FED /* CSURLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F483C0920CE960E00FF0FED /* CSURLAlertView.m */; };
+		1F483C0A20CE960E00FF0FED /* UIURLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F483C0920CE960E00FF0FED /* UIURLAlertView.m */; };
 		1F4DBBF81E4C616600374EA4 /* AlipayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4DBBF71E4C616600374EA4 /* AlipayViewController.m */; };
 		1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */; };
 		1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */; };
@@ -382,6 +383,8 @@
 		1F11EE351FD7AB74007A70A1 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		1F11EE371FDA2FDB007A70A1 /* GGRefreshViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGRefreshViewController.h; path = "vc/上下拉刷新refresh/GGRefreshViewController.h"; sourceTree = "<group>"; };
 		1F11EE381FDA2FDB007A70A1 /* GGRefreshViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGRefreshViewController.m; path = "vc/上下拉刷新refresh/GGRefreshViewController.m"; sourceTree = "<group>"; };
+		1F16ACD821118C0200BA265C /* UIEditTextFieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIEditTextFieldView.h; sourceTree = "<group>"; };
+		1F16ACD921118C0200BA265C /* UIEditTextFieldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIEditTextFieldView.m; sourceTree = "<group>"; };
 		1F16CA411E7631CB0038D774 /* GPKeyBoardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKeyBoardTableViewCell.h; sourceTree = "<group>"; };
 		1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeyBoardTableViewCell.m; sourceTree = "<group>"; };
 		1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPKeyBoardTableViewCell.xib; sourceTree = "<group>"; };
@@ -449,8 +452,8 @@
 		1F47346E1E1F98D7005CF05E /* SearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBarViewController.m; path = vc/searchBar/SearchBarViewController.m; sourceTree = "<group>"; };
 		1F47F8D31E553E740056F326 /* AttributeLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributeLabelViewController.h; path = "vc/富文本/AttributeLabelViewController.h"; sourceTree = "<group>"; };
 		1F47F8D41E553E740056F326 /* AttributeLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributeLabelViewController.m; path = "vc/富文本/AttributeLabelViewController.m"; sourceTree = "<group>"; };
-		1F483C0820CE960E00FF0FED /* CSURLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSURLAlertView.h; sourceTree = "<group>"; };
-		1F483C0920CE960E00FF0FED /* CSURLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSURLAlertView.m; sourceTree = "<group>"; };
+		1F483C0820CE960E00FF0FED /* UIURLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIURLAlertView.h; sourceTree = "<group>"; };
+		1F483C0920CE960E00FF0FED /* UIURLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIURLAlertView.m; sourceTree = "<group>"; };
 		1F4DBBF61E4C616600374EA4 /* AlipayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlipayViewController.h; path = vc/alipay/AlipayViewController.h; sourceTree = "<group>"; };
 		1F4DBBF71E4C616600374EA4 /* AlipayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlipayViewController.m; path = vc/alipay/AlipayViewController.m; sourceTree = "<group>"; };
 		1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -1491,8 +1494,10 @@
 				1FA65F231F297306008D8FCA /* CSAirNameListView.m */,
 				1FF6905F210086F1003B5431 /* CSPassagerPickerView.h */,
 				1FF69061210086F2003B5431 /* CSPassagerPickerView.m */,
-				1F483C0820CE960E00FF0FED /* CSURLAlertView.h */,
-				1F483C0920CE960E00FF0FED /* CSURLAlertView.m */,
+				1F483C0820CE960E00FF0FED /* UIURLAlertView.h */,
+				1F483C0920CE960E00FF0FED /* UIURLAlertView.m */,
+				1F16ACD821118C0200BA265C /* UIEditTextFieldView.h */,
+				1F16ACD921118C0200BA265C /* UIEditTextFieldView.m */,
 			);
 			name = other;
 			path = tools/other;
@@ -2020,7 +2025,7 @@
 			files = (
 				1FAA87431E25D8E400162DA2 /* BaseSearchViewController.m in Sources */,
 				EE6275A01DE6E4620085C7FA /* NSString+CSSafeAccess.m in Sources */,
-				1F483C0A20CE960E00FF0FED /* CSURLAlertView.m in Sources */,
+				1F483C0A20CE960E00FF0FED /* UIURLAlertView.m in Sources */,
 				1F0C61D91F720CBB00D8F01B /* FBBlockStrongRelationDetector.m in Sources */,
 				1FDB7E3B20A58D25002E2F61 /* UIExcelCollectionCell.m in Sources */,
 				1FFA1DE41E12168C00E02421 /* CSUtils.m in Sources */,
@@ -2144,6 +2149,7 @@
 				1FFA1DDE1E12159000E02421 /* CSCabinBoundary.m in Sources */,
 				1F090E641F5E90FC00CA0C61 /* GGVIPDayViewController.m in Sources */,
 				1F46D4841E3753D500C9C4FF /* RZDBTransforms.m in Sources */,
+				1F16ACDA21118C0200BA265C /* UIEditTextFieldView.m in Sources */,
 				1FFA1DD31E12154C00E02421 /* JSONHTTPClient.m in Sources */,
 				1F47346F1E1F98D7005CF05E /* SearchBarViewController.m in Sources */,
 				1FFA1DD41E12154C00E02421 /* JSONModel+networking.m in Sources */,

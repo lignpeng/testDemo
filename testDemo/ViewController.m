@@ -12,9 +12,10 @@
 #import "CSNoviceGuideView.h"
 #import "CSAirNameListView.h"
 #import "UILabelsViewController.h"
-#import "CSURLAlertView.h"
+#import "UIURLAlertView.h"
 #import "SelectPanViewController.h"
 #import "HexColor.h"
+#import "UIEditTextFieldView.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -146,8 +147,11 @@
 //    NSLog(@"***-------------***");
     
 //    UILabelsViewController *vc = [UILabelsViewController new];
-    SelectPanViewController *vc = [SelectPanViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
+//    SelectPanViewController *vc = [SelectPanViewController new];
+//    [self.navigationController pushViewController:vc animated:YES];
+    [UIEditTextFieldView editTextFieldWithTitle:@"输入标题" editStr:nil complish:^(NSString *text) {
+        NSLog(@"%@",text);
+    } cancelBlock:nil];
     
 }
 

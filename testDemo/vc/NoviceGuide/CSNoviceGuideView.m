@@ -3,7 +3,7 @@
 //  CSMBP
 //
 //  Created by lignpeng on 16/12/21.
-//  Copyright © 2016年 China Southern Airlines. All rights reserved.
+//  Copyright © 2016年 genpeng. All rights reserved.
 //
 /*
  新手引导

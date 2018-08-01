@@ -1,16 +1,13 @@
 //
-//  CSURLAlertView.m
-//  CSMBP-AppStore-Package
+//  UIURLAlertView.m
 //
 //  Created by lignpeng on 2018/6/11.
-//  Copyright © 2018年 China Southern Airlines. All rights reserved.
+//  Copyright © 2018年 genpeng. All rights reserved.
 //
 
-#import "CSURLAlertView.h"
-//#import <CSUtilCategory/UILabel+AttributeTextTapAction.h>
-//#import <Masonry/Masonry.h>
+#import "UIURLAlertView.h"
 
-@interface CSURLAlertView ()
+@interface UIURLAlertView ()
 
 @property (nonatomic, strong) UILabel *detailLabel;
 @property (nonatomic, strong) UIView *holdView;
@@ -19,28 +16,27 @@
 @property(nonatomic, strong) UIButton *okButton;
 @property (nonatomic, assign) CGFloat detailHeight;
 
-
 @end
 
 
-@implementation CSURLAlertView
+@implementation UIURLAlertView
 
 + (instancetype)urlAlertView {
-    CSURLAlertView *view = [[CSURLAlertView alloc] init];
+    UIURLAlertView *view = [[UIURLAlertView alloc] init];
 //    [view initView];
     
     return view;
 }
 
 + (instancetype)urlAlertView:(NSString *)fullString urlString:(NSString *)urlStr complish:(void(^)(BOOL flag))complishBlock {
-    CSURLAlertView *view = [[CSURLAlertView alloc] init];
+    UIURLAlertView *view = [[UIURLAlertView alloc] init];
         //    [view initView];
     [view urlAlertViewString:fullString urlString:urlStr];
     return view;
 }
 
 + (instancetype)urlAlertView:(NSString *)fullString urlString:(NSString *)urlStr buttonTitle:(NSString *)title complish:(void(^)(BOOL flag))complishBlock {
-    CSURLAlertView *view = [[CSURLAlertView alloc] init];
+    UIURLAlertView *view = [[UIURLAlertView alloc] init];
         //    [view initView];
     [view setButtonTitle:title];
     [view urlAlertViewString:fullString urlString:urlStr];
