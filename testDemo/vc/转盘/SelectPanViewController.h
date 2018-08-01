@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LabelModel.h"
 
 @interface SelectPanViewController : UIViewController
+
+@property(nonatomic, strong) ActionResult *actionResult;
 
 @end

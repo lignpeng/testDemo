@@ -113,8 +113,12 @@
 }
 
 - (void)okAction {
+    self.navigationItem.rightBarButtonItem.title = [self.navigationItem.rightBarButtonItem.title isEqualToString:@"管理"]?@"确定":@"管理";
     for (LabelModel *model in self.dataSource) {
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm beginWriteTransaction];
         model.isShowDelete = !model.isShowDelete;
+        [realm commitWriteTransaction];
     }
     [self.collectionView reloadData];
 }
@@ -180,7 +184,7 @@
     }
     
     //对象重定向到realm存储的数据对象，上面创建的model跟下面存储到realm的对象不相关的
-//    [FileTools addObjectToDB:model];
+    model = [FileTools addObjectToDB:model];
     [self.dataSource addObject:model];
     [self.collectionView reloadData];
     
@@ -206,8 +210,8 @@
 
 - (void)removeItem:(NSIndexPath *)indexPath {
 //    [FileTools deletDBObject:@[self.dataSource[indexPath.row]]];
-//    LabelModel *model = self.dataSource[indexPath.row];
-//    [FileTools deletDBObject:model withKeyValue:model.id];
+    LabelModel *model = self.dataSource[indexPath.row];
+    [FileTools deletDBObject:model];
     [self.dataSource removeObjectAtIndex:indexPath.row];
     [self.collectionView reloadData];
 }

@@ -28,5 +28,6 @@
 + (RLMObject *)addObjectToDB:(RLMObject *)obj;
 //删除数据
 + (void)deletDBObjects:(NSArray<RLMObject *> *)objs;
-+ (void)deletDBObject:(RLMObject *)obj withKeyValue:(NSString *)value;
++ (void)deletDBObject:(RLMObject *)obj;
+//+ (void)deletDBObject:(RLMObject *)obj withKeyValue:(NSString *)value;
 @end

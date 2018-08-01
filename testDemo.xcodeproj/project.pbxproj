@@ -175,6 +175,7 @@
 		1FF6907C2105D5A2003B5431 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6907A2105D5A2003B5431 /* FileTools.m */; };
 		1FF69080210B19C8003B5431 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6907E210B19C8003B5431 /* UIViewController+BackButtonHandler.m */; };
 		1FF69083210EB2F0003B5431 /* DataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF69082210EB2F0003B5431 /* DataTools.m */; };
+		1FF690B6211037AC003B5431 /* xiaohuangren in Resources */ = {isa = PBXBuildFile; fileRef = 1FF690B5211037AC003B5431 /* xiaohuangren */; };
 		1FF70B291FBE91F500C29816 /* CSBrowingHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */; };
 		1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAA1E12098600E02421 /* GPSelectSeatViewController.m */; };
 		1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA1DAE1E12103000E02421 /* PagingCollectionViewLayout.m */; };
@@ -589,6 +590,7 @@
 		1FF6907F210B19C8003B5431 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		1FF69081210EB2F0003B5431 /* DataTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataTools.h; path = tools/DataTools.h; sourceTree = "<group>"; };
 		1FF69082210EB2F0003B5431 /* DataTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DataTools.m; path = tools/DataTools.m; sourceTree = "<group>"; };
+		1FF690B5211037AC003B5431 /* xiaohuangren */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xiaohuangren; sourceTree = "<group>"; };
 		1FF70B271FBE91F500C29816 /* CSBrowingHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSBrowingHistoryModel.h; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.h; sourceTree = "<group>"; };
 		1FF70B281FBE91F500C29816 /* CSBrowingHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSBrowingHistoryModel.m; path = vc/BrowsingHistory/model/CSBrowingHistoryModel.m; sourceTree = "<group>"; };
 		1FFA1DA91E12098600E02421 /* GPSelectSeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSelectSeatViewController.h; path = vc/selectSeat/GPSelectSeatViewController.h; sourceTree = "<group>"; };
@@ -1739,6 +1741,7 @@
 		EE14AA3C1DE5419D00E152AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1FF690B5211037AC003B5431 /* xiaohuangren */,
 				1FF6906B2105D16E003B5431 /* Realm.framework */,
 				1F11EE351FD7AB74007A70A1 /* AMapFoundationKit.framework */,
 				1F0C618A1F720CBB00D8F01B /* FBRetainCycleDetector */,
@@ -1946,6 +1949,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF690B6211037AC003B5431 /* xiaohuangren in Resources */,
 				1F0C61D71F720CBB00D8F01B /* Circle-LICENSE in Resources */,
 				1FFEBF4B1DEFD4FE00943705 /* GPExtensionTableViewCell.xib in Resources */,
 				1F4EDEF81E826357008F00EF /* GPOperationTableViewCell.xib in Resources */,

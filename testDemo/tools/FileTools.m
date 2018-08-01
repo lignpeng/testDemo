@@ -84,7 +84,7 @@
         //        }];
         //    });
     
-        //要在主线程完成存储操作
+//要在主线程完成存储操作
     RLMRealm *realm = [RLMRealm defaultRealm];
     Class class = (RLMObject *)NSClassFromString([NSString stringWithUTF8String:object_getClassName(obj)]);
     [realm beginWriteTransaction];
@@ -94,31 +94,25 @@
 }
 
 + (void)deletDBObjects:(NSArray<RLMObject *> *)objs {
-    RLMRealm *realm = [RLMRealm defaultRealm];
-//    Class class = (RLMObject *)NSClassFromString([NSString stringWithUTF8String:object_getClassName(obj)]);
-    
-    
-//    [realm beginWriteTransaction];
-//    [realm deleteObjects:objs];
-//    [realm commitWriteTransaction];
-//    for (RLMObject *obj in objs) {
-//        [realm beginWriteTransaction];
-//        [realm deleteObject:obj];
-//        [realm commitWriteTransaction];
-//        [self deletDBObject:obj withKeyValue:]
-//    }
+    for (RLMObject *obj in objs) {
+        [self deletDBObject:obj];
+    }
 }
 
-+ (void)deletDBObject:(RLMObject *)obj withKeyValue:(NSString *)value {
++ (void)deletDBObject:(RLMObject *)obj {
     RLMRealm *realm = [RLMRealm defaultRealm];
     Class class = (RLMObject *)NSClassFromString([NSString stringWithUTF8String:object_getClassName(obj)]);
-    NSPredicate *pre = [NSPredicate predicateWithFormat:@"%@ = %@",[class primaryKey],value];
-    RLMResults *resuls = [class objectsWithPredicate:pre];
+    if (![class primaryKey]) {
+        return;
+    }
     
-    [realm beginWriteTransaction];
-    [realm deleteObjects:resuls];
-    [realm commitWriteTransaction];
+    RLMObject *rlmObj = [class objectInRealm:realm forPrimaryKey:[obj valueForKey:[class primaryKey]]];
+    if (!rlmObj) {
+        return;
+    }
+    [realm transactionWithBlock:^{
+        [realm deleteObject:rlmObj];
+    }];
 }
-
 
 @end

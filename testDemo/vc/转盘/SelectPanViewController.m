@@ -7,7 +7,6 @@
 //
 
 #import "SelectPanViewController.h"
-#import "LabelModel.h"
 #import "Masonry.h"
 #import "UILabelsViewController.h"
 #import "UIButtonView.h"
@@ -36,6 +35,7 @@
 @property(nonatomic, strong) UILabel *bestLabel;//最佳提示
 @property(nonatomic, strong) NSMutableArray *bestArray;
 @property(nonatomic, assign) BOOL isTurnOnShakeAction;
+
 //动画部分
 //列表部分
 @property (nonatomic, strong) UIGravityBehavior *listGravity;//重力
@@ -77,6 +77,17 @@
     [self.resultAnimator addBehavior:self.resultDynamicItemBehavior];
     [self useGyroPush];
     [self updateActionNum];
+    
+    if (self.actionResult) {
+        for (LabelModel *model in self.actionResult.labels) {
+            [self.itemsArray addObject:model];
+        }
+        for (LabelModel *model in self.actionResult.resultLabels) {
+            [self.selectedItemsArray addObject:model];
+        }
+        [self updateViews];
+        self.bestLabel.text = self.actionResult.bestStr;
+    }    
 }
 
 - (void)updateActionNum {
@@ -109,7 +120,7 @@
     [super viewDidLoad];
     [self initView];
     [self initData];
-    [FileTools configDefaultRealmDBWithdbName:labelRealm];
+    
     NSLog(@"%@",[RLMRealmConfiguration defaultConfiguration].fileURL.absoluteString);
     [self startShakeAction];
 }
@@ -117,7 +128,7 @@
 - (void)initView {
     self.title = @"试一试";
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveAction)];
     CGFloat widht = CGRectGetWidth(self.view.frame);
     [self.view addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -224,6 +235,117 @@
         NSLog(@"摇动结束");
         [self dealWithSelect];
     }
+}
+
+//保存到数据库
+- (void)saveAction {
+    if (self.itemsArray.count == 0) {
+        return;
+    }
+    
+    if (self.actionResult == nil) {
+        self.actionResult = [[ActionResult alloc] init];
+        NSDate *today = [NSDate date];
+        NSDateFormatter *dateFormater = [NSDateFormatter new];
+        dateFormater.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+        self.actionResult.date = [dateFormater stringFromDate:today];
+        self.actionResult.name = self.bestLabel.text.length > 0 ? self.bestLabel.text:@"";
+        [self.actionResult.labels addObjects:self.itemsArray];
+        [self.actionResult.resultLabels addObjects:self.selectedItemsArray];
+    }
+    
+    [self removeObjOrignArray:self.itemsArray filterArray:self.actionResult.labels];
+    [self removeObjOrignArray:self.selectedItemsArray filterArray:self.actionResult.resultLabels];
+    [self addObjOrignArray:self.itemsArray targetArray:self.actionResult.labels];
+    [self addObjOrignArray:self.selectedItemsArray targetArray:self.actionResult.resultLabels];
+   
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm beginWriteTransaction];
+    self.actionResult.bestStr = self.bestLabel.text.length > 0 ? self.bestLabel.text:@"";
+    [realm commitWriteTransaction];
+    [FileTools addObjectToDB:self.actionResult];
+}
+
+- (void)addObjOrignArray:(NSArray *)orignArray targetArray:(RLMArray *)targetArray {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    if (targetArray.count == 0) {
+        [realm beginWriteTransaction];
+        [targetArray addObjects:orignArray];
+        [realm commitWriteTransaction];
+    }else {
+        //去除相同的，避免重复添加
+        NSMutableArray *tempArray = [NSMutableArray array];
+        BOOL needAdd = YES;
+        for (int i = 0; i < orignArray.count; i++) {
+            LabelModel *model1 = orignArray[i];
+            needAdd = YES;
+            for (int j = 0; j < targetArray.count; j++) {
+                LabelModel *model2 = targetArray[j];
+                if ([[model2 valueForKey:[LabelModel primaryKey]] isEqualToString:[model1 valueForKey:[LabelModel primaryKey]]]) {
+                    needAdd = NO;
+                    break;
+                }
+            }
+            if (needAdd) {
+                [tempArray addObject:@(i)];
+            }
+        }
+        
+        for (int i = 0; i < tempArray.count; i++) {
+            [realm beginWriteTransaction];
+            NSInteger index = ((NSNumber *)tempArray[i]).integerValue;
+            [targetArray addObject:orignArray[index]];
+            [realm commitWriteTransaction];
+        }
+    }
+    
+//    if (self.actionResult.labels.count == 0) {
+//        [self.actionResult.labels addObjects:self.itemsArray];
+//    }else {
+//            //去除相同的，避免重复添加
+//        NSMutableArray *tempArray = [NSMutableArray array];
+//        BOOL needAdd = YES;
+//        for (int i = 0; i < self.itemsArray.count; i++) {
+//            LabelModel *model1 = self.itemsArray[i];
+//            needAdd = YES;
+//            for (int j = 0; self.actionResult.labels.count; j++) {
+//                LabelModel *model2 =self.actionResult.labels[j];
+//                if ([[model2 valueForKey:[LabelModel primaryKey]] isEqualToString:[model1 valueForKey:[LabelModel primaryKey]]]) {
+//                    needAdd = NO;
+//                    break;
+//                }
+//            }
+//            if (needAdd) {
+//                [tempArray addObject:@(i)];
+//            }
+//        }
+//        RLMRealm *realm = [RLMRealm defaultRealm];
+//        for (int i = 0; i < tempArray.count; i++) {
+//            [realm beginWriteTransaction];
+//            NSInteger index = ((NSNumber *)tempArray[i]).integerValue;
+//            [self.actionResult.labels addObject:self.itemsArray[index]];
+//            [realm commitWriteTransaction];
+//        }
+//    }
+}
+
+- (void)removeObjOrignArray:(NSArray *)orignArray filterArray:(RLMArray *)filterArray {
+    
+    NSMutableArray *tempArray = [NSMutableArray array];
+    for (int i = 0; i < filterArray.count; i++) {
+        LabelModel* model = filterArray[i];
+        NSPredicate *pre = [NSPredicate predicateWithFormat:@"self.%@ == %@",[LabelModel primaryKey],[model valueForKey:[LabelModel primaryKey]]];
+        NSArray *array = [orignArray filteredArrayUsingPredicate:pre];
+        if (array.count == 0) {
+            [tempArray addObject:@(i)];
+        }
+    }
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm beginWriteTransaction];
+    for (NSNumber *index in tempArray) {
+        [filterArray removeObjectAtIndex:index.integerValue];
+    }
+    [realm commitWriteTransaction];
 }
 
 #pragma mark - 添加标签

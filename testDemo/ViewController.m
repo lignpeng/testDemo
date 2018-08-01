@@ -10,11 +10,11 @@
 #import "GPTableViewCell.h"
 #import "GPExtensionViewController.h"
 #import "CSNoviceGuideView.h"
-#define cellIdentify @"cellReuse"
 #import "CSAirNameListView.h"
 #import "UILabelsViewController.h"
 #import "CSURLAlertView.h"
 #import "SelectPanViewController.h"
+#import "HexColor.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -163,7 +163,7 @@
     GPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.iconImageView.image = [UIImage imageWithContentsOfFile:self.imageArray[arc4random() % self.imageArray.count]];
-    cell.backgroundColor = self.colorArray[indexPath.row%self.colorArray.count];
+    cell.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256 alpha:0.45];
     cell.titleLabel.text = self.vcTitleArray[self.vcTitleArray.count - 1 - indexPath.row];
     return cell;
 }
