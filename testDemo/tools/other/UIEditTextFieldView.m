@@ -20,7 +20,6 @@
 @property(nonatomic, strong) UIButton *cancelButton;
 @property(nonatomic, copy) void (^complishBlock)(NSString *text);
 @property(nonatomic, copy) void (^cancelBlock)();
-
 @end
 
 @implementation UIEditTextFieldView
@@ -42,6 +41,54 @@
 
 - (void)viewDidLoad {
     [self initView];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyBoardHiden)];
+    tap.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tap];
+    [self addNoticeForKeyboard];
+}
+
+- (void)keyBoardHiden {
+    [self.view endEditing:YES];
+}
+#pragma mark - 键盘通知
+- (void)addNoticeForKeyboard {
+        //注册键盘出现的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self                                             selector:@selector(keyboardWillShow:)                                                 name:UIKeyboardWillShowNotification object:nil];    //注册键盘消失的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self                                             selector:@selector(keyboardWillHide:)                                                 name:UIKeyboardWillHideNotification object:nil];
+}
+
+//键盘显示事件
+- (void) keyboardWillShow:(NSNotification *)notification {
+        //获取键盘高度，在不同设备上，以及中英文下是不同的
+    CGFloat kbHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+        //计算要偏移的距离
+    CGFloat offset =  CGRectGetHeight(self.view.frame) - (CGRectGetMinY(self.holdView.frame) + CGRectGetHeight(self.holdView.frame)) - kbHeight;
+        // 取得键盘的动画时间，这样可以在视图上移的时候更连贯
+    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        //将视图上移计算好的偏移
+    if(offset > 0) {
+        return;
+    }
+    CGRect sframe = self.holdView.frame;
+    sframe.origin.y += (offset - 18);
+    
+    [UIView animateWithDuration:duration animations:^{
+        self.holdView.frame = sframe;
+    }];
+}
+
+//键盘消失事件
+- (void) keyboardWillHide:(NSNotification *)notify {
+        // 键盘动画时间
+    double duration = [[notify.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        //视图恢复原状
+    [UIView animateWithDuration:duration animations:^{
+        self.holdView.center = self.view.center;
+    }];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)initView {
@@ -65,7 +112,10 @@
     CGFloat textFieldHeight = 32;
     CGFloat labelHeight = 20;
     //16+20++16+3016+1+44
-    CGRect frame = (CGRect){0,margin*2,CGRectGetWidth(self.view.frame)-margin*4,margin+ labelHeight +margin+textFieldHeight+1+margin+1+buttonHeight};
+    
+    CGFloat vHeight = margin+ labelHeight +margin+textFieldHeight+1+margin+1+buttonHeight;
+    
+    CGRect frame = (CGRect){0,margin*2,CGRectGetWidth(self.view.frame)-margin*4,vHeight};
     self.holdView.frame = frame;
     self.holdView.center = self.view.center;
     
@@ -96,24 +146,24 @@
 }
 
 - (void)okAction {
+    [self dismiss];
     if (self.textField.text.length == 0) {
         return;
     }
     if (self.complishBlock) {
         self.complishBlock(self.textField.text);
     }
-    
-    [self dismiss];
 }
 
 - (void)cancelAction {
+    [self dismiss];
     if (self.cancelBlock) {
         self.cancelBlock();
-    }
-    [self dismiss];
+    }    
 }
 
 - (void)dismiss {
+    [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
