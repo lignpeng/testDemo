@@ -149,10 +149,12 @@
 //    UILabelsViewController *vc = [UILabelsViewController new];
 //    SelectPanViewController *vc = [SelectPanViewController new];
 //    [self.navigationController pushViewController:vc animated:YES];
+//    [UIEditTextFieldView editTextFieldWithTitle:@"输入标题" editStr:nil complish:^(NSString *text) {
+//        NSLog(@"%@",text);
+//    } cancelBlock:nil];
     [UIEditTextFieldView editTextFieldWithTitle:@"输入标题" editStr:nil complish:^(NSString *text) {
         NSLog(@"%@",text);
     } cancelBlock:nil];
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

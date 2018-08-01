@@ -13,9 +13,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIEditTextFieldView : UIView
+@interface UIEditTextFieldView : UIViewController
 
-//
-+ (instancetype)editTextFieldWithTitle:(NSString *) title editStr:(NSString *)editStr complish:(void(^)(NSString *text))complishBlock cancelBlock:(void(^)())cancelBlock;
++ (void)editTextFieldWithTitle:(NSString *) title editStr:(NSString *)editStr complish:(void(^)(NSString *text))complishBlock cancelBlock:(void(^)())cancelBlock;
 
 @end

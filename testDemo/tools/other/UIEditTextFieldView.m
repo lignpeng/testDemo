@@ -7,6 +7,7 @@
 //
 #import "HexColor.h"
 #import "UIEditTextFieldView.h"
+#import "GPTools.h"
 
 @interface UIEditTextFieldView()
 
@@ -24,30 +25,28 @@
 
 @implementation UIEditTextFieldView
 
-+ (instancetype)editTextFieldWithTitle:(NSString *) title editStr:(NSString *)editStr complish:(void(^)(NSString *text))complishBlock cancelBlock:(void(^)())cancelBlock {
-    UIEditTextFieldView *view = [[UIEditTextFieldView alloc] init];
-    view.complishBlock = complishBlock;
-    view.cancelBlock = cancelBlock;
++ (void)editTextFieldWithTitle:(NSString *) title editStr:(NSString *)editStr complish:(void(^)(NSString *text))complishBlock cancelBlock:(void(^)())cancelBlock {
+    UIEditTextFieldView *vc = [[UIEditTextFieldView alloc] init];
+    vc.complishBlock = complishBlock;
+    vc.cancelBlock = cancelBlock;
     if (title.length > 0) {
-        view.tipLabel.text = title;
+        vc.tipLabel.text = title;
     }
     if (editStr.length > 0) {
-        view.textField.text = editStr;
+        vc.textField.text = editStr;
     }
-//    [view.textField becomeFirstResponder];
-    return view;
+    vc.view.backgroundColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:0.1];
+    vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    [[GPTools getCurrentViewController] presentViewController:vc animated:YES completion:nil];
 }
 
-- (instancetype)init {
-    if (self = [super init]) {
-        [self initView];
-    }
-    return self;
+- (void)viewDidLoad {
+    [self initView];
 }
 
 - (void)initView {
-    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
-    self.frame = [UIScreen mainScreen].bounds;
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.frame = [UIScreen mainScreen].bounds;
     self.holdView.layer.cornerRadius = 14;
     self.holdView.layer.masksToBounds = YES;
     [self.holdView addSubview:self.tipLabel];
@@ -56,21 +55,19 @@
     [self.holdView addSubview:self.sepT];
     [self.holdView addSubview:self.okButton];
     [self.holdView addSubview:self.cancelButton];
-    [self addSubview:self.holdView];
+    [self.view addSubview:self.holdView];
     
-    [self show];
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
+- (void)viewDidLayoutSubviews {
     CGFloat margin = 16;
     CGFloat buttonHeight = 44;
     CGFloat textFieldHeight = 32;
     CGFloat labelHeight = 20;
     //16+20++16+3016+1+44
-    CGRect frame = (CGRect){0,margin*2,CGRectGetWidth(self.frame)-margin*4,margin+ labelHeight +margin+textFieldHeight+1+margin+1+buttonHeight};
+    CGRect frame = (CGRect){0,margin*2,CGRectGetWidth(self.view.frame)-margin*4,margin+ labelHeight +margin+textFieldHeight+1+margin+1+buttonHeight};
     self.holdView.frame = frame;
-    self.holdView.center = self.center;
+    self.holdView.center = self.view.center;
     
     CGRect lframe = (CGRect){0,margin,CGRectGetWidth(frame),labelHeight};
     self.tipLabel.frame = lframe;
@@ -116,14 +113,8 @@
     [self dismiss];
 }
 
-- (void)show {
-    [[UIApplication sharedApplication].keyWindow addSubview:self];
-}
-
 - (void)dismiss {
-    if ([[UIApplication sharedApplication].keyWindow.subviews containsObject:self]) {
-        [self removeFromSuperview];
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (UIView *)holdView {
@@ -134,7 +125,6 @@
     }
     return _holdView;
 }
-
 
 - (UIView *)sepLine {
     if (!_sepLine) {
