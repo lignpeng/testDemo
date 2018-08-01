@@ -13,6 +13,7 @@
 #import "LabelModel.h"
 #import <Realm/Realm.h>
 #import "FileTools.h"
+#import "GPTools.h"
 
 @interface SelectManagerViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -35,7 +36,7 @@
 - (RLMResults *)dataSource {
     if (!_dataSource) {
         _dataSource = [ActionResult allObjects];
-        [_dataSource sortedResultsUsingKeyPath:@"date" ascending:YES];
+        [_dataSource sortedResultsUsingKeyPath:@"date" ascending:NO];
     }
     return _dataSource;
 }
@@ -45,6 +46,11 @@
     [FileTools configDefaultRealmDBWithdbName:labelRealm];
     [self initView];
 //    [self.tableView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)initView {
@@ -98,6 +104,30 @@
     SelectPanViewController *vc = [SelectPanViewController new];
     vc.actionResult = result;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"删除";
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [GPTools ShowAlertView:@"是否删除这一条数据?" alertHandler:^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [FileTools deletDBObject:self.dataSource[indexPath.row]];
+                [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+            });
+        }];
+    }
 }
 
 @end

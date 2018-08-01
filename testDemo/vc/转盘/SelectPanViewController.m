@@ -253,9 +253,10 @@
         [self.actionResult.labels addObjects:self.itemsArray];
         [self.actionResult.resultLabels addObjects:self.selectedItemsArray];
     }
-    
+    //清理不存在的标签
     [self removeObjOrignArray:self.itemsArray filterArray:self.actionResult.labels];
     [self removeObjOrignArray:self.selectedItemsArray filterArray:self.actionResult.resultLabels];
+    //添加新增的标签
     [self addObjOrignArray:self.itemsArray targetArray:self.actionResult.labels];
     [self addObjOrignArray:self.selectedItemsArray targetArray:self.actionResult.resultLabels];
    
@@ -264,6 +265,7 @@
     self.actionResult.bestStr = self.bestLabel.text.length > 0 ? self.bestLabel.text:@"";
     [realm commitWriteTransaction];
     [FileTools addObjectToDB:self.actionResult];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)addObjOrignArray:(NSArray *)orignArray targetArray:(RLMArray *)targetArray {
@@ -298,35 +300,6 @@
             [realm commitWriteTransaction];
         }
     }
-    
-//    if (self.actionResult.labels.count == 0) {
-//        [self.actionResult.labels addObjects:self.itemsArray];
-//    }else {
-//            //去除相同的，避免重复添加
-//        NSMutableArray *tempArray = [NSMutableArray array];
-//        BOOL needAdd = YES;
-//        for (int i = 0; i < self.itemsArray.count; i++) {
-//            LabelModel *model1 = self.itemsArray[i];
-//            needAdd = YES;
-//            for (int j = 0; self.actionResult.labels.count; j++) {
-//                LabelModel *model2 =self.actionResult.labels[j];
-//                if ([[model2 valueForKey:[LabelModel primaryKey]] isEqualToString:[model1 valueForKey:[LabelModel primaryKey]]]) {
-//                    needAdd = NO;
-//                    break;
-//                }
-//            }
-//            if (needAdd) {
-//                [tempArray addObject:@(i)];
-//            }
-//        }
-//        RLMRealm *realm = [RLMRealm defaultRealm];
-//        for (int i = 0; i < tempArray.count; i++) {
-//            [realm beginWriteTransaction];
-//            NSInteger index = ((NSNumber *)tempArray[i]).integerValue;
-//            [self.actionResult.labels addObject:self.itemsArray[index]];
-//            [realm commitWriteTransaction];
-//        }
-//    }
 }
 
 - (void)removeObjOrignArray:(NSArray *)orignArray filterArray:(RLMArray *)filterArray {

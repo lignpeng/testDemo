@@ -21,6 +21,7 @@
 @property(nonatomic, strong) NSMutableArray *dataSource;
 @property(nonatomic, strong) UIView *holderView;
 @property(nonatomic, strong) UITextField *textField;
+
 @end
 
 @implementation UILabelsViewController
@@ -41,6 +42,16 @@
 
 //返回
 - (BOOL)navigationShouldPopOnBackButton {
+    if ([self.navigationItem.rightBarButtonItem.title isEqualToString:@"确定"]) {
+        //还在编辑状态就退出，要去除，不然再次进入会有问题
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        for (LabelModel *model in self.dataSource) {
+            [realm beginWriteTransaction];
+            model.isShowDelete = NO;
+            [realm commitWriteTransaction];
+        }
+    }
+    
     if (self.actionBlock) {
         self.actionBlock(self.dataSource);
     }
