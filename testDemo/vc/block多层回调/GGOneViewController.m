@@ -36,11 +36,11 @@
 - (void)action {
 
     GGTwoViewController *vc = [GGTwoViewController new];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     
     vc.actionBlock = self.actionBlock;
     vc.delegate = self.delegate;
-    [self.navigationController pushViewController:nav animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 //    [self presentViewController:nav animated:YES completion:nil];
 }
 

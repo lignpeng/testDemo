@@ -227,33 +227,6 @@
     [self.collectionView reloadData];
 }
 
-//- (void)longTouchAction:(UILongPressGestureRecognizer *)tap {
-//    CGPoint pointTouch = [tap locationInView:self.collectionView];
-//
-//    if (tap.state == UIGestureRecognizerStateBegan) {
-//        NSLog(@"UIGestureRecognizerStateBegan");
-//
-//        NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pointTouch];
-//        if (indexPath == nil) {
-//            NSLog(@"空");
-//        }else{
-//
-//            NSLog(@"Section = %ld,Row = %ld",(long)indexPath.section,(long)indexPath.row);
-//           LabelModel *model = self.dataSource[indexPath.row];
-//            model.isShowDelete = !model.isShowDelete;
-//            [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
-//        }
-//    }
-//    if (tap.state == UIGestureRecognizerStateChanged) {
-//        NSLog(@"UIGestureRecognizerStateChanged");
-//    }
-//
-//    if (tap.state == UIGestureRecognizerStateEnded) {
-//        NSLog(@"UIGestureRecognizerStateEnded");
-//    }
-//
-//}
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat widht = CGRectGetWidth(self.collectionView.bounds) / 4;
     return  CGSizeMake(widht,widht);

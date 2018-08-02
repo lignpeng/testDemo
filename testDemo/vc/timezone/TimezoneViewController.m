@@ -7,11 +7,14 @@
 //
 
 #import "TimezoneViewController.h"
+#import "DataTools.h"
+#import "HexColor.h"
 
 @interface TimezoneViewController ()
 
 @property(nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
+@property(nonatomic, strong) UITextView *textView;
 
 @end
 
@@ -25,21 +28,30 @@
 - (void)initView {
     self.view.backgroundColor = [UIColor whiteColor];
     CGFloat margin = 32;
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(margin, margin * 3, CGRectGetWidth([UIScreen mainScreen].bounds) - margin * 2, 42)];
+    CGRect sframe = [UIScreen mainScreen].bounds;
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(margin, margin * 3, CGRectGetWidth(sframe) - margin * 2, 42)];
     [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"action" forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor colorWithRed:3/255.0 green:223/255.0 blue:71/255.0 alpha:1];
+    button.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
     button.layer.cornerRadius = 5;
     button.clipsToBounds = YES;
     [self.view addSubview:button];
-    UILabel *label = [[UILabel alloc] init];
-    label.frame = (CGRect){margin,CGRectGetMinY(button.frame)+CGRectGetHeight(button.frame) +margin,CGRectGetWidth([UIScreen mainScreen].bounds) - margin * 2,margin};
-    label.backgroundColor = [UIColor lightGrayColor];
-    label.font = [UIFont systemFontOfSize:14];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor lightTextColor];
-    [self.view addSubview:label];
-    self.label = label;
+    CGRect bframe = button.frame;
+    CGFloat y = CGRectGetHeight(bframe) + CGRectGetMinY(bframe) + margin * 0.25;
+    self.textView.frame = (CGRect){margin * 0.5,y,CGRectGetWidth(sframe) - margin,CGRectGetHeight(sframe) - y - margin};
+    [self.view addSubview:self.textView];
+}
+
+
+- (UITextView *)textView {
+    if (!_textView) {
+        _textView = [UITextView new];
+        _textView.font = [UIFont systemFontOfSize:14];
+        _textView.showsHorizontalScrollIndicator = NO;
+        _textView.editable = NO;
+        _textView.textAlignment = NSTextAlignmentLeft;
+    }
+    return _textView;
 }
 
 - (void)action {
@@ -57,7 +69,7 @@
     }
     NSString *str =[strZoneName stringByAppendingString:[NSString stringWithFormat:@"(%@)",strZoneAbbreviation]];
     NSLog(@"名称 是 %@",str);
-    self.label.text = str;
+    self.textView.text = str;
 }
 
 - (void)timeTemp {

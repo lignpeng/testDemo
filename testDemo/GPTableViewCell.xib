@@ -32,7 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgI-v3-wIy">
-                        <rect key="frame" x="105" y="61" width="403" height="22.5"/>
+                        <rect key="frame" x="105" y="61" width="419" height="22.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.45716899630000002" green="0.50926429029999998" blue="0.55100148920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="MhD-lH-VL3" secondAttribute="trailing" constant="36" id="05L-jJ-RrB"/>
-                    <constraint firstAttribute="trailing" secondItem="fgI-v3-wIy" secondAttribute="trailing" constant="16" id="6V9-kj-fxL"/>
+                    <constraint firstAttribute="trailing" secondItem="fgI-v3-wIy" secondAttribute="trailing" id="6V9-kj-fxL"/>
                     <constraint firstAttribute="bottom" secondItem="fgI-v3-wIy" secondAttribute="bottom" constant="6" id="A40-rU-tSo"/>
                     <constraint firstItem="MhD-lH-VL3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AH0-ez-s5d"/>
                     <constraint firstItem="tPQ-iV-0q4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Aku-bs-wpT"/>
@@ -56,7 +56,7 @@
                 <outlet property="infoLabel" destination="fgI-v3-wIy" id="Abg-GA-T1S"/>
                 <outlet property="titleLabel" destination="MhD-lH-VL3" id="z7H-eH-Aql"/>
             </connections>
-            <point key="canvasLocation" x="152" y="-403"/>
+            <point key="canvasLocation" x="347" y="-817"/>
         </tableViewCell>
     </objects>
 </document>

@@ -13,9 +13,11 @@
  */
 
 #import "GPNullViewController.h"
+#import "DataTools.h"
+#import "HexColor.h"
 
 @interface GPNullViewController ()
-
+@property(nonatomic, strong) UITextView *textView;
 @end
 
 @implementation GPNullViewController
@@ -23,19 +25,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initView];
+}
+
+- (void)initView {
     self.view.backgroundColor = [UIColor whiteColor];
-    CGRect frame = self.view.bounds;
-    CGFloat wdith = 120;
-    CGFloat height = 42;
-    CGRect bframe = CGRectMake((CGRectGetWidth(frame) - wdith)/2, wdith, wdith, height);
-    UIButton *btn = [[UIButton alloc] initWithFrame:bframe];
-    [self.view addSubview:btn];
-    btn.backgroundColor = [UIColor blueColor];
-    [btn setTitle:@"Ok" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
-    btn.layer.cornerRadius = 5.0;
-    btn.clipsToBounds = YES;
+    CGFloat margin = 32;
+    CGRect sframe = [UIScreen mainScreen].bounds;
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(margin, margin * 3, CGRectGetWidth(sframe) - margin * 2, 42)];
+    [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"action" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
+    button.layer.cornerRadius = 5;
+    button.clipsToBounds = YES;
+    [self.view addSubview:button];
+    CGRect bframe = button.frame;
+    CGFloat y = CGRectGetHeight(bframe) + CGRectGetMinY(bframe) + margin * 0.25;
+    self.textView.frame = (CGRect){margin * 0.5,y,CGRectGetWidth(sframe) - margin,CGRectGetHeight(sframe) - y - margin};
+    [self.view addSubview:self.textView];
+}
+
+- (void)showString:(NSArray *)array {
+    NSString *str = @"";
+    for (NSString *string in array) {
+        str = [str stringByAppendingFormat:@"\n%@",string];
+    }
+    self.textView.text = str;
+}
+
+- (UITextView *)textView {
+    if (!_textView) {
+        _textView = [UITextView new];
+        _textView.font = [UIFont systemFontOfSize:14];
+        _textView.showsHorizontalScrollIndicator = NO;
+        _textView.editable = NO;
+        _textView.textAlignment = NSTextAlignmentLeft;
+    }
+    return _textView;
 }
 
 - (void)action {

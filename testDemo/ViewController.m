@@ -98,7 +98,7 @@
 }
 
 - (void)initView {
-    self.title = @"testDemo";
+    self.title = [@"testDemo" stringByAppendingFormat:@":%lu个",(unsigned long)self.vcArray.count];
     self.view.backgroundColor = [UIColor blueColor];
     CGRect frame = self.view.bounds;
     CGFloat vheight = 120;
