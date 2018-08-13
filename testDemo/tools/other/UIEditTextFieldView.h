@@ -15,6 +15,7 @@
 
 @interface UIEditTextFieldView : UIViewController
 
+//弹出编辑框
 + (void)editTextFieldWithTitle:(NSString *) title editStr:(NSString *)editStr complish:(void(^)(NSString *text))complishBlock cancelBlock:(void(^)())cancelBlock;
 
 @end

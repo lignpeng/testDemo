@@ -274,12 +274,12 @@
         [self.actionResult.labels addObjects:self.itemsArray];
         [self.actionResult.resultLabels addObjects:self.selectedItemsArray];
     }
-        //清理不存在的标签
-    [self removeObjOrignArray:self.itemsArray filterArray:self.actionResult.labels];
-    [self removeObjOrignArray:self.selectedItemsArray filterArray:self.actionResult.resultLabels];
-        //添加新增的标签
-    [self addObjOrignArray:self.itemsArray targetArray:self.actionResult.labels];
-    [self addObjOrignArray:self.selectedItemsArray targetArray:self.actionResult.resultLabels];
+    //清理不存在的标签
+    [FileTools removeObjOrignArray:self.itemsArray filterArray:self.actionResult.labels];
+    [FileTools removeObjOrignArray:self.selectedItemsArray filterArray:self.actionResult.resultLabels];
+    //添加新增的标签
+    [FileTools addObjOrignArray:self.itemsArray targetArray:self.actionResult.labels];
+    [FileTools addObjOrignArray:self.selectedItemsArray targetArray:self.actionResult.resultLabels];
     
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
@@ -294,59 +294,6 @@
     [realm commitWriteTransaction];
     [FileTools addObjectToDB:self.actionResult];
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)addObjOrignArray:(NSArray *)orignArray targetArray:(RLMArray *)targetArray {
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    if (targetArray.count == 0) {
-        [realm beginWriteTransaction];
-        [targetArray addObjects:orignArray];
-        [realm commitWriteTransaction];
-    }else {
-        //去除相同的，避免重复添加
-        NSMutableArray *tempArray = [NSMutableArray array];
-        BOOL needAdd = YES;
-        for (int i = 0; i < orignArray.count; i++) {
-            LabelModel *model1 = orignArray[i];
-            needAdd = YES;
-            for (int j = 0; j < targetArray.count; j++) {
-                LabelModel *model2 = targetArray[j];
-                if ([[model2 valueForKey:[LabelModel primaryKey]] isEqualToString:[model1 valueForKey:[LabelModel primaryKey]]]) {
-                    needAdd = NO;
-                    break;
-                }
-            }
-            if (needAdd) {
-                [tempArray addObject:@(i)];
-            }
-        }
-        
-        for (int i = 0; i < tempArray.count; i++) {
-            [realm beginWriteTransaction];
-            NSInteger index = ((NSNumber *)tempArray[i]).integerValue;
-            [targetArray addObject:orignArray[index]];
-            [realm commitWriteTransaction];
-        }
-    }
-}
-
-- (void)removeObjOrignArray:(NSArray *)orignArray filterArray:(RLMArray *)filterArray {
-    
-    NSMutableArray *tempArray = [NSMutableArray array];
-    for (int i = 0; i < filterArray.count; i++) {
-        LabelModel* model = filterArray[i];
-        NSPredicate *pre = [NSPredicate predicateWithFormat:@"self.%@ == %@",[LabelModel primaryKey],[model valueForKey:[LabelModel primaryKey]]];
-        NSArray *array = [orignArray filteredArrayUsingPredicate:pre];
-        if (array.count == 0) {
-            [tempArray addObject:@(i)];
-        }
-    }
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    [realm beginWriteTransaction];
-    for (NSNumber *index in tempArray) {
-        [filterArray removeObjectAtIndex:index.integerValue];
-    }
-    [realm commitWriteTransaction];
 }
 
 #pragma mark - 添加标签
@@ -433,6 +380,7 @@
 - (void)clearResult {
     [self.selectedItemsArray removeAllObjects];
     [self.bestArray removeAllObjects];
+    self.bestLabel.text = @"最佳：";
     [self updateResultViews];
 }
 

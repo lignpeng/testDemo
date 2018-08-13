@@ -27,7 +27,6 @@ RLM_ARRAY_TYPE(LabelModel)
 
 @end
 
-
 //操作结果
 @interface ActionResult:RLMObject
 

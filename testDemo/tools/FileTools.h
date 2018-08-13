@@ -30,4 +30,17 @@
 + (void)deletDBObjects:(NSArray<RLMObject *> *)objs;
 + (void)deletDBObject:(RLMObject *)obj;
 //+ (void)deletDBObject:(RLMObject *)obj withKeyValue:(NSString *)value;
+
+/*
+ 清除RLMArray数组元素操作
+ 保留与orignArray交集部分
+ */
++ (void)removeObjOrignArray:(NSArray *)orignArray filterArray:(RLMArray *)filterArray;
+/*
+ RLMArray数组添加数组操作
+ 1）orignArray的元素添加到targetArray
+ 2）相同的元素不添加
+ */
++ (void)addObjOrignArray:(NSArray *)orignArray targetArray:(RLMArray *)targetArray;
+
 @end

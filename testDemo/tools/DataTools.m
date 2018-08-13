@@ -40,32 +40,6 @@
         [origArray removeObjectsInArray:pArray];
     }
     
-//    for (int i = 0; i < origArray.count; i++) {
-//        if (isString) {//字符串
-//            NSString *str = origArray[i];
-//            NSMutableArray *tempArray = [NSMutableArray array];
-//            [tempArray addObject:str];
-//            for (int j = i + 1; j < origArray.count; j ++) {
-//                NSString *nextStr = origArray[j];
-//                if ([nextStr isEqualToString:str]) {
-//                    [tempArray addObject:nextStr];
-//                    [origArray removeObjectAtIndex:j];
-//                    j -= 1;
-//                }
-//            }
-//            [filerArray addObject:tempArray];
-//        } else {
-//            //对象操作
-//            while (origArray.count > 0) {
-//                id obj = origArray.firstObject;
-//                id value = [obj valueForKey:key];
-//                NSPredicate *predic = [NSPredicate predicateWithFormat:@"self.%@ == %@",key,value];
-//                NSArray *pArray = [origArray filteredArrayUsingPredicate:predic];
-//                [filerArray addObject:pArray];
-//                [origArray removeObjectsInArray:pArray];
-//            }
-//        }
-//    }
     return filerArray;
 }
 
