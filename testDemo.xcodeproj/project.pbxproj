@@ -85,6 +85,7 @@
 		1F16ADD6212BFBD700BA265C /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16AD99212BFBD700BA265C /* AlipaySDK.framework */; };
 		1F16ADD8212BFBF700BA265C /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 1F16ADD7212BFBF700BA265C /* Resource */; };
 		1F16ADDC212BFD9900BA265C /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ADDA212BFD9800BA265C /* LoadingViewController.m */; };
+		1F16ADE2212C01A300BA265C /* NSString+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ADE1212C01A300BA265C /* NSString+CSSafeAccess.m */; };
 		1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */; };
 		1F16CA4A1E7631CB0038D774 /* GPKeyBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */; };
 		1F16CA4B1E7631CB0038D774 /* GPKeyBoardHeaderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA451E7631CB0038D774 /* GPKeyBoardHeaderTableView.m */; };
@@ -202,7 +203,6 @@
 		EE14AA621DE5419E00E152AD /* testDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14AA611DE5419E00E152AD /* testDemoUITests.m */; };
 		EE516D141DE7DE93001F9010 /* GPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE516D121DE7DE93001F9010 /* GPTableViewCell.m */; };
 		EE516D151DE7DE93001F9010 /* GPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE516D131DE7DE93001F9010 /* GPTableViewCell.xib */; };
-		EE6275A01DE6E4620085C7FA /* NSString+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = EE62759F1DE6E4620085C7FA /* NSString+CSSafeAccess.m */; };
 		EE764F1C1DEBC95700BF4230 /* IDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE764F1B1DEBC95700BF4230 /* IDViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -396,6 +396,8 @@
 		1F16ADDA212BFD9800BA265C /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
 		1F16ADDB212BFD9800BA265C /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
 		1F16ADDD212BFE2200BA265C /* testDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testDemo.entitlements; sourceTree = "<group>"; };
+		1F16ADE0212C01A300BA265C /* NSString+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSSafeAccess.h"; sourceTree = "<group>"; };
+		1F16ADE1212C01A300BA265C /* NSString+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CSSafeAccess.m"; sourceTree = "<group>"; };
 		1F16CA411E7631CB0038D774 /* GPKeyBoardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKeyBoardTableViewCell.h; sourceTree = "<group>"; };
 		1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeyBoardTableViewCell.m; sourceTree = "<group>"; };
 		1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPKeyBoardTableViewCell.xib; sourceTree = "<group>"; };
@@ -615,8 +617,6 @@
 		EE516D111DE7DE93001F9010 /* GPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTableViewCell.h; sourceTree = "<group>"; };
 		EE516D121DE7DE93001F9010 /* GPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTableViewCell.m; sourceTree = "<group>"; };
 		EE516D131DE7DE93001F9010 /* GPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPTableViewCell.xib; sourceTree = "<group>"; };
-		EE62759E1DE6E4620085C7FA /* NSString+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSSafeAccess.h"; sourceTree = "<group>"; };
-		EE62759F1DE6E4620085C7FA /* NSString+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CSSafeAccess.m"; sourceTree = "<group>"; };
 		EE764F1A1DEBC95700BF4230 /* IDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDViewController.h; path = vc/IDViewController.h; sourceTree = "<group>"; };
 		EE764F1B1DEBC95700BF4230 /* IDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDViewController.m; path = vc/IDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1403,6 +1403,8 @@
 		1FF6907D210B19C8003B5431 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				1F16ADE0212C01A300BA265C /* NSString+CSSafeAccess.h */,
+				1F16ADE1212C01A300BA265C /* NSString+CSSafeAccess.m */,
 				1FF6907E210B19C8003B5431 /* UIViewController+BackButtonHandler.m */,
 				1FF6907F210B19C8003B5431 /* UIViewController+BackButtonHandler.h */,
 			);
@@ -1581,9 +1583,7 @@
 				EE516D161DE7DE9E001F9010 /* cell */,
 				EE764F1D1DEBC96400BF4230 /* vc */,
 				EE14AA451DE5419D00E152AD /* Main.storyboard */,
-				EE62759E1DE6E4620085C7FA /* NSString+CSSafeAccess.h */,
 				1F6E8EAF1E84B97700D15351 /* 工具 */,
-				EE62759F1DE6E4620085C7FA /* NSString+CSSafeAccess.m */,
 				EE14AA481DE5419D00E152AD /* Assets.xcassets */,
 				EE14AA4A1DE5419D00E152AD /* LaunchScreen.storyboard */,
 				EE14AA4D1DE5419D00E152AD /* Info.plist */,
@@ -1867,7 +1867,6 @@
 			files = (
 				1FAA87431E25D8E400162DA2 /* BaseSearchViewController.m in Sources */,
 				1F16ADB6212BFBD700BA265C /* NSObject+MemoryLeak.m in Sources */,
-				EE6275A01DE6E4620085C7FA /* NSString+CSSafeAccess.m in Sources */,
 				1F483C0A20CE960E00FF0FED /* UIURLAlertView.m in Sources */,
 				1FDB7E3B20A58D25002E2F61 /* UIExcelCollectionCell.m in Sources */,
 				1FFA1DE41E12168C00E02421 /* CSUtils.m in Sources */,
@@ -1987,6 +1986,7 @@
 				1F47346F1E1F98D7005CF05E /* SearchBarViewController.m in Sources */,
 				1F16ADA0212BFBD700BA265C /* ViewController+MASAdditions.m in Sources */,
 				1F16AD9B212BFBD700BA265C /* CSProgressCustomView.m in Sources */,
+				1F16ADE2212C01A300BA265C /* NSString+CSSafeAccess.m in Sources */,
 				1F3C4DED1F414B2E00EFF7AB /* GGDateViewController.m in Sources */,
 				1F16ADAF212BFBD700BA265C /* UITouch+MemoryLeak.m in Sources */,
 				1F61D14320A0488500F933DC /* WebViewJavascriptBridge.m in Sources */,
