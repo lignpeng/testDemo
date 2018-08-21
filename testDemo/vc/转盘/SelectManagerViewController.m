@@ -29,7 +29,7 @@
     if (_imageArray) {
         return _imageArray;
     }
-    _imageArray = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"xiaohuangren"];
+    _imageArray = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"Resource/xiaohuangren"];
     return _imageArray;
 }
 

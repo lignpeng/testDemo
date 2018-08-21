@@ -109,7 +109,7 @@
 
 - (void)authAction {
     GGDateViewController *vv = [GGDateViewController new];
-    UIViewController *vc = [GPTools getCurrentVC];
+    UIViewController *vc = [GPTools getCurrentViewController];
     if ([vc isKindOfClass:[UINavigationController class]]) {
         [(UINavigationController *)vc pushViewController:vv animated:YES];
     }else {

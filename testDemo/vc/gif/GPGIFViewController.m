@@ -90,7 +90,7 @@
 //    NSString *gitPath = [[NSBundle mainBundle] pathForResource:@"33" ofType:@"gif"];
     
 //    NSString *gitPath = [[NSBundle mainBundle] pathForResource:@"33" ofType:@"gif" inDirectory:@"gif"];
-    NSArray *gitPathArray = [[NSBundle mainBundle] pathsForResourcesOfType:@"gif" inDirectory:@"gif"];
+    NSArray *gitPathArray = [[NSBundle mainBundle] pathsForResourcesOfType:@"gif" inDirectory:@"Resource/gif"];
     if (gitPathArray.count <= 0) {
         return;
     }

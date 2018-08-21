@@ -11,13 +11,13 @@
 
 @implementation GPTools
 
-+ (UIViewController *)getCurrentVC {
-    UIViewController *baseVC = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-    if (baseVC.presentedViewController) {
-        return  [baseVC.presentedViewController isKindOfClass:[UINavigationController class]] ? ((UINavigationController *)baseVC.presentedViewController).topViewController : baseVC.presentedViewController;
-    }
-    return baseVC;
-}
+//+ (UIViewController *)getCurrentVC {
+//    UIViewController *baseVC = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+//    if (baseVC.presentedViewController) {
+//        return  [baseVC.presentedViewController isKindOfClass:[UINavigationController class]] ? ((UINavigationController *)baseVC.presentedViewController).topViewController : baseVC.presentedViewController;
+//    }
+//    return baseVC;
+//}
 
 + (UIViewController *)getCurrentViewController {
     UIViewController *result = nil;
@@ -64,7 +64,7 @@
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Tips",@"提示") message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *alertView = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK",@"确定") style:UIAlertActionStyleCancel handler:nil];
     [alertVC addAction:alertView];
-    [[self getCurrentVC] presentViewController:alertVC animated:true completion:nil];
+    [[self getCurrentViewController] presentViewController:alertVC animated:true completion:nil];
 }
 
 + (void)ShowAlertView:(NSString *)message alertHandler:(AlertViewHandler)handle{
@@ -77,7 +77,7 @@
     }];
     [alertVC addAction:action];
     [alertVC addAction:cancelAction];
-    [[self getCurrentVC] presentViewController:alertVC animated:true completion:nil];
+    [[self getCurrentViewController] presentViewController:alertVC animated:true completion:nil];
 }
 
 + (void)ShowAlertViewWithoutCancelAction:(NSString *)title message:(NSString *)message handler:(AlertViewHandler) handle{
@@ -88,7 +88,7 @@
         }
     }];
     [alertVC addAction:action];
-    [[self getCurrentVC] presentViewController:alertVC animated:true completion:nil];
+    [[self getCurrentViewController] presentViewController:alertVC animated:true completion:nil];
 }
 
 + (void)ShowAlertViewWithCustomAction:(NSString *)title message: (NSString *)message cancleActionTitle: (NSString *)cancleActionTitle OKActionTitle: (NSString *)OKActionTitle cancelAction: (AlertViewHandler)cancelAction OKAction:(AlertViewHandler)OKAction{
@@ -105,7 +105,7 @@
     }];
     [alertVC addAction:OKAc];
     [alertVC addAction:cancleAc];
-    [[self getCurrentVC] presentViewController:alertVC animated:true completion:nil];
+    [[self getCurrentViewController] presentViewController:alertVC animated:true completion:nil];
 }
 
 
@@ -130,7 +130,7 @@
         }];
         [alertVC addAction:cancleAc];
     }
-    [[self getCurrentVC] presentViewController:alertVC animated:YES completion:nil];
+    [[self getCurrentViewController] presentViewController:alertVC animated:YES completion:nil];
 }
 
 //获取指定区域的图片

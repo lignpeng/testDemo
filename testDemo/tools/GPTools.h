@@ -19,7 +19,7 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 @interface GPTools : NSObject
 
 //获取当前控制器
-+ (UIViewController *)getCurrentVC;
+//+ (UIViewController *)getCurrentVC;
 + (UIViewController *)getCurrentViewController;
 
 + (void)ShowAlert:(NSString *)message;
@@ -28,10 +28,10 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 + (void)ShowAlertViewWithCustomAction:(NSString *)title message: (NSString *)message cancleActionTitle: (NSString *)cancleActionTitle OKActionTitle: (NSString *)OKActionTitle cancelAction: (AlertViewHandler)cancelAction OKAction:(AlertViewHandler)OKAction;
 + (void)ShowAlertView:(NSString *)title message:(NSString *)message clickedIndex:(AlertViewClickedIndex) clickedIndex cancelButtonTitle:(NSString *)cancelButtonTitle otherButtons:(NSArray <NSString*>*)otherButtons;
 
-
 //获取指定区域的图片
 + (UIImage *)clipImageOrignImage:(UIImage *)orignImage WithRect:(CGRect)aRect;
 
 //创建按钮
 + (UIButton *)createButton:(NSString *)title titleFont:(UIFont *)titleFont corner:(CGFloat)radius target:(nullable id)target action:(SEL _Nonnull )selector;
+
 @end

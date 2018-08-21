@@ -21,7 +21,7 @@
 #define StatusBar_HEIGHT    20
 
 #define kMiniScale 0.5
-
+#import "GPTools.h"
 
 #import "SinaWBSendingViewController.h"
 
@@ -251,17 +251,8 @@ typedef void(^alertViewHandler)();
         }
     }];
     [alertVC addAction:action];
-    [getCurrentVC() presentViewController:alertVC animated:true completion:nil];
+    [[GPTools getCurrentViewController] presentViewController:alertVC animated:true completion:nil];
 }
-
-UIViewController *getCurrentVC() {
-    UIViewController *baseVC = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-    if (baseVC.presentedViewController) {
-        return  [baseVC.presentedViewController isKindOfClass:[UINavigationController class]] ? ((UINavigationController *)baseVC.presentedViewController).topViewController : baseVC.presentedViewController;
-    }
-    return baseVC;
-}
-//**********************************************
 
 #pragma mark - UITextViewDelegate Methods
 

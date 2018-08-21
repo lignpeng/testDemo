@@ -35,7 +35,7 @@
     if (_imageArray) {
         return _imageArray;
     }
-    _imageArray = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"png"];
+    _imageArray = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"Resource/png"];
     return _imageArray;
 }
 
@@ -68,7 +68,7 @@
                  @"CSBrowsingHistoryListViewController",@"GGStringViewController",
                  @"GGRunTimeMethodViewController",@"TimezoneViewController",
                  @"GExcelViewController",@"RiseUpCalcViewController",
-                 @"SelectManagerViewController"];
+                 @"SelectManagerViewController",@"UIWordListViewController"];
     return _vcArray; 
 }
 
@@ -86,7 +86,7 @@
                       @"时间校验",@"block多层回调",@"会员日弹框",@"弹出选择列表",
                       @"MLeakFinder使用",@"去空格",@"浏览历史",@"字符串包含",
                       @"runtime调用方法",@"获取当前时区",@"excel表",@"复利计算",
-                      @"转盘"];
+                      @"转盘",@"文字识别"];
     return _vcTitleArray;
 }
 
