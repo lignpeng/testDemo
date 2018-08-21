@@ -8,7 +8,7 @@
 
 #import "LoadingViewController.h"
 
-#import "CSProgressHUD.h"
+//#import "CSProgressHUD.h"
 
 @interface LoadingViewController ()
 
@@ -36,7 +36,7 @@
 }
 
 - (void)initView {
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Stop" style:UIBarButtonItemStylePlain target:self action:@selector(stopAction)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Stop" style:UIBarButtonItemStylePlain target:self action:@selector(stopAction)];
     self.view.backgroundColor = [UIColor whiteColor];
     CGRect frame = [UIScreen mainScreen].bounds;
     CGFloat margin = 10;
@@ -44,93 +44,93 @@
     CGFloat height = 42;
     CGRect rect = [[UIApplication sharedApplication] statusBarFrame];
     CGRect bframe = CGRectMake(margin, margin + CGRectGetHeight(rect) + CGRectGetHeight(self.navigationController.navigationBar.frame), wdith, height);
-    UIButton *showBtn = ({
-        UIButton *btn = [[UIButton alloc] initWithFrame:bframe];
-        btn.backgroundColor = [UIColor blueColor];
-        [btn setTitle:@"show" forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(showAction) forControlEvents:UIControlEventTouchUpInside];
-        btn.layer.cornerRadius = 5.0;
-        btn.clipsToBounds = YES;
-        btn;
-    });
-    [self.view addSubview:showBtn];
-    
-    bframe.origin.x += (CGRectGetWidth(bframe) + margin);
-    UIButton *showMessageBtn = ({
-        UIButton *btn = [[UIButton alloc] initWithFrame:bframe];
-        [self.view addSubview:btn];
-        btn.backgroundColor = [UIColor blueColor];
-        [btn setTitle:@"message" forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(showMessageAction) forControlEvents:UIControlEventTouchUpInside];
-        btn.layer.cornerRadius = 5.0;
-        btn.clipsToBounds = YES;
-        btn;
-    });
-    [self.view addSubview:showMessageBtn];
-    
-    bframe.origin.x += (CGRectGetWidth(bframe) + margin);
-    UIButton *showImageBtn = ({
-        UIButton *btn = [[UIButton alloc] initWithFrame:bframe];
-        [self.view addSubview:btn];
-        btn.backgroundColor = [UIColor blueColor];
-        [btn setTitle:@"image" forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(showImageAction) forControlEvents:UIControlEventTouchUpInside];
-        btn.layer.cornerRadius = 5.0;
-        btn.clipsToBounds = YES;
-        btn;
-    });
-    [self.view addSubview:showImageBtn];
-    
-    bframe.origin.y += (CGRectGetHeight(bframe) + margin);
-    bframe.size.width = 200;
-    bframe.size.height = 20;
-    self.slider = ({
-    
-        UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
-        slider.minimumValue = 0;
-        slider.maximumValue = 100;
-        slider.value = 50;
-        [slider addTarget:self action:@selector(updateValue:) forControlEvents:UIControlEventValueChanged];
-        slider;
-    });
-    
-    [self.view addSubview:self.slider];
+//    UIButton *showBtn = ({
+//        UIButton *btn = [[UIButton alloc] initWithFrame:bframe];
+//        btn.backgroundColor = [UIColor blueColor];
+//        [btn setTitle:@"show" forState:UIControlStateNormal];
+//        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [btn addTarget:self action:@selector(showAction) forControlEvents:UIControlEventTouchUpInside];
+//        btn.layer.cornerRadius = 5.0;
+//        btn.clipsToBounds = YES;
+//        btn;
+//    });
+//    [self.view addSubview:showBtn];
+//
+//    bframe.origin.x += (CGRectGetWidth(bframe) + margin);
+//    UIButton *showMessageBtn = ({
+//        UIButton *btn = [[UIButton alloc] initWithFrame:bframe];
+//        [self.view addSubview:btn];
+//        btn.backgroundColor = [UIColor blueColor];
+//        [btn setTitle:@"message" forState:UIControlStateNormal];
+//        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [btn addTarget:self action:@selector(showMessageAction) forControlEvents:UIControlEventTouchUpInside];
+//        btn.layer.cornerRadius = 5.0;
+//        btn.clipsToBounds = YES;
+//        btn;
+//    });
+//    [self.view addSubview:showMessageBtn];
+//
+//    bframe.origin.x += (CGRectGetWidth(bframe) + margin);
+//    UIButton *showImageBtn = ({
+//        UIButton *btn = [[UIButton alloc] initWithFrame:bframe];
+//        [self.view addSubview:btn];
+//        btn.backgroundColor = [UIColor blueColor];
+//        [btn setTitle:@"image" forState:UIControlStateNormal];
+//        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [btn addTarget:self action:@selector(showImageAction) forControlEvents:UIControlEventTouchUpInside];
+//        btn.layer.cornerRadius = 5.0;
+//        btn.clipsToBounds = YES;
+//        btn;
+//    });
+//    [self.view addSubview:showImageBtn];
+//
+//    bframe.origin.y += (CGRectGetHeight(bframe) + margin);
+//    bframe.size.width = 200;
+//    bframe.size.height = 20;
+//    self.slider = ({
+//
+//        UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
+//        slider.minimumValue = 0;
+//        slider.maximumValue = 100;
+//        slider.value = 50;
+//        [slider addTarget:self action:@selector(updateValue:) forControlEvents:UIControlEventValueChanged];
+//        slider;
+//    });
+//
+//    [self.view addSubview:self.slider];
 }
 
 - (void)updateValue:(UISlider *)slider {
     float value = slider.value;
     NSLog(@"value: %f",value);
 }
-- (void)action {
-    [CSProgressHUD showWithImageName:@"new_loading" cancelCallBackBlock:^(id reason) {
-        [CSProgressHUD dismiss];
-    }];
-}
-
-- (void)showAction {
-    [CSProgressHUD show];
-    [self performSelector:@selector(stopAction) withObject:self afterDelay:5];
-}
-
-- (void)showMessageAction {
-    [CSProgressHUD showWithMessage:@"ok" cancelCallBackBlock:^(id button) {
-        [CSProgressHUD dismiss];
-    }];
-}
-
-- (void)showImageAction {
-    [CSProgressHUD showWithImageName:@"new_loading" cancelCallBackBlock:^(id reason) {
-        [CSProgressHUD dismiss];
-    }];
-}
-
-- (void)stopAction {
-//    [self.imageView.layer removeAllAnimations];
-    [CSProgressHUD dismiss];
-}
+//- (void)action {
+//    [CSProgressHUD showWithImageName:@"new_loading" cancelCallBackBlock:^(id reason) {
+//        [CSProgressHUD dismiss];
+//    }];
+//}
+//
+//- (void)showAction {
+//    [CSProgressHUD show];
+//    [self performSelector:@selector(stopAction) withObject:self afterDelay:5];
+//}
+//
+//- (void)showMessageAction {
+//    [CSProgressHUD showWithMessage:@"ok" cancelCallBackBlock:^(id button) {
+//        [CSProgressHUD dismiss];
+//    }];
+//}
+//
+//- (void)showImageAction {
+//    [CSProgressHUD showWithImageName:@"new_loading" cancelCallBackBlock:^(id reason) {
+//        [CSProgressHUD dismiss];
+//    }];
+//}
+//
+//- (void)stopAction {
+////    [self.imageView.layer removeAllAnimations];
+//    [CSProgressHUD dismiss];
+//}
 
 + (UIImageView *)rotate360DegreeWithImageView:(UIImageView *)imageView{
     CABasicAnimation *animation = [ CABasicAnimation

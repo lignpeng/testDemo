@@ -16,6 +16,7 @@
 @property(nonatomic, strong) NSString *text;
 @property(nonatomic, strong) UIButton *okButton;
 @property(nonatomic, strong) UIButton *copyButton;
+//@property(nonatomic, strong) UIButton *reviewButton;
 
 @end
 
@@ -38,6 +39,7 @@
     self.textView.text = self.text;
     [self.view addSubview:self.okButton];
     [self.view addSubview:self.copyButton];
+//    self.navigationItem.rightBarButtonItem
 }
 
 - (void)viewDidLayoutSubviews {
@@ -63,6 +65,10 @@
         UIPasteboard *board = [UIPasteboard generalPasteboard];
         board.string = self.text;
     }
+}
+
+- (void)reviewAction {
+    
 }
 
 - (void)showString:(NSArray *)array {
@@ -113,5 +119,20 @@
     }
     return _okButton;
 }
+
+//- (UIButton *)reviewButton {
+//    if (!_reviewButton) {
+//        _reviewButton = ({
+//            UIButton *button = [[UIButton alloc] initWithFrame:CGRectZero];
+//            [button addTarget:self action:@selector(reviewAction) forControlEvents:UIControlEventTouchUpInside];
+//            [button setTitle:@"恢复" forState:UIControlStateNormal];
+//            button.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
+//            button.layer.cornerRadius = 5;
+//            button.clipsToBounds = YES;
+//            button;
+//        });
+//    }
+//    return _reviewButton;
+//}
 
 @end

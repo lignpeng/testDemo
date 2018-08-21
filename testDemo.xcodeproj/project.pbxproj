@@ -45,10 +45,6 @@
 		1F16ACF3212BEA5900BA265C /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16ACE4212BB43300BA265C /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F16ACF4212BEA5D00BA265C /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16ACE5212BB43300BA265C /* IdcardQuality.framework */; };
 		1F16ACF5212BEA5D00BA265C /* IdcardQuality.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16ACE5212BB43300BA265C /* IdcardQuality.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1F16AD9A212BFBD700BA265C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ACFF212BFBD700BA265C /* MBProgressHUD.m */; };
-		1F16AD9B212BFBD700BA265C /* CSProgressCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD04212BFBD700BA265C /* CSProgressCustomView.m */; };
-		1F16AD9C212BFBD700BA265C /* CSProgressHUD_MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD05212BFBD700BA265C /* CSProgressHUD_MBProgressHUD.m */; };
-		1F16AD9D212BFBD700BA265C /* CSProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD06212BFBD700BA265C /* CSProgressHUD.m */; };
 		1F16AD9E212BFBD700BA265C /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16AD07212BFBD700BA265C /* AMapFoundationKit.framework */; };
 		1F16AD9F212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD0A212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		1F16ADA0212BFBD700BA265C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD13212BFBD700BA265C /* ViewController+MASAdditions.m */; };
@@ -86,6 +82,8 @@
 		1F16ADD8212BFBF700BA265C /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 1F16ADD7212BFBF700BA265C /* Resource */; };
 		1F16ADDC212BFD9900BA265C /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ADDA212BFD9800BA265C /* LoadingViewController.m */; };
 		1F16ADE2212C01A300BA265C /* NSString+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ADE1212C01A300BA265C /* NSString+CSSafeAccess.m */; };
+		1F16ADE6212C06A300BA265C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ADE4212C06A300BA265C /* MBProgressHUD.m */; };
+		1F16ADE9212C095500BA265C /* UIHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ADE8212C095500BA265C /* UIHUD.m */; };
 		1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */; };
 		1F16CA4A1E7631CB0038D774 /* GPKeyBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */; };
 		1F16CA4B1E7631CB0038D774 /* GPKeyBoardHeaderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA451E7631CB0038D774 /* GPKeyBoardHeaderTableView.m */; };
@@ -311,15 +309,6 @@
 		1F16ACE3212BB43300BA265C /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		1F16ACE4212BB43300BA265C /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
 		1F16ACE5212BB43300BA265C /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
-		1F16ACFE212BFBD700BA265C /* CSProgressCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgressCustomView.h; sourceTree = "<group>"; };
-		1F16ACFF212BFBD700BA265C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		1F16AD00212BFBD700BA265C /* CSProgressHUD_MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgressHUD_MBProgressHUD.h; sourceTree = "<group>"; };
-		1F16AD01212BFBD700BA265C /* CSProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgressHUD.h; sourceTree = "<group>"; };
-		1F16AD02212BFBD700BA265C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		1F16AD03212BFBD700BA265C /* CSProgressHUDProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProgressHUDProtocol.h; sourceTree = "<group>"; };
-		1F16AD04212BFBD700BA265C /* CSProgressCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProgressCustomView.m; sourceTree = "<group>"; };
-		1F16AD05212BFBD700BA265C /* CSProgressHUD_MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProgressHUD_MBProgressHUD.m; sourceTree = "<group>"; };
-		1F16AD06212BFBD700BA265C /* CSProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProgressHUD.m; sourceTree = "<group>"; };
 		1F16AD07212BFBD700BA265C /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		1F16AD09212BFBD700BA265C /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		1F16AD0A212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
@@ -398,6 +387,10 @@
 		1F16ADDD212BFE2200BA265C /* testDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testDemo.entitlements; sourceTree = "<group>"; };
 		1F16ADE0212C01A300BA265C /* NSString+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSSafeAccess.h"; sourceTree = "<group>"; };
 		1F16ADE1212C01A300BA265C /* NSString+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CSSafeAccess.m"; sourceTree = "<group>"; };
+		1F16ADE4212C06A300BA265C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1F16ADE5212C06A300BA265C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1F16ADE7212C095500BA265C /* UIHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIHUD.h; sourceTree = "<group>"; };
+		1F16ADE8212C095500BA265C /* UIHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIHUD.m; sourceTree = "<group>"; };
 		1F16CA411E7631CB0038D774 /* GPKeyBoardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKeyBoardTableViewCell.h; sourceTree = "<group>"; };
 		1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeyBoardTableViewCell.m; sourceTree = "<group>"; };
 		1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPKeyBoardTableViewCell.xib; sourceTree = "<group>"; };
@@ -775,7 +768,7 @@
 		1F16ACFC212BFBD700BA265C /* 第三方框架 */ = {
 			isa = PBXGroup;
 			children = (
-				1F16ACFD212BFBD700BA265C /* CSProgressHUD */,
+				1F16ADE3212C06A300BA265C /* progressHUD */,
 				1F16AD07212BFBD700BA265C /* AMapFoundationKit.framework */,
 				1F16AD08212BFBD700BA265C /* Masonry */,
 				1F16AD23212BFBD700BA265C /* YYModel */,
@@ -785,22 +778,6 @@
 				1F16AD99212BFBD700BA265C /* AlipaySDK.framework */,
 			);
 			path = "第三方框架";
-			sourceTree = "<group>";
-		};
-		1F16ACFD212BFBD700BA265C /* CSProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				1F16ACFE212BFBD700BA265C /* CSProgressCustomView.h */,
-				1F16ACFF212BFBD700BA265C /* MBProgressHUD.m */,
-				1F16AD00212BFBD700BA265C /* CSProgressHUD_MBProgressHUD.h */,
-				1F16AD01212BFBD700BA265C /* CSProgressHUD.h */,
-				1F16AD02212BFBD700BA265C /* MBProgressHUD.h */,
-				1F16AD03212BFBD700BA265C /* CSProgressHUDProtocol.h */,
-				1F16AD04212BFBD700BA265C /* CSProgressCustomView.m */,
-				1F16AD05212BFBD700BA265C /* CSProgressHUD_MBProgressHUD.m */,
-				1F16AD06212BFBD700BA265C /* CSProgressHUD.m */,
-			);
-			path = CSProgressHUD;
 			sourceTree = "<group>";
 		};
 		1F16AD08212BFBD700BA265C /* Masonry */ = {
@@ -948,6 +925,17 @@
 			);
 			name = loading;
 			path = vc/loading;
+			sourceTree = "<group>";
+		};
+		1F16ADE3212C06A300BA265C /* progressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1F16ADE4212C06A300BA265C /* MBProgressHUD.m */,
+				1F16ADE5212C06A300BA265C /* MBProgressHUD.h */,
+				1F16ADE7212C095500BA265C /* UIHUD.h */,
+				1F16ADE8212C095500BA265C /* UIHUD.m */,
+			);
+			path = progressHUD;
 			sourceTree = "<group>";
 		};
 		1F16CA401E7631CB0038D774 /* 键盘 */ = {
@@ -1872,7 +1860,9 @@
 				1FFA1DE41E12168C00E02421 /* CSUtils.m in Sources */,
 				1F090E6D1F5E931100CA0C61 /* CSPopoverController.m in Sources */,
 				1F16ADDC212BFD9900BA265C /* LoadingViewController.m in Sources */,
+				1F16ADE6212C06A300BA265C /* MBProgressHUD.m in Sources */,
 				1F50D67E1E13449400C51A57 /* CustomFlowLayout.m in Sources */,
+				1F16ADE9212C095500BA265C /* UIHUD.m in Sources */,
 				1F16ADA2212BFBD700BA265C /* MASConstraintMaker.m in Sources */,
 				1F090E631F5E90FC00CA0C61 /* CSVIPDayADsView.m in Sources */,
 				1FAA873D1E25BE9700162DA2 /* searchBarCustomView.m in Sources */,
@@ -1911,7 +1901,6 @@
 				1F3892161E35D742005AA26B /* BaseViewController.m in Sources */,
 				1FF6904820F59ADB003B5431 /* SelectManagerViewController.m in Sources */,
 				1F50D67F1E13449400C51A57 /* NSArray+CSSafeAccess.m in Sources */,
-				1F16AD9D212BFBD700BA265C /* CSProgressHUD.m in Sources */,
 				1F61D14920A04F8500F933DC /* NativeFunction.m in Sources */,
 				1F16ADA1212BFBD700BA265C /* MASCompositeConstraint.m in Sources */,
 				1F46D4881E3758DC00C9C4FF /* Person.m in Sources */,
@@ -1981,11 +1970,9 @@
 				1F090E641F5E90FC00CA0C61 /* GGVIPDayViewController.m in Sources */,
 				1F46D4841E3753D500C9C4FF /* RZDBTransforms.m in Sources */,
 				1F16ACDA21118C0200BA265C /* UIEditTextFieldView.m in Sources */,
-				1F16AD9A212BFBD700BA265C /* MBProgressHUD.m in Sources */,
 				1F16ADBD212BFBD700BA265C /* JSONHTTPClient.m in Sources */,
 				1F47346F1E1F98D7005CF05E /* SearchBarViewController.m in Sources */,
 				1F16ADA0212BFBD700BA265C /* ViewController+MASAdditions.m in Sources */,
-				1F16AD9B212BFBD700BA265C /* CSProgressCustomView.m in Sources */,
 				1F16ADE2212C01A300BA265C /* NSString+CSSafeAccess.m in Sources */,
 				1F3C4DED1F414B2E00EFF7AB /* GGDateViewController.m in Sources */,
 				1F16ADAF212BFBD700BA265C /* UITouch+MemoryLeak.m in Sources */,
@@ -2014,7 +2001,6 @@
 				1F0C61E51F72174100D8F01B /* GGMasoryViewController.m in Sources */,
 				EE764F1C1DEBC95700BF4230 /* IDViewController.m in Sources */,
 				1FDB7E3E20A59838002E2F61 /* UILeftCollectionCell.m in Sources */,
-				1F16AD9C212BFBD700BA265C /* CSProgressHUD_MBProgressHUD.m in Sources */,
 				1F16ACE1212BB07700BA265C /* UIWordListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

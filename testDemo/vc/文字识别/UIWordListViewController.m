@@ -12,6 +12,7 @@
 #import "GPTableViewCell.h"
 #import "UIWordViewController.h"
 #import "GPTools.h"
+#import "UIHUD.h"
 
 #define ApiKey @"l61gFq3Km3dywPQV4ny52Mya"
 #define SecretKey @"qpHqeGue45LpeYniYLK0u9QdAWCMLpiP"
@@ -20,7 +21,7 @@
 
 @property (nonatomic, strong) NSMutableArray<NSArray<NSString *> *> *actionList;
 @property(nonatomic, strong) UITableView *tableView;
-
+@property(nonatomic, strong) NSArray *imageArray;
 @end
 
 @implementation UIWordListViewController {
@@ -28,6 +29,14 @@
     void (^_successHandler)(id);
         // 默认的识别失败的回调
     void (^_failHandler)(NSError *);
+}
+
+- (NSArray *)imageArray {
+    if (_imageArray) {
+        return _imageArray;
+    }
+    _imageArray = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"Resource/xiaohuangren"];
+    return _imageArray;
 }
 
 - (void)viewDidLoad {
@@ -54,10 +63,10 @@
 }
 
 - (void)initView {
-        //    self.title = @"testDemo";
+//    self.title = @"文字识别";
     self.view.backgroundColor = [UIColor whiteColor];
     CGRect frame = self.view.bounds;
-    CGFloat vheight = 120;
+    CGFloat vheight = 20;
     self.tableView = [[UITableView alloc] initWithFrame:frame];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -98,8 +107,12 @@
     
         // 这是默认的识别成功的回调
     _successHandler = ^(id result){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD dismissHUD];
+        });
+        
         NSLog(@"%@", result);
-        NSString *title = @"识别结果";
+//        NSString *title = @"识别结果";
         NSMutableString *message = [NSMutableString string];
         
         if(result[@"words_result"]){
@@ -136,6 +149,9 @@
     };
     
     _failHandler = ^(NSError *error){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD dismissHUD];
+        });
         NSLog(@"%@", error);
         NSString *msg = [NSString stringWithFormat:@"%li:%@", (long)[error code], [error localizedDescription]];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -144,13 +160,16 @@
     };
 }
 
-
 #pragma mark - Action
+
 - (void)generalOCR{
-    
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
             // 在这个block里，image即为切好的图片，可自行选择如何处理
         NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
+        
         [[AipOcrService shardService] detectTextFromImage:image
                                               withOptions:options
                                            successHandler:_successHandler
@@ -161,9 +180,11 @@
 }
 
 - (void)generalEnchancedOCR{
-    
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
         NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectTextEnhancedFromImage:image
                                                       withOptions:options
                                                    successHandler:_successHandler
@@ -173,11 +194,12 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-
 - (void)generalBasicOCR{
-    
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
         NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectTextBasicFromImage:image
                                                    withOptions:options
                                                 successHandler:_successHandler
@@ -188,9 +210,11 @@
 }
 
 - (void)generalAccurateOCR{
-    
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
         NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectTextAccurateFromImage:image
                                                       withOptions:options
                                                    successHandler:_successHandler
@@ -200,11 +224,12 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-
 - (void)generalAccurateBasicOCR{
-    
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
         NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectTextAccurateBasicFromImage:image
                                                            withOptions:options
                                                         successHandler:_successHandler
@@ -216,9 +241,10 @@
 
 
 - (void)webImageOCR{
-    
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectWebImageFromImage:image
                                                   withOptions:nil
                                                successHandler:_successHandler
@@ -227,13 +253,13 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-
 - (void)idcardOCROnlineFront {
-    
     UIViewController * vc =
     [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardFont
                                  andImageHandler:^(UIImage *image) {
-                                     
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [UIHUD showHUD];
+         });
         [[AipOcrService shardService] detectIdCardFrontFromImage:image
         withOptions:nil
         successHandler:_successHandler
@@ -247,9 +273,10 @@
 - (void)localIdcardOCROnlineFront {
     
     UIViewController * vc =
-    [AipCaptureCardVC ViewControllerWithCardType:CardTypeLocalIdCardFont
-                                 andImageHandler:^(UIImage *image) {
-                                     
+    [AipCaptureCardVC ViewControllerWithCardType:CardTypeLocalIdCardFont andImageHandler:^(UIImage *image) {
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [UIHUD showHUD];
+         });
         [[AipOcrService shardService] detectIdCardFrontFromImage:image
             withOptions:nil
             successHandler:^(id result){
@@ -261,17 +288,16 @@
     }];
     [self presentViewController:vc animated:YES completion:nil];
     
-    
 }
-
-
 
 - (void)idcardOCROnlineBack{
     
     UIViewController * vc =
     [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardBack
                                  andImageHandler:^(UIImage *image) {
-                                     
+                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                         [UIHUD showHUD];
+                                     });
                                      [[AipOcrService shardService] detectIdCardBackFromImage:image
                                                                                  withOptions:nil
                                                                               successHandler:_successHandler
@@ -285,7 +311,9 @@
     UIViewController * vc =
     [AipCaptureCardVC ViewControllerWithCardType:CardTypeLocalIdCardBack
                                  andImageHandler:^(UIImage *image) {
-                                     
+                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                         [UIHUD showHUD];
+                                     });
                                      [[AipOcrService shardService] detectIdCardBackFromImage:image
                                                                                  withOptions:nil
                                                                               successHandler:^(id result){
@@ -299,25 +327,25 @@
 }
 
 - (void)bankCardOCROnline{
-    
     UIViewController * vc =
     [AipCaptureCardVC ViewControllerWithCardType:CardTypeBankCard
                                  andImageHandler:^(UIImage *image) {
-                                     
+                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                         [UIHUD showHUD];
+                                     });
                                      [[AipOcrService shardService] detectBankCardFromImage:image
                                                                             successHandler:_successHandler
                                                                                failHandler:_failHandler];
                                      
                                  }];
     [self presentViewController:vc animated:YES completion:nil];
-    
 }
 
-
 - (void)drivingLicenseOCR{
-    
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectDrivingLicenseFromImage:image
                                                         withOptions:nil
                                                      successHandler:_successHandler
@@ -328,9 +356,10 @@
 }
 
 - (void)vehicleLicenseOCR{
-    
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectVehicleLicenseFromImage:image
                                                         withOptions:nil
                                                      successHandler:_successHandler
@@ -342,7 +371,9 @@
 - (void)plateLicenseOCR{
     
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectPlateNumberFromImage:image
                                                      withOptions:nil
                                                   successHandler:_successHandler
@@ -355,7 +386,9 @@
 - (void)receiptOCR{
     
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectReceiptFromImage:image
                                                  withOptions:nil
                                               successHandler:_successHandler
@@ -368,7 +401,9 @@
 - (void)businessLicenseOCR{
     
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIHUD showHUD];
+        });
         [[AipOcrService shardService] detectBusinessLicenseFromImage:image
                                                          withOptions:nil
                                                       successHandler:_successHandler
@@ -397,17 +432,14 @@
     } else {
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
-    
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return self.actionList.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
@@ -416,17 +448,10 @@
     NSArray *actions = self.actionList[indexPath.row];
     GPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify forIndexPath:indexPath];
     cell.titleLabel.text = actions[0];
-    
+    cell.iconImageView.image = [UIImage imageWithContentsOfFile:self.imageArray[arc4random() % self.imageArray.count]];
+//    cell.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256 alpha:0.45];
     return cell;
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (indexPath.section == 0) {
-//        return 55;
-//    } else {
-//        return 44;
-//    }
-//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -440,16 +465,6 @@
 #pragma clang diagnostic pop
     }
 }
-
-//-(BOOL)shouldAutorotate{
-//    return NO;
-//}
-//
-//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-//{
-//    return UIInterfaceOrientationMaskPortrait;
-//}
-
 
 #pragma mark UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
