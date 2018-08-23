@@ -16,6 +16,7 @@
 #import "SelectPanViewController.h"
 #import "HexColor.h"
 #import "UIEditTextFieldView.h"
+#import "GPTools.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -152,9 +153,11 @@
 //    [UIEditTextFieldView editTextFieldWithTitle:@"输入标题" editStr:nil complish:^(NSString *text) {
 //        NSLog(@"%@",text);
 //    } cancelBlock:nil];
-    [UIEditTextFieldView editTextFieldWithTitle:@"输入标题" editStr:nil complish:^(NSString *text) {
-        NSLog(@"%@",text);
-    } cancelBlock:nil];
+//    [UIEditTextFieldView editTextFieldWithTitle:@"输入标题" editStr:nil complish:^(NSString *text) {
+//        NSLog(@"%@",text);
+//    } cancelBlock:nil];
+    
+    [GPTools ShowInfoTitle:@"提醒" message:@"OK" delayTime:0.2];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

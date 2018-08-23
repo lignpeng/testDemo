@@ -133,6 +133,21 @@
     [[self getCurrentViewController] presentViewController:alertVC animated:YES completion:nil];
 }
 
++ (void)ShowInfoTitle:(NSString *)title message:(NSString *)message delayTime:(float)time {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:title?title:@"提示" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        [alerView show];
+        [alerView performSelector:@selector(dismissWithClickedButtonIndex:animated:) withObject:@[@0, @1] afterDelay:time];
+        
+//        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+
+//        [[self getCurrentViewController] presentViewController:alertVC animated:true completion:nil];
+//        [alertVC performSelector:@selector(dismissWithClickedButtonIndex:animated:) withObject:@[@0,@1] afterDelay:time];
+//        [alertVC performSelector:@selector(dismissViewControllerAnimated:completion:) withObject:@[@YES] afterDelay:time];
+    });
+}
+
 //获取指定区域的图片
 + (UIImage *)clipImageOrignImage:(UIImage *)orignImage WithRect:(CGRect)aRect {
     

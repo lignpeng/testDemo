@@ -189,7 +189,6 @@ typedef enum : NSUInteger {
         default:
             break;
     }
-    
 }
 
 //选择

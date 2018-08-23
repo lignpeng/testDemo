@@ -9,6 +9,7 @@
 #import "UIWordViewController.h"
 #import "DataTools.h"
 #import "HexColor.h"
+#import "GPTools.h"
 
 @interface UIWordViewController ()
 
@@ -64,7 +65,9 @@
     if (self.text.length > 0) {
         UIPasteboard *board = [UIPasteboard generalPasteboard];
         board.string = self.text;
+        [GPTools ShowInfoTitle:@"提示" message:@"复制成功！" delayTime:0.2];
     }
+    
 }
 
 - (void)reviewAction {

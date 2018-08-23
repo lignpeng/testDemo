@@ -27,7 +27,8 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 + (void)ShowAlertViewWithoutCancelActionTitle:(NSString *)title message:(NSString *)message handler:(AlertViewHandler) handle;
 + (void)ShowAlertViewWithCustomAction:(NSString *)title message: (NSString *)message cancleActionTitle: (NSString *)cancleActionTitle OKActionTitle: (NSString *)OKActionTitle cancelAction: (AlertViewHandler)cancelAction OKAction:(AlertViewHandler)OKAction;
 + (void)ShowAlertView:(NSString *)title message:(NSString *)message clickedIndex:(AlertViewClickedIndex) clickedIndex cancelButtonTitle:(NSString *)cancelButtonTitle otherButtons:(NSArray <NSString*>*)otherButtons;
-
+//延时自动消失，无按钮
++ (void)ShowInfoTitle:(NSString *)title message:(NSString *)message delayTime:(float)time;
 //获取指定区域的图片
 + (UIImage *)clipImageOrignImage:(UIImage *)orignImage WithRect:(CGRect)aRect;
 
