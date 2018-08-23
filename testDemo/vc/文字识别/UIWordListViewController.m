@@ -13,6 +13,7 @@
 #import "UIWordViewController.h"
 #import "GPTools.h"
 #import "UIHUD.h"
+#import "UISelectImageViewController.h"
 
 #define ApiKey @"l61gFq3Km3dywPQV4ny52Mya"
 #define SecretKey @"qpHqeGue45LpeYniYLK0u9QdAWCMLpiP"
@@ -82,18 +83,23 @@
 }
 
 - (void)configureData {
-    
     self.actionList = [NSMutableArray array];
+//    [self.actionList addObject:@[@"图片文字识别", @"imageOCR"]];
     [self.actionList addObject:@[@"通用文字识别", @"generalBasicOCR"]];
     [self.actionList addObject:@[@"通用文字识别(高精度版)", @"generalAccurateBasicOCR"]];
     [self.actionList addObject:@[@"通用文字识别(含位置信息版)", @"generalOCR"]];
     [self.actionList addObject:@[@"通用文字识别(高精度含位置版)", @"generalAccurateOCR"]];
     [self.actionList addObject:@[@"通用文字识别(含生僻字版)", @"generalEnchancedOCR"]];
     [self.actionList addObject:@[@"网络图片文字识别", @"webImageOCR"]];
+    /*
+     身份证本地扫描 IdcardQuality.framework不支持模拟器 如果开发者想要在模拟器中开发并集成IdcardQuality，可以使用 宏定义屏蔽相关代码
+     
+     因此移除了
+     
     [self.actionList addObject:@[@"身份证正面拍照识别", @"idcardOCROnlineFront"]];
     [self.actionList addObject:@[@"身份证反面拍照识别", @"idcardOCROnlineBack"]];
     [self.actionList addObject:@[@"身份证正面(嵌入式质量控制+云端识别)", @"localIdcardOCROnlineFront"]];
-    [self.actionList addObject:@[@"身份证反面(嵌入式质量控制+云端识别)", @"localIdcardOCROnlineBack"]];
+    [self.actionList addObject:@[@"身份证反面(嵌入式质量控制+云端识别)", @"localIdcardOCROnlineBack"]];*/
     [self.actionList addObject:@[@"银行卡正面拍照识别", @"bankCardOCROnline"]];
     [self.actionList addObject:@[@"驾驶证识别", @"drivingLicenseOCR"]];
     [self.actionList addObject:@[@"行驶证识别", @"vehicleLicenseOCR"]];
@@ -161,6 +167,11 @@
 }
 
 #pragma mark - Action
+
+- (void)imageOCR {
+    UISelectImageViewController *vc = [UISelectImageViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)generalOCR{
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {

@@ -10,7 +10,7 @@
 #import "GPTableViewCell.h"
 #import "GPExtensionViewController.h"
 #import "CSNoviceGuideView.h"
-#import "CSAirNameListView.h"
+#import "UINameListPickerView.h"
 #import "UILabelsViewController.h"
 #import "UIURLAlertView.h"
 #import "SelectPanViewController.h"
@@ -68,7 +68,7 @@
                  @"CSBrowsingHistoryListViewController",@"GGStringViewController",
                  @"GGRunTimeMethodViewController",@"TimezoneViewController",
                  @"GExcelViewController",@"RiseUpCalcViewController",
-                 @"SelectManagerViewController",@"UIWordListViewController"];
+                 @"SelectManagerViewController",@"UISelectImageViewController"];
     return _vcArray; 
 }
 
@@ -121,16 +121,16 @@
 
 - (void)guideAction {
 //    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
-//    [CSAirNameListView airNameListView];
+//    [UINameListPickerView nameListPickerView];
     NSLog(@"***-------------***");
-//    [CSAirNameListView airNameListView:^(NSInteger section, NSInteger index, NSString *name) {
+//    [UINameListPickerView nameListPickerView:^(NSInteger section, NSInteger index, NSString *name) {
 //        NSLog(@"section = %ld index = %ld name = %@",(long)section,(long)index,name);
 //    }];
-//    [CSAirNameListView airNameListView:self.vcTitleArray complish:^(NSInteger index, NSString *name) {
+//    [UINameListPickerView nameListPickerView:self.vcTitleArray complish:^(NSInteger index, NSString *name) {
 //        NSLog(@"index = %ld name = %@",(long)index,name);
 //    }];
 //    __weak typeof(self) weakSelf = self;
-//    [CSAirNameListView airNameListView:self.vcTitleArray selectedIndex:0 complish:^(NSInteger index, NSString *name) {
+//    [UINameListPickerView nameListPickerView:self.vcTitleArray selectedIndex:0 complish:^(NSInteger index, NSString *name) {
 //        NSLog(@"index = %ld name = %@",(long)index,name);
 //        UIViewController *vc = [NSClassFromString(weakSelf.vcArray[index]) new];
 //        vc.title = weakSelf.vcTitleArray[index];

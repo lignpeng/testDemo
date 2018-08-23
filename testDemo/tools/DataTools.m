@@ -9,6 +9,7 @@
 #import "DataTools.h"
 #import <objc/runtime.h>
 
+
 @implementation DataTools
 
 + (NSString *)createFileName:(int)length {
@@ -41,6 +42,32 @@
     }
     
     return filerArray;
+}
+
+//计算图片大小
++ (NSDictionary *)calulateImageFileSize:(UIImage *)image {
+    NSData *data = UIImagePNGRepresentation(image);
+    if (!data) {
+        data = UIImageJPEGRepresentation(image, 0.5);//需要改成0.5才接近原图片大小，原因请看下文
+    }
+    double dataLength = [data length] * 1.0;
+    NSArray *typeArray = @[@"bytes",@"KB",@"MB",@"GB",@"TB",@"PB", @"EB",@"ZB",@"YB"];
+    NSInteger index = 0;
+    while (dataLength > 1024) {
+        dataLength /= 1024.0;
+        index ++;
+    }
+    NSLog(@"image = %.3f %@",dataLength,typeArray[index]);
+    return @{@"size":@(dataLength),@"type":typeArray[index]};
+}
+
++ (float)calulateImageFileSizeTypeMB:(UIImage *)image {
+    NSData *data = UIImagePNGRepresentation(image);
+    if (!data) {
+        data = UIImageJPEGRepresentation(image, 0.5);//需要改成0.5才接近原图片大小
+    }
+    float dataLength = [data length] * 1.0 /(1024*1024);
+    return dataLength;
 }
 
 @end

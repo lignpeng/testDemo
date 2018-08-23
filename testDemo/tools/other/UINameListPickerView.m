@@ -1,5 +1,5 @@
 //
-//  CSAirNameListView.m
+//  UINameListPickerView.m
 //  testDemo
 //
 //  Created by lignpeng on 2017/7/27.
@@ -11,7 +11,7 @@
  
  */
 
-#import "CSAirNameListView.h"
+#import "UINameListPickerView.h"
 #import "Masonry.h"
 
 static const CGFloat kHolderViewHeight = 250.0f;//选择器总高度
@@ -20,7 +20,7 @@ static const CGFloat kButtonWidth = 72.0f;//按钮宽度
 static const NSTimeInterval kAnimationDuration = 0.25f;
 static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 
-@interface CSAirNameListView()<UIPickerViewDelegate,UIPickerViewDataSource>
+@interface UINameListPickerView()<UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property(nonatomic, strong) UIPickerView *pickerView;
 @property(nonatomic, strong) UIButton *cancelButton;
@@ -30,28 +30,28 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 
 @end
 
-@implementation CSAirNameListView
+@implementation UINameListPickerView
 
-+ (instancetype)airNameListView {
-    CSAirNameListView *view = [[CSAirNameListView alloc] initWithFrame:[UIScreen mainScreen].bounds];
++ (instancetype)nameListPickerView {
+    UINameListPickerView *view = [[UINameListPickerView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [view show];
     return view;
 }
 
-+ (instancetype)airNameListView:(void (^)(NSInteger index, NSString *name))complishBlock {
-    CSAirNameListView *view = [self airNameListView];
++ (instancetype)nameListPickerView:(void (^)(NSInteger index, NSString *name))complishBlock {
+    UINameListPickerView *view = [self nameListPickerView];
     view.complishBlock = complishBlock;
     return view;
 }
 
-+ (instancetype)airNameListView:(NSArray *)dataSource complish:(void(^)(NSInteger index, NSString *name))complishBlock {
-    CSAirNameListView *view = [self airNameListView:complishBlock];
++ (instancetype)nameListPickerView:(NSArray *)dataSource complish:(void(^)(NSInteger index, NSString *name))complishBlock {
+    UINameListPickerView *view = [self nameListPickerView:complishBlock];
     view.dataSource = dataSource;
     return view;
 }
 
-+ (instancetype)airNameListView:(NSArray *)dataSource selectedIndex:(NSInteger )selectedIndex complish:(void(^)(NSInteger index, NSString *name))complishBlock {
-    CSAirNameListView *view = [[CSAirNameListView alloc] initWithFrame:[UIScreen mainScreen].bounds];
++ (instancetype)nameListPickerView:(NSArray *)dataSource selectedIndex:(NSInteger )selectedIndex complish:(void(^)(NSInteger index, NSString *name))complishBlock {
+    UINameListPickerView *view = [[UINameListPickerView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     view.dataSource = dataSource;
     view.selectRow = selectedIndex;
     view.complishBlock = complishBlock;
@@ -62,8 +62,8 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 + (void)dissmiss {
     UIWindow *windowView = [[UIApplication sharedApplication] keyWindow];
     for (UIView *subView in windowView.subviews) {
-        if ([subView isMemberOfClass:[CSAirNameListView class]]) {
-            [(CSAirNameListView *)subView dismiss];
+        if ([subView isMemberOfClass:[UINameListPickerView class]]) {
+            [(UINameListPickerView *)subView dismiss];
         }
     }
 }

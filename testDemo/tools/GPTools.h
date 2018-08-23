@@ -24,7 +24,7 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 
 + (void)ShowAlert:(NSString *)message;
 + (void)ShowAlertView:(NSString *)message alertHandler:(AlertViewHandler)handle;
-+ (void)ShowAlertViewWithoutCancelAction:(NSString *)title message:(NSString *)message handler:(AlertViewHandler) handle;
++ (void)ShowAlertViewWithoutCancelActionTitle:(NSString *)title message:(NSString *)message handler:(AlertViewHandler) handle;
 + (void)ShowAlertViewWithCustomAction:(NSString *)title message: (NSString *)message cancleActionTitle: (NSString *)cancleActionTitle OKActionTitle: (NSString *)OKActionTitle cancelAction: (AlertViewHandler)cancelAction OKAction:(AlertViewHandler)OKAction;
 + (void)ShowAlertView:(NSString *)title message:(NSString *)message clickedIndex:(AlertViewClickedIndex) clickedIndex cancelButtonTitle:(NSString *)cancelButtonTitle otherButtons:(NSArray <NSString*>*)otherButtons;
 
@@ -33,5 +33,6 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 
 //创建按钮
 + (UIButton *)createButton:(NSString *)title titleFont:(UIFont *)titleFont corner:(CGFloat)radius target:(nullable id)target action:(SEL _Nonnull )selector;
++ (UIButton *)colorButton:(NSString *)title titleFont:(UIFont *)titleFont isColor:(BOOL)isColor corner:(CGFloat)radius target:(nullable id)target action:(SEL _Nonnull )selector;
 
 @end

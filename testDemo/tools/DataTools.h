@@ -11,6 +11,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface DataTools : NSObject
 
@@ -22,4 +23,7 @@
  */
 + (NSArray *)filterMaxItemsArray:(NSArray *)origArray isStringObj:(BOOL)isString filterKey:(NSString *)key;
 
+//计算图片大小{@"size":大小,@"type":type}
++ (NSDictionary *)calulateImageFileSize:(UIImage *)image;
++ (float)calulateImageFileSizeTypeMB:(UIImage *)image;
 @end

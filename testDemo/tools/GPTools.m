@@ -7,7 +7,7 @@
 //
 
 #import "GPTools.h"
-
+#import "HexColor.h"
 
 @implementation GPTools
 
@@ -80,7 +80,7 @@
     [[self getCurrentViewController] presentViewController:alertVC animated:true completion:nil];
 }
 
-+ (void)ShowAlertViewWithoutCancelAction:(NSString *)title message:(NSString *)message handler:(AlertViewHandler) handle{
++ (void)ShowAlertViewWithoutCancelActionTitle:(NSString *)title message:(NSString *)message handler:(AlertViewHandler) handle{
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK",@"确定") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         if (handle) {
@@ -158,6 +158,14 @@
     }
     bt.titleLabel.font = titleFont;
     [bt addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    return bt;
+}
+
++ (UIButton *)colorButton:(NSString *)title titleFont:(UIFont *)titleFont isColor:(BOOL)isColor corner:(CGFloat)radius target:(nullable id)target action:(SEL _Nonnull )selector {
+    UIButton *bt = [self createButton:title titleFont:titleFont corner:radius target:target action:selector];
+    if (isColor) {
+        bt.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
+    }
     return bt;
 }
 
