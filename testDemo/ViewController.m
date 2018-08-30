@@ -17,6 +17,8 @@
 #import "HexColor.h"
 #import "UIEditTextFieldView.h"
 #import "GPTools.h"
+#import "UIClipImageViewController.h"
+
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -157,7 +159,9 @@
 //        NSLog(@"%@",text);
 //    } cancelBlock:nil];
     
-    [GPTools ShowInfoTitle:@"提醒" message:@"OK" delayTime:0.2];
+//    [GPTools ShowInfoTitle:@"提醒" message:@"OK" delayTime:0.2];
+    UIClipImageViewController *vc = [UIClipImageViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -171,7 +171,12 @@
         bt.layer.cornerRadius = radius;
         bt.clipsToBounds = YES;
     }
-    bt.titleLabel.font = titleFont;
+    if (titleFont) {
+        bt.titleLabel.font = titleFont;
+    }else {
+        bt.titleLabel.font = [UIFont systemFontOfSize:14];
+    }
+    
     [bt addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     return bt;
 }

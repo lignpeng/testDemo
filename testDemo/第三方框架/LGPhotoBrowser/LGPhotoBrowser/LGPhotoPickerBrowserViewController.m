@@ -12,6 +12,8 @@
 #import "LGPhotoPickerCustomToolBarView.h"
 #import "LGPhotoAssets.h"
 #import "LGPhotoPickerCommon.h"
+#import "HexColor.h"
+#import "UIClipImageViewController.h"
 
 static NSString *_cellIdentifier = @"collectionViewCell";
 
@@ -24,19 +26,20 @@ typedef NS_ENUM(NSInteger, DraggingDirect) {
 @interface LGPhotoPickerBrowserViewController () <UIScrollViewDelegate,LGPhotoPickerPhotoScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,LGPhotoPickerCustomToolBarViewDelegate>
 
 // 控件
-@property (nonatomic, weak  ) UILabel                             *pageLabel;
-@property (nonatomic, weak  ) UIButton                            *backBtn;
-@property (nonatomic, weak  ) UICollectionView                    *collectionView;
-@property (nonatomic, assign) NSInteger                           currentPage;
-@property (nonatomic, assign) BOOL                                isNowRotation;
-@property (nonatomic, weak  ) LGImagePickerSelectView             *imagePickerSelectView;
-@property (nonatomic, strong) LGPhotoPickerCustomToolBarView      *XGtoolbar;
+@property (nonatomic, weak  ) UILabel *pageLabel;
+@property (nonatomic, weak  ) UIButton *backBtn;
+@property (nonatomic, weak  ) UICollectionView *collectionView;
+@property (nonatomic, assign) NSInteger currentPage;
+@property (nonatomic, assign) BOOL isNowRotation;
+@property (nonatomic, weak  ) LGImagePickerSelectView *imagePickerSelectView;
+@property (nonatomic, strong) LGPhotoPickerCustomToolBarView *XGtoolbar;
 @property (nonatomic, weak  ) LGPhotoPickerBrowserPhotoScrollView *cellScrollView;
-@property (nonatomic, strong) UIImage                             *displayImage;
-@property (nonatomic, assign) CGFloat                             beginDraggingContentOffsetX;
-@property (nonatomic, assign) DraggingDirect                      draggingDirect;
-@property (nonatomic, assign) BOOL                                scrollToEndFlag;
-@property (nonatomic, assign) BOOL                                needHidenBar;// YES - 隐藏顶部和底部bar，单击照片dismiss
+@property (nonatomic, strong) UIImage *displayImage;
+@property (nonatomic, assign) CGFloat beginDraggingContentOffsetX;
+@property (nonatomic, assign) DraggingDirect draggingDirect;
+@property (nonatomic, assign) BOOL scrollToEndFlag;
+@property (nonatomic, assign) BOOL needHidenBar;// YES - 隐藏顶部和底部bar，单击照片dismiss
+@property (nonatomic, weak  ) UIButton *editButton;
 
 @end
 
@@ -103,6 +106,7 @@ typedef NS_ENUM(NSInteger, DraggingDirect) {
         [self.view addSubview:collectionView];
         self.collectionView = collectionView;
         self.pageLabel.hidden = NO;
+        self.editButton.hidden = NO;
     }
 }
 
@@ -121,7 +125,7 @@ typedef NS_ENUM(NSInteger, DraggingDirect) {
         self.pageLabel = pageLabel;
         
         NSString *widthVfl = @"H:|-0-[pageLabel]-0-|";
-        NSString *heightVfl = @"V:[pageLabel(ZLPickerPageCtrlH)]-20-|";
+        NSString *heightVfl = @"V:[pageLabel(ZLPickerPageCtrlH)]-15-|";
         NSDictionary *views = NSDictionaryOfVariableBindings(pageLabel);
         NSDictionary *metrics = @{@"ZLPickerPageCtrlH":@(LGPickerPageCtrlH)};
         
@@ -129,6 +133,45 @@ typedef NS_ENUM(NSInteger, DraggingDirect) {
         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:heightVfl options:0 metrics:metrics views:views]];
     }
     return _pageLabel;
+}
+
+- (UIButton *)editButton {
+    if (!_editButton) {
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectZero];
+        [button addTarget:self action:@selector(editAction) forControlEvents:UIControlEventTouchUpInside];
+        [button setTitle:@"编辑" forState:UIControlStateNormal];
+//        button.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
+        button.layer.cornerRadius = 5;
+        button.clipsToBounds = YES;
+        [self.view addSubview:button];
+        
+        CGRect vframe = self.view.bounds;
+        CGFloat height = 48;
+        CGFloat width = 80;
+        button.frame = (CGRect){CGRectGetWidth(vframe)-width,CGRectGetHeight(vframe)-height,width,height};
+        _editButton = button;
+    }
+    return _editButton;
+}
+
+- (void)editAction {
+    LGPhotoPickerBrowserPhoto *photo = nil;
+    photo = self.photos[self.currentPage];
+    UIImage *image = photo.photoImage;
+    if (!image) {
+        return;
+    }
+    __weak typeof(self) weakSelf = self;
+    [UIClipImageViewController clipImage:image complishBlock:^(UIImage *image) {
+        LGPhotoPickerBrowserPhoto *photo = weakSelf.photos[weakSelf.currentPage];
+        photo.photoImage = image;
+        weakSelf.editBlock(image);
+        weakSelf.photos = nil;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf reloadData];
+            [weakSelf.collectionView reloadData];
+        });
+    }];
 }
 
 #pragma mark getPhotos
@@ -412,8 +455,7 @@ typedef NS_ENUM(NSInteger, DraggingDirect) {
     }
 }
 
-- (void)updateXGToolbar
-{
+- (void)updateXGToolbar{
     [self.XGtoolbar updateToolbarWithOriginal:self.isOriginal
                                   currentPage:self.currentPage
                                 selectedCount:self.selectedAssets.count];

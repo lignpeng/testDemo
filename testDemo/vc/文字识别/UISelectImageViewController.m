@@ -28,7 +28,7 @@ typedef enum : NSUInteger {
 
 
 @interface UISelectImageViewController ()<LGPhotoPickerViewControllerDelegate,LGPhotoPickerBrowserViewControllerDataSource,LGPhotoPickerBrowserViewControllerDelegate>
-
+@property(nonatomic, strong) UIButton *deletButton;
 @property(nonatomic, strong) UIButton *okButton;
 @property(nonatomic, strong) UIButton *selectButton;
 @property(nonatomic, strong) UIButton *pickerButton;
@@ -57,6 +57,7 @@ typedef enum : NSUInteger {
     [self.view addSubview:self.selectButton];
     [self.view addSubview:self.pickerButton];
     [self.view addSubview:self.okButton];
+    [self.view addSubview:self.deletButton];
     [self.view addSubview:self.imageView];
     [self.view addSubview:self.typeLabel];
     self.wordType = NSWordTypeBasicAccurate;
@@ -68,7 +69,8 @@ typedef enum : NSUInteger {
     CGFloat nHight = CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]) + CGRectGetHeight(self.navigationController.navigationBar.frame);
     CGFloat margin = 32;
     CGRect sframe = [UIScreen mainScreen].bounds;
-    CGFloat width = (CGRectGetWidth(sframe) - margin*2.5)/3;
+    CGFloat gap = 2;
+    CGFloat width = (CGRectGetWidth(sframe) - margin - gap * 3)/4;
     CGFloat bheigh = 42;
     
     //图片
@@ -83,15 +85,18 @@ typedef enum : NSUInteger {
     self.typeLabel.frame = lframe;
     
     y = CGRectGetMinY(lframe) + lheight + margin *0.5;
-    CGRect bframe = CGRectMake(margin,y, width, bheigh);
+    CGRect bframe = CGRectMake(margin*0.5,y, width, bheigh);
     //拍照
     self.pickerButton.frame = bframe;
     //选择
-    bframe.origin.x += width + margin * 0.25;
+    bframe.origin.x += width + gap;
     self.selectButton.frame = bframe;
     //确定
-    bframe.origin.x += width + margin * 0.25;
+    bframe.origin.x += width + gap;
     self.okButton.frame = bframe;
+    //删除
+    bframe.origin.x += width + gap;
+    self.deletButton.frame = bframe;
 }
 
 - (void)initData {
@@ -166,6 +171,7 @@ typedef enum : NSUInteger {
 //确定
 - (void)okAction {
     if (self.images.count == 0) {
+        [GPTools ShowInfoTitle:@"提醒" message:@"请先添加图片" delayTime:0.2];
         return;
     }
     NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
@@ -221,21 +227,43 @@ typedef enum : NSUInteger {
     [cameraVC showPickerVc:self];
 }
 
+- (void)deletAction {
+    [self.images removeAllObjects];
+    [self updateImageView];
+}
+
+
 - (void)browserAction {
     if (self.images.count == 0) {
+        //选择图片
+        [self selectAction];
         return;
     }
-    LGPhotoPickerBrowserViewController *BroswerVC = [[LGPhotoPickerBrowserViewController alloc] init];
-    BroswerVC.delegate = self;
-    BroswerVC.dataSource = self;
-    BroswerVC.showType = LGShowImageTypeImageBroswer;
-    [self presentViewController:BroswerVC animated:YES completion:nil];
+    LGPhotoPickerBrowserViewController *vc = [[LGPhotoPickerBrowserViewController alloc] init];
+    vc.delegate = self;
+    vc.dataSource = self;
+    vc.showType = LGShowImageTypeImageBroswer;
+    //编辑图片
+    __weak typeof(self) weakSelf = self;
+    vc.editBlock = ^(UIImage *image) {
+        [weakSelf.images removeAllObjects];
+        [weakSelf.images addObject:image];
+    };
+    
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)updateImageView {
     if (self.images.count > 0) {
         self.imageView.image = self.images.firstObject;
+    }else {
+        self.imageView.image = nil;
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateImageView];
 }
 
 #pragma mark - LGPhotoPickerViewControllerDelegate
@@ -308,6 +336,13 @@ typedef enum : NSUInteger {
         });
     }
     return _okButton;
+}
+
+- (UIButton *)deletButton {
+    if (!_deletButton) {
+        _deletButton = [GPTools colorButton:@"清除" titleFont:nil isColor:YES corner:5 target:self action:@selector(deletAction)];
+    }
+    return _deletButton;
 }
 
 - (UIButton *)pickerButton {

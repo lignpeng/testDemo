@@ -187,6 +187,12 @@
 		1FB412791EFB4B260040C840 /* GGXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB412771EFB4B260040C840 /* GGXibViewController.xib */; };
 		1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4127C1EFB532C0040C840 /* HexColor.m */; };
 		1FB8D9F41FB13FDD001A60A3 /* GGSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */; };
+		1FBC475D21363BEC00C203B7 /* UIClipImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC475C21363BEC00C203B7 /* UIClipImageViewController.m */; };
+		1FBC47682136419F00C203B7 /* JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47602136419F00C203B7 /* JPImageresizerView.m */; };
+		1FBC47692136419F00C203B7 /* UIImage+JPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47612136419F00C203B7 /* UIImage+JPExtension.m */; };
+		1FBC476A2136419F00C203B7 /* JPImageresizerFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47622136419F00C203B7 /* JPImageresizerFrameView.m */; };
+		1FBC476B2136419F00C203B7 /* JPImageresizerConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47652136419F00C203B7 /* JPImageresizerConfigure.m */; };
+		1FBC476F2136924B00C203B7 /* UIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC476E2136924B00C203B7 /* UIImageViewController.m */; };
 		1FDB7E2720A17D74002E2F61 /* TimezoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E2620A17D74002E2F61 /* TimezoneViewController.m */; };
 		1FDB7E2E20A57D10002E2F61 /* GExcelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E2D20A57D10002E2F61 /* GExcelViewController.m */; };
 		1FDB7E3220A57DFF002E2F61 /* UIExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3120A57DFF002E2F61 /* UIExcelView.m */; };
@@ -637,6 +643,20 @@
 		1FB4127C1EFB532C0040C840 /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HexColor.m; path = tools/HexColor.m; sourceTree = "<group>"; };
 		1FB8D9F21FB13FDD001A60A3 /* GGSpaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGSpaceViewController.h; path = "vc/去空格/GGSpaceViewController.h"; sourceTree = "<group>"; };
 		1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGSpaceViewController.m; path = "vc/去空格/GGSpaceViewController.m"; sourceTree = "<group>"; };
+		1FBC475B21363BEC00C203B7 /* UIClipImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIClipImageViewController.h; sourceTree = "<group>"; };
+		1FBC475C21363BEC00C203B7 /* UIClipImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIClipImageViewController.m; sourceTree = "<group>"; };
+		1FBC475F2136419F00C203B7 /* JPImageresizerConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerConfigure.h; sourceTree = "<group>"; };
+		1FBC47602136419F00C203B7 /* JPImageresizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerView.m; sourceTree = "<group>"; };
+		1FBC47612136419F00C203B7 /* UIImage+JPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JPExtension.m"; sourceTree = "<group>"; };
+		1FBC47622136419F00C203B7 /* JPImageresizerFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerFrameView.m; sourceTree = "<group>"; };
+		1FBC47632136419F00C203B7 /* JPImageresizerTypedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerTypedef.h; sourceTree = "<group>"; };
+		1FBC47642136419F00C203B7 /* JPImageresizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerView.h; sourceTree = "<group>"; };
+		1FBC47652136419F00C203B7 /* JPImageresizerConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerConfigure.m; sourceTree = "<group>"; };
+		1FBC47662136419F00C203B7 /* JPImageresizerFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerFrameView.h; sourceTree = "<group>"; };
+		1FBC47672136419F00C203B7 /* UIImage+JPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JPExtension.h"; sourceTree = "<group>"; };
+		1FBC476C2136740D00C203B7 /* GGMacors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGMacors.h; path = tools/GGMacors.h; sourceTree = "<group>"; };
+		1FBC476D2136924B00C203B7 /* UIImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageViewController.h; sourceTree = "<group>"; };
+		1FBC476E2136924B00C203B7 /* UIImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageViewController.m; sourceTree = "<group>"; };
 		1FDB7E2520A17D74002E2F61 /* TimezoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimezoneViewController.h; path = vc/timezone/TimezoneViewController.h; sourceTree = "<group>"; };
 		1FDB7E2620A17D74002E2F61 /* TimezoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TimezoneViewController.m; path = vc/timezone/TimezoneViewController.m; sourceTree = "<group>"; };
 		1FDB7E2C20A57D10002E2F61 /* GExcelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GExcelViewController.h; path = "vc/excel表/GExcelViewController.h"; sourceTree = "<group>"; };
@@ -887,6 +907,7 @@
 		1F16ACFC212BFBD700BA265C /* 第三方框架 */ = {
 			isa = PBXGroup;
 			children = (
+				1FBC475E2136419F00C203B7 /* JPImageresizerView */,
 				1F16AE76212D191D00BA265C /* SDWebImage */,
 				1F16AE72212D191600BA265C /* DACircularProgress */,
 				1F16ADED212D189800BA265C /* LGPhotoBrowser */,
@@ -1075,8 +1096,8 @@
 		1F16ADEE212D189800BA265C /* LGPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				1F16ADF5212D189800BA265C /* LGPhotoPickerBrowserViewController.m */,
 				1F16ADF6212D189800BA265C /* LGPhotoPickerBrowserViewController.h */,
+				1F16ADF5212D189800BA265C /* LGPhotoPickerBrowserViewController.m */,
 				1F16ADEF212D189800BA265C /* Models */,
 				1F16ADF7212D189800BA265C /* Views */,
 			);
@@ -1524,6 +1545,7 @@
 				1FF6907A2105D5A2003B5431 /* FileTools.m */,
 				1FF69081210EB2F0003B5431 /* DataTools.h */,
 				1FF69082210EB2F0003B5431 /* DataTools.m */,
+				1FBC476C2136740D00C203B7 /* GGMacors.h */,
 			);
 			name = "工具";
 			sourceTree = "<group>";
@@ -1556,6 +1578,34 @@
 				1FB8D9F31FB13FDD001A60A3 /* GGSpaceViewController.m */,
 			);
 			name = "去空格";
+			sourceTree = "<group>";
+		};
+		1FBC475A21363BC600C203B7 /* 裁剪图片 */ = {
+			isa = PBXGroup;
+			children = (
+				1FBC475B21363BEC00C203B7 /* UIClipImageViewController.h */,
+				1FBC475C21363BEC00C203B7 /* UIClipImageViewController.m */,
+				1FBC476D2136924B00C203B7 /* UIImageViewController.h */,
+				1FBC476E2136924B00C203B7 /* UIImageViewController.m */,
+			);
+			name = "裁剪图片";
+			path = "vc/裁剪图片";
+			sourceTree = "<group>";
+		};
+		1FBC475E2136419F00C203B7 /* JPImageresizerView */ = {
+			isa = PBXGroup;
+			children = (
+				1FBC475F2136419F00C203B7 /* JPImageresizerConfigure.h */,
+				1FBC47602136419F00C203B7 /* JPImageresizerView.m */,
+				1FBC47612136419F00C203B7 /* UIImage+JPExtension.m */,
+				1FBC47622136419F00C203B7 /* JPImageresizerFrameView.m */,
+				1FBC47632136419F00C203B7 /* JPImageresizerTypedef.h */,
+				1FBC47642136419F00C203B7 /* JPImageresizerView.h */,
+				1FBC47652136419F00C203B7 /* JPImageresizerConfigure.m */,
+				1FBC47662136419F00C203B7 /* JPImageresizerFrameView.h */,
+				1FBC47672136419F00C203B7 /* UIImage+JPExtension.h */,
+			);
+			path = JPImageresizerView;
 			sourceTree = "<group>";
 		};
 		1FC09C171F01FF4D00D2F8A7 /* 第一篇：15个VC */ = {
@@ -1911,6 +1961,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FBC475A21363BC600C203B7 /* 裁剪图片 */,
 				1F16ACDE212BAF2400BA265C /* 文字识别 */,
 				1FF6904520F599FC003B5431 /* 转盘 */,
 				1FF6903920F44598003B5431 /* 复利计算 */,
@@ -2158,6 +2209,7 @@
 				1F16ADA2212BFBD700BA265C /* MASConstraintMaker.m in Sources */,
 				1F090E631F5E90FC00CA0C61 /* CSVIPDayADsView.m in Sources */,
 				1FAA873D1E25BE9700162DA2 /* searchBarCustomView.m in Sources */,
+				1FBC476B2136419F00C203B7 /* JPImageresizerConfigure.m in Sources */,
 				1F16AE95212D191D00BA265C /* SDWebImageDecoder.m in Sources */,
 				1F16AE98212D191D00BA265C /* UIImage+GIF.m in Sources */,
 				1F090E691F5E910C00CA0C61 /* CSSelectListView.m in Sources */,
@@ -2192,6 +2244,7 @@
 				1F3C4DFC1F45976500EFF7AB /* GGBlockViewController.m in Sources */,
 				1F40B3AD1DF809EB00E03910 /* GPTimeViewController.m in Sources */,
 				1F47F8D51E553E740056F326 /* AttributeLabelViewController.m in Sources */,
+				1FBC47692136419F00C203B7 /* UIImage+JPExtension.m in Sources */,
 				1F8B927F202854A200710DB6 /* GGPerson.m in Sources */,
 				1FF69063210086F2003B5431 /* CSPassagerPickerView.m in Sources */,
 				1F2CF6861EF37BCE00093C15 /* UnmenberToken.m in Sources */,
@@ -2232,6 +2285,7 @@
 				1FFA1DB41E12103000E02421 /* PagingCollectionViewLayout.m in Sources */,
 				1F16AE4F212D189900BA265C /* LGPhotoPickerCustomToolBarView.m in Sources */,
 				1FDB7E2720A17D74002E2F61 /* TimezoneViewController.m in Sources */,
+				1FBC476F2136924B00C203B7 /* UIImageViewController.m in Sources */,
 				1F16ADB2212BFBD700BA265C /* UITabBarController+MemoryLeak.m in Sources */,
 				1F61D14520A0488500F933DC /* WebViewJavascriptBridgeBase.m in Sources */,
 				1FF6904120F44873003B5431 /* RiseupCalcHeaderView.m in Sources */,
@@ -2241,6 +2295,7 @@
 				1FB4127D1EFB532C0040C840 /* HexColor.m in Sources */,
 				1F16AD9F212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1F2CF67F1EF3753900093C15 /* ModelViewController.m in Sources */,
+				1FBC47682136419F00C203B7 /* JPImageresizerView.m in Sources */,
 				1F16AE51212D189900BA265C /* LGImagePickerSelectView.m in Sources */,
 				1FFA1DAB1E12098600E02421 /* GPSelectSeatViewController.m in Sources */,
 				1F16ADA8212BFBD700BA265C /* MASViewAttribute.m in Sources */,
@@ -2273,6 +2328,7 @@
 				1F16ADAE212BFBD700BA265C /* UIView+MemoryLeak.m in Sources */,
 				1F6E8EAE1E84B97000D15351 /* GPTools.m in Sources */,
 				1FFFD9801F21EDEF00929FC2 /* CalulateImageViewController.m in Sources */,
+				1FBC475D21363BEC00C203B7 /* UIClipImageViewController.m in Sources */,
 				1F16ADB5212BFBD700BA265C /* UIApplication+MemoryLeak.m in Sources */,
 				1F16AEA1212D191D00BA265C /* UIButton+WebCache.m in Sources */,
 				1F4DBBF81E4C616600374EA4 /* AlipayViewController.m in Sources */,
@@ -2328,6 +2384,7 @@
 				1F0C61E51F72174100D8F01B /* GGMasoryViewController.m in Sources */,
 				EE764F1C1DEBC95700BF4230 /* IDViewController.m in Sources */,
 				1FDB7E3E20A59838002E2F61 /* UILeftCollectionCell.m in Sources */,
+				1FBC476A2136419F00C203B7 /* JPImageresizerFrameView.m in Sources */,
 				1F16AE5E212D189900BA265C /* LGPhotoPickerFooterCollectionReusableView.m in Sources */,
 				1F16ACE1212BB07700BA265C /* UIWordListViewController.m in Sources */,
 			);

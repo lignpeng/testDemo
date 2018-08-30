@@ -50,5 +50,7 @@
 	<string>需要访问您的相册，实现相应功能</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
