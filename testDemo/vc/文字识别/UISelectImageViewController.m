@@ -60,7 +60,7 @@ typedef enum : NSUInteger {
     [self.view addSubview:self.deletButton];
     [self.view addSubview:self.imageView];
     [self.view addSubview:self.typeLabel];
-    self.wordType = NSWordTypeBasicAccurate;
+    self.wordType = NSWordTypeBasic;
     self.typeArray = @[@"通用文字识别(50000次/日)", @"文字识别(高精度版)(500次/日)"];
     self.typeLabel.text = self.typeArray[self.wordType];
 }

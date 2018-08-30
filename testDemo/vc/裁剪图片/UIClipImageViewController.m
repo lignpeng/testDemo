@@ -72,8 +72,11 @@
 }
 
 - (void)initData {
-//    NSString *imageStr = [[NSBundle mainBundle] pathForResource:@"0021" ofType:@"jpg"];
-//    UIImage *image = [UIImage imageWithContentsOfFile:imageStr];
+
+    if (!self.image) {
+        NSString *imageStr = [[NSBundle mainBundle] pathForResource:@"0021" ofType:@"jpg"];
+        self.image = [UIImage imageWithContentsOfFile:imageStr];
+    }
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(50, 0, (40 + 30 + 30 + 10), 0);
     self.configure = [JPImageresizerConfigure defaultConfigureWithResizeImage:self.image make:^(JPImageresizerConfigure *configure) {
         configure.jp_contentInsets(contentInsets);
