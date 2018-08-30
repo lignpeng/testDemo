@@ -209,7 +209,9 @@
             [GPTools ShowInfoTitle:@"提醒" message:@"没有裁剪图片" delayTime:0.2];
             return;
         }
-        strongSelf.complishBlock(resizeImage);
+        if (strongSelf.complishBlock) {
+            strongSelf.complishBlock(resizeImage);
+        }
         [strongSelf goBack:nil];
     } isOriginImageSize:YES];
 }
@@ -246,12 +248,9 @@
         if (self.navigationController) {
             [strongSelf.navigationController pushViewController:vc animated:YES];
         }else {
-//            return;
             [self presentViewController:vc animated:YES completion:nil];
         }
-        
         strongSelf.recoveryBtn.enabled = YES;
-        
     } isOriginImageSize:YES];
 }
 

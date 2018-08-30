@@ -165,7 +165,9 @@ typedef NS_ENUM(NSInteger, DraggingDirect) {
     [UIClipImageViewController clipImage:image complishBlock:^(UIImage *image) {
         LGPhotoPickerBrowserPhoto *photo = weakSelf.photos[weakSelf.currentPage];
         photo.photoImage = image;
-        weakSelf.editBlock(image);
+        if (weakSelf.editBlock) {
+            weakSelf.editBlock(image);
+        }        
         weakSelf.photos = nil;
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf reloadData];
