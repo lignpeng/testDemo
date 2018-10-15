@@ -199,6 +199,7 @@
 		1FDB7E3520A58993002E2F61 /* UIExcelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3420A58993002E2F61 /* UIExcelTableViewCell.m */; };
 		1FDB7E3B20A58D25002E2F61 /* UIExcelCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3A20A58D25002E2F61 /* UIExcelCollectionCell.m */; };
 		1FDB7E3E20A59838002E2F61 /* UILeftCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */; };
+		1FDC3976217442D100748EBC /* EMailCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3974217442D000748EBC /* EMailCheckViewController.m */; };
 		1FF6903C20F44598003B5431 /* RiseUpCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6903B20F44598003B5431 /* RiseUpCalcViewController.m */; };
 		1FF6903E20F44859003B5431 /* RiseupCalcHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */; };
 		1FF6904120F44873003B5431 /* RiseupCalcHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6904020F44873003B5431 /* RiseupCalcHeaderView.m */; };
@@ -669,6 +670,8 @@
 		1FDB7E3A20A58D25002E2F61 /* UIExcelCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIExcelCollectionCell.m; path = "vc/excel表/UIExcelCollectionCell.m"; sourceTree = "<group>"; };
 		1FDB7E3C20A59838002E2F61 /* UILeftCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UILeftCollectionCell.h; path = "vc/excel表/UILeftCollectionCell.h"; sourceTree = "<group>"; };
 		1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UILeftCollectionCell.m; path = "vc/excel表/UILeftCollectionCell.m"; sourceTree = "<group>"; };
+		1FDC3974217442D000748EBC /* EMailCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMailCheckViewController.m; sourceTree = "<group>"; };
+		1FDC3975217442D000748EBC /* EMailCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMailCheckViewController.h; sourceTree = "<group>"; };
 		1FF6903A20F44598003B5431 /* RiseUpCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiseUpCalcViewController.h; sourceTree = "<group>"; };
 		1FF6903B20F44598003B5431 /* RiseUpCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiseUpCalcViewController.m; sourceTree = "<group>"; };
 		1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiseupCalcHeaderView.xib; sourceTree = "<group>"; };
@@ -1658,6 +1661,16 @@
 			name = "excel表";
 			sourceTree = "<group>";
 		};
+		1FDC3973217442D000748EBC /* 校验邮箱 */ = {
+			isa = PBXGroup;
+			children = (
+				1FDC3974217442D000748EBC /* EMailCheckViewController.m */,
+				1FDC3975217442D000748EBC /* EMailCheckViewController.h */,
+			);
+			name = "校验邮箱";
+			path = "vc/校验邮箱";
+			sourceTree = "<group>";
+		};
 		1FF6903920F44598003B5431 /* 复利计算 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1961,6 +1974,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FDC3973217442D000748EBC /* 校验邮箱 */,
 				1FBC475A21363BC600C203B7 /* 裁剪图片 */,
 				1F16ACDE212BAF2400BA265C /* 文字识别 */,
 				1FF6904520F599FC003B5431 /* 转盘 */,
@@ -2222,6 +2236,7 @@
 				1F16ADAA212BFBD700BA265C /* NSObject+YYModel.m in Sources */,
 				1FDB7E2E20A57D10002E2F61 /* GExcelViewController.m in Sources */,
 				1F16AE9E212D191D00BA265C /* NSData+ImageContentType.m in Sources */,
+				1FDC3976217442D100748EBC /* EMailCheckViewController.m in Sources */,
 				1F16AE56212D189900BA265C /* LGCameraImageView.m in Sources */,
 				1F16ADBC212BFBD700BA265C /* JSONModelClassProperty.m in Sources */,
 				1F4EDEF71E826357008F00EF /* GPOperationTableViewCell.m in Sources */,
@@ -2570,6 +2585,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XY856E7G8;
@@ -2596,6 +2612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XY856E7G8;
