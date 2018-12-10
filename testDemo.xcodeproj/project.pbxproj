@@ -36,10 +36,6 @@
 		1F16ACDA21118C0200BA265C /* UIEditTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ACD921118C0200BA265C /* UIEditTextFieldView.m */; };
 		1F16ACDD212BAF1400BA265C /* UIWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ACDC212BAF1400BA265C /* UIWordViewController.m */; };
 		1F16ACE1212BB07700BA265C /* UIWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16ACE0212BB07700BA265C /* UIWordListViewController.m */; };
-		1F16ACE9212BC27A00BA265C /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16ACE3212BB43300BA265C /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		1F16ACEB212BC27D00BA265C /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16ACE4212BB43300BA265C /* AipBase.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		1F16ACF1212BEA5600BA265C /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16ACE3212BB43300BA265C /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1F16ACF3212BEA5900BA265C /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16ACE4212BB43300BA265C /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F16AD9E212BFBD700BA265C /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16AD07212BFBD700BA265C /* AMapFoundationKit.framework */; };
 		1F16AD9F212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD0A212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		1F16ADA0212BFBD700BA265C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD13212BFBD700BA265C /* ViewController+MASAdditions.m */; };
@@ -119,8 +115,6 @@
 		1F16AE9F212D191D00BA265C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AE8B212D191D00BA265C /* UIImageView+WebCache.m */; };
 		1F16AEA0212D191D00BA265C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AE8E212D191D00BA265C /* UIView+WebCacheOperation.m */; };
 		1F16AEA1212D191D00BA265C /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AE92212D191D00BA265C /* UIButton+WebCache.m */; };
-		1F16AEA6212E49AC00BA265C /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16AEA4212E49A500BA265C /* IdcardQuality.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		1F16AEA7212E49AC00BA265C /* IdcardQuality.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16AEA4212E49A500BA265C /* IdcardQuality.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F16CA491E7631CB0038D774 /* GPKeyBoardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */; };
 		1F16CA4A1E7631CB0038D774 /* GPKeyBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */; };
 		1F16CA4B1E7631CB0038D774 /* GPKeyBoardHeaderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16CA451E7631CB0038D774 /* GPKeyBoardHeaderTableView.m */; };
@@ -200,6 +194,7 @@
 		1FDB7E3B20A58D25002E2F61 /* UIExcelCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3A20A58D25002E2F61 /* UIExcelCollectionCell.m */; };
 		1FDB7E3E20A59838002E2F61 /* UILeftCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */; };
 		1FDC3976217442D100748EBC /* EMailCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3974217442D000748EBC /* EMailCheckViewController.m */; };
+		1FF0E107218068920096B5E6 /* TimeCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0E105218068920096B5E6 /* TimeCheckViewController.m */; };
 		1FF6903C20F44598003B5431 /* RiseUpCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6903B20F44598003B5431 /* RiseUpCalcViewController.m */; };
 		1FF6903E20F44859003B5431 /* RiseupCalcHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */; };
 		1FF6904120F44873003B5431 /* RiseupCalcHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6904020F44873003B5431 /* RiseupCalcHeaderView.m */; };
@@ -289,10 +284,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1F16ACF3212BEA5900BA265C /* AipBase.framework in Embed Frameworks */,
 				1FF6906E2105D17E003B5431 /* Realm.framework in Embed Frameworks */,
-				1F16ACF1212BEA5600BA265C /* AipOcrSdk.framework in Embed Frameworks */,
-				1F16AEA7212E49AC00BA265C /* IdcardQuality.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,8 +342,6 @@
 		1F16ACDC212BAF1400BA265C /* UIWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIWordViewController.m; path = "vc/文字识别/UIWordViewController.m"; sourceTree = "<group>"; };
 		1F16ACDF212BB07700BA265C /* UIWordListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIWordListViewController.h; path = "vc/文字识别/UIWordListViewController.h"; sourceTree = "<group>"; };
 		1F16ACE0212BB07700BA265C /* UIWordListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIWordListViewController.m; path = "vc/文字识别/UIWordListViewController.m"; sourceTree = "<group>"; };
-		1F16ACE3212BB43300BA265C /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
-		1F16ACE4212BB43300BA265C /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
 		1F16AD07212BFBD700BA265C /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		1F16AD09212BFBD700BA265C /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		1F16AD0A212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
@@ -517,7 +507,6 @@
 		1F16AE91212D191D00BA265C /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		1F16AE92212D191D00BA265C /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		1F16AE93212D191D00BA265C /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
-		1F16AEA4212E49A500BA265C /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
 		1F16CA411E7631CB0038D774 /* GPKeyBoardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKeyBoardTableViewCell.h; sourceTree = "<group>"; };
 		1F16CA421E7631CB0038D774 /* GPKeyBoardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeyBoardTableViewCell.m; sourceTree = "<group>"; };
 		1F16CA431E7631CB0038D774 /* GPKeyBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPKeyBoardTableViewCell.xib; sourceTree = "<group>"; };
@@ -672,6 +661,8 @@
 		1FDB7E3D20A59838002E2F61 /* UILeftCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UILeftCollectionCell.m; path = "vc/excel表/UILeftCollectionCell.m"; sourceTree = "<group>"; };
 		1FDC3974217442D000748EBC /* EMailCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMailCheckViewController.m; sourceTree = "<group>"; };
 		1FDC3975217442D000748EBC /* EMailCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMailCheckViewController.h; sourceTree = "<group>"; };
+		1FF0E105218068920096B5E6 /* TimeCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCheckViewController.m; sourceTree = "<group>"; };
+		1FF0E106218068920096B5E6 /* TimeCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeCheckViewController.h; sourceTree = "<group>"; };
 		1FF6903A20F44598003B5431 /* RiseUpCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiseUpCalcViewController.h; sourceTree = "<group>"; };
 		1FF6903B20F44598003B5431 /* RiseUpCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiseUpCalcViewController.m; sourceTree = "<group>"; };
 		1FF6903D20F44859003B5431 /* RiseupCalcHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiseupCalcHeaderView.xib; sourceTree = "<group>"; };
@@ -776,14 +767,11 @@
 				1F16AD9E212BFBD700BA265C /* AMapFoundationKit.framework in Frameworks */,
 				1FF6906C2105D16E003B5431 /* Realm.framework in Frameworks */,
 				1F0362531E0D0D6700BD804A /* UIKit.framework in Frameworks */,
-				1F16ACEB212BC27D00BA265C /* AipBase.framework in Frameworks */,
 				1F0362511E0D0D6100BD804A /* QuartzCore.framework in Frameworks */,
-				1F16ACE9212BC27A00BA265C /* AipOcrSdk.framework in Frameworks */,
 				1F03624F1E0D0D5A00BD804A /* SystemConfiguration.framework in Frameworks */,
 				1F03624D1E0D0D4E00BD804A /* AudioToolbox.framework in Frameworks */,
 				1FF6906D2105D17E003B5431 /* Realm.framework in Frameworks */,
 				1F16ADD6212BFBD700BA265C /* AlipaySDK.framework in Frameworks */,
-				1F16AEA6212E49AC00BA265C /* IdcardQuality.framework in Frameworks */,
 				1F03624B1E0D0D4400BD804A /* CoreTelephony.framework in Frameworks */,
 				1F0362491E0D0D3B00BD804A /* Security.framework in Frameworks */,
 				1F0362471E0D0D3200BD804A /* libsqlite3.tbd in Frameworks */,
@@ -894,17 +882,6 @@
 				1F16ADEB212D120D00BA265C /* UISelectImageViewController.m */,
 			);
 			name = "文字识别";
-			sourceTree = "<group>";
-		};
-		1F16ACE2212BB43300BA265C /* aipocr */ = {
-			isa = PBXGroup;
-			children = (
-				1F16AEA4212E49A500BA265C /* IdcardQuality.framework */,
-				1F16ACE3212BB43300BA265C /* AipOcrSdk.framework */,
-				1F16ACE4212BB43300BA265C /* AipBase.framework */,
-			);
-			name = aipocr;
-			path = sdk/aipocr;
 			sourceTree = "<group>";
 		};
 		1F16ACFC212BFBD700BA265C /* 第三方框架 */ = {
@@ -1671,6 +1648,16 @@
 			path = "vc/校验邮箱";
 			sourceTree = "<group>";
 		};
+		1FF0E104218068920096B5E6 /* 年龄计算 */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0E106218068920096B5E6 /* TimeCheckViewController.h */,
+				1FF0E105218068920096B5E6 /* TimeCheckViewController.m */,
+			);
+			name = "年龄计算";
+			path = "vc/年龄计算";
+			sourceTree = "<group>";
+		};
 		1FF6903920F44598003B5431 /* 复利计算 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1936,7 +1923,6 @@
 			children = (
 				1F16ADD7212BFBF700BA265C /* Resource */,
 				1F16ACFC212BFBD700BA265C /* 第三方框架 */,
-				1F16ACE2212BB43300BA265C /* aipocr */,
 				1FF6906B2105D16E003B5431 /* Realm.framework */,
 				EE14AA3D1DE5419D00E152AD /* main.m */,
 			);
@@ -1974,6 +1960,7 @@
 		EE764F1D1DEBC96400BF4230 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				1FF0E104218068920096B5E6 /* 年龄计算 */,
 				1FDC3973217442D000748EBC /* 校验邮箱 */,
 				1FBC475A21363BC600C203B7 /* 裁剪图片 */,
 				1F16ACDE212BAF2400BA265C /* 文字识别 */,
@@ -2233,6 +2220,7 @@
 				1F8B927B202852BD00710DB6 /* GGRunTimeMethodViewController.m in Sources */,
 				1F0C60E11F70FFD400D8F01B /* GGMLeakViewController.m in Sources */,
 				1F16AE5A212D189900BA265C /* LGPhotoAssets.m in Sources */,
+				1FF0E107218068920096B5E6 /* TimeCheckViewController.m in Sources */,
 				1F16ADAA212BFBD700BA265C /* NSObject+YYModel.m in Sources */,
 				1FDB7E2E20A57D10002E2F61 /* GExcelViewController.m in Sources */,
 				1F16AE9E212D191D00BA265C /* NSData+ImageContentType.m in Sources */,

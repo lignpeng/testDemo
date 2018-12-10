@@ -12,7 +12,7 @@
 #import "HexColor.h"
 #import "UIWordListViewController.h"
 #import "UIHUD.h"
-#import <AipOcrSdk/AipOcrSdk.h>
+//#import <AipOcrSdk/AipOcrSdk.h>
 #import "LGPhoto.h"
 #import "UIWordViewController.h"
 #import "GPTools.h"
@@ -45,7 +45,7 @@ typedef enum : NSUInteger {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[AipOcrService shardService] authWithAK:ApiKey andSK:SecretKey];
+//    [[AipOcrService shardService] authWithAK:ApiKey andSK:SecretKey];
     [self initView];
     [self initData];
 }
@@ -179,6 +179,7 @@ typedef enum : NSUInteger {
         [UIHUD showHUD];
     });
     UIImage *image = self.images.firstObject;
+    /*
     switch (self.wordType) {
         case NSWordTypeBasic:{
             [[AipOcrService shardService] detectTextBasicFromImage:image
@@ -195,6 +196,7 @@ typedef enum : NSUInteger {
         default:
             break;
     }
+    */
 }
 
 //选择

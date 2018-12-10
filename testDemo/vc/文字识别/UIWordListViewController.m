@@ -8,7 +8,7 @@
 
 #import "UIWordListViewController.h"
 #import <objc/runtime.h>
-#import <AipOcrSdk/AipOcrSdk.h>
+//#import <AipOcrSdk/AipOcrSdk.h>
 #import "GPTableViewCell.h"
 #import "UIWordViewController.h"
 #import "GPTools.h"
@@ -46,7 +46,7 @@
 //#error 【必须！】请在 ai.baidu.com中新建App, 绑定BundleId后，在此填写授权信息
 //#error 【必须！】上传至AppStore前，请使用lipo移除AipBase.framework、AipOcrSdk.framework的模拟器架构，参考FAQ：ai.baidu.com/docs#/OCR-iOS-SDK/top
         //     授权方法1：在此处填写App的Api Key/Secret Key
-    [[AipOcrService shardService] authWithAK:ApiKey andSK:SecretKey];
+//    [[AipOcrService shardService] authWithAK:ApiKey andSK:SecretKey];
     
     
         // 授权方法2（更安全）： 下载授权文件，添加至资源
@@ -167,7 +167,7 @@
 }
 
 #pragma mark - Action
-
+/*
 - (void)imageOCR {
     UISelectImageViewController *vc = [UISelectImageViewController new];
     [self.navigationController pushViewController:vc animated:YES];
@@ -480,7 +480,7 @@
 #pragma mark UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
+}*/
 
 @end
 
