@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSDictionary (CSSafeAccess)
 - (id)cs_objectForKey:(id)key;

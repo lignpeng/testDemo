@@ -178,7 +178,7 @@
     GPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.iconImageView.image = [UIImage imageWithContentsOfFile:self.imageArray[arc4random() % self.imageArray.count]];
-    cell.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256 alpha:0.45];
+    cell.backgroundColor = [UIColor colorWith8BitRed:arc4random()%256 green:arc4random()%256 blue:arc4random()%256 alpha:0.45];
     cell.titleLabel.text = self.vcTitleArray[self.vcTitleArray.count - 1 - indexPath.row];
     return cell;
 }

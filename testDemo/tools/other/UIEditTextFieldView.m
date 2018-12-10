@@ -220,7 +220,7 @@
 - (UIButton *)okButton {
     if (!_okButton) {
         _okButton = [UIButton new];
-        _okButton.backgroundColor = [UIColor colorWith8BitRedN:89 green:189 blue:249];
+        _okButton.backgroundColor = [UIColor colorWith8BitRed:89 green:189 blue:249];
         [_okButton setTitle:@"确定" forState:UIControlStateNormal];
         [_okButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _okButton.titleLabel.font = [UIFont systemFontOfSize:16.0];

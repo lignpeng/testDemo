@@ -3,13 +3,11 @@
 //
 //  Created by lignpeng on 2017/7/26.
 //
-/*
- 选择航空公司
- */
+
 
 #import "CSAirNameListView.h"
 #import "Masonry.h"
-
+#import "GGMacors.h"
 static const CGFloat kHolderViewHeight = 250.0f;//选择器总高度
 static const CGFloat kBarViewHeight = 50.0f;//bar条高度
 static const CGFloat kButtonWidth = 72.0f;//按钮宽度
@@ -174,10 +172,10 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
     if (self.dataSource.count > self.selectRow && self.complishBlock) {
         NSString *name;
         if (self.isDictionary) {
-            NSDictionary *dic = [self.dataSource cs_objectWithIndex:self.selectRow];
-            name = [dic cs_stringForKey:self.key];
+            NSDictionary *dic = self.dataSource[self.selectRow];
+            name = [dic objectForKey:self.key];
         }else {
-            name = [self.dataSource cs_objectWithIndex:self.selectRow];
+            name = self.dataSource[self.selectRow];
         }
         self.complishBlock(self.selectRow, name);
     }
@@ -232,12 +230,12 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
         [pickerLabel setTextAlignment:NSTextAlignmentCenter];
         [pickerLabel setBackgroundColor:[UIColor clearColor]];
         [pickerLabel setFont:[UIFont systemFontOfSize:16]];
-        pickerLabel.textColor = RGBCOLOR(0, 35, 78);
+        pickerLabel.textColor = RgbColor(0, 35, 78);
     }    
     pickerLabel.text = [self pickerView:pickerView titleForRow:row forComponent:component];
     for (UIView *subView in pickerView.subviews) {
         if (CGRectGetHeight(subView.frame) < 1) {
-            subView.backgroundColor = RGBCOLOR(209, 217, 224);
+            subView.backgroundColor = RgbColor(209, 217, 224);
         }
     }
     return pickerLabel;
@@ -245,8 +243,8 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     if (self.isDictionary) {
-        NSDictionary *dic = [self.dataSource cs_objectWithIndex:row];
-        return [dic cs_stringForKey:self.key];
+        NSDictionary *dic = self.dataSource[row];
+        return [dic objectForKey:self.key];
     }
     return self.dataSource[row];
 }

@@ -23,10 +23,10 @@
 
 @interface HXColor (HexColorAddition)
 
-+ (HXColor *)colorWithHexStringN:(NSString *)hexString;
-+ (HXColor *)colorWithHexStringN:(NSString *)hexString alpha:(CGFloat)alpha;
++ (HXColor *)colorWithHexString:(NSString *)hexString;
++ (HXColor *)colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 
-+ (HXColor *)colorWith8BitRedN:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue;
-+ (HXColor *)colorWith8BitRedN:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha;
++ (HXColor *)colorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue;
++ (HXColor *)colorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha;
 
 @end

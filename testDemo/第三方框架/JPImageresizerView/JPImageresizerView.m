@@ -255,6 +255,9 @@
 }
 
 - (void)setupImageViewWithImage:(UIImage *)image {
+    if (!image){
+        return;
+    }
     CGFloat width = (self.frame.size.width - _contentInsets.left - _contentInsets.right);
     CGFloat height = (self.frame.size.height - _contentInsets.top - _contentInsets.bottom);
     CGFloat maxW = width - 2 * self.horBaseMargin;

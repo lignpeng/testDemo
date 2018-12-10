@@ -140,7 +140,7 @@ typedef NS_ENUM(NSInteger, DraggingDirect) {
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectZero];
         [button addTarget:self action:@selector(editAction) forControlEvents:UIControlEventTouchUpInside];
         [button setTitle:@"编辑" forState:UIControlStateNormal];
-//        button.backgroundColor = [UIColor colorWith8BitRedN:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
+//        button.backgroundColor = [UIColor colorWith8BitRed:arc4random()%256 green:arc4random()%256 blue:arc4random()%256];
         button.layer.cornerRadius = 5;
         button.clipsToBounds = YES;
         [self.view addSubview:button];

@@ -10,13 +10,14 @@
 #import "Masonry.h"
 #import "NSDate+Display.h"
 #import "NSDate+CSCalendar.h"
+#import "HexColor.h"
 
 static const CGFloat kHolderViewHeight = 250.0f;//选择器总高度
 static const CGFloat kBarViewHeight = 50.0f;//bar条高度
 static const CGFloat kButtonWidth = 72.0f;//按钮宽度
 static const NSTimeInterval kAnimationDuration = 0.25f;
 static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
-
+#import "GGMacors.h"
 #define kBackViewWidth IPHONE_WIDTH
 #define kBackViewHeight IPHONE_HEIGHT-20
 #define kMinYear 1800
@@ -129,8 +130,8 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = SysFont14;
-        _titleLabel.textColor = [UIColor colorFromHexString:@"798691"];
+        _titleLabel.font = [UIFont systemFontOfSize:14];
+        _titleLabel.textColor = [UIColor colorWithHexString:@"798691"];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;
@@ -214,7 +215,7 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
     self.presentDate = [NSDate date];
     self.minDate = [self dateFromYear:kMinYear month:01 day:01];
     self.maxDate = [self dateFromYear:kMaxYear month:12 day:31];
-    NSString *localeStr = [CSLanguageManager currentLanguageCode];
+    NSString *localeStr = @"";
     localeStr = localeStr? localeStr: @"zh-Hans";
     currentLocale = [[NSLocale alloc] initWithLocaleIdentifier:localeStr];
     if ([localeStr isEqualToString:@"zh-Hans"]) {
@@ -315,7 +316,7 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
     yearStr = [formatter stringFromDate:aDate];
     
     if ([[currentLocale localeIdentifier] isEqualToString:@"zh-Hans"]) {
-        yearStr = [yearStr cs_stringByAppendingString:@"年"];
+        yearStr = [yearStr stringByAppendingString:@"年"];
     }
     return yearStr;
 }
@@ -330,7 +331,7 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
         [formatter setLocale:currentLocale];
         [formatter setDateFormat:@"M"];
         monthStr = [formatter stringFromDate:aDate];
-        monthStr = [monthStr cs_stringByAppendingString:@"月"];
+        monthStr = [monthStr stringByAppendingString:@"月"];
     }
     else {
         [formatter setLocale:currentLocale];
@@ -352,7 +353,7 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
     dayStr = [formatter stringFromDate:aDate];
     
     if ([[currentLocale localeIdentifier] isEqualToString:@"zh-Hans"]) {
-        dayStr = [dayStr cs_stringByAppendingString:@"日"];
+        dayStr = [dayStr stringByAppendingString:@"日"];
     }
     return dayStr;
 }
@@ -457,7 +458,7 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
     aLabel.backgroundColor = [UIColor clearColor];
     aLabel.textAlignment = NSTextAlignmentCenter;
     aLabel.font = [UIFont systemFontOfSize:16.0];
-    aLabel.textColor = RGBCOLOR(0, 35, 78);
+    aLabel.textColor = RgbColor(0, 35, 78);
     if (component == myYearComponent) {
         aRect = CGRectMake(20, 5, myYearWidth, 30);
         titleStr = [self localYear:[self yearFromRow:row]];
@@ -470,7 +471,7 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
     }
     for (UIView *subView in pickerView.subviews) {
         if (CGRectGetHeight(subView.frame) < 1) {
-            subView.backgroundColor = RGBCOLOR(209, 217, 224);
+            subView.backgroundColor = RgbColor(209, 217, 224);
         }
     }
     aLabel.frame = aRect;

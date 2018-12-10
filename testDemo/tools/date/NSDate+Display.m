@@ -8,7 +8,6 @@
 
 #import "NSDate+Display.h"
 #import "CSSafeAccess.h"
-#import "CSLanguageManager.h"
 #import "NSDate+CSCalendar.h"
 
 @implementation NSDate (NSDate_Display)
@@ -84,7 +83,7 @@
         return NSLocalizedString(@"Tomorrow", @"明天");
     } else if ([self today]) {
         return NSLocalizedString(@"Today", @"今天");
-    } else if ([self theDayAfterTomorrow] && ![CSLanguageManager isEN]) {
+    } else if ([self theDayAfterTomorrow]) {
         return @"后天";
     } else {
         NSArray *weekdays = [NSArray arrayWithObjects: [NSNull null], NSLocalizedString(@"Sunday", @"星期日"), NSLocalizedString(@"Monday", @"星期一"), NSLocalizedString(@"Tuesday", @"星期二"), NSLocalizedString(@"Wednesday", @"星期三"), NSLocalizedString(@"Thursday", @"星期四"), NSLocalizedString(@"Friday", @"星期五"), NSLocalizedString(@"Saturday", @"星期六"), nil];
@@ -106,8 +105,7 @@
     return [df stringFromDate:self];
 }
 
-- (NSString *)stringMMdd
-{
+- (NSString *)stringMMddisEnglish:(BOOL)isEnglish {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
     //zzz表示时区，zzz可以删除，这样返回的日期字符将不包含时区信息。
@@ -117,7 +115,7 @@
     
     NSString *destDateString = [dateFormatter stringFromDate:self];
     
-    if ([CSLanguageManager isEN]) {
+    if (isEnglish) {
         NSString *monthTemp = [NSString stringWithFormat:@"%@Month",[destDateString cs_substringWithRange:NSMakeRange(0, 2)]];
         NSString *month = NSLocalizedString(monthTemp, @"月");
         NSString *day = [destDateString cs_substringWithRange:NSMakeRange(3, 2)];
