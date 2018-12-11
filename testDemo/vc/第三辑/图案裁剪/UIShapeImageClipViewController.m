@@ -7,8 +7,11 @@
 //
 
 #import "UIShapeImageClipViewController.h"
+#import "UICircleShapeView.h"
 
 @interface UIShapeImageClipViewController ()
+
+@property(nonatomic, strong) UICircleShapeView *circleView;
 
 @end
 
@@ -16,22 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.circleView];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UICircleShapeView *)circleView {
+    if (!_circleView){
+        NSString *imageStr = [[NSBundle mainBundle] pathForResource:@"0021" ofType:@"jpg" inDirectory:@"Resource"];
+//        if(imageStr.length == 0){
+//            return;
+//        }
+        _circleView = [UICircleShapeView shapeView:[UIImage imageWithContentsOfFile:imageStr]];
+    }
+    return _circleView;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

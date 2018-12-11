@@ -229,6 +229,13 @@
 		1F368B1E21BE3B7000F8B44D /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B0721BE3B7000F8B44D /* HexColor.m */; };
 		1F368B2121BE489200F8B44D /* GGSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B2021BE489100F8B44D /* GGSelectViewController.m */; };
 		1F368B2421BE50AA00F8B44D /* UIShapeImageClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B2321BE50AA00F8B44D /* UIShapeImageClipViewController.m */; };
+		1F368B2821BE52A600F8B44D /* UIShapeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B2721BE52A600F8B44D /* UIShapeImageView.m */; };
+		1F368B2B21BE545300F8B44D /* ImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B2A21BE545300F8B44D /* ImageTools.m */; };
+		1F368B2E21BE56A400F8B44D /* UIShapeImageMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B2D21BE56A400F8B44D /* UIShapeImageMainView.m */; };
+		1F368B3121BE5C9C00F8B44D /* UIRectShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B3021BE5C9C00F8B44D /* UIRectShapeView.m */; };
+		1F368B3521BE5CD500F8B44D /* UIShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B3421BE5CD500F8B44D /* UIShapeView.m */; };
+		1F368B3821BE60CB00F8B44D /* UICircleShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B3721BE60CB00F8B44D /* UICircleShapeView.m */; };
+		1F368B3B21BE684700F8B44D /* UIRectShapeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B3A21BE684700F8B44D /* UIRectShapeImage.m */; };
 		1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */; };
 		1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */; };
 		1F4DBC031E4C6A8A00374EA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */; };
@@ -741,6 +748,20 @@
 		1F368B2021BE489100F8B44D /* GGSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGSelectViewController.m; sourceTree = "<group>"; };
 		1F368B2221BE50AA00F8B44D /* UIShapeImageClipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShapeImageClipViewController.h; sourceTree = "<group>"; };
 		1F368B2321BE50AA00F8B44D /* UIShapeImageClipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIShapeImageClipViewController.m; sourceTree = "<group>"; };
+		1F368B2621BE52A600F8B44D /* UIShapeImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShapeImageView.h; sourceTree = "<group>"; };
+		1F368B2721BE52A600F8B44D /* UIShapeImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIShapeImageView.m; sourceTree = "<group>"; };
+		1F368B2921BE545300F8B44D /* ImageTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTools.h; sourceTree = "<group>"; };
+		1F368B2A21BE545300F8B44D /* ImageTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTools.m; sourceTree = "<group>"; };
+		1F368B2C21BE56A400F8B44D /* UIShapeImageMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShapeImageMainView.h; sourceTree = "<group>"; };
+		1F368B2D21BE56A400F8B44D /* UIShapeImageMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIShapeImageMainView.m; sourceTree = "<group>"; };
+		1F368B2F21BE5C9C00F8B44D /* UIRectShapeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRectShapeView.h; sourceTree = "<group>"; };
+		1F368B3021BE5C9C00F8B44D /* UIRectShapeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIRectShapeView.m; sourceTree = "<group>"; };
+		1F368B3321BE5CD500F8B44D /* UIShapeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShapeView.h; sourceTree = "<group>"; };
+		1F368B3421BE5CD500F8B44D /* UIShapeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIShapeView.m; sourceTree = "<group>"; };
+		1F368B3621BE60CB00F8B44D /* UICircleShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICircleShapeView.h; sourceTree = "<group>"; };
+		1F368B3721BE60CB00F8B44D /* UICircleShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICircleShapeView.m; sourceTree = "<group>"; };
+		1F368B3921BE684700F8B44D /* UIRectShapeImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRectShapeImage.h; sourceTree = "<group>"; };
+		1F368B3A21BE684700F8B44D /* UIRectShapeImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIRectShapeImage.m; sourceTree = "<group>"; };
 		1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1574,9 +1595,9 @@
 			isa = PBXGroup;
 			children = (
 				1F368A0721BE3A0900F8B44D /* UIImageViewController.h */,
-				1F368A0821BE3A0900F8B44D /* UIClipImageViewController.m */,
-				1F368A0921BE3A0900F8B44D /* UIClipImageViewController.h */,
 				1F368A0A21BE3A0900F8B44D /* UIImageViewController.m */,
+				1F368A0921BE3A0900F8B44D /* UIClipImageViewController.h */,
+				1F368A0821BE3A0900F8B44D /* UIClipImageViewController.m */,
 			);
 			path = "裁剪图片";
 			sourceTree = "<group>";
@@ -1907,8 +1928,30 @@
 			children = (
 				1F368B2221BE50AA00F8B44D /* UIShapeImageClipViewController.h */,
 				1F368B2321BE50AA00F8B44D /* UIShapeImageClipViewController.m */,
+				1F368B2C21BE56A400F8B44D /* UIShapeImageMainView.h */,
+				1F368B2D21BE56A400F8B44D /* UIShapeImageMainView.m */,
+				1F368B2621BE52A600F8B44D /* UIShapeImageView.h */,
+				1F368B2721BE52A600F8B44D /* UIShapeImageView.m */,
+				1F368B3221BE5CA100F8B44D /* shape */,
+				1F368B2921BE545300F8B44D /* ImageTools.h */,
+				1F368B2A21BE545300F8B44D /* ImageTools.m */,
 			);
 			path = "图案裁剪";
+			sourceTree = "<group>";
+		};
+		1F368B3221BE5CA100F8B44D /* shape */ = {
+			isa = PBXGroup;
+			children = (
+				1F368B3321BE5CD500F8B44D /* UIShapeView.h */,
+				1F368B3421BE5CD500F8B44D /* UIShapeView.m */,
+				1F368B2F21BE5C9C00F8B44D /* UIRectShapeView.h */,
+				1F368B3021BE5C9C00F8B44D /* UIRectShapeView.m */,
+				1F368B3621BE60CB00F8B44D /* UICircleShapeView.h */,
+				1F368B3721BE60CB00F8B44D /* UICircleShapeView.m */,
+				1F368B3921BE684700F8B44D /* UIRectShapeImage.h */,
+				1F368B3A21BE684700F8B44D /* UIRectShapeImage.m */,
+			);
+			path = shape;
 			sourceTree = "<group>";
 		};
 		1FBC475E2136419F00C203B7 /* JPImageresizerView */ = {
@@ -2245,6 +2288,7 @@
 				1F368A7C21BE3A0A00F8B44D /* GPLoginViewController.m in Sources */,
 				1F368A9121BE3A0A00F8B44D /* ArrayEnumViewController.m in Sources */,
 				1F368B0A21BE3B7000F8B44D /* FileTools.m in Sources */,
+				1F368B2821BE52A600F8B44D /* UIShapeImageView.m in Sources */,
 				1F16ADA2212BFBD700BA265C /* MASConstraintMaker.m in Sources */,
 				1F368A7221BE3A0A00F8B44D /* GGOneViewController.m in Sources */,
 				1F368A8F21BE3A0A00F8B44D /* BaseViewController.m in Sources */,
@@ -2266,6 +2310,7 @@
 				1F16ADAC212BFBD700BA265C /* UINavigationController+MemoryLeak.m in Sources */,
 				1F368A7B21BE3A0A00F8B44D /* GPPopViewController.m in Sources */,
 				1F368AA621BE3A0A00F8B44D /* NativeFunction.m in Sources */,
+				1F368B3821BE60CB00F8B44D /* UICircleShapeView.m in Sources */,
 				1F368AC521BE3A0A00F8B44D /* CSBrowingHistoryAirPortCell.m in Sources */,
 				1F368A6521BE3A0A00F8B44D /* BuildListViewController.m in Sources */,
 				EE516D141DE7DE93001F9010 /* GPTableViewCell.m in Sources */,
@@ -2294,6 +2339,7 @@
 				1F368A6421BE3A0A00F8B44D /* BaseSearchViewController.m in Sources */,
 				1F368B0F21BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.m in Sources */,
 				1F16ADAB212BFBD700BA265C /* YYClassInfo.m in Sources */,
+				1F368B3121BE5C9C00F8B44D /* UIRectShapeView.m in Sources */,
 				1F16AE55212D189900BA265C /* ZLCamera.m in Sources */,
 				1F368AB821BE3A0A00F8B44D /* RZDBCoalesce.m in Sources */,
 				1F368B1221BE3B7000F8B44D /* GPTools.m in Sources */,
@@ -2305,8 +2351,10 @@
 				1F368AC221BE3A0A00F8B44D /* CSBrowingHistoryBlankView.m in Sources */,
 				1F368A8A21BE3A0A00F8B44D /* GPKeyBoardHeaderTableView.m in Sources */,
 				1F368A8421BE3A0A00F8B44D /* GPTimeViewController.m in Sources */,
+				1F368B3B21BE684700F8B44D /* UIRectShapeImage.m in Sources */,
 				1F16AE9F212D191D00BA265C /* UIImageView+WebCache.m in Sources */,
 				1F368B1121BE3B7000F8B44D /* NSString+CSSafeAccess.m in Sources */,
+				1F368B2B21BE545300F8B44D /* ImageTools.m in Sources */,
 				1F16AE9B212D191D00BA265C /* SDWebImagePrefetcher.m in Sources */,
 				1F16ADA1212BFBD700BA265C /* MASCompositeConstraint.m in Sources */,
 				1F368A7121BE3A0A00F8B44D /* GGTwoViewController.m in Sources */,
@@ -2320,6 +2368,7 @@
 				1F16AE57212D189900BA265C /* ZLCameraView.m in Sources */,
 				1F16ADA3212BFBD700BA265C /* MASLayoutConstraint.m in Sources */,
 				1F16ADB9212BFBD700BA265C /* JSONKeyMapper.m in Sources */,
+				1F368B2E21BE56A400F8B44D /* UIShapeImageMainView.m in Sources */,
 				1F368A9021BE3A0A00F8B44D /* SinaWBSendingViewController.m in Sources */,
 				1F368AA121BE3A0A00F8B44D /* WebViewJavascriptBridgeBase.m in Sources */,
 				1F16AE50212D189900BA265C /* LGPhotoPickerBrowserPhotoView.m in Sources */,
@@ -2401,6 +2450,7 @@
 				1F368AC821BE3A0A00F8B44D /* CSBrowsingHistoryListViewModel.m in Sources */,
 				1F16AE5B212D189900BA265C /* LGPhotoPickerGroupViewController.m in Sources */,
 				1F368B1D21BE3B7000F8B44D /* DataTools.m in Sources */,
+				1F368B3521BE5CD500F8B44D /* UIShapeView.m in Sources */,
 				1F16ADBD212BFBD700BA265C /* JSONHTTPClient.m in Sources */,
 				1F16ADA0212BFBD700BA265C /* ViewController+MASAdditions.m in Sources */,
 				1F368AD421BE3A0A00F8B44D /* GPGIFViewController.m in Sources */,
