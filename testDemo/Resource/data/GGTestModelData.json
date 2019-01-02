@@ -1,0 +1,82 @@
+{
+  "code": "0000",
+  "name": "zhangsan",
+  "ddm": [{
+      "accNo": "869952*********9141",
+      "accId": "6663",
+      "bankName": "华夏银行",
+      "cardFlag": "01",
+      "logo": "16.png"
+  },
+  {
+      "accNo": "869920*********2079",
+      "accId": "0254",
+      "bankName": "华夏银行",
+      "cardFlag": "01",
+      "logo": "16.png"
+  },
+  {
+      "accNo": "622609******0048",
+      "accId": "3229",
+      "bankName": "华夏银行",
+      "cardFlag": "01",
+      "logo": "16.png"
+  },
+  {
+      "accNo": "622202*********4836",
+      "accId": "5092",
+      "bankName": "工商银行",
+      "cardFlag": "01",
+      "logo": "02.png"
+  },
+  {
+      "accNo": "622202*********4836",
+      "accId": "5092",
+      "bankName": "工商银行",
+      "cardFlag": "01",
+      "logo": "02.png"
+  }
+  ],
+  "accMsg": {
+    "accNo": "123456",
+    "name": "zhangsan",
+    "accNoList": [{
+        "accNo": "869952*********9141",
+        "accId": "6663",
+        "bankName": "华夏银行",
+        "cardFlag": "01",
+        "logo": "16.png"
+      },
+      {
+        "accNo": "869920*********2079",
+        "accId": "0254",
+        "bankName": "华夏银行",
+        "cardFlag": "01",
+        "logo": "16.png"
+      },
+      {
+        "accNo": "622609******0048",
+        "accId": "3229",
+        "bankName": "华夏银行",
+        "cardFlag": "01",
+        "logo": "16.png"
+      },
+      {
+        "accNo": "622202*********4836",
+        "accId": "5092",
+        "bankName": "工商银行",
+        "cardFlag": "01",
+        "logo": "02.png"
+      },
+      {
+        "accNo": "622202*********4836",
+        "accId": "5092",
+        "bankName": "工商银行",
+        "cardFlag": "01",
+        "logo": "02.png"
+      }
+    ],
+    "phoneNo": "13726700743",
+    "cardNo": "80"
+  }
+}

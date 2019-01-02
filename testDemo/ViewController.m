@@ -73,7 +73,8 @@
                  @"GExcelViewController",@"RiseUpCalcViewController",
                  @"SelectManagerViewController",@"UISelectImageViewController",
                  @"UIClipImageViewController",@"EMailCheckViewController",
-                 @"TimeCheckViewController",@"UIShapeImageClipViewController"];
+                 @"TimeCheckViewController",@"UIShapeImageClipViewController",
+                 @"UIDataModelViewController"];
     return _vcArray; 
 }
 
@@ -92,7 +93,7 @@
                       @"MLeakFinder使用",@"去空格",@"浏览历史",@"字符串包含",
                       @"runtime调用方法",@"获取当前时区",@"excel表",@"复利计算",
                       @"转盘",@"文字识别",@"图片裁剪",@"邮箱校验",@"年龄计算",
-                      @"图案裁剪"];
+                      @"图案裁剪",@"数据解析"];
     return _vcTitleArray;
 }
 

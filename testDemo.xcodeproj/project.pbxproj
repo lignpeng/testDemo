@@ -15,6 +15,9 @@
 		1F03624F1E0D0D5A00BD804A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F03624E1E0D0D5A00BD804A /* SystemConfiguration.framework */; };
 		1F0362511E0D0D6100BD804A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0362501E0D0D6100BD804A /* QuartzCore.framework */; };
 		1F0362531E0D0D6700BD804A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0362521E0D0D6700BD804A /* UIKit.framework */; };
+		1F1043EC21D47ED400E08B7E /* UIDataModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1043EB21D47ED400E08B7E /* UIDataModelViewController.m */; };
+		1F1043F321D47FE900E08B7E /* DataJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1043EF21D47FE900E08B7E /* DataJsonModel.m */; };
+		1F1043F421D47FE900E08B7E /* DataYYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1043F221D47FE900E08B7E /* DataYYModel.m */; };
 		1F16AD9E212BFBD700BA265C /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F16AD07212BFBD700BA265C /* AMapFoundationKit.framework */; };
 		1F16AD9F212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD0A212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		1F16ADA0212BFBD700BA265C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD13212BFBD700BA265C /* ViewController+MASAdditions.m */; };
@@ -26,7 +29,6 @@
 		1F16ADA6212BFBD700BA265C /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD1E212BFBD700BA265C /* MASConstraint.m */; };
 		1F16ADA7212BFBD700BA265C /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD20212BFBD700BA265C /* MASViewConstraint.m */; };
 		1F16ADA8212BFBD700BA265C /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD21212BFBD700BA265C /* MASViewAttribute.m */; };
-		1F16ADA9212BFBD700BA265C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F16AD22212BFBD700BA265C /* Info.plist */; };
 		1F16ADAA212BFBD700BA265C /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD25212BFBD700BA265C /* NSObject+YYModel.m */; };
 		1F16ADAB212BFBD700BA265C /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD26212BFBD700BA265C /* YYClassInfo.m */; };
 		1F16ADAC212BFBD700BA265C /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AD2B212BFBD700BA265C /* UINavigationController+MemoryLeak.m */; };
@@ -316,6 +318,12 @@
 		1F03624E1E0D0D5A00BD804A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1F0362501E0D0D6100BD804A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1F0362521E0D0D6700BD804A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1F1043EA21D47ED400E08B7E /* UIDataModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDataModelViewController.h; sourceTree = "<group>"; };
+		1F1043EB21D47ED400E08B7E /* UIDataModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDataModelViewController.m; sourceTree = "<group>"; };
+		1F1043EF21D47FE900E08B7E /* DataJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataJsonModel.m; sourceTree = "<group>"; };
+		1F1043F021D47FE900E08B7E /* DataYYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataYYModel.h; sourceTree = "<group>"; };
+		1F1043F121D47FE900E08B7E /* DataJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataJsonModel.h; sourceTree = "<group>"; };
+		1F1043F221D47FE900E08B7E /* DataYYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataYYModel.m; sourceTree = "<group>"; };
 		1F16AD07212BFBD700BA265C /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		1F16AD09212BFBD700BA265C /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		1F16AD0A212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
@@ -342,7 +350,6 @@
 		1F16AD1F212BFBD700BA265C /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		1F16AD20212BFBD700BA265C /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		1F16AD21212BFBD700BA265C /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
-		1F16AD22212BFBD700BA265C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F16AD24212BFBD700BA265C /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
 		1F16AD25212BFBD700BA265C /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
 		1F16AD26212BFBD700BA265C /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
@@ -762,6 +769,7 @@
 		1F368B3721BE60CB00F8B44D /* UICircleShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICircleShapeView.m; sourceTree = "<group>"; };
 		1F368B3921BE684700F8B44D /* UIRectShapeImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRectShapeImage.h; sourceTree = "<group>"; };
 		1F368B3A21BE684700F8B44D /* UIRectShapeImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIRectShapeImage.m; sourceTree = "<group>"; };
+		1F38656221D5D3E3001D6C0A /* YYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -866,6 +874,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1F1043ED21D47EDD00E08B7E /* 数据解析 */ = {
+			isa = PBXGroup;
+			children = (
+				1F1043EA21D47ED400E08B7E /* UIDataModelViewController.h */,
+				1F1043EB21D47ED400E08B7E /* UIDataModelViewController.m */,
+				1F1043EE21D47FE900E08B7E /* model */,
+			);
+			path = "数据解析";
+			sourceTree = "<group>";
+		};
+		1F1043EE21D47FE900E08B7E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1F1043F121D47FE900E08B7E /* DataJsonModel.h */,
+				1F1043EF21D47FE900E08B7E /* DataJsonModel.m */,
+				1F1043F021D47FE900E08B7E /* DataYYModel.h */,
+				1F1043F221D47FE900E08B7E /* DataYYModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		1F16ACFC212BFBD700BA265C /* 第三方框架 */ = {
 			isa = PBXGroup;
 			children = (
@@ -912,7 +941,6 @@
 				1F16AD1F212BFBD700BA265C /* ViewController+MASAdditions.h */,
 				1F16AD20212BFBD700BA265C /* MASViewConstraint.m */,
 				1F16AD21212BFBD700BA265C /* MASViewAttribute.m */,
-				1F16AD22212BFBD700BA265C /* Info.plist */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
@@ -920,10 +948,11 @@
 		1F16AD23212BFBD700BA265C /* YYModel */ = {
 			isa = PBXGroup;
 			children = (
-				1F16AD24212BFBD700BA265C /* YYClassInfo.h */,
-				1F16AD25212BFBD700BA265C /* NSObject+YYModel.m */,
-				1F16AD26212BFBD700BA265C /* YYClassInfo.m */,
+				1F38656221D5D3E3001D6C0A /* YYModel.h */,
 				1F16AD27212BFBD700BA265C /* NSObject+YYModel.h */,
+				1F16AD25212BFBD700BA265C /* NSObject+YYModel.m */,
+				1F16AD24212BFBD700BA265C /* YYClassInfo.h */,
+				1F16AD26212BFBD700BA265C /* YYClassInfo.m */,
 			);
 			path = YYModel;
 			sourceTree = "<group>";
@@ -1578,6 +1607,7 @@
 		1F368A0521BE3A0900F8B44D /* 第三辑 */ = {
 			isa = PBXGroup;
 			children = (
+				1F1043ED21D47EDD00E08B7E /* 数据解析 */,
 				1F368B2521BE50B000F8B44D /* 图案裁剪 */,
 				1F368A5B21BE3A0A00F8B44D /* 短信 */,
 				1F368A2821BE3A0900F8B44D /* NoviceGuide */,
@@ -2213,7 +2243,6 @@
 				1F368A8121BE3A0A00F8B44D /* GPExtensionTableViewCell.xib in Resources */,
 				EE14AA471DE5419D00E152AD /* Main.storyboard in Resources */,
 				1F368A6721BE3A0A00F8B44D /* GGXibViewController.xib in Resources */,
-				1F16ADA9212BFBD700BA265C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2277,6 +2306,7 @@
 				1F368A6F21BE3A0A00F8B44D /* GGBlockViewController.m in Sources */,
 				1F368A7021BE3A0A00F8B44D /* GGThreeViewController.m in Sources */,
 				1F368ACC21BE3A0A00F8B44D /* UIExcelView.m in Sources */,
+				1F1043F321D47FE900E08B7E /* DataJsonModel.m in Sources */,
 				1F16AE61212D189900BA265C /* LGPhotoPickerGroupTableViewCell.m in Sources */,
 				1F16AE97212D191D00BA265C /* SDWebImageDownloader.m in Sources */,
 				1F16AE52212D189900BA265C /* LGPhotoPickerBrowserPhotoImageView.m in Sources */,
@@ -2338,6 +2368,7 @@
 				1F16AE9D212D191D00BA265C /* SDWebImageDownloaderOperation.m in Sources */,
 				1F368A6421BE3A0A00F8B44D /* BaseSearchViewController.m in Sources */,
 				1F368B0F21BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.m in Sources */,
+				1F1043F421D47FE900E08B7E /* DataYYModel.m in Sources */,
 				1F16ADAB212BFBD700BA265C /* YYClassInfo.m in Sources */,
 				1F368B3121BE5C9C00F8B44D /* UIRectShapeView.m in Sources */,
 				1F16AE55212D189900BA265C /* ZLCamera.m in Sources */,
@@ -2458,6 +2489,7 @@
 				1F368A8C21BE3A0A00F8B44D /* UISelectImageViewController.m in Sources */,
 				1F368AB621BE3A0A00F8B44D /* DataBindingViewController.m in Sources */,
 				1F16ADAF212BFBD700BA265C /* UITouch+MemoryLeak.m in Sources */,
+				1F1043EC21D47ED400E08B7E /* UIDataModelViewController.m in Sources */,
 				1F16AE60212D189900BA265C /* LGPhotoPickerCollectionView.m in Sources */,
 				1F368A8721BE3A0A00F8B44D /* Model.m in Sources */,
 				1F368A9521BE3A0A00F8B44D /* GGMasoryViewController.m in Sources */,
@@ -2671,6 +2703,10 @@
 					"$(PROJECT_DIR)/testDemo/sdk/aipocr",
 					"$(PROJECT_DIR)/testDemo/第三方框架",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/testDemo",
+					"$(PROJECT_DIR)/testDemo/第三方框架",
+				);
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2696,6 +2732,10 @@
 					"$(PROJECT_DIR)/testDemo",
 					"$(PROJECT_DIR)/testDemo/sdk",
 					"$(PROJECT_DIR)/testDemo/sdk/aipocr",
+					"$(PROJECT_DIR)/testDemo/第三方框架",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/testDemo",
 					"$(PROJECT_DIR)/testDemo/第三方框架",
 				);
 				INFOPLIST_FILE = testDemo/Info.plist;
