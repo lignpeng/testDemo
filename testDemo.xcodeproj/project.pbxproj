@@ -208,27 +208,6 @@
 		1F368AD321BE3A0A00F8B44D /* GPSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368A5D21BE3A0A00F8B44D /* GPSMSViewController.m */; };
 		1F368AD421BE3A0A00F8B44D /* GPGIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368A5F21BE3A0A00F8B44D /* GPGIFViewController.m */; };
 		1F368AD521BE3A0A00F8B44D /* IDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368A6121BE3A0A00F8B44D /* IDViewController.m */; };
-		1F368B0A21BE3B7000F8B44D /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368ADA21BE3B7000F8B44D /* FileTools.m */; };
-		1F368B0B21BE3B7000F8B44D /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368ADD21BE3B7000F8B44D /* UIViewController+BackButtonHandler.m */; };
-		1F368B0C21BE3B7000F8B44D /* NSString+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368ADE21BE3B7000F8B44D /* NSString+CSSafeAccess.m */; };
-		1F368B0D21BE3B7000F8B44D /* NSArray+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AE221BE3B7000F8B44D /* NSArray+CSSafeAccess.m */; };
-		1F368B0E21BE3B7000F8B44D /* NSDictionary+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AE521BE3B7000F8B44D /* NSDictionary+CSSafeAccess.m */; };
-		1F368B0F21BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AE721BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.m */; };
-		1F368B1021BE3B7000F8B44D /* NSSet+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AE821BE3B7000F8B44D /* NSSet+CSSafeAccess.m */; };
-		1F368B1121BE3B7000F8B44D /* NSString+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AE921BE3B7000F8B44D /* NSString+CSSafeAccess.m */; };
-		1F368B1221BE3B7000F8B44D /* GPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AED21BE3B7000F8B44D /* GPTools.m */; };
-		1F368B1321BE3B7000F8B44D /* CSNewDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AEF21BE3B7000F8B44D /* CSNewDatePickerView.m */; };
-		1F368B1421BE3B7000F8B44D /* CSSelectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AF121BE3B7000F8B44D /* CSSelectListView.m */; };
-		1F368B1521BE3B7000F8B44D /* CSAirNameListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AF421BE3B7000F8B44D /* CSAirNameListView.m */; };
-		1F368B1621BE3B7000F8B44D /* NSDate+CSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AF621BE3B7000F8B44D /* NSDate+CSCalendar.m */; };
-		1F368B1721BE3B7000F8B44D /* NSDate+Display.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AF721BE3B7000F8B44D /* NSDate+Display.m */; };
-		1F368B1821BE3B7000F8B44D /* UIURLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AFE21BE3B7000F8B44D /* UIURLAlertView.m */; };
-		1F368B1921BE3B7000F8B44D /* UIEditTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368AFF21BE3B7000F8B44D /* UIEditTextFieldView.m */; };
-		1F368B1A21BE3B7000F8B44D /* CSManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B0021BE3B7000F8B44D /* CSManagerTest.m */; };
-		1F368B1B21BE3B7000F8B44D /* CSPassagerPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B0121BE3B7000F8B44D /* CSPassagerPickerView.m */; };
-		1F368B1C21BE3B7000F8B44D /* UINameListPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B0221BE3B7000F8B44D /* UINameListPickerView.m */; };
-		1F368B1D21BE3B7000F8B44D /* DataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B0621BE3B7000F8B44D /* DataTools.m */; };
-		1F368B1E21BE3B7000F8B44D /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B0721BE3B7000F8B44D /* HexColor.m */; };
 		1F368B2121BE489200F8B44D /* GGSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B2021BE489100F8B44D /* GGSelectViewController.m */; };
 		1F368B2421BE50AA00F8B44D /* UIShapeImageClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B2321BE50AA00F8B44D /* UIShapeImageClipViewController.m */; };
 		1F368B2821BE52A600F8B44D /* UIShapeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B2721BE52A600F8B44D /* UIShapeImageView.m */; };
@@ -238,6 +217,30 @@
 		1F368B3521BE5CD500F8B44D /* UIShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B3421BE5CD500F8B44D /* UIShapeView.m */; };
 		1F368B3821BE60CB00F8B44D /* UICircleShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B3721BE60CB00F8B44D /* UICircleShapeView.m */; };
 		1F368B3B21BE684700F8B44D /* UIRectShapeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F368B3A21BE684700F8B44D /* UIRectShapeImage.m */; };
+		1F38657621DC6B99001D6C0A /* UINewDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38656521DC6B98001D6C0A /* UINewDatePickerView.m */; };
+		1F38657721DC6B99001D6C0A /* CSPassagerPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38656B21DC6B98001D6C0A /* CSPassagerPickerView.m */; };
+		1F38657821DC6B99001D6C0A /* UINameListPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38656C21DC6B98001D6C0A /* UINameListPickerView.m */; };
+		1F38657921DC6B99001D6C0A /* UISelectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38656D21DC6B98001D6C0A /* UISelectListView.m */; };
+		1F38657A21DC6B99001D6C0A /* UINameListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38656E21DC6B98001D6C0A /* UINameListView.m */; };
+		1F38657B21DC6B99001D6C0A /* UIURLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38657121DC6B98001D6C0A /* UIURLAlertView.m */; };
+		1F38657C21DC6B99001D6C0A /* UIEditTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38657221DC6B98001D6C0A /* UIEditTextFieldView.m */; };
+		1F38658221DC6C6B001D6C0A /* UIWalletPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38657E21DC6C6A001D6C0A /* UIWalletPayPasswordView.m */; };
+		1F38658321DC6C6B001D6C0A /* UIInputPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38657F21DC6C6A001D6C0A /* UIInputPassWordView.m */; };
+		1F3865B621DC9394001D6C0A /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38659521DC9394001D6C0A /* FileTools.m */; };
+		1F3865B721DC9394001D6C0A /* GPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38659621DC9394001D6C0A /* GPTools.m */; };
+		1F3865B821DC9394001D6C0A /* TxetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38659721DC9394001D6C0A /* TxetTools.m */; };
+		1F3865B921DC9394001D6C0A /* DataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38659921DC9394001D6C0A /* DataTools.m */; };
+		1F3865BA21DC9394001D6C0A /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38659E21DC9394001D6C0A /* UIViewController+BackButtonHandler.m */; };
+		1F3865BB21DC9394001D6C0A /* NSString+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F38659F21DC9394001D6C0A /* NSString+CSSafeAccess.m */; };
+		1F3865BC21DC9394001D6C0A /* NSArray+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865A321DC9394001D6C0A /* NSArray+CSSafeAccess.m */; };
+		1F3865BD21DC9394001D6C0A /* NSDictionary+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865A621DC9394001D6C0A /* NSDictionary+CSSafeAccess.m */; };
+		1F3865BE21DC9394001D6C0A /* NSUserDefaults+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865A821DC9394001D6C0A /* NSUserDefaults+CSSafeAccess.m */; };
+		1F3865BF21DC9394001D6C0A /* NSSet+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865A921DC9394001D6C0A /* NSSet+CSSafeAccess.m */; };
+		1F3865C021DC9394001D6C0A /* NSString+CSSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865AA21DC9394001D6C0A /* NSString+CSSafeAccess.m */; };
+		1F3865C121DC9394001D6C0A /* NSDate+CSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865AF21DC9394001D6C0A /* NSDate+CSCalendar.m */; };
+		1F3865C221DC9394001D6C0A /* NSDate+Display.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865B021DC9394001D6C0A /* NSDate+Display.m */; };
+		1F3865C321DC9394001D6C0A /* CSManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865B321DC9394001D6C0A /* CSManagerTest.m */; };
+		1F3865C421DC9394001D6C0A /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865B421DC9394001D6C0A /* HexColor.m */; };
 		1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */; };
 		1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */; };
 		1F4DBC031E4C6A8A00374EA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */; };
@@ -707,50 +710,6 @@
 		1F368A5F21BE3A0A00F8B44D /* GPGIFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGIFViewController.m; sourceTree = "<group>"; };
 		1F368A6021BE3A0A00F8B44D /* GPGIFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGIFViewController.h; sourceTree = "<group>"; };
 		1F368A6121BE3A0A00F8B44D /* IDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDViewController.m; sourceTree = "<group>"; };
-		1F368AD921BE3B7000F8B44D /* DataTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTools.h; sourceTree = "<group>"; };
-		1F368ADA21BE3B7000F8B44D /* FileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
-		1F368ADC21BE3B7000F8B44D /* NSString+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSSafeAccess.h"; sourceTree = "<group>"; };
-		1F368ADD21BE3B7000F8B44D /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
-		1F368ADE21BE3B7000F8B44D /* NSString+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CSSafeAccess.m"; sourceTree = "<group>"; };
-		1F368ADF21BE3B7000F8B44D /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
-		1F368AE121BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+CSSafeAccess.h"; sourceTree = "<group>"; };
-		1F368AE221BE3B7000F8B44D /* NSArray+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CSSafeAccess.m"; sourceTree = "<group>"; };
-		1F368AE321BE3B7000F8B44D /* NSString+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSSafeAccess.h"; sourceTree = "<group>"; };
-		1F368AE421BE3B7000F8B44D /* NSSet+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+CSSafeAccess.h"; sourceTree = "<group>"; };
-		1F368AE521BE3B7000F8B44D /* NSDictionary+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CSSafeAccess.m"; sourceTree = "<group>"; };
-		1F368AE621BE3B7000F8B44D /* CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSafeAccess.h; sourceTree = "<group>"; };
-		1F368AE721BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+CSSafeAccess.m"; sourceTree = "<group>"; };
-		1F368AE821BE3B7000F8B44D /* NSSet+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+CSSafeAccess.m"; sourceTree = "<group>"; };
-		1F368AE921BE3B7000F8B44D /* NSString+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CSSafeAccess.m"; sourceTree = "<group>"; };
-		1F368AEA21BE3B7000F8B44D /* NSArray+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CSSafeAccess.h"; sourceTree = "<group>"; };
-		1F368AEB21BE3B7000F8B44D /* NSDictionary+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CSSafeAccess.h"; sourceTree = "<group>"; };
-		1F368AEC21BE3B7000F8B44D /* HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColor.h; sourceTree = "<group>"; };
-		1F368AED21BE3B7000F8B44D /* GPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTools.m; sourceTree = "<group>"; };
-		1F368AEF21BE3B7000F8B44D /* CSNewDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNewDatePickerView.m; sourceTree = "<group>"; };
-		1F368AF021BE3B7000F8B44D /* CSAirNameListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAirNameListView.h; sourceTree = "<group>"; };
-		1F368AF121BE3B7000F8B44D /* CSSelectListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSelectListView.m; sourceTree = "<group>"; };
-		1F368AF221BE3B7000F8B44D /* CSNewDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNewDatePickerView.h; sourceTree = "<group>"; };
-		1F368AF321BE3B7000F8B44D /* CSSelectListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSelectListView.h; sourceTree = "<group>"; };
-		1F368AF421BE3B7000F8B44D /* CSAirNameListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAirNameListView.m; sourceTree = "<group>"; };
-		1F368AF621BE3B7000F8B44D /* NSDate+CSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CSCalendar.m"; sourceTree = "<group>"; };
-		1F368AF721BE3B7000F8B44D /* NSDate+Display.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Display.m"; sourceTree = "<group>"; };
-		1F368AF821BE3B7000F8B44D /* NSDate+Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Display.h"; sourceTree = "<group>"; };
-		1F368AF921BE3B7000F8B44D /* NSDate+CSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CSCalendar.h"; sourceTree = "<group>"; };
-		1F368AFB21BE3B7000F8B44D /* CSManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSManagerTest.h; sourceTree = "<group>"; };
-		1F368AFC21BE3B7000F8B44D /* CSPassagerPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPassagerPickerView.h; sourceTree = "<group>"; };
-		1F368AFD21BE3B7000F8B44D /* UINameListPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINameListPickerView.h; sourceTree = "<group>"; };
-		1F368AFE21BE3B7000F8B44D /* UIURLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIURLAlertView.m; sourceTree = "<group>"; };
-		1F368AFF21BE3B7000F8B44D /* UIEditTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIEditTextFieldView.m; sourceTree = "<group>"; };
-		1F368B0021BE3B7000F8B44D /* CSManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSManagerTest.m; sourceTree = "<group>"; };
-		1F368B0121BE3B7000F8B44D /* CSPassagerPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPassagerPickerView.m; sourceTree = "<group>"; };
-		1F368B0221BE3B7000F8B44D /* UINameListPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINameListPickerView.m; sourceTree = "<group>"; };
-		1F368B0321BE3B7000F8B44D /* UIEditTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIEditTextFieldView.h; sourceTree = "<group>"; };
-		1F368B0421BE3B7000F8B44D /* UIURLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIURLAlertView.h; sourceTree = "<group>"; };
-		1F368B0521BE3B7000F8B44D /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
-		1F368B0621BE3B7000F8B44D /* DataTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTools.m; sourceTree = "<group>"; };
-		1F368B0721BE3B7000F8B44D /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColor.m; sourceTree = "<group>"; };
-		1F368B0821BE3B7000F8B44D /* GPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTools.h; sourceTree = "<group>"; };
-		1F368B0921BE3B7000F8B44D /* GGMacors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMacors.h; sourceTree = "<group>"; };
 		1F368B1F21BE489100F8B44D /* GGSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGSelectViewController.h; sourceTree = "<group>"; };
 		1F368B2021BE489100F8B44D /* GGSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGSelectViewController.m; sourceTree = "<group>"; };
 		1F368B2221BE50AA00F8B44D /* UIShapeImageClipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIShapeImageClipViewController.h; sourceTree = "<group>"; };
@@ -770,6 +729,56 @@
 		1F368B3921BE684700F8B44D /* UIRectShapeImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRectShapeImage.h; sourceTree = "<group>"; };
 		1F368B3A21BE684700F8B44D /* UIRectShapeImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIRectShapeImage.m; sourceTree = "<group>"; };
 		1F38656221D5D3E3001D6C0A /* YYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		1F38656521DC6B98001D6C0A /* UINewDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINewDatePickerView.m; sourceTree = "<group>"; };
+		1F38656621DC6B98001D6C0A /* CSPassagerPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPassagerPickerView.h; sourceTree = "<group>"; };
+		1F38656721DC6B98001D6C0A /* UISelectListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISelectListView.h; sourceTree = "<group>"; };
+		1F38656821DC6B98001D6C0A /* UINameListPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINameListPickerView.h; sourceTree = "<group>"; };
+		1F38656921DC6B98001D6C0A /* UINameListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINameListView.h; sourceTree = "<group>"; };
+		1F38656A21DC6B98001D6C0A /* UINewDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINewDatePickerView.h; sourceTree = "<group>"; };
+		1F38656B21DC6B98001D6C0A /* CSPassagerPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPassagerPickerView.m; sourceTree = "<group>"; };
+		1F38656C21DC6B98001D6C0A /* UINameListPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINameListPickerView.m; sourceTree = "<group>"; };
+		1F38656D21DC6B98001D6C0A /* UISelectListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISelectListView.m; sourceTree = "<group>"; };
+		1F38656E21DC6B98001D6C0A /* UINameListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINameListView.m; sourceTree = "<group>"; };
+		1F38657121DC6B98001D6C0A /* UIURLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIURLAlertView.m; sourceTree = "<group>"; };
+		1F38657221DC6B98001D6C0A /* UIEditTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIEditTextFieldView.m; sourceTree = "<group>"; };
+		1F38657421DC6B98001D6C0A /* UIEditTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIEditTextFieldView.h; sourceTree = "<group>"; };
+		1F38657521DC6B98001D6C0A /* UIURLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIURLAlertView.h; sourceTree = "<group>"; };
+		1F38657E21DC6C6A001D6C0A /* UIWalletPayPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWalletPayPasswordView.m; sourceTree = "<group>"; };
+		1F38657F21DC6C6A001D6C0A /* UIInputPassWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIInputPassWordView.m; sourceTree = "<group>"; };
+		1F38658021DC6C6A001D6C0A /* UIWalletPayPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWalletPayPasswordView.h; sourceTree = "<group>"; };
+		1F38658121DC6C6B001D6C0A /* UIInputPassWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInputPassWordView.h; sourceTree = "<group>"; };
+		1F38659221DC9394001D6C0A /* CSManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSManagerTest.h; sourceTree = "<group>"; };
+		1F38659421DC9394001D6C0A /* DataTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTools.h; sourceTree = "<group>"; };
+		1F38659521DC9394001D6C0A /* FileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
+		1F38659621DC9394001D6C0A /* GPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTools.m; sourceTree = "<group>"; };
+		1F38659721DC9394001D6C0A /* TxetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TxetTools.m; sourceTree = "<group>"; };
+		1F38659821DC9394001D6C0A /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
+		1F38659921DC9394001D6C0A /* DataTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTools.m; sourceTree = "<group>"; };
+		1F38659A21DC9394001D6C0A /* GPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTools.h; sourceTree = "<group>"; };
+		1F38659B21DC9394001D6C0A /* TxetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TxetTools.h; sourceTree = "<group>"; };
+		1F38659D21DC9394001D6C0A /* NSString+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSSafeAccess.h"; sourceTree = "<group>"; };
+		1F38659E21DC9394001D6C0A /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		1F38659F21DC9394001D6C0A /* NSString+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CSSafeAccess.m"; sourceTree = "<group>"; };
+		1F3865A021DC9394001D6C0A /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		1F3865A221DC9394001D6C0A /* NSUserDefaults+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+CSSafeAccess.h"; sourceTree = "<group>"; };
+		1F3865A321DC9394001D6C0A /* NSArray+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CSSafeAccess.m"; sourceTree = "<group>"; };
+		1F3865A421DC9394001D6C0A /* NSString+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSSafeAccess.h"; sourceTree = "<group>"; };
+		1F3865A521DC9394001D6C0A /* NSSet+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+CSSafeAccess.h"; sourceTree = "<group>"; };
+		1F3865A621DC9394001D6C0A /* NSDictionary+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CSSafeAccess.m"; sourceTree = "<group>"; };
+		1F3865A721DC9394001D6C0A /* CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSafeAccess.h; sourceTree = "<group>"; };
+		1F3865A821DC9394001D6C0A /* NSUserDefaults+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+CSSafeAccess.m"; sourceTree = "<group>"; };
+		1F3865A921DC9394001D6C0A /* NSSet+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+CSSafeAccess.m"; sourceTree = "<group>"; };
+		1F3865AA21DC9394001D6C0A /* NSString+CSSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CSSafeAccess.m"; sourceTree = "<group>"; };
+		1F3865AB21DC9394001D6C0A /* NSArray+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CSSafeAccess.h"; sourceTree = "<group>"; };
+		1F3865AC21DC9394001D6C0A /* NSDictionary+CSSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CSSafeAccess.h"; sourceTree = "<group>"; };
+		1F3865AD21DC9394001D6C0A /* HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColor.h; sourceTree = "<group>"; };
+		1F3865AF21DC9394001D6C0A /* NSDate+CSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CSCalendar.m"; sourceTree = "<group>"; };
+		1F3865B021DC9394001D6C0A /* NSDate+Display.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Display.m"; sourceTree = "<group>"; };
+		1F3865B121DC9394001D6C0A /* NSDate+Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Display.h"; sourceTree = "<group>"; };
+		1F3865B221DC9394001D6C0A /* NSDate+CSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CSCalendar.h"; sourceTree = "<group>"; };
+		1F3865B321DC9394001D6C0A /* CSManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSManagerTest.m; sourceTree = "<group>"; };
+		1F3865B421DC9394001D6C0A /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColor.m; sourceTree = "<group>"; };
+		1F3865B521DC9394001D6C0A /* GGMacors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMacors.h; sourceTree = "<group>"; };
 		1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1862,97 +1871,6 @@
 			path = "第二辑";
 			sourceTree = "<group>";
 		};
-		1F368AD821BE3B7000F8B44D /* tools */ = {
-			isa = PBXGroup;
-			children = (
-				1F368ADB21BE3B7000F8B44D /* category */,
-				1F368AE021BE3B7000F8B44D /* access */,
-				1F368AEC21BE3B7000F8B44D /* HexColor.h */,
-				1F368B0721BE3B7000F8B44D /* HexColor.m */,
-				1F368B0821BE3B7000F8B44D /* GPTools.h */,
-				1F368AED21BE3B7000F8B44D /* GPTools.m */,
-				1F368AEE21BE3B7000F8B44D /* pickerView */,
-				1F368AF521BE3B7000F8B44D /* date */,
-				1F368AFA21BE3B7000F8B44D /* other */,
-				1F368AD921BE3B7000F8B44D /* DataTools.h */,
-				1F368B0621BE3B7000F8B44D /* DataTools.m */,
-				1F368B0521BE3B7000F8B44D /* FileTools.h */,
-				1F368ADA21BE3B7000F8B44D /* FileTools.m */,
-				1F368B0921BE3B7000F8B44D /* GGMacors.h */,
-			);
-			path = tools;
-			sourceTree = "<group>";
-		};
-		1F368ADB21BE3B7000F8B44D /* category */ = {
-			isa = PBXGroup;
-			children = (
-				1F368ADC21BE3B7000F8B44D /* NSString+CSSafeAccess.h */,
-				1F368ADD21BE3B7000F8B44D /* UIViewController+BackButtonHandler.m */,
-				1F368ADE21BE3B7000F8B44D /* NSString+CSSafeAccess.m */,
-				1F368ADF21BE3B7000F8B44D /* UIViewController+BackButtonHandler.h */,
-			);
-			path = category;
-			sourceTree = "<group>";
-		};
-		1F368AE021BE3B7000F8B44D /* access */ = {
-			isa = PBXGroup;
-			children = (
-				1F368AE121BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.h */,
-				1F368AE221BE3B7000F8B44D /* NSArray+CSSafeAccess.m */,
-				1F368AE321BE3B7000F8B44D /* NSString+CSSafeAccess.h */,
-				1F368AE421BE3B7000F8B44D /* NSSet+CSSafeAccess.h */,
-				1F368AE521BE3B7000F8B44D /* NSDictionary+CSSafeAccess.m */,
-				1F368AE621BE3B7000F8B44D /* CSSafeAccess.h */,
-				1F368AE721BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.m */,
-				1F368AE821BE3B7000F8B44D /* NSSet+CSSafeAccess.m */,
-				1F368AE921BE3B7000F8B44D /* NSString+CSSafeAccess.m */,
-				1F368AEA21BE3B7000F8B44D /* NSArray+CSSafeAccess.h */,
-				1F368AEB21BE3B7000F8B44D /* NSDictionary+CSSafeAccess.h */,
-			);
-			path = access;
-			sourceTree = "<group>";
-		};
-		1F368AEE21BE3B7000F8B44D /* pickerView */ = {
-			isa = PBXGroup;
-			children = (
-				1F368AEF21BE3B7000F8B44D /* CSNewDatePickerView.m */,
-				1F368AF021BE3B7000F8B44D /* CSAirNameListView.h */,
-				1F368AF121BE3B7000F8B44D /* CSSelectListView.m */,
-				1F368AF221BE3B7000F8B44D /* CSNewDatePickerView.h */,
-				1F368AF321BE3B7000F8B44D /* CSSelectListView.h */,
-				1F368AF421BE3B7000F8B44D /* CSAirNameListView.m */,
-			);
-			path = pickerView;
-			sourceTree = "<group>";
-		};
-		1F368AF521BE3B7000F8B44D /* date */ = {
-			isa = PBXGroup;
-			children = (
-				1F368AF621BE3B7000F8B44D /* NSDate+CSCalendar.m */,
-				1F368AF721BE3B7000F8B44D /* NSDate+Display.m */,
-				1F368AF821BE3B7000F8B44D /* NSDate+Display.h */,
-				1F368AF921BE3B7000F8B44D /* NSDate+CSCalendar.h */,
-			);
-			path = date;
-			sourceTree = "<group>";
-		};
-		1F368AFA21BE3B7000F8B44D /* other */ = {
-			isa = PBXGroup;
-			children = (
-				1F368AFB21BE3B7000F8B44D /* CSManagerTest.h */,
-				1F368AFC21BE3B7000F8B44D /* CSPassagerPickerView.h */,
-				1F368AFD21BE3B7000F8B44D /* UINameListPickerView.h */,
-				1F368AFE21BE3B7000F8B44D /* UIURLAlertView.m */,
-				1F368AFF21BE3B7000F8B44D /* UIEditTextFieldView.m */,
-				1F368B0021BE3B7000F8B44D /* CSManagerTest.m */,
-				1F368B0121BE3B7000F8B44D /* CSPassagerPickerView.m */,
-				1F368B0221BE3B7000F8B44D /* UINameListPickerView.m */,
-				1F368B0321BE3B7000F8B44D /* UIEditTextFieldView.h */,
-				1F368B0421BE3B7000F8B44D /* UIURLAlertView.h */,
-			);
-			path = other;
-			sourceTree = "<group>";
-		};
 		1F368B2521BE50B000F8B44D /* 图案裁剪 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1982,6 +1900,118 @@
 				1F368B3A21BE684700F8B44D /* UIRectShapeImage.m */,
 			);
 			path = shape;
+			sourceTree = "<group>";
+		};
+		1F38656321DC6B98001D6C0A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1F38656421DC6B98001D6C0A /* pickerView */,
+				1F38656F21DC6B98001D6C0A /* other */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1F38656421DC6B98001D6C0A /* pickerView */ = {
+			isa = PBXGroup;
+			children = (
+				1F38656621DC6B98001D6C0A /* CSPassagerPickerView.h */,
+				1F38656B21DC6B98001D6C0A /* CSPassagerPickerView.m */,
+				1F38656721DC6B98001D6C0A /* UISelectListView.h */,
+				1F38656921DC6B98001D6C0A /* UINameListView.h */,
+				1F38656A21DC6B98001D6C0A /* UINewDatePickerView.h */,
+				1F38656521DC6B98001D6C0A /* UINewDatePickerView.m */,
+				1F38656821DC6B98001D6C0A /* UINameListPickerView.h */,
+				1F38656C21DC6B98001D6C0A /* UINameListPickerView.m */,
+				1F38656D21DC6B98001D6C0A /* UISelectListView.m */,
+				1F38656E21DC6B98001D6C0A /* UINameListView.m */,
+			);
+			path = pickerView;
+			sourceTree = "<group>";
+		};
+		1F38656F21DC6B98001D6C0A /* other */ = {
+			isa = PBXGroup;
+			children = (
+				1F38658121DC6C6B001D6C0A /* UIInputPassWordView.h */,
+				1F38657F21DC6C6A001D6C0A /* UIInputPassWordView.m */,
+				1F38658021DC6C6A001D6C0A /* UIWalletPayPasswordView.h */,
+				1F38657E21DC6C6A001D6C0A /* UIWalletPayPasswordView.m */,
+				1F38657421DC6B98001D6C0A /* UIEditTextFieldView.h */,
+				1F38657221DC6B98001D6C0A /* UIEditTextFieldView.m */,
+				1F38657521DC6B98001D6C0A /* UIURLAlertView.h */,
+				1F38657121DC6B98001D6C0A /* UIURLAlertView.m */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		1F38659121DC9394001D6C0A /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				1F38659221DC9394001D6C0A /* CSManagerTest.h */,
+				1F3865B321DC9394001D6C0A /* CSManagerTest.m */,
+				1F38659321DC9394001D6C0A /* tools */,
+				1F38659C21DC9394001D6C0A /* category */,
+				1F3865A121DC9394001D6C0A /* access */,
+				1F3865AD21DC9394001D6C0A /* HexColor.h */,
+				1F3865B421DC9394001D6C0A /* HexColor.m */,
+				1F3865AE21DC9394001D6C0A /* date */,
+				1F3865B521DC9394001D6C0A /* GGMacors.h */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		1F38659321DC9394001D6C0A /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				1F38659421DC9394001D6C0A /* DataTools.h */,
+				1F38659921DC9394001D6C0A /* DataTools.m */,
+				1F38659821DC9394001D6C0A /* FileTools.h */,
+				1F38659521DC9394001D6C0A /* FileTools.m */,
+				1F38659A21DC9394001D6C0A /* GPTools.h */,
+				1F38659621DC9394001D6C0A /* GPTools.m */,
+				1F38659B21DC9394001D6C0A /* TxetTools.h */,
+				1F38659721DC9394001D6C0A /* TxetTools.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		1F38659C21DC9394001D6C0A /* category */ = {
+			isa = PBXGroup;
+			children = (
+				1F38659D21DC9394001D6C0A /* NSString+CSSafeAccess.h */,
+				1F38659E21DC9394001D6C0A /* UIViewController+BackButtonHandler.m */,
+				1F38659F21DC9394001D6C0A /* NSString+CSSafeAccess.m */,
+				1F3865A021DC9394001D6C0A /* UIViewController+BackButtonHandler.h */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		1F3865A121DC9394001D6C0A /* access */ = {
+			isa = PBXGroup;
+			children = (
+				1F3865A221DC9394001D6C0A /* NSUserDefaults+CSSafeAccess.h */,
+				1F3865A321DC9394001D6C0A /* NSArray+CSSafeAccess.m */,
+				1F3865A421DC9394001D6C0A /* NSString+CSSafeAccess.h */,
+				1F3865A521DC9394001D6C0A /* NSSet+CSSafeAccess.h */,
+				1F3865A621DC9394001D6C0A /* NSDictionary+CSSafeAccess.m */,
+				1F3865A721DC9394001D6C0A /* CSSafeAccess.h */,
+				1F3865A821DC9394001D6C0A /* NSUserDefaults+CSSafeAccess.m */,
+				1F3865A921DC9394001D6C0A /* NSSet+CSSafeAccess.m */,
+				1F3865AA21DC9394001D6C0A /* NSString+CSSafeAccess.m */,
+				1F3865AB21DC9394001D6C0A /* NSArray+CSSafeAccess.h */,
+				1F3865AC21DC9394001D6C0A /* NSDictionary+CSSafeAccess.h */,
+			);
+			path = access;
+			sourceTree = "<group>";
+		};
+		1F3865AE21DC9394001D6C0A /* date */ = {
+			isa = PBXGroup;
+			children = (
+				1F3865AF21DC9394001D6C0A /* NSDate+CSCalendar.m */,
+				1F3865B021DC9394001D6C0A /* NSDate+Display.m */,
+				1F3865B121DC9394001D6C0A /* NSDate+Display.h */,
+				1F3865B221DC9394001D6C0A /* NSDate+CSCalendar.h */,
+			);
+			path = date;
 			sourceTree = "<group>";
 		};
 		1FBC475E2136419F00C203B7 /* JPImageresizerView */ = {
@@ -2033,7 +2063,8 @@
 				EE14AA431DE5419D00E152AD /* ViewController.m */,
 				EE516D161DE7DE9E001F9010 /* cell */,
 				EE14AA451DE5419D00E152AD /* Main.storyboard */,
-				1F368AD821BE3B7000F8B44D /* tools */,
+				1F38659121DC9394001D6C0A /* tools */,
+				1F38656321DC6B98001D6C0A /* view */,
 				1F36894E21BE3A0900F8B44D /* vc */,
 				EE14AA481DE5419D00E152AD /* Assets.xcassets */,
 				EE14AA4A1DE5419D00E152AD /* LaunchScreen.storyboard */,
@@ -2294,13 +2325,11 @@
 				1F368A9D21BE3A0A00F8B44D /* GPSelectSeatViewController.m in Sources */,
 				1F368AC921BE3A0A00F8B44D /* UIExcelTableViewCell.m in Sources */,
 				1F368AB321BE3A0A00F8B44D /* RiseUpCalcViewController.m in Sources */,
-				1F368B1721BE3B7000F8B44D /* NSDate+Display.m in Sources */,
+				1F38658221DC6C6B001D6C0A /* UIWalletPayPasswordView.m in Sources */,
 				1F368A9A21BE3A0A00F8B44D /* CSSeatMapElement.m in Sources */,
 				1F368AD121BE3A0A00F8B44D /* UnmenberToken.m in Sources */,
 				1F368AC121BE3A0A00F8B44D /* CSBrowingHistoryModel.m in Sources */,
-				1F368B1A21BE3B7000F8B44D /* CSManagerTest.m in Sources */,
 				1F16AE94212D191D00BA265C /* SDWebImageManager.m in Sources */,
-				1F368B1321BE3B7000F8B44D /* CSNewDatePickerView.m in Sources */,
 				1F16ADB6212BFBD700BA265C /* NSObject+MemoryLeak.m in Sources */,
 				1F368AC721BE3A0A00F8B44D /* CSBrowingHistoryFlightNumberCell.m in Sources */,
 				1F368A6F21BE3A0A00F8B44D /* GGBlockViewController.m in Sources */,
@@ -2314,10 +2343,8 @@
 				1F16ADE6212C06A300BA265C /* MBProgressHUD.m in Sources */,
 				1F16ADE9212C095500BA265C /* UIHUD.m in Sources */,
 				1F368B2421BE50AA00F8B44D /* UIShapeImageClipViewController.m in Sources */,
-				1F368B1021BE3B7000F8B44D /* NSSet+CSSafeAccess.m in Sources */,
 				1F368A7C21BE3A0A00F8B44D /* GPLoginViewController.m in Sources */,
 				1F368A9121BE3A0A00F8B44D /* ArrayEnumViewController.m in Sources */,
-				1F368B0A21BE3B7000F8B44D /* FileTools.m in Sources */,
 				1F368B2821BE52A600F8B44D /* UIShapeImageView.m in Sources */,
 				1F16ADA2212BFBD700BA265C /* MASConstraintMaker.m in Sources */,
 				1F368A7221BE3A0A00F8B44D /* GGOneViewController.m in Sources */,
@@ -2326,8 +2353,11 @@
 				1F16AE95212D191D00BA265C /* SDWebImageDecoder.m in Sources */,
 				1F16AE98212D191D00BA265C /* UIImage+GIF.m in Sources */,
 				1F368A8821BE3A0A00F8B44D /* GPKeyBoardViewController.m in Sources */,
+				1F38657821DC6B99001D6C0A /* UINameListPickerView.m in Sources */,
 				1F16AE5A212D189900BA265C /* LGPhotoAssets.m in Sources */,
+				1F38657A21DC6B99001D6C0A /* UINameListView.m in Sources */,
 				1F368A9921BE3A0A00F8B44D /* CSPriceTag.m in Sources */,
+				1F3865B721DC9394001D6C0A /* GPTools.m in Sources */,
 				1F16ADAA212BFBD700BA265C /* NSObject+YYModel.m in Sources */,
 				1F16AE9E212D191D00BA265C /* NSData+ImageContentType.m in Sources */,
 				1F16AE56212D189900BA265C /* LGCameraImageView.m in Sources */,
@@ -2345,11 +2375,14 @@
 				1F368A6521BE3A0A00F8B44D /* BuildListViewController.m in Sources */,
 				EE516D141DE7DE93001F9010 /* GPTableViewCell.m in Sources */,
 				1F368AD221BE3A0A00F8B44D /* GPExtensionViewController.m in Sources */,
+				1F38657921DC6B99001D6C0A /* UISelectListView.m in Sources */,
 				1F368A6B21BE3A0A00F8B44D /* LabelModel.m in Sources */,
 				1F368A6E21BE3A0A00F8B44D /* SelectManagerViewController.m in Sources */,
+				1F3865BB21DC9394001D6C0A /* NSString+CSSafeAccess.m in Sources */,
 				1F368AAE21BE3A0A00F8B44D /* UIClipImageViewController.m in Sources */,
+				1F3865B921DC9394001D6C0A /* DataTools.m in Sources */,
+				1F3865BD21DC9394001D6C0A /* NSDictionary+CSSafeAccess.m in Sources */,
 				1F368AC621BE3A0A00F8B44D /* CSBrowsingHistoryTypeView.m in Sources */,
-				1F368B1421BE3B7000F8B44D /* CSSelectListView.m in Sources */,
 				1F368AB421BE3A0A00F8B44D /* RiseupCalcHeaderView.m in Sources */,
 				1F368AD321BE3A0A00F8B44D /* GPSMSViewController.m in Sources */,
 				1F16AE96212D191D00BA265C /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -2361,19 +2394,18 @@
 				EE14AA441DE5419D00E152AD /* ViewController.m in Sources */,
 				1F368AA221BE3A0A00F8B44D /* WKWebViewJavascriptBridge.m in Sources */,
 				1F16AE5C212D189900BA265C /* LGPhotoPickerViewController.m in Sources */,
-				1F368B1B21BE3B7000F8B44D /* CSPassagerPickerView.m in Sources */,
+				1F3865BA21DC9394001D6C0A /* UIViewController+BackButtonHandler.m in Sources */,
 				1F368A9C21BE3A0A00F8B44D /* CSUtils.m in Sources */,
+				1F3865BF21DC9394001D6C0A /* NSSet+CSSafeAccess.m in Sources */,
 				1F368A9321BE3A0A00F8B44D /* GGMLViewController.m in Sources */,
-				1F368B0D21BE3B7000F8B44D /* NSArray+CSSafeAccess.m in Sources */,
 				1F16AE9D212D191D00BA265C /* SDWebImageDownloaderOperation.m in Sources */,
 				1F368A6421BE3A0A00F8B44D /* BaseSearchViewController.m in Sources */,
-				1F368B0F21BE3B7000F8B44D /* NSUserDefaults+CSSafeAccess.m in Sources */,
 				1F1043F421D47FE900E08B7E /* DataYYModel.m in Sources */,
 				1F16ADAB212BFBD700BA265C /* YYClassInfo.m in Sources */,
 				1F368B3121BE5C9C00F8B44D /* UIRectShapeView.m in Sources */,
 				1F16AE55212D189900BA265C /* ZLCamera.m in Sources */,
 				1F368AB821BE3A0A00F8B44D /* RZDBCoalesce.m in Sources */,
-				1F368B1221BE3B7000F8B44D /* GPTools.m in Sources */,
+				1F3865C121DC9394001D6C0A /* NSDate+CSCalendar.m in Sources */,
 				1F16AE4D212D189900BA265C /* LGPhotoPickerBrowserViewController.m in Sources */,
 				1F368A7721BE3A0A00F8B44D /* GGPredicateViewController.m in Sources */,
 				1F368AB721BE3A0A00F8B44D /* NSObject+RZDataBinding.m in Sources */,
@@ -2383,15 +2415,17 @@
 				1F368A8A21BE3A0A00F8B44D /* GPKeyBoardHeaderTableView.m in Sources */,
 				1F368A8421BE3A0A00F8B44D /* GPTimeViewController.m in Sources */,
 				1F368B3B21BE684700F8B44D /* UIRectShapeImage.m in Sources */,
+				1F38658321DC6C6B001D6C0A /* UIInputPassWordView.m in Sources */,
 				1F16AE9F212D191D00BA265C /* UIImageView+WebCache.m in Sources */,
-				1F368B1121BE3B7000F8B44D /* NSString+CSSafeAccess.m in Sources */,
 				1F368B2B21BE545300F8B44D /* ImageTools.m in Sources */,
 				1F16AE9B212D191D00BA265C /* SDWebImagePrefetcher.m in Sources */,
 				1F16ADA1212BFBD700BA265C /* MASCompositeConstraint.m in Sources */,
+				1F3865B821DC9394001D6C0A /* TxetTools.m in Sources */,
 				1F368A7121BE3A0A00F8B44D /* GGTwoViewController.m in Sources */,
 				1F368A6221BE3A0A00F8B44D /* searchBarCustomView.m in Sources */,
 				1F368AA821BE3A0A00F8B44D /* GGPerson.m in Sources */,
 				1F368A9421BE3A0A00F8B44D /* GGMLeakViewController.m in Sources */,
+				1F3865C221DC9394001D6C0A /* NSDate+Display.m in Sources */,
 				1F16AE53212D189900BA265C /* ZLCameraViewController.m in Sources */,
 				1F16ADA5212BFBD700BA265C /* View+MASAdditions.m in Sources */,
 				1F368A9F21BE3A0A00F8B44D /* CustomFlowLayout.m in Sources */,
@@ -2408,10 +2442,14 @@
 				1F16ADBA212BFBD700BA265C /* JSONModel.m in Sources */,
 				1F16AE4F212D189900BA265C /* LGPhotoPickerCustomToolBarView.m in Sources */,
 				1F368AA521BE3A0A00F8B44D /* WebViewController.m in Sources */,
+				1F3865B621DC9394001D6C0A /* FileTools.m in Sources */,
 				1F16ADB2212BFBD700BA265C /* UITabBarController+MemoryLeak.m in Sources */,
 				1F368A6621BE3A0A00F8B44D /* GGRefreshViewController.m in Sources */,
 				1F368AB121BE3A0A00F8B44D /* TimeCheckViewController.m in Sources */,
 				1F16ADA4212BFBD700BA265C /* NSArray+MASAdditions.m in Sources */,
+				1F3865BE21DC9394001D6C0A /* NSUserDefaults+CSSafeAccess.m in Sources */,
+				1F38657621DC6B99001D6C0A /* UINewDatePickerView.m in Sources */,
+				1F38657721DC6B99001D6C0A /* CSPassagerPickerView.m in Sources */,
 				1F368ACA21BE3A0A00F8B44D /* ExcelCollectionViewFlowLayout.m in Sources */,
 				1F16AE99212D191D00BA265C /* UIImage+MultiFormat.m in Sources */,
 				1F368AA421BE3A0A00F8B44D /* WebViewJavascriptBridge_JS.m in Sources */,
@@ -2424,7 +2462,6 @@
 				1F16ADA8212BFBD700BA265C /* MASViewAttribute.m in Sources */,
 				1F368A9E21BE3A0A00F8B44D /* PagingCollectionViewLayout.m in Sources */,
 				1F16ADA7212BFBD700BA265C /* MASViewConstraint.m in Sources */,
-				1F368B1C21BE3B7000F8B44D /* UINameListPickerView.m in Sources */,
 				1F368AAA21BE3A0A00F8B44D /* GGSpaceViewController.m in Sources */,
 				1F368A6C21BE3A0A00F8B44D /* UIButtonView.m in Sources */,
 				1F368A7E21BE3A0A00F8B44D /* CSVIPDayADsView.m in Sources */,
@@ -2435,26 +2472,23 @@
 				1F16ADB1212BFBD700BA265C /* UIPageViewController+MemoryLeak.m in Sources */,
 				1F16AE54212D189900BA265C /* ZLCameraImageView.m in Sources */,
 				1F16ADB8212BFBD700BA265C /* JSONValueTransformer.m in Sources */,
+				1F38657B21DC6B99001D6C0A /* UIURLAlertView.m in Sources */,
 				1F368A6321BE3A0A00F8B44D /* SearchBarViewController.m in Sources */,
 				1F368A6D21BE3A0A00F8B44D /* UISelectCollectionViewCell.m in Sources */,
 				1F16AE75212D191600BA265C /* DACircularProgressView.m in Sources */,
 				1F368A7621BE3A0A00F8B44D /* GPVideoViewController.m in Sources */,
-				1F368B0E21BE3B7000F8B44D /* NSDictionary+CSSafeAccess.m in Sources */,
-				1F368B1821BE3B7000F8B44D /* UIURLAlertView.m in Sources */,
+				1F3865C321DC9394001D6C0A /* CSManagerTest.m in Sources */,
 				1F368AAD21BE3A0A00F8B44D /* AttributeLabelViewController.m in Sources */,
 				1F368AB521BE3A0A00F8B44D /* Person.m in Sources */,
-				1F368B1E21BE3B7000F8B44D /* HexColor.m in Sources */,
 				1F16ADB3212BFBD700BA265C /* MLeaksMessenger.m in Sources */,
 				1F368A7421BE3A0A00F8B44D /* CSPopoverController.m in Sources */,
 				1F16ADAD212BFBD700BA265C /* MLeakedObjectProxy.m in Sources */,
 				1F368AB021BE3A0A00F8B44D /* EMailCheckViewController.m in Sources */,
 				1F368A7821BE3A0A00F8B44D /* CalulateImageViewController.m in Sources */,
-				1F368B1621BE3B7000F8B44D /* NSDate+CSCalendar.m in Sources */,
 				1F16ADBB212BFBD700BA265C /* JSONModelError.m in Sources */,
 				1F16ADAE212BFBD700BA265C /* UIView+MemoryLeak.m in Sources */,
 				1F368ABE21BE3A0A00F8B44D /* GPOperationTableViewCell.m in Sources */,
 				1F368A7D21BE3A0A00F8B44D /* GPPopNavigationController.m in Sources */,
-				1F368B1921BE3B7000F8B44D /* UIEditTextFieldView.m in Sources */,
 				1F368ACB21BE3A0A00F8B44D /* UIExcelCollectionCell.m in Sources */,
 				1F16ADB5212BFBD700BA265C /* UIApplication+MemoryLeak.m in Sources */,
 				1F16AEA1212D191D00BA265C /* UIButton+WebCache.m in Sources */,
@@ -2468,20 +2502,22 @@
 				1F16ADBF212BFBD700BA265C /* JSONModel+networking.m in Sources */,
 				1F368AD521BE3A0A00F8B44D /* IDViewController.m in Sources */,
 				1F368AA921BE3A0A00F8B44D /* GGRunTimeMethodViewController.m in Sources */,
+				1F38657C21DC6B99001D6C0A /* UIEditTextFieldView.m in Sources */,
 				1F368A8321BE3A0A00F8B44D /* LoadingViewController.m in Sources */,
 				1F16AE4E212D189900BA265C /* LGPhotoPickerBrowserPhotoScrollView.m in Sources */,
+				1F3865C021DC9394001D6C0A /* NSString+CSSafeAccess.m in Sources */,
 				1F368AAB21BE3A0A00F8B44D /* GPNullViewController.m in Sources */,
+				1F3865C421DC9394001D6C0A /* HexColor.m in Sources */,
 				1F368A8021BE3A0A00F8B44D /* TimezoneViewController.m in Sources */,
 				1F368AC021BE3A0A00F8B44D /* CSBrowingHistoryMarco.m in Sources */,
 				1F368A9221BE3A0A00F8B44D /* GGDelegateViewController.m in Sources */,
-				1F368B1521BE3B7000F8B44D /* CSAirNameListView.m in Sources */,
 				1F368AD021BE3A0A00F8B44D /* ModelViewController.m in Sources */,
 				1F368A9B21BE3A0A00F8B44D /* CSCabinBoundary.m in Sources */,
 				1F368A9621BE3A0A00F8B44D /* AlipayViewController.m in Sources */,
 				1F368AC821BE3A0A00F8B44D /* CSBrowsingHistoryListViewModel.m in Sources */,
 				1F16AE5B212D189900BA265C /* LGPhotoPickerGroupViewController.m in Sources */,
-				1F368B1D21BE3B7000F8B44D /* DataTools.m in Sources */,
 				1F368B3521BE5CD500F8B44D /* UIShapeView.m in Sources */,
+				1F3865BC21DC9394001D6C0A /* NSArray+CSSafeAccess.m in Sources */,
 				1F16ADBD212BFBD700BA265C /* JSONHTTPClient.m in Sources */,
 				1F16ADA0212BFBD700BA265C /* ViewController+MASAdditions.m in Sources */,
 				1F368AD421BE3A0A00F8B44D /* GPGIFViewController.m in Sources */,
@@ -2494,12 +2530,10 @@
 				1F368A8721BE3A0A00F8B44D /* Model.m in Sources */,
 				1F368A9521BE3A0A00F8B44D /* GGMasoryViewController.m in Sources */,
 				1F16AE59212D189900BA265C /* LGPhotoPickerGroup.m in Sources */,
-				1F368B0B21BE3B7000F8B44D /* UIViewController+BackButtonHandler.m in Sources */,
 				1F368A6821BE3A0A00F8B44D /* GGXibViewController.m in Sources */,
 				1F16AE4C212D189900BA265C /* LGPhotoPickerBrowserPhoto.m in Sources */,
 				1F16ADBE212BFBD700BA265C /* JSONAPI.m in Sources */,
 				EE14AA411DE5419D00E152AD /* AppDelegate.m in Sources */,
-				1F368B0C21BE3B7000F8B44D /* NSString+CSSafeAccess.m in Sources */,
 				EE14AA3E1DE5419D00E152AD /* main.m in Sources */,
 				1F16AE9A212D191D00BA265C /* SDWebImageCompat.m in Sources */,
 				1F368A8B21BE3A0A00F8B44D /* UIWordListViewController.m in Sources */,
@@ -2690,6 +2724,7 @@
 		EE14AA671DE5419E00E152AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2710,6 +2745,7 @@
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/testDemo";
 				PRODUCT_BUNDLE_IDENTIFIER = com.model.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2721,6 +2757,7 @@
 		EE14AA681DE5419E00E152AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2741,6 +2778,7 @@
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/testDemo";
 				PRODUCT_BUNDLE_IDENTIFIER = com.model.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

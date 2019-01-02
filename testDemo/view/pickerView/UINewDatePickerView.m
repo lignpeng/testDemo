@@ -1,12 +1,12 @@
 //
-//  CSNewDatePickerView.m
+//  UINewDatePickerView.m
 //  CSMBP
 //
 //  Created by lignpeng on 2017/7/28.
 //   
 //
 
-#import "CSNewDatePickerView.h"
+#import "UINewDatePickerView.h"
 #import "Masonry.h"
 #import "NSDate+Display.h"
 #import "NSDate+CSCalendar.h"
@@ -27,7 +27,7 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 #define kYearInt [self yearFromRow: [self.pickerView selectedRowInComponent:myYearComponent]]
 #define kMonthInt [self monthFromRow: [self.pickerView selectedRowInComponent:myMonthComponent]]
 
-@interface CSNewDatePickerView()<UIPickerViewDelegate,UIPickerViewDataSource>{
+@interface UINewDatePickerView()<UIPickerViewDelegate,UIPickerViewDataSource>{
     NSDate *_presentDate, *_minDate, *_maxDate;
     NSInteger myYearComponent, myMonthComponent, myDayComponent;
     CGFloat myYearWidth, myMonthWidth, myDayWidth;
@@ -48,20 +48,20 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 @property(nonatomic, assign) BOOL noDayColumns;
 @property(nonatomic, strong) NSString *customFlag;
 
-@property(nonatomic, assign) BOOL isNewFlihtBooking;//新版预定流用属性
+@property(nonatomic, assign) BOOL isNewFlihtBooking;//新版
 
 @end
 
-@implementation CSNewDatePickerView
+@implementation UINewDatePickerView
 
 + (instancetype)datePickerView {
-    CSNewDatePickerView *view = [[CSNewDatePickerView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UINewDatePickerView *view = [[UINewDatePickerView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [view show];
     return view;
 }
 
 + (instancetype)datePickerViewWithPresentDate:(NSDate *)presentDate andMinDate:(NSDate *)minDate andMaxDate:(NSDate *)maxDate andTitle:(NSString *)title andFlag:(NSString *)aFlag complishBlock:(void (^)(NSDate *, NSString *))complishBlock {
-    CSNewDatePickerView *view = [self datePickerView];
+    UINewDatePickerView *view = [self datePickerView];
     view.complishBlock = complishBlock;
     if(!presentDate) {
         presentDate = [[NSDate date] dateByAddingTimeInterval:(24*3600l)];
@@ -78,7 +78,7 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 
 + (instancetype)datePickerViewWithPresentDate:(NSDate *)presentDate andMinDate:(NSDate *)minDate andMaxDate:(NSDate *)maxDate andFlag:(NSString *)aFlag isNewFlightBooking:(BOOL)isNewFlightBooking complishBlock:(void(^)(NSDate *aDate, NSString *aFlag))complishBlock {
     
-    CSNewDatePickerView *view = [self datePickerView];
+    UINewDatePickerView *view = [self datePickerView];
     view.isNewFlihtBooking = isNewFlightBooking;
     view.complishBlock = complishBlock;
     if(!presentDate) {
@@ -96,8 +96,8 @@ static const CGFloat kPickerViewHeight = 42.0f;//选择器高度
 + (void)dissmiss {
     UIWindow *windowView = [[UIApplication sharedApplication] keyWindow];
     for (UIView *subView in windowView.subviews) {
-        if ([subView isMemberOfClass:[CSNewDatePickerView class]]) {
-            [(CSNewDatePickerView *)subView dismiss];
+        if ([subView isMemberOfClass:[UINewDatePickerView class]]) {
+            [(UINewDatePickerView *)subView dismiss];
         }
     }
 }

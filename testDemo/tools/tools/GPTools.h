@@ -19,8 +19,7 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 @interface GPTools : NSObject
 
 //获取当前控制器
-//+ (UIViewController *)getCurrentVC;
-+ (UIViewController *)getCurrentViewController;
++ (UIViewController *_Nullable)getCurrentViewController;
 
 + (void)ShowAlert:(NSString *)message;
 + (void)ShowAlertView:(NSString *)message alertHandler:(AlertViewHandler)handle;
@@ -34,6 +33,6 @@ typedef void(^AlertViewClickedIndex)(NSInteger clickedIndex);
 
 //创建按钮
 + (UIButton *)createButton:(NSString *)title titleFont:(UIFont *)titleFont corner:(CGFloat)radius target:(nullable id)target action:(SEL _Nonnull )selector;
-+ (UIButton *)colorButton:(NSString *)title titleFont:(UIFont *)titleFont isColor:(BOOL)isColor corner:(CGFloat)radius target:(nullable id)target action:(SEL _Nonnull )selector;
++ (UIButton *_Nullable)colorButton:(NSString *_Nullable)title titleFont:(UIFont *_Nullable)titleFont isColor:(BOOL)isColor corner:(CGFloat)radius target:(nullable id)target action:(SEL _Nonnull )selector;
 
 @end

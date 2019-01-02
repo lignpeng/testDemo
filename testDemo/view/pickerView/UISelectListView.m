@@ -1,12 +1,12 @@
 //
-//  CSSelectListView.m
+//  UISelectListView.m
 //  testDemo
 //
 //  Created by lignpeng on 2017/9/5.
 //  Copyright © 2017年 genpeng. All rights reserved.
 //
 
-#import "CSSelectListView.h"
+#import "UISelectListView.h"
 #import "Masonry.h"
 
 #define viewAlpha 0.1
@@ -14,9 +14,9 @@
 #define cellHeight 42
 #define tableviewWidht 180
 
-static CSSelectListView *g_SelectListView;
+static UISelectListView *g_SelectListView;
 
-@interface CSSelectListView()<UITableViewDelegate, UITableViewDataSource>
+@interface UISelectListView()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) CGSize preferredContentSize;
@@ -26,14 +26,14 @@ static CSSelectListView *g_SelectListView;
 
 @end
 
-@implementation CSSelectListView
+@implementation UISelectListView
 
 + (void)showSelectListViewWithDataSoucre:(NSArray *)dataSource SourceRect:(CGRect)sourceRect delegate:(UIViewController *)delegate complishBlock:(void(^)(NSString *str))complishBlock {
     [self removeSelectListView:delegate];
     if (dataSource.count <= 0) {
         return;
     }
-    CSSelectListView *view = [CSSelectListView new];
+    UISelectListView *view = [UISelectListView new];
     view.dataSource = dataSource;
     view.delegate = delegate;
     view.complishBlock = complishBlock;
@@ -42,21 +42,21 @@ static CSSelectListView *g_SelectListView;
 
 + (void)showSelectListViewWithSourceRect:(CGRect)sourceRect delegate:(UIViewController *)delegate complishBlock:(void(^)(NSString *str))complishBlock {
     [self removeSelectListView:delegate];
-    CSSelectListView *view = [CSSelectListView new];
+    UISelectListView *view = [UISelectListView new];
     view.delegate = delegate;
     view.complishBlock = complishBlock;
     [view showWithSourceRect:sourceRect];
 }
 
 + (void)showSelectListViewWithSourceRect:(CGRect )sourceRect {
-    CSSelectListView *view = [CSSelectListView new];
+    UISelectListView *view = [UISelectListView new];
     [view showWithSourceRect:sourceRect];
 }
 
 + (void)removeSelectListView:(UIViewController *)delegate {
     NSArray *subViews = delegate.view.subviews;
     for (UIView *view in subViews) {
-        if ([view isKindOfClass:[CSSelectListView class]]) {
+        if ([view isKindOfClass:[UISelectListView class]]) {
             [view removeFromSuperview];
         }
     }
@@ -66,7 +66,7 @@ static CSSelectListView *g_SelectListView;
     return g_SelectListView != nil;
 }
 
-+ (void)showSelectListView:(CSSelectListView *)selectListView {
++ (void)showSelectListView:(UISelectListView *)selectListView {
     g_SelectListView = selectListView;
     [selectListView show];
 }
@@ -90,7 +90,7 @@ static CSSelectListView *g_SelectListView;
 - (void)showWithSourceRect:(CGRect )sourceRect {
     [self updateData];
     [self updateViewWithSourceRect:sourceRect];
-    [CSSelectListView showSelectListView:self];
+    [UISelectListView showSelectListView:self];
 }
 
 - (void)updateViewWithSourceRect:(CGRect )sourceRect {

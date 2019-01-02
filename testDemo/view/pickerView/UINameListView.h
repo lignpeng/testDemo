@@ -1,5 +1,5 @@
 //
-//  CSAirNameListView.h
+//  UINameListView.h
 //
 //  Created by lignpeng on 2017/7/26.
 //
@@ -8,7 +8,7 @@
 
 typedef void(^AirNameListBlock)(NSInteger index, NSString *name);
 
-@interface CSAirNameListView : UIView
+@interface UINameListView : UIView
 
 @property(nonatomic, copy) AirNameListBlock complishBlock;
 

@@ -11,14 +11,6 @@
 
 @implementation GPTools
 
-//+ (UIViewController *)getCurrentVC {
-//    UIViewController *baseVC = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-//    if (baseVC.presentedViewController) {
-//        return  [baseVC.presentedViewController isKindOfClass:[UINavigationController class]] ? ((UINavigationController *)baseVC.presentedViewController).topViewController : baseVC.presentedViewController;
-//    }
-//    return baseVC;
-//}
-
 + (UIViewController *)getCurrentViewController {
     UIViewController *result = nil;
     UIWindow * window = [[UIApplication sharedApplication] keyWindow];

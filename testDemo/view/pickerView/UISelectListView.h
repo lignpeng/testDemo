@@ -1,5 +1,5 @@
 //
-//  CSSelectListView.h
+//  UISelectListView.h
 //  testDemo
 //
 //  Created by lignpeng on 2017/9/5.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSSelectListView : UIView
+@interface UISelectListView : UIView
 
 @property(nonatomic, copy) void (^actionBlock)(NSString *str);
 
