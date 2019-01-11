@@ -15,7 +15,9 @@
 @interface GGRouterModel : JSONModel
 
 @property(nonatomic, strong) NSString *version;
-@property(nonatomic, strong) NSArray<GGComponentModel> *componentList;
+@property(nonatomic, strong) NSMutableArray<GGComponentModel> *componentList;
+
++ (instancetype)routerModel;
 
 @end
 
@@ -28,6 +30,10 @@
 @property(nonatomic, strong) NSString *info;
 @property(nonatomic, strong) NSDictionary *actions;//实例对象方法
 @property(nonatomic, strong) NSDictionary *classActions;//类方法
+@property(nonatomic, strong) NSString *patch;//配置组件文件名，实现分散化
+
+- (BOOL)canUsePatch;
++ (instancetype)componentModel:(NSString *)patch;
 @end
 
 @interface GGRouterUrl : NSObject
@@ -36,7 +42,6 @@
 @property(nonatomic, strong) NSString *scheme;
 @property(nonatomic, strong) NSMutableArray *actions;
 @property(nonatomic, strong) NSMutableArray *classActions;
-//@property(nonatomic, strong) NSDictionary *param;
 
 //创建urll对象
 /*

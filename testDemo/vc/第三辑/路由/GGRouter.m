@@ -41,8 +41,8 @@ static GGRouter *g_Router;
 
 //启动路由
 + (void)startRouter {
-    GGRouter *router = [GGRouter ggRouter];
-    [router loadRegisterData];
+//    GGRouter *router = [GGRouter ggRouter];
+//    [router loadRegisterData];
 }
 
 + (void)removeValue {
@@ -141,15 +141,13 @@ static GGRouter *g_Router;
     if (![target respondsToSelector:selector]) {
         return nil;
     }
-    id obj;
+    id obj = nil;
     NSArray *param = [self.params objectForKey:key];
     if (![param isKindOfClass:[NSArray class]]) {
         if (param) {
             obj =  objc_msgSend(target,selector,param);
-            return obj;
-        }else {
-            return nil;
         }
+        return obj;
     }
     if (param.count == 0  && [self paramNums:actionStr] == 0) {
         obj =  objc_msgSend(target,selector);
@@ -316,7 +314,7 @@ static NSString *extractStructName(NSString *typeEncodeString) {
 }
 
 - (void)loadRegisterData {
-//    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GGTestModelData" ofType:@"json" inDirectory:@"Resource/data"]];
+    //    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GGTestModelData" ofType:@"json" inDirectory:@"Resource/data"]];
     NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"routerRegister" ofType:@"json" inDirectory:@"Resource/routerData"]];
     if (data == nil) {
         return;
@@ -334,7 +332,7 @@ static NSString *extractStructName(NSString *typeEncodeString) {
 
 - (GGRouterModel *)routerModel {
     if (!_routerModel) {
-        _routerModel = [GGRouterModel new];
+        _routerModel = [GGRouterModel routerModel];
     }
     return _routerModel;
 }

@@ -9,15 +9,84 @@
 #import "GGRouterModel.h"
 
 @implementation GGRouterModel
-    
+
++ (instancetype)routerModel {
+    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"routerRegister" ofType:@"json" inDirectory:@"Resource/routerData"]];
+    if (data == nil) {
+        return [GGRouterModel new];
+    }
+    NSError *error;
+    id  dic  = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    if (error) {
+        return [GGRouterModel new];
+    }
+    GGRouterModel *routerModel = [[GGRouterModel alloc] initWithDictionary:dic error:&error];
+    if (error) {
+        NSLog(error);
+        return [GGRouterModel new];
+    }
+    [routerModel patchModel];
+    return routerModel;
+}
+
+- (void)patchModel {
+    NSMutableArray *removeArray = [NSMutableArray array];
+    NSMutableArray *addArray = [NSMutableArray array];
+    for (GGComponentModel *model in self.componentList) {
+        if ([model canUsePatch]) {
+            [removeArray addObject:model];
+            GGComponentModel *compModel = [GGComponentModel componentModel:model.patch];
+            if (compModel) {
+                [addArray addObject:compModel];
+            }
+        }
+    }
+    if (removeArray.count > 0) {
+        [self.componentList removeObjectsInArray:removeArray];
+    }
+    if (addArray.count > 0) {
+        [self.componentList addObjectsFromArray:addArray];
+    }
+}
+
 + (BOOL)propertyIsOptional:(NSString*)propertyName {
     return YES;
 }
-    
+
 @end
 
 @implementation GGComponentModel
+
++ (instancetype)componentModel:(NSString *)patch {
+    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:patch ofType:@"json" inDirectory:@"Resource/routerData"]];
+    if (data == nil) {
+        return nil;
+    }
+    NSError *error;
+    id  dic  = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    if (error) {
+        return nil;
+    }
+    GGComponentModel *compModel = [[GGComponentModel alloc] initWithDictionary:dic error:&error];
+    if (error) {
+        NSLog(error);
+        return nil;
+    }
+    return compModel;
+}
+
+- (BOOL)canUsePatch {
+    if (self.patch.length == 0 || self.url.length > 0) {
+        return NO;
+    }
     
+    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:self.patch ofType:@"json" inDirectory:@"Resource/routerData"]];
+    if (data == nil) {
+        return NO;
+    }
+    return YES;
+}
+
 + (BOOL)propertyIsOptional:(NSString*)propertyName {
     return YES;
 }
