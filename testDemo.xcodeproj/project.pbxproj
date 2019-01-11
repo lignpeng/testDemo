@@ -15,6 +15,7 @@
 		1F03624F1E0D0D5A00BD804A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F03624E1E0D0D5A00BD804A /* SystemConfiguration.framework */; };
 		1F0362511E0D0D6100BD804A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0362501E0D0D6100BD804A /* QuartzCore.framework */; };
 		1F0362531E0D0D6700BD804A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0362521E0D0D6700BD804A /* UIKit.framework */; };
+		1F08884321E304C700372EB3 /* GGRouterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F08884221E304C700372EB3 /* GGRouterModel.m */; };
 		1F1043EC21D47ED400E08B7E /* UIDataModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1043EB21D47ED400E08B7E /* UIDataModelViewController.m */; };
 		1F1043F321D47FE900E08B7E /* DataJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1043EF21D47FE900E08B7E /* DataJsonModel.m */; };
 		1F1043F421D47FE900E08B7E /* DataYYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1043F221D47FE900E08B7E /* DataYYModel.m */; };
@@ -241,6 +242,7 @@
 		1F3865C221DC9394001D6C0A /* NSDate+Display.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865B021DC9394001D6C0A /* NSDate+Display.m */; };
 		1F3865C321DC9394001D6C0A /* CSManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865B321DC9394001D6C0A /* CSManagerTest.m */; };
 		1F3865C421DC9394001D6C0A /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865B421DC9394001D6C0A /* HexColor.m */; };
+		1F3865D721E2EE80001D6C0A /* GGRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3865D621E2EE80001D6C0A /* GGRouter.m */; };
 		1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */; };
 		1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */; };
 		1F4DBC031E4C6A8A00374EA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */; };
@@ -321,6 +323,8 @@
 		1F03624E1E0D0D5A00BD804A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1F0362501E0D0D6100BD804A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1F0362521E0D0D6700BD804A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1F08884121E304C700372EB3 /* GGRouterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGRouterModel.h; sourceTree = "<group>"; };
+		1F08884221E304C700372EB3 /* GGRouterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRouterModel.m; sourceTree = "<group>"; };
 		1F1043EA21D47ED400E08B7E /* UIDataModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDataModelViewController.h; sourceTree = "<group>"; };
 		1F1043EB21D47ED400E08B7E /* UIDataModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDataModelViewController.m; sourceTree = "<group>"; };
 		1F1043EF21D47FE900E08B7E /* DataJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataJsonModel.m; sourceTree = "<group>"; };
@@ -779,6 +783,8 @@
 		1F3865B321DC9394001D6C0A /* CSManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSManagerTest.m; sourceTree = "<group>"; };
 		1F3865B421DC9394001D6C0A /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColor.m; sourceTree = "<group>"; };
 		1F3865B521DC9394001D6C0A /* GGMacors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMacors.h; sourceTree = "<group>"; };
+		1F3865D521E2EE80001D6C0A /* GGRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGRouter.h; sourceTree = "<group>"; };
+		1F3865D621E2EE80001D6C0A /* GGRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRouter.m; sourceTree = "<group>"; };
 		1F4DBBFE1E4C6A6500374EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -881,6 +887,15 @@
 				1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F08884021E304A600372EB3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1F08884121E304C700372EB3 /* GGRouterModel.h */,
+				1F08884221E304C700372EB3 /* GGRouterModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		1F1043ED21D47EDD00E08B7E /* 数据解析 */ = {
@@ -1616,6 +1631,7 @@
 		1F368A0521BE3A0900F8B44D /* 第三辑 */ = {
 			isa = PBXGroup;
 			children = (
+				1F3865D421E2EE4B001D6C0A /* 路由 */,
 				1F1043ED21D47EDD00E08B7E /* 数据解析 */,
 				1F368B2521BE50B000F8B44D /* 图案裁剪 */,
 				1F368A5B21BE3A0A00F8B44D /* 短信 */,
@@ -2014,6 +2030,16 @@
 			path = date;
 			sourceTree = "<group>";
 		};
+		1F3865D421E2EE4B001D6C0A /* 路由 */ = {
+			isa = PBXGroup;
+			children = (
+				1F3865D521E2EE80001D6C0A /* GGRouter.h */,
+				1F3865D621E2EE80001D6C0A /* GGRouter.m */,
+				1F08884021E304A600372EB3 /* model */,
+			);
+			path = "路由";
+			sourceTree = "<group>";
+		};
 		1FBC475E2136419F00C203B7 /* JPImageresizerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2395,6 +2421,7 @@
 				1F368AA221BE3A0A00F8B44D /* WKWebViewJavascriptBridge.m in Sources */,
 				1F16AE5C212D189900BA265C /* LGPhotoPickerViewController.m in Sources */,
 				1F3865BA21DC9394001D6C0A /* UIViewController+BackButtonHandler.m in Sources */,
+				1F3865D721E2EE80001D6C0A /* GGRouter.m in Sources */,
 				1F368A9C21BE3A0A00F8B44D /* CSUtils.m in Sources */,
 				1F3865BF21DC9394001D6C0A /* NSSet+CSSafeAccess.m in Sources */,
 				1F368A9321BE3A0A00F8B44D /* GGMLViewController.m in Sources */,
@@ -2467,6 +2494,7 @@
 				1F368A7E21BE3A0A00F8B44D /* CSVIPDayADsView.m in Sources */,
 				1F368A6A21BE3A0A00F8B44D /* SelectPanViewController.m in Sources */,
 				1F368A8921BE3A0A00F8B44D /* GPKeyBoardTableViewCell.m in Sources */,
+				1F08884321E304C700372EB3 /* GGRouterModel.m in Sources */,
 				1F16AE58212D189900BA265C /* LGPhotoPickerDatas.m in Sources */,
 				1F16ADB4212BFBD700BA265C /* UIViewController+MemoryLeak.m in Sources */,
 				1F16ADB1212BFBD700BA265C /* UIPageViewController+MemoryLeak.m in Sources */,
@@ -2731,6 +2759,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XY856E7G8;
 				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo",
@@ -2741,6 +2770,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/testDemo",
 					"$(PROJECT_DIR)/testDemo/第三方框架",
+					"$(PROJECT_DIR)/testDemo/view",
+					"$(PROJECT_DIR)/testDemo/vc",
+					"$(PROJECT_DIR)/testDemo/tools",
 				);
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2750,7 +2782,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/testDemo";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/testDemo $(PROJECT_DIR)/testDemo/第三方框架 $(PROJECT_DIR)/testDemo/vc $(PROJECT_DIR)/testDemo/view $(PROJECT_DIR)/testDemo/tools";
 			};
 			name = Debug;
 		};
@@ -2764,6 +2796,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5XY856E7G8;
 				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testDemo",
@@ -2774,6 +2807,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/testDemo",
 					"$(PROJECT_DIR)/testDemo/第三方框架",
+					"$(PROJECT_DIR)/testDemo/view",
+					"$(PROJECT_DIR)/testDemo/vc",
+					"$(PROJECT_DIR)/testDemo/tools",
 				);
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2783,7 +2819,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/testDemo";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/testDemo $(PROJECT_DIR)/testDemo/第三方框架 $(PROJECT_DIR)/testDemo/vc $(PROJECT_DIR)/testDemo/view $(PROJECT_DIR)/testDemo/tools";
 			};
 			name = Release;
 		};

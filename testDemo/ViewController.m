@@ -18,7 +18,7 @@
 #import "UIEditTextFieldView.h"
 #import "GPTools.h"
 #import "UIClipImageViewController.h"
-
+#import "GGRouter.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -99,7 +99,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    [GGRouter startRouter];
     [self initView];
 //    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
 }
@@ -187,6 +187,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    [GGRouter openUrl:@"scheme://dataModel"];
+//    scheme://dataModel/classAction=create#action=add&&action=sum
+    [GGRouter openUrl:@"scheme://dataModel/classAction=class#action=action&&action=sum"];
+    return;
+    
     UIViewController *vc = [[NSClassFromString(self.vcArray[self.vcArray.count - 1 - indexPath.row]) alloc] init];
     vc.title = self.vcTitleArray[self.vcTitleArray.count - 1 -indexPath.row];
 //    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];

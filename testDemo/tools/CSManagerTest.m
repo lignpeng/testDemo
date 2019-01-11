@@ -165,8 +165,8 @@
         
         NSLog(@"[%d]methodName : %@", i, methodName);
         
-        IMP imp = method_getImplementation(method);
-        imp();
+//        IMP imp = method_getImplementation(method);
+//        imp();
     }
     free(methods);
 }

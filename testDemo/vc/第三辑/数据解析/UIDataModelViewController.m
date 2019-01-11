@@ -20,6 +20,11 @@
 
 @implementation UIDataModelViewController
 
++ (instancetype)create {
+    UIDataModelViewController *vc = [UIDataModelViewController new];
+    return vc;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
@@ -88,16 +93,19 @@
     
     NSDictionary *json = (NSDictionary *)jsonWallet.accMsg.accNoList[0];
     BankCardJsonModel *model1 = [[BankCardJsonModel alloc] initWithDictionary:json error:nil];
-    NSArray *array = [jsonWallet getAllProperties];
-    NSLog(@"mm %@",model1.bankName);
+//    NSLog(@"mm %@",model1.bankName);
     
     BankCardJsonModel *model2 = [model1 copy];//使用jsonmodel，可以直接使用这个方法
     model2.bankName = @"111111";
     BankCardJsonModel *model3 = [model1 modelCopy];//yymodel的方法
-//    model3.bankName = @"2222222";
+    model3.bankName = @"2222222";
     NSLog(@"1 = %p 2 = %p 3 = %p",model1,model2,model3);
     
     NSLog(@"1 = %@ 2 = %@ 3 = ",model1.bankName,model2.bankName);
+    NSString *value = @"5092";
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"accId = %@",value];
+    NSArray *filterArray = [jsonWallet.accMsg.accNoList filteredArrayUsingPredicate:pre];
+    NSLog(@"%@",filterArray);
 
 }
 
@@ -112,7 +120,7 @@
     if ([dic isKindOfClass:[NSDictionary class]]) {
         NSLog(@"yes");
     }
-    NSLog(@"%@",dic);
+//    NSLog(@"%@",dic);
     [self showString:@[@"yes",dic]];
     return dic;
 }

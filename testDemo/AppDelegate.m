@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GGRouter.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [GGRouter startRouter];
+//    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"routerRegister" ofType:@"json" inDirectory:@"Resource/Data"]];
+//    NSError *error;
     return YES;
 }
 

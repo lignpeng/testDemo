@@ -96,8 +96,8 @@
         if ([methodName hasSuffix:@":"]) {
             break;
         }
-        IMP imp = method_getImplementation(method);
-        imp();
+//        IMP imp = method_getImplementation(method);
+//        imp();
             //        NSLog(@"[%d]methodArgs : %@", i, methodArgs);
             //        NSLog(@"[%d]methodType : %@\n\n", i, methodType);
             //        if ([CSLoginUserManager respondsToSelector:NSSelectorFromString(methodName)]) {

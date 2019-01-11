@@ -11,7 +11,8 @@
 
 @interface UIDataModelViewController : UIViewController
 
-
++ (instancetype)create;
+- (void)action;
 
 @end
 

@@ -1,0 +1,18 @@
+{
+    "version":"1.0.0",
+    "componentList":[
+        {
+            "url":"dataModel",
+            "name":"数据解析",
+            "classType":"UIViewController",
+            "className":"UIDataModelViewController",
+            "info":"**用法描述**",
+            "actions":{
+                "action":"action"
+                },
+            "classActions":{
+                "class":"create",
+            }
+        }
+    ]
+}
