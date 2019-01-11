@@ -116,9 +116,9 @@ static GGRouter *g_Router;
     //执行实例方法
     for (NSString *item in routerUrl.actions) {
         NSString *actionStr = [model.actions objectForKey:item];
-        obj = [self runInstanceMethod:obj key:item action:actionStr];
+        id value = [self runInstanceMethod:obj key:item action:actionStr];
         if (obj) {
-            [resultParams setValue:obj forKey:item];
+            [resultParams setValue:value forKey:item];
         }
     }
     

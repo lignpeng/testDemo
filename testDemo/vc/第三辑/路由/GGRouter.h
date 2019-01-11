@@ -43,6 +43,8 @@
  3、complishBlock：执行完后，调用complishBlock，返回info
  1）info：@{“status”：YES/NO，“key”：value}；key是url里的方法，value是方法执行后的结果
  一定会返回status，但不一定会有key-value
+ 2）类方法的返回值默认作为实例对象
+ 3）实例对象方法的返回值作为value
  */
 + (void)openUrl:(NSString *)url;
 + (void)openUrl:(NSString *)url complish:(void(^)(NSDictionary *info))complishBlock;
