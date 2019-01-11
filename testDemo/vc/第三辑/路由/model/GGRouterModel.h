@@ -36,17 +36,17 @@
 @property(nonatomic, strong) NSString *scheme;
 @property(nonatomic, strong) NSMutableArray *actions;
 @property(nonatomic, strong) NSMutableArray *classActions;
-@property(nonatomic, strong) NSDictionary *param;
+//@property(nonatomic, strong) NSDictionary *param;
 
 //创建urll对象
 /*
  url: scheme://dataModel/classAction=create#action=add&&action=sum
  dataModel：组件名
  classAction：表示类方法
- classAction=create：调用create类方法
+ classAction=create：create为类方法的key，根据key获取对应的类方法
  #：分割类方法、实例方法
  action：表示实例对象方法
- action=add&&action=sum：依次调用add、sum实例方法
+ action=add&&action=sum：add、sum实例方法的key，依次调用add、sum指向的实例方法
  */
 
 + (instancetype)routerUrlWithUrl:(NSString *)url;

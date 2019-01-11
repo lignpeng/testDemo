@@ -41,7 +41,7 @@ static NSString *kActionValue = @"=";
  classAction=create：create为类方法的key，根据key获取对应的类方法
  #：分割类方法、实例方法
  action：表示实例对象方法
- action=add&&action=sum：add、sum实例方法的xkey，依次调用add、sum指向的实例方法
+ action=add&&action=sum：add、sum实例方法的key，依次调用add、sum指向的实例方法
  */
 + (instancetype)routerUrlWithUrl:(NSString *)url {
     GGRouterUrl *routerUrl = [GGRouterUrl new];
@@ -84,9 +84,12 @@ static NSString *kActionValue = @"=";
 //解析类方法
 - (void)configClassAction:(NSString *)actionStr {
     [self.classActions removeAllObjects];
-    NSArray *array = [actionStr componentsSeparatedByString:[NSString stringWithFormat:@"%@%@",kClassAction,kActionValue]];
-    if (array.count > 0) {
-        [self.classActions addObjectsFromArray:array];
+    NSArray *actionArray = [actionStr componentsSeparatedByString:kSeparatorMethod];
+    for (NSString *subStr in actionArray) {
+        NSArray *array = [subStr componentsSeparatedByString:[NSString stringWithFormat:@"%@%@",kClassAction,kActionValue]];
+        if (array.count > 0) {
+            [self.classActions addObjectsFromArray:array];
+        }
     }
 }
 

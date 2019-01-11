@@ -128,7 +128,7 @@
 
 - (void)guideAction {
 //    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
-//    [UINameListPickerView nameListPickerView];
+    [UINameListPickerView nameListPickerView];
     NSLog(@"***-------------***");
 //    [UINameListPickerView nameListPickerView:^(NSInteger section, NSInteger index, NSString *name) {
 //        NSLog(@"section = %ld index = %ld name = %@",(long)section,(long)index,name);
@@ -189,7 +189,17 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 //    [GGRouter openUrl:@"scheme://dataModel"];
 //    scheme://dataModel/classAction=create#action=add&&action=sum
-    [GGRouter openUrl:@"scheme://dataModel/classAction=class#action=action&&action=sum"];
+    NSString *scheme = @"scheme://dataModel/classAction=add&&classAction=fun";
+//    NSDictionary *param = @{@"add":@[@"mm",@"dd"],@"fun":@[@"hello"]};
+////    [GGRouter openUrl:scheme param:param];
+//    [GGRouter openUrl:scheme param:param complish:^(NSDictionary *info) {
+//        NSLog(@"info = %@",info);
+    
+    scheme = @"scheme://guideView/classAction=show";
+    [GGRouter openUrl:scheme param:@{@"show":@(YES)} complish:^(NSDictionary *info) {
+        NSLog(@"info = %@",info);
+    }];
+    
     return;
     
     UIViewController *vc = [[NSClassFromString(self.vcArray[self.vcArray.count - 1 - indexPath.row]) alloc] init];

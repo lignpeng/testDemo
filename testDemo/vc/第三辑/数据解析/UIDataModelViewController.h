@@ -14,5 +14,9 @@
 + (instancetype)create;
 - (void)action;
 
++ (NSString *)fun:(NSString *)name;
+
++ (NSString *)add:(NSString *)str1 with:(NSString *)str2;
+
 @end
 

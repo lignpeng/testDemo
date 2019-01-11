@@ -12,7 +12,22 @@
                 },
             "classActions":{
                 "class":"create",
+                "add":"add:with:",
+                "fun":"fun:"
+            }
+        },
+        {
+            "url":"guideView",
+            "name":"数据解析",
+            "classType":"UIView",
+            "className":"UINameListPickerView",
+            "info":"**用法描述**",
+            "actions":{
+            },
+            "classActions":{
+                "show":"nameListPickerView"
             }
         }
+        
     ]
 }

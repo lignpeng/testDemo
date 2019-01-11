@@ -18,7 +18,8 @@ static GGRouter *g_Router;
 
 @property(nonatomic, strong) GGRouterModel *routerModel;
 @property(nonatomic, copy) void (^complishBlock)(NSDictionary *info);
-    
+@property(nonatomic, strong) NSDictionary *params;
+
 @end
 
 
@@ -44,26 +45,34 @@ static GGRouter *g_Router;
     [router loadRegisterData];
 }
 
-//url: scheme://dataModel/action
++ (void)removeValue {
+    GGRouter *router = [GGRouter ggRouter];
+    router.params = nil;
+    router.complishBlock = nil;
+//    router.routerModel = nil;
+}
+
 + (void)openUrl:(NSString *)url {
+    [self openUrl:url param:nil complish:nil];
+}
+    
++ (void)openUrl:(NSString *)url complish:(void(^)(NSDictionary *info))complishBlock {
+    [self openUrl:url param:nil complish:complishBlock];
+}
+    
++ (void)openUrl:(NSString *)url param:(NSDictionary *)params {
+    [self openUrl:url param:params complish:nil];
+}
+    
++ (void)openUrl:(NSString *)url param:(NSDictionary *)params complish:(void(^)(NSDictionary *info))complishBlock {
     GGRouterUrl *routerUrl = [GGRouterUrl routerUrlWithUrl:url];
     GGRouter *router = [GGRouter ggRouter];
+    router.complishBlock = complishBlock;
+    router.params = params;
     if(![router isRegisterComponent:routerUrl]) {
         return;
     }
     [router loadComponent:routerUrl];
-}
-    
-+ (void)openUrl:(NSString *)url complish:(void(^)(NSDictionary *info))complishBlock {
-    
-}
-    
-+ (void)openUrl:(NSString *)url param:(NSDictionary *)dic {
-    
-}
-    
-+ (void)openUrl:(NSString *)url param:(NSDictionary *)dic complish:(void(^)(NSDictionary *info))complishBlock {
-    
 }
     
 - (BOOL)isRegisterComponent:(GGRouterUrl *)routerUrl {
@@ -76,21 +85,29 @@ static GGRouter *g_Router;
     Class class = NSClassFromString(model.className);
     
     if (![class isKindOfClass:[NSObject class]]) {
-        return;
+        if (self.complishBlock) {
+            self.complishBlock(@{@"status":@(NO)});
+        }
+        return ;
     }
     
     id obj;
-    //执行类方法
+    NSMutableDictionary *resultParams = [NSMutableDictionary dictionary];
+    //没有类方法，创建默认实例对象
     if (routerUrl.classActions.count == 0) {
         obj = [[class alloc] init];
-    }else {
-        for (NSString *item in routerUrl.classActions) {
-            NSString *actionStr = [model.classActions objectForKey:item];
-            obj = [self runClassMethod:class action:actionStr];
+    }
+    
+    //执行类方法
+    for (NSString *item in routerUrl.classActions) {
+        NSString *actionStr = [model.classActions objectForKey:item];
+        obj = [self runClassMethod:class key:item action:actionStr];
+        if (obj) {
+            [resultParams setValue:obj forKey:item];
         }
     }
 
-    //1、viewController
+    //推出viewController
     if ([obj isKindOfClass:[UIViewController class]]) {
         UIViewController *cur = [GPTools getCurrentViewController];
         [cur.navigationController pushViewController:obj animated:YES];
@@ -99,12 +116,24 @@ static GGRouter *g_Router;
     //执行实例方法
     for (NSString *item in routerUrl.actions) {
         NSString *actionStr = [model.actions objectForKey:item];
-        [self runInstanceMethod:obj action:actionStr];
+        obj = [self runInstanceMethod:obj key:item action:actionStr];
+        if (obj) {
+            [resultParams setValue:obj forKey:item];
+        }
+    }
+    
+    if (self.complishBlock) {
+        if ([resultParams allKeys].count > 0) {
+            [resultParams setValue:@(YES) forKey:@"status"];
+            self.complishBlock(resultParams);
+        }else {
+            self.complishBlock(@{@"status":@(NO)});
+        }
     }
 }
 
 //执行类方法
-- (id)runClassMethod:(id)target action:(NSString *)actionStr {
+- (id)runClassMethod:(id)target key:(NSString *)key action:(NSString *)actionStr {
     if (actionStr.length == 0) {
         return nil;
     }
@@ -112,12 +141,41 @@ static GGRouter *g_Router;
     if (![target respondsToSelector:selector]) {
         return nil;
     }
-    id obj =  objc_msgSend(target,selector);
+    id obj;
+    NSArray *param = [self.params objectForKey:key];
+    if (![param isKindOfClass:[NSArray class]]) {
+        if (param) {
+            obj =  objc_msgSend(target,selector,param);
+            return obj;
+        }else {
+            return nil;
+        }
+    }
+    if (param.count == 0  && [self paramNums:actionStr] == 0) {
+        obj =  objc_msgSend(target,selector);
+    }else if(param.count == 1 && [self paramNums:actionStr] == 1){
+        obj =  objc_msgSend(target,selector,param.firstObject);
+    }else if (param.count == 2 && [self paramNums:actionStr] == 2) {
+        id (*obj_msgsend)(id, SEL, NSString *, NSString *) = (id (*)(id, SEL, NSString *, NSString *))objc_msgSend;
+        obj =  obj_msgsend(target, selector, param.firstObject, param.lastObject);
+    }
+    
     return obj;
 }
 
+- (NSInteger)paramNums:(NSString *)actionStr {
+    NSInteger num = 0;
+    for (int i = 0; i < actionStr.length; i++) {
+        NSString *subStr = [actionStr substringWithRange:NSMakeRange(i, 1)];
+        if ([subStr isEqualToString:@":"]) {
+            ++num;
+        }
+    }
+    return num;
+}
+
 //执行实例方法
-- (id)runInstanceMethod:(id)target action:(NSString *)actionStr {
+- (id)runInstanceMethod:(id)target key:(NSString *)key action:(NSString *)actionStr {
     if (actionStr.length == 0 || target == nil) {
         return nil;
     }
