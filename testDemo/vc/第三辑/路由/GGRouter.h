@@ -38,8 +38,7 @@
     @“add”:@[@"abc",@"hello"]
  }
  
- 
- 2）
+ 2）类方法的参数：最多支持传三个参数，如果只有一个参数，可以不用数组形式，直接作为value也是OK的
  
  3、complishBlock：执行完后，调用complishBlock，返回info
  1）info：@{“status”：YES/NO，“key”：value}；key是url里的方法，value是方法执行后的结果

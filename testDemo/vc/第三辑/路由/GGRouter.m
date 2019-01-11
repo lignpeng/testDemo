@@ -154,8 +154,11 @@ static GGRouter *g_Router;
     }else if(param.count == 1 && [self paramNums:actionStr] == 1){
         obj =  objc_msgSend(target,selector,param.firstObject);
     }else if (param.count == 2 && [self paramNums:actionStr] == 2) {
-        id (*obj_msgsend)(id, SEL, NSString *, NSString *) = (id (*)(id, SEL, NSString *, NSString *))objc_msgSend;
+        id (*obj_msgsend)(id, SEL, id, id) = (id (*)(id, SEL, id, id))objc_msgSend;
         obj =  obj_msgsend(target, selector, param.firstObject, param.lastObject);
+    }else if (param.count == 3 && [self paramNums:actionStr] == 3) {
+        id (*obj_msgsend)(id, SEL, id, id, id) = (id (*)(id, SEL, id, id, id))objc_msgSend;
+        obj =  obj_msgsend(target, selector, param.firstObject, param[1],param.lastObject);
     }
     
     return obj;

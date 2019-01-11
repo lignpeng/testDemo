@@ -190,14 +190,14 @@
 //    [GGRouter openUrl:@"scheme://dataModel"];
 //    scheme://dataModel/classAction=create#action=add&&action=sum
     NSString *scheme = @"scheme://dataModel/classAction=add&&classAction=fun";
-//    NSDictionary *param = @{@"add":@[@"mm",@"dd"],@"fun":@[@"hello"]};
-////    [GGRouter openUrl:scheme param:param];
-//    [GGRouter openUrl:scheme param:param complish:^(NSDictionary *info) {
-//        NSLog(@"info = %@",info);
-    
-    scheme = @"scheme://guideView/classAction=show";
-    [GGRouter openUrl:scheme param:@{@"show":@(YES)} complish:^(NSDictionary *info) {
+    NSDictionary *param = @{@"add":@[@"mm",@"dd"],@"fun":@[@"hello"]};
+//    [GGRouter openUrl:scheme param:param];
+    [GGRouter openUrl:scheme param:param complish:^(NSDictionary *info) {
         NSLog(@"info = %@",info);
+    
+//    scheme = @"scheme://guideView/classAction=show";
+//    [GGRouter openUrl:scheme param:@{@"show":@(YES)} complish:^(NSDictionary *info) {
+//        NSLog(@"info = %@",info);
     }];
     
     return;
