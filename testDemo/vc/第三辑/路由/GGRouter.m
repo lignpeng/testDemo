@@ -126,7 +126,6 @@ static GGRouter *g_Router;
         NSString *actionStr = [model.actions objectForKey:item];
         id value = [self runInstanceMethod:obj key:item action:actionStr error:&actionError];
         if (actionError) {
-            //
             [resultParams setValue:actionError forKey:item];
         }
         if (obj) {
@@ -162,8 +161,11 @@ static GGRouter *g_Router;
     }
     id obj = nil;
     NSArray *param = [self.params objectForKey:key];
+    NSInteger paramNum = [self paramNums:actionStr];
     if (![param isKindOfClass:[NSArray class]]) {
-        if ([self paramNums:actionStr] == 1) {
+        if(paramNum == 0){
+            obj =  objc_msgSend(target,selector);
+        }else if (paramNum == 1) {
             if (param) {
                 obj =  objc_msgSend(target,selector,param);
             }else {
@@ -234,11 +236,17 @@ static GGRouter *g_Router;
                 }
             }
         }else {
-            [invocation setArgument:&param atIndex:2];
+            if(paramNum == 1) {
+                [invocation setArgument:&param atIndex:2];
+            }
         }
         [invocation retainArguments];
+    }else {
+        if (paramNum != 0) {
+            [self hasError:error errorInfo:[NSString stringWithFormat:@"为方法%@提供参数不够",actionStr]];
+            return nil;
+        }
     }
-
     obj = [self runInvoke:invocation methodSignature:sig];
     return obj;
 }
