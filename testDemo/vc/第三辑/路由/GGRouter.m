@@ -96,12 +96,19 @@ static GGRouter *g_Router;
     //没有类方法，创建默认实例对象
     if (routerUrl.classActions.count == 0) {
         obj = [[class alloc] init];
+        [resultParams setObject:obj forKey:@"obj"];
     }
     
     //执行类方法
+    NSError *classError;
     for (NSString *item in routerUrl.classActions) {
         NSString *actionStr = [model.classActions objectForKey:item];
-        obj = [self runClassMethod:class key:item action:actionStr];
+        
+        obj = [self runClassMethod:class key:item action:actionStr error:&classError];
+        if (classError) {
+            //
+            [resultParams setValue:classError forKey:item];
+        }
         if (obj) {
             [resultParams setValue:obj forKey:item];
         }
@@ -114,11 +121,16 @@ static GGRouter *g_Router;
     }
     
     //执行实例方法
+    NSError *actionError;
     for (NSString *item in routerUrl.actions) {
         NSString *actionStr = [model.actions objectForKey:item];
-        id value = [self runInstanceMethod:obj key:item action:actionStr];
+        id value = [self runInstanceMethod:obj key:item action:actionStr error:&actionError];
+        if (actionError) {
+            //
+            [resultParams setValue:actionError forKey:item];
+        }
         if (obj) {
-            [resultParams setValue:value forKey:item];
+            [resultParams setValue:value?:@"" forKey:item];
         }
     }
     
@@ -132,33 +144,44 @@ static GGRouter *g_Router;
     }
 }
 
+- (void)hasError:(NSError **)error errorInfo:(NSString *)errorString {
+    NSDictionary *dic = @{NSLocalizedFailureReasonErrorKey:errorString};
+    *error = [[NSError alloc] initWithDomain:NSCocoaErrorDomain code:1024 userInfo:dic];
+}
+
 //执行类方法
-- (id)runClassMethod:(id)target key:(NSString *)key action:(NSString *)actionStr {
+- (id)runClassMethod:(id)target key:(NSString *)key action:(NSString *)actionStr error:(NSError **)error {
     if (actionStr.length == 0) {
+        [self hasError:error errorInfo:@"提供的类方法为空"];
         return nil;
     }
     SEL selector = NSSelectorFromString(actionStr);
     if (![target respondsToSelector:selector]) {
+        [self hasError:error errorInfo:[NSString stringWithFormat:@"类:'%@',没有找到此类方法：'%@'",NSStringFromClass(target),actionStr]];
         return nil;
     }
     id obj = nil;
     NSArray *param = [self.params objectForKey:key];
     if (![param isKindOfClass:[NSArray class]]) {
-        if (param) {
-            obj =  objc_msgSend(target,selector,param);
+        if ([self paramNums:actionStr] == 1) {
+            if (param) {
+                obj =  objc_msgSend(target,selector,param);
+            }else {
+                [self hasError:error errorInfo:[NSString stringWithFormat:@"类方法：'%@',提供的参数为空",actionStr]];
+            }
         }
         return obj;
     }
-    if (param.count == 0  && [self paramNums:actionStr] == 0) {
+    if ([self paramNums:actionStr] == 0) {
         obj =  objc_msgSend(target,selector);
-    }else if(param.count == 1 && [self paramNums:actionStr] == 1){
+    }else if(param.count > 0 && [self paramNums:actionStr] == 1){
         obj =  objc_msgSend(target,selector,param.firstObject);
-    }else if (param.count == 2 && [self paramNums:actionStr] == 2) {
+    }else if (param.count >= 2 && [self paramNums:actionStr] == 2) {
         id (*obj_msgsend)(id, SEL, id, id) = (id (*)(id, SEL, id, id))objc_msgSend;
-        obj =  obj_msgsend(target, selector, param.firstObject, param.lastObject);
-    }else if (param.count == 3 && [self paramNums:actionStr] == 3) {
+        obj =  obj_msgsend(target, selector, param.firstObject, param[1]);
+    }else if (param.count >= 3 && [self paramNums:actionStr] == 3) {
         id (*obj_msgsend)(id, SEL, id, id, id) = (id (*)(id, SEL, id, id, id))objc_msgSend;
-        obj =  obj_msgsend(target, selector, param.firstObject, param[1],param.lastObject);
+        obj =  obj_msgsend(target, selector, param.firstObject, param[1],param[2]);
     }
     
     return obj;
@@ -176,35 +199,47 @@ static GGRouter *g_Router;
 }
 
 //执行实例方法
-- (id)runInstanceMethod:(id)target key:(NSString *)key action:(NSString *)actionStr {
-    if (actionStr.length == 0 || target == nil) {
+- (id)runInstanceMethod:(id)target key:(NSString *)key action:(NSString *)actionStr error:(NSError **)error {
+    if (!target) {
+        [self hasError:error errorInfo:@"创建对象失败"];
+        return nil;
+    }
+    if (actionStr.length == 0) {
+        [self hasError:error errorInfo:@"提供方法为空"];
         return nil;
     }
     id obj;
     SEL selector = NSSelectorFromString(actionStr);
     if (!selector || ![target respondsToSelector:selector]) {
+        [self hasError:error errorInfo:@"找不到提供的方法"];
         return nil;
     }
-//            obj = objc_msgSend(target, selector);
-    //        if ([actionStr hasSuffix:@":"]) {
-    //            [target performSelector:action withObject:nil];
-    //        }else {
-    //            [target performSelector:action];
-    //        }
-    BOOL hasArg = NO;
+
     NSMethodSignature *sig = [target methodSignatureForSelector:selector];
     if (!sig) {
+        [self hasError:error errorInfo:@"方法签名失败"];
         return nil;
     }
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:sig];
     [invocation setTarget:target];
     [invocation setSelector:selector];
-    if (hasArg) {
-//            [invocation setArgument:&ext atIndex:2];
+    NSInteger paramNum = [self paramNums:actionStr];
+    NSArray *param = [self.params objectForKey:key];
+    if (param) {
+        if ([param isKindOfClass:[NSArray class]]) {
+            if (param.count >= paramNum && (paramNum > 0)) {
+                for (int i = 0; i < paramNum; i++) {
+                    id item = param[i];
+                    [invocation setArgument:&item atIndex:i+2];
+                }
+            }
+        }else {
+            [invocation setArgument:&param atIndex:2];
+        }
+        [invocation retainArguments];
     }
-    [invocation retainArguments];
+
     obj = [self runInvoke:invocation methodSignature:sig];
-    
     return obj;
 }
 

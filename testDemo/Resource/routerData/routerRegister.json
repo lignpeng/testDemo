@@ -8,7 +8,9 @@
             "className":"UIDataModelViewController",
             "info":"**用法描述**",
             "actions":{
-                "action":"action"
+                "action":"action",
+                "add":"add:with:",
+                "fun":"fun:"
                 },
             "classActions":{
                 "class":"create",

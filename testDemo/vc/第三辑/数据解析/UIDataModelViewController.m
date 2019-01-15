@@ -26,10 +26,18 @@
 }
 
 + (NSString *)fun:(NSString *)name {
-    return [NSString stringWithFormat:@"hello %@",name];
+    return [NSString stringWithFormat:@"hello = %@",name];
+}
+
+- (NSString *)fun:(NSString *)name {
+    return [NSString stringWithFormat:@"hello = %@",name];
 }
 
 + (NSString *)add:(NSString *)str1 with:(NSString *)str2 {
+    return [NSString stringWithFormat:@"%@ + %@ = hello",str1,str2];
+}
+
+- (NSString *)add:(NSString *)str1 with:(NSString *)str2 {
     return [NSString stringWithFormat:@"%@ + %@ = hello",str1,str2];
 }
 

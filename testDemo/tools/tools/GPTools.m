@@ -31,7 +31,7 @@
         nextResponder = appRootVC.presentedViewController;
     }else{
         //2、通过navigationcontroller弹出VC
-        NSLog(@"subviews == %@",[window subviews]);
+//        NSLog(@"subviews == %@",[window subviews]);
         UIView *frontView = [[window subviews] objectAtIndex:0];
         nextResponder = [frontView nextResponder];
     }

@@ -99,18 +99,18 @@ static NSString *kSeparatorScheme = @"/";
 static NSString *kSeparatorAction = @"#";
 static NSString *kAction = @"action";
 static NSString *kClassAction = @"classAction";
-static NSString *kSeparatorMethod = @"&&";
+static NSString *kSeparatorMethod = @"&";
 static NSString *kActionValue = @"=";
 
 @implementation GGRouterUrl
 /*
- url: scheme://dataModel/classAction=create#action=add&&action=sum
+ url: scheme://dataModel/classAction=create#action=add&action=sum
  dataModel：组件名
  classAction：表示类方法
  classAction=create：create为类方法的key，根据key获取对应的类方法
  #：分割类方法、实例方法
  action：表示实例对象方法
- action=add&&action=sum：add、sum实例方法的key，依次调用add、sum指向的实例方法
+ action=add&action=sum：add、sum实例方法的key，依次调用add、sum指向的实例方法
  */
 + (instancetype)routerUrlWithUrl:(NSString *)url {
     GGRouterUrl *routerUrl = [GGRouterUrl new];

@@ -61,7 +61,7 @@
 
 - (void)showAction {
     NSString *infoString = @"image 原大小：\n";
-    NSString *imageStr = [[NSBundle mainBundle] pathForResource:@"0021" ofType:@"jpg"];
+    NSString *imageStr = [[NSBundle mainBundle] pathForResource:@"0021" ofType:@"jpg" inDirectory:@"Resource"];
     NSData *data = [NSData dataWithContentsOfFile:imageStr];
     infoString = [infoString stringByAppendingString:[self data:data value:0]];
     infoString = [infoString stringByAppendingString:@"\n"];
@@ -81,6 +81,9 @@
     docDir = [docDir stringByAppendingString:[NSString stringWithFormat:@"/0021.%.3f.jpg",value]];
     NSLog(@"path = %@",docDir);
     [data writeToFile:docDir atomically:YES];
+//    NSString *imageStr = [[NSBundle mainBundle] pathForResource:@"0021" ofType:@"jpg" inDirectory:@"Resource"];
+    [self getFileAttributes:docDir];
+    
     return [self data:data value:value];
 }
 
@@ -95,6 +98,44 @@
     }
     NSString *str = [NSString stringWithFormat:@"%.3f，%.1f字节，%.3f%@\n",value,orgrionLenght,dataLength,typeArray[index]];
     return str;
+
 }
+//获得文件的属性 
+
+
+- (void)getFileAttributes:(NSString *)path {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:path]) {
+        return;
+    }
+    NSError *error;
+    NSDictionary *attribute = [fileManager attributesOfItemAtPath:path error:&error];
+    if (error) {
+        NSLog(@"%@", error);
+        return;
+    }
+    NSLog(@"attribute info = %@",attribute);
+    NSNumber *filesize = [attribute objectForKey:NSFileSize];
+}
+
+//
+//- (void)getFilesssAttributes:(NSString *)path { 
+//
+//
+//    if ((fileSize = [fileAttributes objectForKey:NSFileSize])) {
+//        NSLog(@"File size: %qin", [fileSize unsignedLongLongValue]);
+//    }
+//
+//    if ((creationDate = [fileAttributes objectForKey:NSFileCreationDate])) {
+//        NSLog(@"File creationDate: %@n", creationDate);
+//    }
+//
+//    if ((fileOwner = [fileAttributes objectForKey:NSFileOwnerAccountName])) {
+//        NSLog(@"Owner: %@n", fileOwner);
+//    }
+//
+//
+//    if ((fileModDate = [fileAttributes objectForKey:NSFileModificationDate])) {
+//        NSLog(@"Modification date: %@n", fileModDate);
 
 @end

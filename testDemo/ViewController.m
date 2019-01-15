@@ -189,7 +189,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 //    [GGRouter openUrl:@"scheme://dataModel"];
 //    scheme://dataModel/classAction=create#action=add&&action=sum
-    NSString *scheme = @"scheme://dataModel/classAction=add&&classAction=fun";
+    NSString *scheme = @"scheme://dataModel/action=add&action=fun&action=action";
+//    scheme = @"scheme://dataModel/action=action";
     NSDictionary *param = @{@"add":@[@"mm",@"dd"],@"fun":@[@"hello"]};
 //    [GGRouter openUrl:scheme param:param];
     [GGRouter openUrl:scheme param:param complish:^(NSDictionary *info) {
