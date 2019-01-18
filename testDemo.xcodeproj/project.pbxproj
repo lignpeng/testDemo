@@ -94,6 +94,10 @@
 		1F16AE9F212D191D00BA265C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AE8B212D191D00BA265C /* UIImageView+WebCache.m */; };
 		1F16AEA0212D191D00BA265C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AE8E212D191D00BA265C /* UIView+WebCacheOperation.m */; };
 		1F16AEA1212D191D00BA265C /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16AE92212D191D00BA265C /* UIButton+WebCache.m */; };
+		1F19995A21F0695100E1DB3C /* GGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F19995921F0695100E1DB3C /* GGWebViewController.m */; };
+		1F19996121F16A4D00E1DB3C /* GGWebMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F19996021F16A4D00E1DB3C /* GGWebMenuView.m */; };
+		1F19996421F17F3C00E1DB3C /* GGWebMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F19996321F17F3C00E1DB3C /* GGWebMenuViewCell.m */; };
+		1F19996721F1AB2300E1DB3C /* GGWebMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F19996621F1AB2300E1DB3C /* GGWebMenuModel.m */; };
 		1F2CF6951EF7638A00093C15 /* myTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6941EF7638A00093C15 /* myTests.m */; };
 		1F368A6221BE3A0A00F8B44D /* searchBarCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36895221BE3A0900F8B44D /* searchBarCustomView.m */; };
 		1F368A6321BE3A0A00F8B44D /* SearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36895421BE3A0900F8B44D /* SearchBarViewController.m */; };
@@ -489,6 +493,18 @@
 		1F16AE91212D191D00BA265C /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		1F16AE92212D191D00BA265C /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		1F16AE93212D191D00BA265C /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		1F19995321EDD2F100E1DB3C /* make_run.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = make_run.sh; sourceTree = "<group>"; };
+		1F19995421EDD2F100E1DB3C /* encrypt.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = encrypt.sh; sourceTree = "<group>"; };
+		1F19995521EDD2F100E1DB3C /* Encrypt */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = Encrypt; sourceTree = "<group>"; };
+		1F19995621EDD2F100E1DB3C /* hello.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
+		1F19995821F0695100E1DB3C /* GGWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGWebViewController.h; sourceTree = "<group>"; };
+		1F19995921F0695100E1DB3C /* GGWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGWebViewController.m; sourceTree = "<group>"; };
+		1F19995F21F16A4D00E1DB3C /* GGWebMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGWebMenuView.h; sourceTree = "<group>"; };
+		1F19996021F16A4D00E1DB3C /* GGWebMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGWebMenuView.m; sourceTree = "<group>"; };
+		1F19996221F17F3C00E1DB3C /* GGWebMenuViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGWebMenuViewCell.h; sourceTree = "<group>"; };
+		1F19996321F17F3C00E1DB3C /* GGWebMenuViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGWebMenuViewCell.m; sourceTree = "<group>"; };
+		1F19996521F1AB2300E1DB3C /* GGWebMenuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGWebMenuModel.h; sourceTree = "<group>"; };
+		1F19996621F1AB2300E1DB3C /* GGWebMenuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGWebMenuModel.m; sourceTree = "<group>"; };
 		1F2CF6921EF7638A00093C15 /* myTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F2CF6941EF7638A00093C15 /* myTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myTests.m; sourceTree = "<group>"; };
 		1F2CF6961EF7638A00093C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1236,6 +1252,40 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		1F19995121EDD2F100E1DB3C /* shell */ = {
+			isa = PBXGroup;
+			children = (
+				1F19995321EDD2F100E1DB3C /* make_run.sh */,
+				1F19995421EDD2F100E1DB3C /* encrypt.sh */,
+				1F19995521EDD2F100E1DB3C /* Encrypt */,
+				1F19995621EDD2F100E1DB3C /* hello.txt */,
+			);
+			path = shell;
+			sourceTree = "<group>";
+		};
+		1F19995721F0693200E1DB3C /* web框架 */ = {
+			isa = PBXGroup;
+			children = (
+				1F19995821F0695100E1DB3C /* GGWebViewController.h */,
+				1F19995921F0695100E1DB3C /* GGWebViewController.m */,
+				1F19995E21F16A4D00E1DB3C /* view */,
+			);
+			path = "web框架";
+			sourceTree = "<group>";
+		};
+		1F19995E21F16A4D00E1DB3C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1F19995F21F16A4D00E1DB3C /* GGWebMenuView.h */,
+				1F19996021F16A4D00E1DB3C /* GGWebMenuView.m */,
+				1F19996221F17F3C00E1DB3C /* GGWebMenuViewCell.h */,
+				1F19996321F17F3C00E1DB3C /* GGWebMenuViewCell.m */,
+				1F19996521F1AB2300E1DB3C /* GGWebMenuModel.h */,
+				1F19996621F1AB2300E1DB3C /* GGWebMenuModel.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		1F2CF6931EF7638A00093C15 /* myTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1631,6 +1681,7 @@
 		1F368A0521BE3A0900F8B44D /* 第三辑 */ = {
 			isa = PBXGroup;
 			children = (
+				1F19995721F0693200E1DB3C /* web框架 */,
 				1F3865D421E2EE4B001D6C0A /* 路由 */,
 				1F1043ED21D47EDD00E08B7E /* 数据解析 */,
 				1F368B2521BE50B000F8B44D /* 图案裁剪 */,
@@ -1793,12 +1844,12 @@
 				1F368A4921BE3A0A00F8B44D /* UILeftCollectionCell.h */,
 				1F368A4A21BE3A0A00F8B44D /* GExcelViewController.h */,
 				1F368A4B21BE3A0A00F8B44D /* ExcelCollectionViewFlowLayout.m */,
+				1F368A5121BE3A0A00F8B44D /* UIExcelCollectionCell.h */,
 				1F368A4C21BE3A0A00F8B44D /* UIExcelCollectionCell.m */,
 				1F368A4D21BE3A0A00F8B44D /* UIExcelView.m */,
 				1F368A4E21BE3A0A00F8B44D /* GExcelViewController.m */,
 				1F368A4F21BE3A0A00F8B44D /* UILeftCollectionCell.m */,
 				1F368A5021BE3A0A00F8B44D /* UIExcelTableViewCell.h */,
-				1F368A5121BE3A0A00F8B44D /* UIExcelCollectionCell.h */,
 				1F368A5221BE3A0A00F8B44D /* ExcelCollectionViewFlowLayout.h */,
 			);
 			path = "excel表";
@@ -1932,13 +1983,13 @@
 			children = (
 				1F38656621DC6B98001D6C0A /* CSPassagerPickerView.h */,
 				1F38656B21DC6B98001D6C0A /* CSPassagerPickerView.m */,
-				1F38656721DC6B98001D6C0A /* UISelectListView.h */,
-				1F38656921DC6B98001D6C0A /* UINameListView.h */,
 				1F38656A21DC6B98001D6C0A /* UINewDatePickerView.h */,
 				1F38656521DC6B98001D6C0A /* UINewDatePickerView.m */,
 				1F38656821DC6B98001D6C0A /* UINameListPickerView.h */,
 				1F38656C21DC6B98001D6C0A /* UINameListPickerView.m */,
+				1F38656721DC6B98001D6C0A /* UISelectListView.h */,
 				1F38656D21DC6B98001D6C0A /* UISelectListView.m */,
+				1F38656921DC6B98001D6C0A /* UINameListView.h */,
 				1F38656E21DC6B98001D6C0A /* UINameListView.m */,
 			);
 			path = pickerView;
@@ -2059,6 +2110,7 @@
 		EE14AA301DE5419D00E152AD = {
 			isa = PBXGroup;
 			children = (
+				1F19995121EDD2F100E1DB3C /* shell */,
 				EE14AA3B1DE5419D00E152AD /* testDemo */,
 				EE14AA551DE5419D00E152AD /* testDemoTests */,
 				EE14AA601DE5419E00E152AD /* testDemoUITests */,
@@ -2170,6 +2222,7 @@
 				1F671A6B1E7A1A5A0022AA4A /* Embed App Extensions */,
 				1FF690692105CC72003B5431 /* Embed Frameworks */,
 				1FF6906A2105CCEB003B5431 /* ShellScript */,
+				1F19994E21EDD18E00E1DB3C /* my Script */,
 			);
 			buildRules = (
 			);
@@ -2320,6 +2373,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F19994E21EDD18E00E1DB3C /* my Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "my Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
 		1FF6906A2105CCEB003B5431 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2376,6 +2448,7 @@
 				1F368A7221BE3A0A00F8B44D /* GGOneViewController.m in Sources */,
 				1F368A8F21BE3A0A00F8B44D /* BaseViewController.m in Sources */,
 				1FBC476B2136419F00C203B7 /* JPImageresizerConfigure.m in Sources */,
+				1F19995A21F0695100E1DB3C /* GGWebViewController.m in Sources */,
 				1F16AE95212D191D00BA265C /* SDWebImageDecoder.m in Sources */,
 				1F16AE98212D191D00BA265C /* UIImage+GIF.m in Sources */,
 				1F368A8821BE3A0A00F8B44D /* GPKeyBoardViewController.m in Sources */,
@@ -2439,6 +2512,7 @@
 				1FBC47692136419F00C203B7 /* UIImage+JPExtension.m in Sources */,
 				1F368AB921BE3A0A00F8B44D /* RZDBTransforms.m in Sources */,
 				1F368AC221BE3A0A00F8B44D /* CSBrowingHistoryBlankView.m in Sources */,
+				1F19996421F17F3C00E1DB3C /* GGWebMenuViewCell.m in Sources */,
 				1F368A8A21BE3A0A00F8B44D /* GPKeyBoardHeaderTableView.m in Sources */,
 				1F368A8421BE3A0A00F8B44D /* GPTimeViewController.m in Sources */,
 				1F368B3B21BE684700F8B44D /* UIRectShapeImage.m in Sources */,
@@ -2481,6 +2555,7 @@
 				1F16AE99212D191D00BA265C /* UIImage+MultiFormat.m in Sources */,
 				1F368AA421BE3A0A00F8B44D /* WebViewJavascriptBridge_JS.m in Sources */,
 				1F368ACE21BE3A0A00F8B44D /* UILeftCollectionCell.m in Sources */,
+				1F19996121F16A4D00E1DB3C /* GGWebMenuView.m in Sources */,
 				1F16AEA0212D191D00BA265C /* UIView+WebCacheOperation.m in Sources */,
 				1F368A8D21BE3A0A00F8B44D /* UIWordViewController.m in Sources */,
 				1F16AD9F212BFBD700BA265C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -2506,6 +2581,7 @@
 				1F16AE75212D191600BA265C /* DACircularProgressView.m in Sources */,
 				1F368A7621BE3A0A00F8B44D /* GPVideoViewController.m in Sources */,
 				1F3865C321DC9394001D6C0A /* CSManagerTest.m in Sources */,
+				1F19996721F1AB2300E1DB3C /* GGWebMenuModel.m in Sources */,
 				1F368AAD21BE3A0A00F8B44D /* AttributeLabelViewController.m in Sources */,
 				1F368AB521BE3A0A00F8B44D /* Person.m in Sources */,
 				1F16ADB3212BFBD700BA265C /* MLeaksMessenger.m in Sources */,

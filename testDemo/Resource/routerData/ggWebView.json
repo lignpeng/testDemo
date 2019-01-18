@@ -1,0 +1,11 @@
+{
+  "url": "ggWebView",
+  "name": "web框架",
+  "classType": "UIViewController",
+  "className": "GGWebViewController",
+  "info": "**用法描述**",
+  "actions": {},
+  "classActions": {
+    "loadUrl": "loadUrl:"
+  }
+}

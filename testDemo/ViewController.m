@@ -193,6 +193,11 @@
 //    scheme = @"scheme://dataModel/action=action";
     NSDictionary *param = @{@"add":@[@"mm",@"dd"],@"fun":@[@"hello"]};
 //    [GGRouter openUrl:scheme param:param];
+    
+    
+    scheme = @"scheme://ggWebView/classAction=loadUrl";
+//    param = @{@"loadUrl":@"https://www.cnblogs.com/someonelikeyou/p/7162613.html"};
+    param = @{@"loadUrl":@"https://www.csair.com/cn/index.shtml"};
     [GGRouter openUrl:scheme param:param complish:^(NSDictionary *info) {
         NSLog(@"info = %@",info);
     
