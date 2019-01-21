@@ -6,6 +6,7 @@
 //  Copyright © 2019年 genpeng. All rights reserved.
 //
 
+
 #import "GGWebViewController.h"
 #import <WebKit/WebKit.h>
 #import "HexColor.h"
@@ -18,9 +19,10 @@
 
 @interface GGWebViewController ()<WKNavigationDelegate>
 
-@property(nonatomic, strong) WKWebView *webView;
 @property(nonatomic, strong) NSURL *url;
+@property(nonatomic, strong) WKWebView *webView;
 @property(nonatomic, strong) WKWebViewConfiguration *webViewConfiguration;
+@property(nonatomic, strong) WKUserContentController *userConentController;
 @property(nonatomic, strong) UIProgressView *progressView;//进度条
 
 @property(nonatomic, strong) UIBarButtonItem *moreButton;
@@ -54,13 +56,13 @@
     [super viewDidLoad];
     [self bindData];
     [self initView];
-    [self showUpdateButton:NO];
 }
 
 - (void)initView {
     self.view = self.webView;
     [self.view addSubview:self.progressView];
     [self showLeftButtonHasCloseButton:NO];
+    [self showUpdateButton:NO];
 }
 
 - (void)showUpdateButton:(BOOL)isShow {
@@ -227,10 +229,13 @@
 
 - (WKWebView *)webView {
     if (!_webView) {
-        _webView = [[WKWebView alloc] init];
-        _webView.frame = [UIScreen mainScreen].bounds;
-        _webView.navigationDelegate = self;
+        _webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds configuration:self.webViewConfiguration];
+        _webView.navigationDelegate = self;//类似于UIWebView的加载成功、失败、是否允许跳转等
         
+        if ([_webView respondsToSelector:@selector(setAllowsLinkPreview:)]) {
+            _webView.allowsLinkPreview = YES;//允许链接3D touch
+        }
+        _webView.allowsBackForwardNavigationGestures = YES;//允许左滑前进，右滑返回上一个链接
     }
     return _webView;
 }
@@ -238,8 +243,16 @@
 - (WKWebViewConfiguration *)webViewConfiguration {
     if (!_webViewConfiguration) {
         _webViewConfiguration = [WKWebViewConfiguration new];
+        _webViewConfiguration.userContentController = self.userConentController;
     }
     return _webViewConfiguration;
+}
+
+- (WKUserContentController *)userConentController {
+    if (!_userConentController) {
+        _userConentController = [WKUserContentController new];
+    }
+    return _userConentController;
 }
 
 - (UIProgressView *)progressView {
