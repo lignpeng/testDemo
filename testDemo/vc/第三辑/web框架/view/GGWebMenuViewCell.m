@@ -51,18 +51,18 @@
     [self addSubview:self.label];
     [self addSubview:self.holderView];
     [self.holderView addSubview:self.imageView];
+    [self layoutIfNeeded];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGFloat margin = 2;
+    CGFloat margin = 4;
     CGRect frame = self.bounds;
     CGFloat width = CGRectGetWidth(frame) - 2*margin;
     CGRect hframe = (CGRect){margin,margin,width,width};
     self.holderView.frame = hframe;
-    CGFloat imargin = 8;
-    self.imageView.frame = (CGRect){imargin,imargin,width-imargin,width-imargin};
-    
+    CGFloat imargin = 4;
+    self.imageView.frame = (CGRect){imargin,imargin,width-2*imargin,width-2*imargin};
     CGFloat y = CGRectGetMinY(hframe)+width+margin;
     self.label.frame = (CGRect){margin, y, width, CGRectGetHeight(frame) - y - margin};
 }
@@ -81,6 +81,7 @@
     if (!_imageView) {
         _imageView = [UIImageView new];
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        _imageView.backgroundColor = [UIColor clearColor];
     }
     return _imageView;
 }

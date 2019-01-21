@@ -23,6 +23,10 @@
 @property(nonatomic, strong) WKWebViewConfiguration *webViewConfiguration;
 @property(nonatomic, strong) UIProgressView *progressView;//进度条
 
+@property(nonatomic, strong) UIBarButtonItem *moreButton;
+@property(nonatomic, strong) UIBarButtonItem *backButton;
+@property(nonatomic, strong) UIBarButtonItem *closeButton;
+
 @end
 
 @implementation GGWebViewController
@@ -56,21 +60,22 @@
 - (void)initView {
     self.view = self.webView;
     [self.view addSubview:self.progressView];
-    
-    //自定义返回按钮
-    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, kNaviHeight, kNaviHeight)];
-    [backButton setImage:[UIImage imageNamed:@"icon-right"] forState:UIControlStateNormal];
-    [backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
-    self.navigationItem.leftBarButtonItem = backItem;
+    [self showLeftButtonHasCloseButton:NO];
 }
 
 - (void)showUpdateButton:(BOOL)isShow {
     if (isShow) {
-        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"..." style:UIBarButtonItemStylePlain target:self action:@selector(moreWebAction)];
-        self.navigationItem.rightBarButtonItems = @[item];
+        self.navigationItem.rightBarButtonItems = @[self.moreButton];
     }else {
         self.navigationItem.rightBarButtonItems = nil;
+    }
+}
+
+- (void)showLeftButtonHasCloseButton:(BOOL)isShow {
+    if (isShow) {
+        self.navigationItem.leftBarButtonItems = @[self.backButton,self.closeButton];
+    }else {
+        self.navigationItem.leftBarButtonItems = @[self.backButton];
     }
 }
 
@@ -95,6 +100,10 @@
     }
 }
 
+- (void)closeAction {
+    [self dismiss];
+}
+
 - (void)dismiss {
     if (self.navigationController) {
         [self.navigationController popViewControllerAnimated:YES];
@@ -112,7 +121,6 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:kEstimatedProgress]) {
         [self updateProgressViewHasError:NO error:nil];
-//        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
     if ([keyPath isEqualToString:kWebTitle]) {
         self.title = change[@"new"];
@@ -142,11 +150,11 @@
 
 #pragma mark - web delegate
 
-//在发送请求之前，决定是否允许或取消导航。
+//在发送web请求之前的拦截，允许或取消。
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     //    NSLog(@"%s", __FUNCTION__);
     static int i = 1;
-    NSLog(@"url %d = %@" ,i,navigationAction.request.URL.absoluteString);
+    NSLog(@"url %d = %@ \n" ,i,navigationAction.request.URL.absoluteString);
     i++;
     // 如果请求的是百度地址，则允许跳转
     //    if ([navigationAction.request.URL.host.lowercaseString isEqual:@"www.baidu.com"]) {
@@ -156,7 +164,9 @@
     //    }
     decisionHandler(WKNavigationActionPolicyAllow);
     // 否则不允许跳转
-    //    decisionHandler(WKNavigationActionPolicyCancel);
+    //decisionHandler(WKNavigationActionPolicyCancel);
+    [self showLeftButtonHasCloseButton:![self.url.absoluteString isEqualToString:navigationAction.request.URL.absoluteString]];
+    
 }
 
 //开始加载web调用
@@ -164,6 +174,7 @@
     self.progressView.hidden = NO;
     [self.view bringSubviewToFront:self.progressView];
     [self showUpdateButton:NO];
+    NSLog(@"is can back == %d \n",[webView canGoBack]);
 }
 
 //web内容开始返回时调用
@@ -241,6 +252,42 @@
         _progressView.trackTintColor = [UIColor whiteColor];
     }
     return _progressView;
+}
+
+- (UIBarButtonItem *)moreButton {
+    if (!_moreButton) {
+        _moreButton = ({
+            UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"..." style:UIBarButtonItemStylePlain target:self action:@selector(moreWebAction)];
+            item.tag = 1000;
+            item;
+        });
+    }
+    return _moreButton;
+}
+
+- (UIBarButtonItem *)backButton {
+    if (!_backButton) {
+        _backButton = ({
+            //自定义返回按钮
+            UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, kNaviHeight, kNaviHeight)];
+            [backButton setImage:[UIImage imageNamed:@"icon-right"] forState:UIControlStateNormal];
+            [backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+            UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+            backItem;
+        });
+    }
+    return _backButton;
+}
+
+- (UIBarButtonItem *)closeButton {
+    if (!_closeButton) {
+        _closeButton = ({
+            UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(closeAction)];
+            item.tag = 1000;
+            item;
+        });
+    }
+    return _closeButton;
 }
 
 - (void)dealloc {

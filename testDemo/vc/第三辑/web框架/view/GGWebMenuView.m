@@ -16,7 +16,7 @@ static const CGFloat kHolderViewHeight = 250.0f;//选择器总高度
 static const CGFloat kBarViewHeight = 50.0f;//bar条高度
 static const CGFloat kTitleHeigh = 36.0f;//按钮宽度
 static const NSTimeInterval kAnimationDuration = 0.25f;
-static const CGFloat kCollectionViewHeight = 72.0f;//选择器高度
+static const CGFloat kCollectionViewHeight = 80.0f;//选择器高度
 static const CGFloat kCellMargin = 2;
 @interface GGWebMenuView()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -40,7 +40,7 @@ static const CGFloat kCellMargin = 2;
     [[GGWebMenuView webMenuView] show];
 }
 
-+ (void)showComplish:(void(^)(NSInteger index))complishBlock {
++ (void)showComplish:(void(^)(WebMenuType index))complishBlock {
     GGWebMenuView *view = [self webMenuView];
     view.complishBlock = complishBlock;
     [view show];
@@ -239,9 +239,9 @@ static const CGFloat kCellMargin = 2;
 }
 
 //内边距
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(kCellMargin, kCellMargin, kCellMargin, kCellMargin);
-}
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+//    return UIEdgeInsetsMake(kCellMargin, kCellMargin, kCellMargin, kCellMargin);
+//}
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return kCellMargin;
