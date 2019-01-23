@@ -1,0 +1,457 @@
+[
+  {
+    "China" : [
+      "",
+      "简体中文-cn",
+      "English-en"
+    ]
+  },
+  {
+    "Argentina" : [
+      "AR",
+      "简体中文-CN",
+      "English-GB",
+      "Español-ES"
+    ]
+  },
+  {
+    "Australia" : [
+      "au",
+      "简体中文-zh",
+      "English-en"
+    ]
+  },
+  {
+    "Azerbaijan" : [
+      "AZ",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Bangladesh" : [
+      "BD",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Belgium" : [
+      "BE",
+      "简体中文-CN",
+      "English-GB",
+      "Français-FR",
+      "Nederlands-NL"
+    ]
+  },
+  {
+    "Brazil" : [
+      "BR",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Cambodia" : [
+      "KH",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Canada" : [
+      "CA",
+      "简体中文-CN",
+      "English-GB",
+      "Français-FR"
+    ]
+  },
+  {
+    "Denmark" : [
+      "DK",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Finland" : [
+      "FI",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "France" : [
+      "FR",
+      "简体中文-CN",
+      "English-GB",
+      "Français-FR"
+    ]
+  },
+  {
+    "Georgia" : [
+      "GE",
+      "简体中文-CN",
+      "English-GB",
+      "Русский-RU"
+    ]
+  },
+  {
+    "Germany" : [
+      "DE",
+      "简体中文-CN",
+      "English-GB",
+      "Deutsch-DE"
+    ]
+  },
+  {
+    "Greece" : [
+      "GR",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Hongkong, China-中国香港" : [
+      "HK",
+      "简体中文-CN",
+      "English-GB",
+      "繁體中文-TW"
+    ]
+  },
+  {
+    "India" : [
+      "IN",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Indonesia" : [
+      "ID",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Ireland (Republic of)" : [
+      "IE",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Italy" : [
+      "IT",
+      "简体中文-CN",
+      "English-GB",
+      "Italiano-IT"
+    ]
+  },
+  {
+    "Japan" : [
+      "JP",
+      "简体中文-CN",
+      "English-GB",
+      "日本語-JP"
+    ]
+  },
+  {
+    "Jordan" : [
+      "JO",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Kazakhstan" : [
+      "KZ",
+      "简体中文-CN",
+      "English-GB",
+      "Русский-RU"
+    ]
+  },
+  {
+    "Kenya" : [
+      "KE",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Korea (Republic of)" : [
+      "kr",
+      "简体中文-zh",
+      "한국어-ko",
+      "English-en"
+    ]
+  },
+  {
+    "Kyrgyzstan" : [
+      "KG",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Macao, China-中国澳門" : [
+      "MO",
+      "简体中文-CN",
+      "English-GB",
+      "繁體中文-TW"
+    ]
+  },
+  {
+    "Malaysia" : [
+      "MY",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Maldives Islands" : [
+      "MV",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Mexico" : [
+      "MX",
+      "简体中文-CN",
+      "English-GB",
+      "Español-ES"
+    ]
+  },
+  {
+    "Myanmar" : [
+      "MM",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Nepal" : [
+      "NP",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Netherlands" : [
+      "NL",
+      "简体中文-CN",
+      "English-GB",
+      "Nederlands-NL"
+    ]
+  },
+  {
+    "New Zealand" : [
+      "nz",
+      "简体中文-zh",
+      "English-en"
+    ]
+  },
+  {
+    "Norway" : [
+      "NO",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Pakistan" : [
+      "PK",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Panama" : [
+      "PA",
+      "简体中文-CN",
+      "English-GB",
+      "Español-ES"
+    ]
+  },
+  {
+    "Peru" : [
+      "PE",
+      "简体中文-CN",
+      "English-GB",
+      "Español-ES"
+    ]
+  },
+  {
+    "Philippines" : [
+      "PH",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Portugal" : [
+      "PT",
+      "简体中文-CN",
+      "English-GB",
+      "Português-PO"
+    ]
+  },
+  {
+    "Russia" : [
+      "RU",
+      "简体中文-CN",
+      "English-GB",
+      "Русский-RU"
+    ]
+  },
+  {
+    "Saudi Arabia" : [
+      "SA",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Singapore" : [
+      "SG",
+      "简体中文-ZH",
+      "English-en"
+    ]
+  },
+  {
+    "South Africa" : [
+      "ZA",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Spain" : [
+      "ES",
+      "简体中文-CN",
+      "English-GB",
+      "Español-ES"
+    ]
+  },
+  {
+    "Sweden" : [
+      "SE",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Switzerland" : [
+      "CH",
+      "简体中文-CN",
+      "English-GB",
+      "Français-FR"
+    ]
+  },
+  {
+    "Taiwan, China-中国台灣" : [
+      "TW",
+      "简体中文-CN",
+      "English-GB",
+      "繁體中文-TW"
+    ]
+  },
+  {
+    "Tajikistan" : [
+      "TJ",
+      "简体中文-CN",
+      "English-GB",
+      "Русский-RU"
+    ]
+  },
+  {
+    "Tanzania (United Republic)" : [
+      "TZ",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Thailand" : [
+      "TH",
+      "简体中文-CN",
+      "English-GB",
+      "ภาษาไทย-TH"
+    ]
+  },
+  {
+    "Turkey" : [
+      "TR",
+      "简体中文-CN",
+      "English-GB",
+      "Türkçe-TK"
+    ]
+  },
+  {
+    "Turkmenistan" : [
+      "TM",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Uganda" : [
+      "UG",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Ukraine" : [
+      "UA",
+      "简体中文-CN",
+      "English-GB",
+      "Русский-RU"
+    ]
+  },
+  {
+    "United Arab Emirates" : [
+      "AE",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "United Kingdom" : [
+      "gb",
+      "简体中文-zh",
+      "English-en"
+    ]
+  },
+  {
+    "United States Of America" : [
+      "US",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Uzbekistan" : [
+      "UZ",
+      "简体中文-CN",
+      "English-GB"
+    ]
+  },
+  {
+    "Venezuela" : [
+      "VE",
+      "简体中文-CN",
+      "English-GB",
+      "Español-ES"
+    ]
+  },
+  {
+    "Vietnam" : [
+      "VN",
+      "简体中文-CN",
+      "English-GB",
+      "Tiếng Việt-VN"
+    ]
+  }
+]
