@@ -6,11 +6,12 @@
 //  Copyright © 2019年 genpeng. All rights reserved.
 //
 #import "IndexView.h"
-
+#import "Masonry.h"
 #define NAV_HEIGHT 64
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #import "TableViewIndexViewController.h"
+#import "IndexTableViewCell.h"
 
 static NSString *TableViewHeaderViewIdentifier = @"TableViewHeaderViewIdentifier";
 static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
@@ -31,46 +32,25 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadData];
-//    [self initView];
-    //默认设置第一组
-//    [self.indexView setSelectionIndex:0];
-//    [self.tableView reloadData];
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.view addSubview:self.tableView];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [self.view addSubview:self.indexView];
-    [self.indexView setSelectionIndex:0];
-    [self.tableView reloadData];
+    [self initView];
 }
 
 - (void)initView {
 //添加视图
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.indexView];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.bottom.right.equalTo(self.view);
+    }];
+
+    [self.tableView reloadData];
+    [self.indexView reload];
+    [self.indexView setSelectionIndex:0];
+    [self.view layoutIfNeeded];
 }
 
 
 - (void)loadData {
-    //1.先获取沙盒中的站点列表文件
-//    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-//    NSString *filePath = [NSString stringWithFormat:@"%@/overseasSiteData.json", path];//json文件路径
-//    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-//        //提取json文件中的站点数据
-//        NSData *siteData = [[NSData alloc] initWithContentsOfFile:filePath];
-//        self.siteArr = [NSJSONSerialization JSONObjectWithData:siteData options:kNilOptions error:nil];
-//        for (NSDictionary *siteDict in self.siteArr) {
-//            NSString *countryname = [[siteDict allKeys] firstObject];
-//            [self.countryArr cs_addObj:countryname];
-//        }
-//    }
     NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"overseasSiteData" ofType:@"json" inDirectory:@"Resource/data"]];
     NSError *error;
 //    id dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
@@ -127,27 +107,46 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
     return 0.01f;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 42;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
     UILabel *headerView = (UILabel *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:TableViewHeaderViewIdentifier];
     if (!headerView) {
         headerView = [UILabel new];
         headerView.backgroundColor = [UIColor whiteColor];
-        headerView.frame = (CGRect){0,0,SCREEN_WIDTH,30};
+        headerView.frame = (CGRect){0,0,CGRectGetWidth([UIScreen mainScreen].bounds),30};
     }
-    headerView.text = self.indexArray[section];
+    headerView.text = [NSString stringWithFormat:@"  %@",self.indexArray[section]];
     return headerView;
 }
 
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+//    UIView *headerView = (UILabel *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footer"];
+//    if (!headerView) {
+//        headerView = [UIView new];
+//        headerView.backgroundColor = [UIColor whiteColor];
+//        headerView.frame = (CGRect){0,0,CGRectGetWidth([UIScreen mainScreen].bounds),30};
+//    }
+//    return [[UIView new] initWithFrame:(CGRect){0,0,CGRectGetWidth([UIScreen mainScreen].bounds),30}];
+//}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableViewCellIdentifier];
-    }
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableViewCellIdentifier];
+//    }
     NSArray *dataArray = self.dataSourceArray[indexPath.section];
     NSString *info = dataArray[indexPath.row];
-    cell.textLabel.text = info;
+    IndexTableViewCell *cell = [IndexTableViewCell indexTableViewCell:tableView info:info];
+//    cell.textLabel.text = info;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
@@ -164,7 +163,6 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
 
 #pragma mark - IndexView
 - (NSArray<NSString *> *)sectionIndexTitles {
-
     return self.indexArray;
 }
 
@@ -177,6 +175,7 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
 //        return;
 //    }
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    NSLog(@"index = %ld\n",(long)index);
 }
 
 //将指示器视图添加到当前视图上
@@ -187,18 +186,31 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
 #pragma mark - getter
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStyleGrouped)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.estimatedRowHeight = 42;//因为实现了cell，所以不会出现空白
+        _tableView.rowHeight = 42;//因为实现了cell，所以不会出现空白
+        //要实现sectionheader的方法，返回headerview，且frame不能为zero，否则会导致每行section出现空白
+        _tableView.estimatedSectionHeaderHeight = 30;
+        //要实现sectionfooter的方法，返回footerview，且frame不能为zero，会导致每行section出现空白
+        _tableView.estimatedSectionFooterHeight = 0;
         _tableView.showsVerticalScrollIndicator = NO;
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellIdentifier];
+//        UIView *view = [[UIView alloc] initWithFrame:(CGRect){0,0,10,10}];
+//        view.backgroundColor = [UIColor grayColor];
+//        _tableView.tableHeaderView = view;//会导致头部出现空白
+        _tableView.tableFooterView = [UIView new];
+//        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellIdentifier];
     }
     return _tableView;
 }
 
 - (IndexView *)indexView {
     if (!_indexView) {
-        _indexView = [[IndexView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 30, NAV_HEIGHT, 30, SCREEN_HEIGHT - NAV_HEIGHT)];
+        _indexView = [[IndexView alloc] init];
+        CGFloat nHight = CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]) + CGRectGetHeight(self.navigationController.navigationBar.frame);
+        CGRect frame = [UIScreen mainScreen].bounds;
+        _indexView.frame = (CGRect){CGRectGetWidth(frame)-30,nHight,30,CGRectGetHeight(frame)-nHight};
         _indexView.referenceStr = @"推荐";
         _indexView.delegate = self;
         _indexView.dataSource = self;
@@ -209,7 +221,6 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
 - (NSMutableArray *)dataSourceArray {
     if (!_dataSourceArray) {
         _dataSourceArray = [NSMutableArray array];
-        
     }
     return _dataSourceArray;
 }

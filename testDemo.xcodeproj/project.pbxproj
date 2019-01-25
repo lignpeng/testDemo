@@ -253,6 +253,8 @@
 		1F5394CA1E80CD06009D6B17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5394C91E80CD06009D6B17 /* AVFoundation.framework */; };
 		1F8E222421F8108D001E0CE0 /* TableViewIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E222321F8108D001E0CE0 /* TableViewIndexViewController.m */; };
 		1F8E222721F811F3001E0CE0 /* IndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E222621F811F3001E0CE0 /* IndexView.m */; };
+		1F8E223221FAA7DB001E0CE0 /* IndexTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E223021FAA7DB001E0CE0 /* IndexTableViewCell.m */; };
+		1F8E223321FAA7DB001E0CE0 /* IndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E223121FAA7DB001E0CE0 /* IndexTableViewCell.xib */; };
 		1FBC47682136419F00C203B7 /* JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47602136419F00C203B7 /* JPImageresizerView.m */; };
 		1FBC47692136419F00C203B7 /* UIImage+JPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47612136419F00C203B7 /* UIImage+JPExtension.m */; };
 		1FBC476A2136419F00C203B7 /* JPImageresizerFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47622136419F00C203B7 /* JPImageresizerFrameView.m */; };
@@ -812,6 +814,9 @@
 		1F8E222321F8108D001E0CE0 /* TableViewIndexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewIndexViewController.m; sourceTree = "<group>"; };
 		1F8E222521F811F3001E0CE0 /* IndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexView.h; sourceTree = "<group>"; };
 		1F8E222621F811F3001E0CE0 /* IndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexView.m; sourceTree = "<group>"; };
+		1F8E222F21FAA7DB001E0CE0 /* IndexTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexTableViewCell.h; sourceTree = "<group>"; };
+		1F8E223021FAA7DB001E0CE0 /* IndexTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexTableViewCell.m; sourceTree = "<group>"; };
+		1F8E223121FAA7DB001E0CE0 /* IndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndexTableViewCell.xib; sourceTree = "<group>"; };
 		1FBC475F2136419F00C203B7 /* JPImageresizerConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerConfigure.h; sourceTree = "<group>"; };
 		1FBC47602136419F00C203B7 /* JPImageresizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerView.m; sourceTree = "<group>"; };
 		1FBC47612136419F00C203B7 /* UIImage+JPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JPExtension.m"; sourceTree = "<group>"; };
@@ -2105,6 +2110,9 @@
 				1F8E222621F811F3001E0CE0 /* IndexView.m */,
 				1F8E222221F8108D001E0CE0 /* TableViewIndexViewController.h */,
 				1F8E222321F8108D001E0CE0 /* TableViewIndexViewController.m */,
+				1F8E222F21FAA7DB001E0CE0 /* IndexTableViewCell.h */,
+				1F8E223021FAA7DB001E0CE0 /* IndexTableViewCell.m */,
+				1F8E223121FAA7DB001E0CE0 /* IndexTableViewCell.xib */,
 			);
 			path = "tableView索引";
 			sourceTree = "<group>";
@@ -2358,6 +2366,7 @@
 			files = (
 				EE14AA4C1DE5419D00E152AD /* LaunchScreen.storyboard in Resources */,
 				1F368AC421BE3A0A00F8B44D /* CSBrowingHistoryAirPortCell.xib in Resources */,
+				1F8E223321FAA7DB001E0CE0 /* IndexTableViewCell.xib in Resources */,
 				1F368A8E21BE3A0A00F8B44D /* SinaWBSendingViewController.xib in Resources */,
 				1F368A8621BE3A0A00F8B44D /* GPKeyBoardTableViewCell.xib in Resources */,
 				1F368AA021BE3A0A00F8B44D /* SubCollectionViewCell.xib in Resources */,
@@ -2466,6 +2475,7 @@
 				1F368A7221BE3A0A00F8B44D /* GGOneViewController.m in Sources */,
 				1F368A8F21BE3A0A00F8B44D /* BaseViewController.m in Sources */,
 				1FBC476B2136419F00C203B7 /* JPImageresizerConfigure.m in Sources */,
+				1F8E223221FAA7DB001E0CE0 /* IndexTableViewCell.m in Sources */,
 				1F19995A21F0695100E1DB3C /* GGWebViewController.m in Sources */,
 				1F16AE95212D191D00BA265C /* SDWebImageDecoder.m in Sources */,
 				1F16AE98212D191D00BA265C /* UIImage+GIF.m in Sources */,
