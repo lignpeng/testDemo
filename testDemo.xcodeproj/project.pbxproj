@@ -255,13 +255,12 @@
 		1F8E222721F811F3001E0CE0 /* IndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E222621F811F3001E0CE0 /* IndexView.m */; };
 		1F8E223221FAA7DB001E0CE0 /* IndexTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E223021FAA7DB001E0CE0 /* IndexTableViewCell.m */; };
 		1F8E223321FAA7DB001E0CE0 /* IndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E223121FAA7DB001E0CE0 /* IndexTableViewCell.xib */; };
+		1F8E223521FEA07E001E0CE0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E223421FEA07E001E0CE0 /* Realm.framework */; };
+		1F8E223621FEA1ED001E0CE0 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E223421FEA07E001E0CE0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FBC47682136419F00C203B7 /* JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47602136419F00C203B7 /* JPImageresizerView.m */; };
 		1FBC47692136419F00C203B7 /* UIImage+JPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47612136419F00C203B7 /* UIImage+JPExtension.m */; };
 		1FBC476A2136419F00C203B7 /* JPImageresizerFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47622136419F00C203B7 /* JPImageresizerFrameView.m */; };
 		1FBC476B2136419F00C203B7 /* JPImageresizerConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC47652136419F00C203B7 /* JPImageresizerConfigure.m */; };
-		1FF6906C2105D16E003B5431 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF6906B2105D16E003B5431 /* Realm.framework */; };
-		1FF6906D2105D17E003B5431 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF6906B2105D16E003B5431 /* Realm.framework */; };
-		1FF6906E2105D17E003B5431 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF6906B2105D16E003B5431 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE14AA3E1DE5419D00E152AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14AA3D1DE5419D00E152AD /* main.m */; };
 		EE14AA411DE5419D00E152AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14AA401DE5419D00E152AD /* AppDelegate.m */; };
 		EE14AA441DE5419D00E152AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14AA431DE5419D00E152AD /* ViewController.m */; };
@@ -315,7 +314,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1FF6906E2105D17E003B5431 /* Realm.framework in Embed Frameworks */,
+				1F8E223621FEA1ED001E0CE0 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,6 +816,7 @@
 		1F8E222F21FAA7DB001E0CE0 /* IndexTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexTableViewCell.h; sourceTree = "<group>"; };
 		1F8E223021FAA7DB001E0CE0 /* IndexTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexTableViewCell.m; sourceTree = "<group>"; };
 		1F8E223121FAA7DB001E0CE0 /* IndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndexTableViewCell.xib; sourceTree = "<group>"; };
+		1F8E223421FEA07E001E0CE0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1FBC475F2136419F00C203B7 /* JPImageresizerConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerConfigure.h; sourceTree = "<group>"; };
 		1FBC47602136419F00C203B7 /* JPImageresizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerView.m; sourceTree = "<group>"; };
 		1FBC47612136419F00C203B7 /* UIImage+JPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JPExtension.m"; sourceTree = "<group>"; };
@@ -826,7 +826,6 @@
 		1FBC47652136419F00C203B7 /* JPImageresizerConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPImageresizerConfigure.m; sourceTree = "<group>"; };
 		1FBC47662136419F00C203B7 /* JPImageresizerFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPImageresizerFrameView.h; sourceTree = "<group>"; };
 		1FBC47672136419F00C203B7 /* UIImage+JPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JPExtension.h"; sourceTree = "<group>"; };
-		1FF6906B2105D16E003B5431 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = sdk/Realm.framework; sourceTree = "<group>"; };
 		EE14AA391DE5419D00E152AD /* testDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE14AA3D1DE5419D00E152AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE14AA3F1DE5419D00E152AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -865,12 +864,11 @@
 				1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */,
 				1F4DBBFF1E4C6A6500374EA4 /* libc++.tbd in Frameworks */,
 				1F16AD9E212BFBD700BA265C /* AMapFoundationKit.framework in Frameworks */,
-				1FF6906C2105D16E003B5431 /* Realm.framework in Frameworks */,
 				1F0362531E0D0D6700BD804A /* UIKit.framework in Frameworks */,
 				1F0362511E0D0D6100BD804A /* QuartzCore.framework in Frameworks */,
 				1F03624F1E0D0D5A00BD804A /* SystemConfiguration.framework in Frameworks */,
 				1F03624D1E0D0D4E00BD804A /* AudioToolbox.framework in Frameworks */,
-				1FF6906D2105D17E003B5431 /* Realm.framework in Frameworks */,
+				1F8E223521FEA07E001E0CE0 /* Realm.framework in Frameworks */,
 				1F16ADD6212BFBD700BA265C /* AlipaySDK.framework in Frameworks */,
 				1F03624B1E0D0D4400BD804A /* CoreTelephony.framework in Frameworks */,
 				1F0362491E0D0D3B00BD804A /* Security.framework in Frameworks */,
@@ -949,6 +947,7 @@
 		1F16ACFC212BFBD700BA265C /* 第三方框架 */ = {
 			isa = PBXGroup;
 			children = (
+				1F8E223421FEA07E001E0CE0 /* Realm.framework */,
 				1FBC475E2136419F00C203B7 /* JPImageresizerView */,
 				1F16AE76212D191D00BA265C /* SDWebImage */,
 				1F16AE72212D191600BA265C /* DACircularProgress */,
@@ -2183,7 +2182,6 @@
 			children = (
 				1F16ADD7212BFBF700BA265C /* Resource */,
 				1F16ACFC212BFBD700BA265C /* 第三方框架 */,
-				1FF6906B2105D16E003B5431 /* Realm.framework */,
 				EE14AA3D1DE5419D00E152AD /* main.m */,
 			);
 			name = "Supporting Files";
