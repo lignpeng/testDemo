@@ -189,24 +189,24 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 //    [GGRouter openUrl:@"scheme://dataModel"];
 //    scheme://dataModel/classAction=create#action=add&&action=sum
-//    NSString *scheme = @"scheme://dataModel/action=add&action=fun&action=action";
+    NSString *scheme = @"scheme://dataModel/action=add&action=fun&action=action";
 //    scheme = @"scheme://dataModel/action=action";
-//    NSDictionary *param = @{@"add":@[@"mm",@"dd"],@"fun":@[@"hello"]};
+    NSDictionary *param = @{@"add":@[@"mm",@"dd"],@"fun":@[@"hello"]};
 //    [GGRouter openUrl:scheme param:param];
     
     
 //    scheme = @"scheme://ggWebView/classAction=loadUrl";
-//    param = @{@"loadUrl":@"https://www.cnblogs.com/someonelikeyou/p/7162613.html"};
+    param = @{@"loadUrl":@"https://www.cnblogs.com/someonelikeyou/p/7162613.html"};
 //    param = @{@"loadUrl":@"https://www.csair.com/cn/index.shtml"};
-//    [GGRouter openUrl:scheme param:param complish:^(NSDictionary *info) {
-//        NSLog(@"info = %@",info);
+    [GGRouter openUrl:scheme param:param complish:^(NSDictionary *info) {
+        NSLog(@"info = %@",info);
     
 //    scheme = @"scheme://guideView/classAction=show";
 //    [GGRouter openUrl:scheme param:@{@"show":@(YES)} complish:^(NSDictionary *info) {
 //        NSLog(@"info = %@",info);
-//    }];
-    
-//    return;
+    }];
+
+    return;
     
     UIViewController *vc = [[NSClassFromString(self.vcArray[self.vcArray.count - 1 - indexPath.row]) alloc] init];
     vc.title = self.vcTitleArray[self.vcTitleArray.count - 1 -indexPath.row];
