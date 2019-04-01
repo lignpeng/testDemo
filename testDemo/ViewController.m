@@ -30,9 +30,19 @@
 @property(nonatomic, strong) NSArray *vcArray;
 @property(nonatomic, strong) NSArray *vcTitleArray;
 
+@property(nonatomic, strong) UIView *headerView;
+
 @end
 
 @implementation ViewController
+
+- (UIView *)headerView {
+    if (!_headerView) {
+        _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 30)];
+        _headerView.backgroundColor = [UIColor grayColor];
+    }
+    return _headerView;
+}
 
 - (NSArray *)imageArray {
     if (_imageArray) {
@@ -115,7 +125,8 @@
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"GPTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellIdentify];
     self.tableView.rowHeight = 72;
-    self.tableView.tableHeaderView = [UIView new];
+    self.tableView.tableHeaderView = self.headerView;
+    
     //[[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 30)];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), vheight)];
     [self.view addSubview:self.tableView];
@@ -127,9 +138,16 @@
 }
 
 - (void)guideAction {
+//    UIView *headerview = self.tableView.tableHeaderView;
+//    CGRect frame = headerview.frame;
+//    frame.size.height = frame.size.height == 120?30:120;
+//    headerview.frame = frame;
+//    [self.tableView beginUpdates];
+//    self.tableView.tableHeaderView = headerview;
+//    [self.tableView endUpdates];
 //    [CSNoviceGuideView showNoviceGuideWithAnimated:YES];
-    [UINameListPickerView nameListPickerView];
-    NSLog(@"***-------------***");
+//    [UINameListPickerView nameListPickerView];
+//    NSLog(@"***-------------***");
 //    [UINameListPickerView nameListPickerView:^(NSInteger section, NSInteger index, NSString *name) {
 //        NSLog(@"section = %ld index = %ld name = %@",(long)section,(long)index,name);
 //    }];
@@ -163,7 +181,7 @@
 //        NSLog(@"%@",text);
 //    } cancelBlock:nil];
     
-    [GPTools ShowInfoTitle:@"提醒" message:@"OK" delayTime:0.2];
+//    [GPTools ShowInfoTitle:@"提醒" message:@"OK" delayTime:0.2];
 //    UIClipImageViewController *vc = [UIClipImageViewController new];
 //    [self.navigationController pushViewController:vc animated:YES];
 }
