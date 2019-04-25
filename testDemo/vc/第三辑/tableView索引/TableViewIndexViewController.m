@@ -12,16 +12,17 @@
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #import "TableViewIndexViewController.h"
 #import "IndexTableViewCell.h"
+#import "NewIndexView.h"
 
 static NSString *TableViewHeaderViewIdentifier = @"TableViewHeaderViewIdentifier";
 static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
 
 
 
-@interface TableViewIndexViewController ()<UITableViewDelegate, UITableViewDataSource, IndexViewDelegate, IndexViewDataSource>
+@interface TableViewIndexViewController ()<UITableViewDelegate, UITableViewDataSource, NewIndexViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) IndexView *indexView;
+@property (nonatomic, strong) NewIndexView *indexView;
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;//数据源数组
 @property (nonatomic, strong) NSMutableArray *indexArray; //索引数组
 @property(nonatomic, strong) NSArray *siteArray;
@@ -45,7 +46,7 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
 
     [self.tableView reloadData];
     [self.indexView reload];
-    [self.indexView setSelectionIndex:0];
+//    [self.indexView setSelectionIndex:0];
     [self.view layoutIfNeeded];
 }
 
@@ -58,9 +59,6 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
     if (error) {
         NSLog(@"%@",error);
     }
-//    if ([dic isKindOfClass:[NSDictionary class]]) {
-//        NSLog(@"yes");
-//    }
     //获得国家名
     NSMutableArray *countyArray = [NSMutableArray array];
     for (NSDictionary *siteDic in self.siteArray) {
@@ -73,7 +71,7 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
     if ([china isEqualToString:@"China"]) {
         [countyArray removeObjectAtIndex:0];
         [self.indexArray addObject:@"推荐"];
-        [self.dataSourceArray addObject:@[china]];
+        [self.dataSourceArray addObject:@[china,china,china,china,china,china]];
     }
     while (countyArray.count > 0) {
         NSString *countryName = countyArray.firstObject;
@@ -149,38 +147,21 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-    [self.indexView tableView:tableView willDisplayHeaderView:view forSection:section];
-}
-
-- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section {
-    [self.indexView tableView:tableView didEndDisplayingHeaderView:view forSection:section];
-}
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self.indexView scrollViewDidScroll:scrollView];
+    CGFloat nHight = CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]) + CGRectGetHeight(self.navigationController.navigationBar.frame);
+    [self.indexView scrollViewDidScroll:scrollView navigationHeight:nHight];
 }
 
 #pragma mark - IndexView
+
 - (NSArray<NSString *> *)sectionIndexTitles {
     return self.indexArray;
 }
 
 //当前选中组
 - (void)selectedSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    
-//    if (index == 0) {
-//        //搜索视图头视图(这里不能使用scrollToRowAtIndexPath，因为搜索组没有cell)
-//        [self.tableView setContentOffset:CGPointZero animated:NO];
-//        return;
-//    }
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionTop animated:NO];
     NSLog(@"index = %ld\n",(long)index);
-}
-
-//将指示器视图添加到当前视图上
-- (void)addIndicatorView:(UIView *)view {
-    [self.view addSubview:view];
 }
 
 #pragma mark - getter
@@ -205,6 +186,33 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
     return _tableView;
 }
 
+- (NewIndexView *)indexView {
+    if (!_indexView) {
+        CGFloat nHight = CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]) + CGRectGetHeight(self.navigationController.navigationBar.frame);
+        CGRect frame = [UIScreen mainScreen].bounds;
+        frame = (CGRect){CGRectGetWidth(frame)-64,nHight,64,CGRectGetHeight(frame)-nHight};
+        _indexView = [NewIndexView indexViewWithFrame:frame tableView:self.tableView delegate:self];
+        UILabel *label = [self dd];
+        [_indexView configIndicatorView:label touchBlock:^(NSString *title) {
+            label.text = title;
+        }];
+        [_indexView showBackColor:[UIColor colorWithRed:121/255.0 green:134/255.0 blue:145/255.0 alpha:0.5]];
+    }
+    return _indexView;
+}
+
+- (UILabel *)dd {
+    UILabel *label = [UILabel new];
+    CGRect frame = [UIScreen mainScreen].bounds;
+    label.frame = CGRectMake((CGRectGetWidth(frame)-80)/2.0, (CGRectGetHeight(frame) - 64 - 40)/2.0, 80, 40);
+    label.backgroundColor = [UIColor colorWithRed:0.5 green:0.2 blue:0.6 alpha:0.5];
+    label.layer.cornerRadius = 8.0;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.layer.masksToBounds = YES;
+    return label;
+}
+
+/*
 - (IndexView *)indexView {
     if (!_indexView) {
         _indexView = [[IndexView alloc] init];
@@ -217,6 +225,7 @@ static NSString *TableViewCellIdentifier = @"TableViewCellIdentifier";
     }
     return _indexView;
 }
+*/
 
 - (NSMutableArray *)dataSourceArray {
     if (!_dataSourceArray) {

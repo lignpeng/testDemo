@@ -251,6 +251,7 @@
 		1F4DBC011E4C6A7F00374EA4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC001E4C6A7F00374EA4 /* CoreText.framework */; };
 		1F4DBC031E4C6A8A00374EA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */; };
 		1F5394CA1E80CD06009D6B17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5394C91E80CD06009D6B17 /* AVFoundation.framework */; };
+		1F8464432269ACF100707E40 /* NewIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8464412269ACF100707E40 /* NewIndexView.m */; };
 		1F8E222421F8108D001E0CE0 /* TableViewIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E222321F8108D001E0CE0 /* TableViewIndexViewController.m */; };
 		1F8E222721F811F3001E0CE0 /* IndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E222621F811F3001E0CE0 /* IndexView.m */; };
 		1F8E223221FAA7DB001E0CE0 /* IndexTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E223021FAA7DB001E0CE0 /* IndexTableViewCell.m */; };
@@ -809,6 +810,8 @@
 		1F4DBC021E4C6A8A00374EA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1F5394C91E80CD06009D6B17 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1F671A5B1E7A1A5A0022AA4A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		1F8464412269ACF100707E40 /* NewIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewIndexView.m; sourceTree = "<group>"; };
+		1F8464422269ACF100707E40 /* NewIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewIndexView.h; sourceTree = "<group>"; };
 		1F8E222221F8108D001E0CE0 /* TableViewIndexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewIndexViewController.h; sourceTree = "<group>"; };
 		1F8E222321F8108D001E0CE0 /* TableViewIndexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewIndexViewController.m; sourceTree = "<group>"; };
 		1F8E222521F811F3001E0CE0 /* IndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexView.h; sourceTree = "<group>"; };
@@ -2105,6 +2108,8 @@
 		1F8E222121F8106F001E0CE0 /* tableView索引 */ = {
 			isa = PBXGroup;
 			children = (
+				1F8464422269ACF100707E40 /* NewIndexView.h */,
+				1F8464412269ACF100707E40 /* NewIndexView.m */,
 				1F8E222521F811F3001E0CE0 /* IndexView.h */,
 				1F8E222621F811F3001E0CE0 /* IndexView.m */,
 				1F8E222221F8108D001E0CE0 /* TableViewIndexViewController.h */,
@@ -2559,6 +2564,7 @@
 				1F16AE9C212D191D00BA265C /* SDImageCache.m in Sources */,
 				1F16AE57212D189900BA265C /* ZLCameraView.m in Sources */,
 				1F16ADA3212BFBD700BA265C /* MASLayoutConstraint.m in Sources */,
+				1F8464432269ACF100707E40 /* NewIndexView.m in Sources */,
 				1F8E222721F811F3001E0CE0 /* IndexView.m in Sources */,
 				1F16ADB9212BFBD700BA265C /* JSONKeyMapper.m in Sources */,
 				1F368B2E21BE56A400F8B44D /* UIShapeImageMainView.m in Sources */,
