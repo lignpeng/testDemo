@@ -208,7 +208,10 @@
     self.selectedIndex = selectedIndex;
     for (NSInteger i = 0; i < self.itemsViewArray.count; i++) {
         UIButton *bt = self.itemsViewArray[i];
-        bt.selected = (selectedIndex == i);
+        BOOL isSelected = (selectedIndex == i);
+        if (bt.selected != isSelected) {
+            bt.selected = isSelected;
+        }
     }
 }
 
