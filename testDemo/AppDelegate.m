@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GGRouter.h"
+//#import "pocTools/CSPOCWebDissectorTool.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,8 @@
     [GGRouter startRouter];
 //    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"routerRegister" ofType:@"json" inDirectory:@"Resource/Data"]];
 //    NSError *error;
+//    [CSPOCWebDissectorTool startPocWebDissector];
+    
     return YES;
 }
 

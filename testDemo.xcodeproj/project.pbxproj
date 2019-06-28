@@ -99,6 +99,7 @@
 		1F19996421F17F3C00E1DB3C /* GGWebMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F19996321F17F3C00E1DB3C /* GGWebMenuViewCell.m */; };
 		1F19996721F1AB2300E1DB3C /* GGWebMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F19996621F1AB2300E1DB3C /* GGWebMenuModel.m */; };
 		1F2CF6951EF7638A00093C15 /* myTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CF6941EF7638A00093C15 /* myTests.m */; };
+		1F34890522C473AE0098CA95 /* ButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F34890422C473AE0098CA95 /* ButtonViewController.m */; };
 		1F368A6221BE3A0A00F8B44D /* searchBarCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36895221BE3A0900F8B44D /* searchBarCustomView.m */; };
 		1F368A6321BE3A0A00F8B44D /* SearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36895421BE3A0900F8B44D /* SearchBarViewController.m */; };
 		1F368A6421BE3A0A00F8B44D /* BaseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36895521BE3A0900F8B44D /* BaseSearchViewController.m */; };
@@ -512,6 +513,8 @@
 		1F2CF6921EF7638A00093C15 /* myTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F2CF6941EF7638A00093C15 /* myTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myTests.m; sourceTree = "<group>"; };
 		1F2CF6961EF7638A00093C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F34890322C473AE0098CA95 /* ButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonViewController.h; sourceTree = "<group>"; };
+		1F34890422C473AE0098CA95 /* ButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonViewController.m; sourceTree = "<group>"; };
 		1F36895021BE3A0900F8B44D /* BaseSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchViewController.h; sourceTree = "<group>"; };
 		1F36895121BE3A0900F8B44D /* SearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarViewController.h; sourceTree = "<group>"; };
 		1F36895221BE3A0900F8B44D /* searchBarCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchBarCustomView.m; sourceTree = "<group>"; };
@@ -1308,6 +1311,15 @@
 			path = myTests;
 			sourceTree = "<group>";
 		};
+		1F34890222C4737E0098CA95 /* 按钮图文 */ = {
+			isa = PBXGroup;
+			children = (
+				1F34890322C473AE0098CA95 /* ButtonViewController.h */,
+				1F34890422C473AE0098CA95 /* ButtonViewController.m */,
+			);
+			path = "按钮图文";
+			sourceTree = "<group>";
+		};
 		1F36894E21BE3A0900F8B44D /* vc */ = {
 			isa = PBXGroup;
 			children = (
@@ -1694,6 +1706,7 @@
 		1F368A0521BE3A0900F8B44D /* 第三辑 */ = {
 			isa = PBXGroup;
 			children = (
+				1F34890222C4737E0098CA95 /* 按钮图文 */,
 				1F8E222121F8106F001E0CE0 /* tableView索引 */,
 				1F19995721F0693200E1DB3C /* web框架 */,
 				1F3865D421E2EE4B001D6C0A /* 路由 */,
@@ -2339,6 +2352,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2529,6 +2543,7 @@
 				1F368A9C21BE3A0A00F8B44D /* CSUtils.m in Sources */,
 				1F3865BF21DC9394001D6C0A /* NSSet+CSSafeAccess.m in Sources */,
 				1F368A9321BE3A0A00F8B44D /* GGMLViewController.m in Sources */,
+				1F34890522C473AE0098CA95 /* ButtonViewController.m in Sources */,
 				1F16AE9D212D191D00BA265C /* SDWebImageDownloaderOperation.m in Sources */,
 				1F368A6421BE3A0A00F8B44D /* BaseSearchViewController.m in Sources */,
 				1F1043F421D47FE900E08B7E /* DataYYModel.m in Sources */,
@@ -2887,8 +2902,11 @@
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/testDemo";
-				PRODUCT_BUNDLE_IDENTIFIER = com.model.testDemo;
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/testDemo",
+					"$(PROJECT_DIR)/testDemo/第三方框架/poc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.csair.MBP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2924,8 +2942,11 @@
 				INFOPLIST_FILE = testDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/testDemo";
-				PRODUCT_BUNDLE_IDENTIFIER = com.model.testDemo;
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/testDemo",
+					"$(PROJECT_DIR)/testDemo/第三方框架/poc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.csair.MBP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
