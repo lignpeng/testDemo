@@ -19,6 +19,7 @@
 #import "GPTools.h"
 #import "UIClipImageViewController.h"
 #import "GGRouter.h"
+#import "testDemo-Swift.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -85,7 +86,7 @@
                  @"UIClipImageViewController",@"EMailCheckViewController",
                  @"TimeCheckViewController",@"UIShapeImageClipViewController",
                  @"UIDataModelViewController",@"TableViewIndexViewController",
-                 @"ButtonViewController"];
+                 @"ButtonViewController",@"testDemo.TablelistController"];
     return _vcArray; 
 }
 
@@ -104,7 +105,7 @@
                       @"MLeakFinder使用",@"去空格",@"浏览历史",@"字符串包含",
                       @"runtime调用方法",@"获取当前时区",@"excel表",@"复利计算",
                       @"转盘",@"文字识别",@"图片裁剪",@"邮箱校验",@"年龄计算",
-                      @"图案裁剪",@"数据解析",@"tableview索引",@"按钮图文"];
+                      @"图案裁剪",@"数据解析",@"tableview索引",@"按钮图文",@"swift 使用"];
     return _vcTitleArray;
 }
 
@@ -229,6 +230,7 @@
     
     UIViewController *vc = [[NSClassFromString(self.vcArray[self.vcArray.count - 1 - indexPath.row]) alloc] init];
     vc.title = self.vcTitleArray[self.vcTitleArray.count - 1 -indexPath.row];
+    
 //    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
     [self.navigationController pushViewController:vc animated:YES];
 //    [self presentViewController:navi animated:YES completion:nil];
